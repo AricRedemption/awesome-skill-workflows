@@ -33,6 +33,23 @@ This project is an AI agent skill workflow framework. It is not a single-scenari
 - Store failed evidence only under explicit failed locations such as `failed-recipes/` or `workflow-kb/failure-cases/`.
 - Keep every reusable knowledge item in one primary home. Link to it instead of duplicating it across many files.
 
+## Execution Discipline
+
+These rules adapt general LLM coding guardrails to this workflow framework. They bias toward clear, small, evidence-backed changes.
+
+- State important assumptions before changing architecture, schemas, workflows, recipes, or promotion rules. If the task has multiple plausible meanings, name the interpretation you are using instead of silently choosing.
+- Do not hide uncertainty. If required evidence, approval state, scenario authority, or success criteria are missing, say what is missing and pause or route the work to the smallest safe evidence-gathering step.
+- Prefer the smallest asset change that satisfies the requested workflow outcome. Do not add speculative framework features, configurability, fallback paths, or abstractions unless current evidence requires them.
+- Prefer a simpler workflow, skill boundary, or evidence path when it meets the goal. If rejecting a simpler path, record the concrete evidence or constraint that makes the larger design necessary.
+- Do not add defensive handling for states that the workflow contract says are impossible. Fix the contract, validator, or evidence source instead of masking contract confusion with extra branches.
+- Keep edits surgical. Every changed line should trace to the user's request, a validator failure, review feedback, or captured run evidence.
+- Match existing file structure, naming, and style. Mention unrelated cleanup opportunities instead of applying them opportunistically.
+- When you discover unrelated risk, weak design, stale evidence, dead assets, or validator gaps, report it as a finding with file/evidence context. Do not refactor, delete, migrate, or promote assets to fix it unless the user asks or the risk directly blocks the current task.
+- Clean up only artifacts made obsolete by the current change. Do not delete pre-existing dead, duplicate, or weak assets unless the task explicitly includes that cleanup.
+- Convert broad requests into verifiable goals before execution, such as a specific schema check, promotion-gate validation, acceptance report, or run-evidence update.
+- For multi-step changes, pair each step with the narrowest relevant verification before moving on. Weak goals like "make the workflow better" are not enough for promotion-sensitive work.
+- Before reporting completion, inspect the final diff and validation output. If the diff contains unrelated changes, speculative assets, or unverified promotion-sensitive edits, remove them or report the remaining issue clearly.
+
 ## Scenario And Risk Rules
 
 - Root rules define only general safety boundaries. Scenario files define scenario-specific risk gates.
