@@ -1,0 +1,15 @@
+{
+  "status": "filled_publish_page",
+  "mode": "draft_or_manual_review",
+  "published": false,
+  "clickedPublish": false,
+  "savedDraft": false,
+  "reason": "页面已填充，未检测到明确保存草稿按钮；停在发布前人工确认状态。",
+  "url": "https://creator.xiaohongshu.com/publish/publish?source=official&from=menu&target=image",
+  "title": "AI Agent每天省1小时",
+  "mediaCount": 4,
+  "contentLength": 257,
+  "draftButtons": [],
+  "screenshotPath": "/Users/aricredemption/Projects/awesome-skill-workflows/runs/001-xhs-ai-agent-save-one-hour/xhs-draft-filled.png",
+  "checkedAt": "2026-05-24T09:30:24.209Z"
+}

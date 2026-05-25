@@ -1,0 +1,94 @@
+{
+  "url": "https://creator.xiaohongshu.com/login?source=&redirectReason=401&lastUrl=%252Fpublish%252Fpublish",
+  "title": "小红书创作服务平台",
+  "bodyTextSample": "创作服务平台\n创作百科\n加入我们\n解锁创作者专属功能\n让创作发布、数据分析、商业变现更高效。\n短信登录\n发送验证码\n收不到验证码？\n登 录\n登录即同意\n用户协议\n和\n隐私政策\n关于小红书\n沪ICP备 13030189号 Copyright © 2014-2026 行吟信息科技（上海）有限公司",
+  "buttons": [
+    {
+      "tag": "button",
+      "text": "登 录",
+      "placeholder": "",
+      "ariaLabel": "",
+      "role": "",
+      "type": "",
+      "accept": "",
+      "className": "css-n0yaji css-1qm1xja dyn beer-login-btn",
+      "id": "",
+      "disabled": false
+    }
+  ],
+  "inputs": [
+    {
+      "tag": "input",
+      "text": "",
+      "placeholder": "请选择选项",
+      "ariaLabel": "",
+      "role": "",
+      "type": "",
+      "accept": "",
+      "className": "css-1skbtim css-fkqjnb dyn",
+      "id": "",
+      "disabled": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "placeholder": "手机号",
+      "ariaLabel": "",
+      "role": "",
+      "type": "",
+      "accept": "",
+      "className": "css-1skbtim css-nt440g dyn",
+      "id": "",
+      "disabled": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "placeholder": "验证码",
+      "ariaLabel": "",
+      "role": "",
+      "type": "",
+      "accept": "",
+      "className": "css-1skbtim css-1ge5flv dyn",
+      "id": "",
+      "disabled": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "placeholder": "邮箱",
+      "ariaLabel": "",
+      "role": "",
+      "type": "text",
+      "accept": "",
+      "className": "css-1skbtim css-xno39g dyn",
+      "id": "",
+      "disabled": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "placeholder": "密码",
+      "ariaLabel": "",
+      "role": "",
+      "type": "password",
+      "accept": "",
+      "className": "css-1skbtim css-olu0jd dyn",
+      "id": "",
+      "disabled": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "placeholder": "",
+      "ariaLabel": "",
+      "role": "",
+      "type": "checkbox",
+      "accept": "",
+      "className": "",
+      "id": "",
+      "disabled": false
+    }
+  ],
+  "fileInputs": []
+}

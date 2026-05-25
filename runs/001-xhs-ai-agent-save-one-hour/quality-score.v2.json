@@ -1,0 +1,74 @@
+{
+  "scores": {
+    "topic_attraction": 15,
+    "painpoint_clarity": 14,
+    "title_cover_clickability": 15,
+    "xhs_voice_fit": 15,
+    "body_structure": 9,
+    "save_value": 10,
+    "hashtag_fit": 5,
+    "interaction_hook": 5,
+    "compliance_risk": 10
+  },
+  "total_score": 98,
+  "compliance_score": 96,
+  "xhs_style_fit": 93,
+  "content_quality_passed": true,
+  "content_threshold_passed": true,
+  "numeric_threshold_passed": true,
+  "human_review_required": true,
+  "human_review_status": "pending",
+  "human_review_ref": null,
+  "human_review_history_refs": [
+    "runs/001-xhs-ai-agent-save-one-hour/human-review.json",
+    "runs/001-xhs-ai-agent-save-one-hour/human-review-rereview.json"
+  ],
+  "publish_threshold_passed": false,
+  "passed_threshold": false,
+  "failed_reasons": [
+    "Content quality threshold passed, but publish threshold did not pass because Step 8 cannot prove pre-publish human review gate ordering.",
+    "The latest publish evidence is a platform fact only and is not compliant publish proof.",
+    "Do not treat this v2 scorecard as approval for verified recipe promotion."
+  ],
+  "workflow_gap_detected": true,
+  "workflow_gap_status": "resolved",
+  "workflow_gap_reasons": [
+    "Step 6 passed numerically, but MVP self-evolution still required one workflow improvement event.",
+    "The v1 workflow did not include an explicit save-worthiness gate before quality scoring.",
+    "The v1 title and save-value subscores were strong but not maximal, so they were selected as the safest improvement target."
+  ],
+  "evolution_trigger_reasons": [
+    "MVP self-evolution proof required at least one improvement even when Step 6 passed",
+    "title_cover_clickability improved from 14 to 15",
+    "save_value improved from 9 to 10",
+    "workflow composition changed by adding save-worthiness-checker"
+  ],
+  "improvement_suggestions": [
+    "Send generated-note.v2.md to human review before publish or verified KB promotion.",
+    "If human review approves the template section, consider promoting save-worthiness-checker as a reusable composition pattern after a second verified run.",
+    "If human review flags the title as too strong, roll back to the v1 title and keep the task-template body improvement.",
+    "Do not promote this v2 event to verified-recipes until review and reuse evidence exist."
+  ],
+  "should_trigger_evolution": false,
+  "final_status": "needs_revision_before_publish_or_verified_kb",
+  "score_before": 95,
+  "score_after": 98,
+  "score_delta": 3,
+  "evolution_event_ref": "evolution/xhs-ai-tool-topic-to-post-evolution-log.md",
+  "workflow_plan_ref": "runs/001-xhs-ai-agent-save-one-hour/workflow-plan.v2.md",
+  "generated_note_ref": "runs/001-xhs-ai-agent-save-one-hour/generated-note.v2.md",
+  "latest_publish_evidence": {
+    "title": "别再囤Skill了",
+    "noteId": "6a139f0d0000000037035783",
+    "url": "https://www.xiaohongshu.com/explore/6a139f0d0000000037035783",
+    "status": "public",
+    "publish_fact_status": "published",
+    "compliance_status": "failed",
+    "manual_note": "This is public platform evidence only. It does not prove pre-publish human review, risk approval, account-state pass, or draft-to-publish mode escalation approval.",
+    "verification_source": "xhs-mcp usernote list -l 5"
+  },
+  "kb_writeback_decision": {
+    "should_write_to_workflow_kb_now": false,
+    "reason": "This is useful evolution evidence, but it should not become a verified workflow knowledge-base pattern until human review or another run verifies the save-worthiness gate."
+  }
+}

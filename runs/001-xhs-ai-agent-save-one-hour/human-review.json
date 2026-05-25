@@ -1,0 +1,36 @@
+{
+  "review_type": "human_review",
+  "reviewer_role": "test_engineer",
+  "review_status": "changes_requested",
+  "reviewed_at": "2026-05-25",
+  "review_scope": "step_6_content_generation_and_quality_gate",
+  "summary": "内容生成和评分文件本身基本完整，数值评分达标；发布前门槛未通过，因为 human review 未批准且 workflow gap 需要进入 Step 7 self-evolution。",
+  "approval_scope": {
+    "content_generation": "pass",
+    "quality_scoring": "pass",
+    "publish_readiness": "fail",
+    "workflow_evolution": "required"
+  },
+  "content_artifact_status": "acceptable",
+  "publish_gate_status": "blocked",
+  "blocking_reasons": [
+    "human review has not approved the publish gate",
+    "publish threshold remains false",
+    "workflow gap requires Step 7 self-evolution"
+  ],
+  "required_actions": [
+    "record this review as structured human review evidence",
+    "keep publish_threshold_passed false",
+    "keep passed_threshold false",
+    "run or record Step 7 self-evolution",
+    "request re-review after Step 7 result is available"
+  ],
+  "review_notes": [
+    "generated-note.md contains the required content sections",
+    "quality-score.json contains the required score fields",
+    "numeric thresholds pass",
+    "human review is not approved",
+    "self-evolution is required because of the account-state workflow gap"
+  ],
+  "next_review_required": true
+}

@@ -1,0 +1,50 @@
+{
+  "scores": {
+    "topic_attraction": 14,
+    "painpoint_clarity": 14,
+    "title_cover_clickability": 14,
+    "xhs_voice_fit": 15,
+    "body_structure": 9,
+    "save_value": 9,
+    "hashtag_fit": 5,
+    "interaction_hook": 5,
+    "compliance_risk": 10
+  },
+  "total_score": 95,
+  "compliance_score": 95,
+  "xhs_style_fit": 90,
+  "content_quality_passed": true,
+  "numeric_threshold_passed": true,
+  "human_review_required": true,
+  "human_review_status": "changes_requested",
+  "human_review_ref": "runs/001-xhs-ai-agent-save-one-hour/human-review.md",
+  "human_review_history_refs": [
+    "runs/001-xhs-ai-agent-save-one-hour/human-review.json",
+    "runs/001-xhs-ai-agent-save-one-hour/human-review-rereview.json"
+  ],
+  "publish_threshold_passed": false,
+  "passed_threshold": false,
+  "failed_reasons": [
+    "Step 8 cannot prove final human approval before the publish command started.",
+    "The run started as human_review_then_draft and lacks pre-publish approval for human_review_then_publish.",
+    "Pre-publish risk approval and account-state check pass evidence are missing."
+  ],
+  "workflow_gap_detected": true,
+  "workflow_gap_status": "resolved",
+  "workflow_gap_reasons": [
+    "人工反馈指出小红书保存草稿或发布前的账号登录/授权状态没有作为独立前置门槛。",
+    "原始 Step 6 执行把账号状态放在发布建议和风险提示里，未及时沉淀为 workflow failure case。"
+  ],
+  "evolution_trigger_reasons": [
+    "human feedback identified a pre-handoff account-state gap",
+    "workflow gap exists even though numeric content score passed"
+  ],
+  "improvement_suggestions": [
+    "如果后续要冲更高收藏率，可以补 1 个具体 Agent 模板示例。",
+    "如果要冲更强点击感，可以把标题再做一个更口语化版本做 AB 测试。",
+    "如果要提高传播性，可以补一张封面图文案版式建议。",
+    "账号登录和授权应该被单独抽成前置检查，不能只放在发布建议里。",
+    "后续生成流程应先检查账号态，再输出保存草稿、评论区配置或发布建议。"
+  ],
+  "should_trigger_evolution": true
+}

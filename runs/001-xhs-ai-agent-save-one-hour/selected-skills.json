@@ -1,0 +1,178 @@
+[
+  {
+    "step_id": "skill-discoverer",
+    "selected_skill": "skill-discovery",
+    "reason": "先从技能集合里找出与小红书场景强相关的候选，避免后续编排脱离仓库事实。",
+    "confidence": 0.96,
+    "risk_level": "low",
+    "requires_human_review": false
+  },
+  {
+    "step_id": "skill-normalizer",
+    "selected_skill": "source-intake-and-discovery",
+    "reason": "该 skill 已覆盖 skill-normalization 能力，适合把候选技能整理成统一结构。",
+    "confidence": 0.93,
+    "risk_level": "low",
+    "requires_human_review": false
+  },
+  {
+    "step_id": "capability-mapper",
+    "selected_skill": "source-intake-and-discovery",
+    "reason": "该 skill 同时覆盖 capability-mapping，能把场景要求映射到具体技能并暴露缺口。",
+    "confidence": 0.92,
+    "risk_level": "low",
+    "requires_human_review": false
+  },
+  {
+    "step_id": "workflow-composer",
+    "selected_skill": "workflow-improvement",
+    "reason": "该 skill 的 capability 包含 workflow-composition，适合把能力矩阵编成可执行 workflow。",
+    "confidence": 0.88,
+    "risk_level": "medium",
+    "requires_human_review": false
+  },
+  {
+    "step_id": "xhs-topic-generator",
+    "selected_skill": "topic-generation",
+    "reason": "该 skill 直接负责 topic-angle-generation，能把账号方向和目标用户转成选题角度。",
+    "confidence": 0.95,
+    "risk_level": "medium",
+    "requires_human_review": false
+  },
+  {
+    "step_id": "audience-painpoint-extractor",
+    "selected_skill": "audience-painpoint-extraction",
+    "reason": "这是最贴合场景的原生能力，能把目标人群转成痛点、需求态和 hook 候选。",
+    "confidence": 0.95,
+    "risk_level": "medium",
+    "requires_human_review": false
+  },
+  {
+    "step_id": "title-cover-copy-generator",
+    "selected_skill": "title-generation + cover-copy-generation",
+    "reason": "标题和封面必须一起设计，组合选择能保证同一个 hook 在两处一致表达。",
+    "confidence": 0.9,
+    "risk_level": "medium",
+    "requires_human_review": false
+  },
+  {
+    "step_id": "xhs-note-writer",
+    "selected_skill": "note-writing",
+    "reason": "这是直接产出小红书正文草稿的核心能力，但风险较高，需要严格控制输出质量。",
+    "confidence": 0.97,
+    "risk_level": "high",
+    "requires_human_review": true
+  },
+  {
+    "step_id": "xhs-style-rewriter",
+    "selected_skill": "platform-style-rewrite",
+    "reason": "该 skill 负责平台化改写，适合把草稿调整成更像小红书原生表达。",
+    "confidence": 0.91,
+    "risk_level": "medium",
+    "requires_human_review": false
+  },
+  {
+    "step_id": "hashtag-generator",
+    "selected_skill": "hashtag-generation",
+    "reason": "该 skill 专门做关键词和标签打包，能提高内容的可发现性。",
+    "confidence": 0.88,
+    "risk_level": "low",
+    "requires_human_review": false
+  },
+  {
+    "step_id": "engagement-hook-generator",
+    "selected_skill": "engagement-hook-generation",
+    "reason": "该 skill 直接产出开头 hook 和互动提示，适合在标题和正文前段增强停留。",
+    "confidence": 0.89,
+    "risk_level": "medium",
+    "requires_human_review": false
+  },
+  {
+    "step_id": "compliance-risk-checker",
+    "selected_skill": "compliance-checker",
+    "reason": "该 skill 是发布前的安全与合规闸口，必须先挡住高风险内容再进入 human review。",
+    "confidence": 0.95,
+    "risk_level": "high",
+    "requires_human_review": true
+  },
+  {
+    "step_id": "quality-scorer",
+    "selected_skill": "quality-scoring",
+    "reason": "该 skill 负责 promotion gating，能决定草稿是否足够稳定进入后续环节。",
+    "confidence": 0.96,
+    "risk_level": "medium",
+    "requires_human_review": false
+  },
+  {
+    "step_id": "workflow-improver",
+    "selected_skill": "workflow-improvement",
+    "reason": "该 skill 能把运行摩擦转成改进候选，适合在编排层持续降低成本。",
+    "confidence": 0.89,
+    "risk_level": "medium",
+    "requires_human_review": false
+  },
+  {
+    "step_id": "human-review-gate",
+    "selected_skill": "mock: human-review-gate",
+    "reason": "这里没有单独的实现 skill，必须由人工在合规和评分之后做最终批准或退回。",
+    "confidence": 0.99,
+    "risk_level": "high",
+    "requires_human_review": true
+  },
+  {
+    "step_id": "human-feedback-intake",
+    "selected_skill": "evolution-recording",
+    "reason": "人工反馈不能只作为自由文本保留，需要结构化为 review notes、failure cases 和 evolution candidates，供后续自进化使用。",
+    "confidence": 0.92,
+    "risk_level": "medium",
+    "requires_human_review": false
+  },
+  {
+    "step_id": "account-state-check",
+    "selected_skill": "post-verification",
+    "reason": "该场景涉及小红书草稿或发布交付，必须在 human review 之后、publish-draft-creation 之前确认登录与授权状态。",
+    "confidence": 0.88,
+    "risk_level": "medium",
+    "requires_human_review": true
+  },
+  {
+    "step_id": "xhs-publish-or-draft",
+    "selected_skill": "publish-draft-creation",
+    "reason": "该 skill 直接负责创建草稿或发布包，且本场景要求 human_review_then_draft，并依赖已确认的账号状态。",
+    "confidence": 0.97,
+    "risk_level": "high",
+    "requires_human_review": true
+  },
+  {
+    "step_id": "post-publish-verifier",
+    "selected_skill": "post-verification",
+    "reason": "该 skill 可以验证发布后或草稿状态是否与预期一致，是闭环的一部分。",
+    "confidence": 0.93,
+    "risk_level": "medium",
+    "requires_human_review": true
+  },
+  {
+    "step_id": "evolution-recorder",
+    "selected_skill": "evolution-recording",
+    "reason": "该 skill 负责把一次运行的证据、失败点和可复用模式沉淀下来。",
+    "confidence": 0.94,
+    "risk_level": "medium",
+    "requires_human_review": false
+  },
+  {
+    "step_id": "workflow-kb-writer",
+    "selected_skill": "knowledge-base-writeback",
+    "reason": "该 skill 负责把验证过的内容和经验回写到知识库，形成可检索资产。",
+    "confidence": 0.9,
+    "risk_level": "high",
+    "requires_human_review": true
+  },
+  {
+    "step_id": "verified-recipe-generator",
+    "selected_skill": "quality-scoring",
+    "reason": "该 skill 已覆盖 verified-recipe-generation，适合把通过验证的执行路径升级成可复用 recipe。",
+    "confidence": 0.88,
+    "risk_level": "medium",
+    "requires_human_review": false
+  }
+]

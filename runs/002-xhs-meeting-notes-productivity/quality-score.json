@@ -1,0 +1,35 @@
+{
+  "run_id": "002-xhs-meeting-notes-productivity",
+  "rubric_ref": "workflow-kb/evaluation-rubrics/xhs-content-rubric.md",
+  "scores": {
+    "topic_attraction": 14,
+    "painpoint_clarity": 15,
+    "title_cover_clickability": 14,
+    "xhs_voice_fit": 14,
+    "body_structure": 9,
+    "save_value": 10,
+    "hashtag_fit": 5,
+    "interaction_hook": 5,
+    "compliance_risk": 9
+  },
+  "total_score": 95,
+  "compliance_score": 92,
+  "xhs_style_fit": 88,
+  "passed_threshold": true,
+  "content_quality_passed": true,
+  "numeric_threshold_passed": true,
+  "publish_readiness_passed": false,
+  "human_review_required": true,
+  "human_review_status": "pending",
+  "account_state_checked": false,
+  "account_state_required_for_handoff": true,
+  "kb_reuse_passed": true,
+  "reuse_ratio": 0.8,
+  "improvement_suggestions": [
+    "Human reviewer should check whether the title over-promises overtime reduction.",
+    "If publishing later, add a stronger disclaimer about using only company-approved AI tools for confidential meetings.",
+    "A carousel version could turn the 4-step method and prompt into separate images for higher save value.",
+    "Keep publish readiness false until human review and account-state precheck are proven before handoff."
+  ],
+  "final_status": "content_package_ready_for_human_review"
+}

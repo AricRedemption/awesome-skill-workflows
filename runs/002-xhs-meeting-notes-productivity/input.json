@@ -1,0 +1,30 @@
+{
+  "run_id": "002-xhs-meeting-notes-productivity",
+  "step": "Step 10",
+  "objective": "Prove the workflow knowledge base can be retrieved and reused for a second similar Xiaohongshu AI productivity content task.",
+  "account_direction": "AI 工具 / 效率提升",
+  "target_users": [
+    "普通职场人",
+    "经常开会的一线员工",
+    "需要整理会议纪要的小团队负责人"
+  ],
+  "topic": "普通职场人如何用 AI 自动整理会议纪要并减少加班",
+  "platform": "xiaohongshu",
+  "publish_mode": "content_package_only",
+  "required_kb_query_first": true,
+  "reuse_policy": {
+    "must_query": "workflow-kb/retrieval-index.json",
+    "acceptable_matches": [
+      "xhs-ai-tool-topic-to-post.v1",
+      "content-platform-posting-pattern"
+    ],
+    "minimum_reuse_ratio": 0.6,
+    "avoid_from_zero_discovery": true,
+    "write_back_new_experience": true
+  },
+  "quality_threshold": {
+    "total_score_min": 80,
+    "compliance_score_min": 85,
+    "xhs_style_fit_min": 80
+  }
+}

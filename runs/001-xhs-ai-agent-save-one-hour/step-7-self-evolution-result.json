@@ -1,0 +1,66 @@
+{
+  "step": "step_7_self_evolution",
+  "status": "completed_step_8_needs_revision",
+  "triggered_by": [
+    "human_review_changes_requested",
+    "workflow_gap_detected"
+  ],
+  "source_review_ref": "runs/001-xhs-ai-agent-save-one-hour/human-review.json",
+  "source_score_ref": "runs/001-xhs-ai-agent-save-one-hour/quality-score.json",
+  "problem_detected": [
+    "Account login and authorization state were initially treated as publishing advice instead of a pre-handoff workflow gate.",
+    "Step 6 did not originally require immediate workflow KB writeback when human feedback found a process gap."
+  ],
+  "changes_made": [
+    {
+      "type": "scorecard_update",
+      "path": "runs/001-xhs-ai-agent-save-one-hour/quality-score.json",
+      "summary": "Recorded workflow gap detection and set should_trigger_evolution to true."
+    },
+    {
+      "type": "schema_update",
+      "path": "schemas/scoring.schema.json",
+      "summary": "Aligned the scoring schema with the Step 6 scorecard contract."
+    },
+    {
+      "type": "failure_case_writeback",
+      "path": "workflow-kb/failure-cases/xhs-account-state-precheck-missing.md",
+      "summary": "Captured the account-state precheck gap as reusable workflow KB evidence."
+    },
+    {
+      "type": "retrieval_index_update",
+      "path": "workflow-kb/retrieval-index.json",
+      "summary": "Indexed the failure case for future platform publishing and account-state workflows."
+    },
+    {
+      "type": "durable_rule_update",
+      "path": "docs/self-evolution.md",
+      "summary": "Documented that human feedback and workflow gaps trigger self-evolution independently of score failure."
+    }
+  ],
+  "promotion_result": {
+    "workflow_kb_failure_case": "written",
+    "verified_recipe": "not_promoted",
+    "reason": "The run has reusable failure-case evidence, but Step 8 later found that the rereview cannot prove pre-publish approval because it cites post-publish evidence."
+  },
+  "post_step_7_gate": {
+    "content_quality_passed": true,
+    "human_review_status": "changes_requested",
+    "human_review_ref": "runs/001-xhs-ai-agent-save-one-hour/human-review.md",
+    "publish_threshold_passed": false,
+    "passed_threshold": false,
+    "rereview_required": true,
+    "step_8_compliance_status": "failed",
+    "blocking_reasons": [
+      "Final rereview accepted post-publish evidence and cannot prove approval before the publish command.",
+      "Original run mode was human_review_then_draft and no pre-publish approval exists for upgrading to human_review_then_publish.",
+      "Independent pre-publish risk approval and account-state pass evidence are missing."
+    ]
+  },
+  "next_actions": [
+    "Use the workflow KB failure case in future platform publishing workflows.",
+    "Continue requiring human approval and account-state checks before future draft or publish handoffs."
+  ],
+  "rereview_ref": "runs/001-xhs-ai-agent-save-one-hour/human-review-rereview.json",
+  "completed_at": "2026-05-25"
+}

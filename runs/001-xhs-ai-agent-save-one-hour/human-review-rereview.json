@@ -1,0 +1,37 @@
+{
+  "review_type": "human_review_rereview",
+  "reviewer_role": "user_acceptance",
+  "review_status": "post_publish_review_not_gate_approval",
+  "reviewed_at": "2026-05-25",
+  "review_scope": "step_7_self_evolution_repair_and_publish_flow",
+  "summary": "复审确认 Step 7 self-evolution 修复可作为失败证据保留，账号登录/授权前置缺口已沉淀；但该复审引用了发布结果，不能作为发布前 human review gate approval。",
+  "approval_scope": {
+    "content_generation": "pass",
+    "quality_scoring": "pass",
+    "workflow_evolution": "pass",
+    "publish_flow": "fail_pre_publish_gate_not_proven"
+  },
+  "accepted_evidence": [
+    "runs/001-xhs-ai-agent-save-one-hour/step-7-self-evolution-result.json",
+    "workflow-kb/failure-cases/xhs-account-state-precheck-missing.md",
+    "workflow-kb/retrieval-index.json",
+    "docs/self-evolution.md",
+    "runs/001-xhs-ai-agent-save-one-hour/xhs-mcp-publish-result.json"
+  ],
+  "publish_verification": {
+    "status": "failed",
+    "publish_fact_status": "published",
+    "compliance_status": "failed",
+    "method": "xhs-mcp publish",
+    "note_id": "6a139f0d0000000037035783",
+    "url": "https://www.xiaohongshu.com/explore/6a139f0d0000000037035783",
+    "evidence_ref": "runs/001-xhs-ai-agent-save-one-hour/xhs-mcp-publish-result.json",
+    "blocking_reason": "Accepted evidence includes the publish result, so this review cannot prove approval before the publish command started."
+  },
+  "remaining_risks": [
+    "The historical workflow gap remains in the KB as reusable failure evidence.",
+    "This run lacks pre-publish approval for upgrading from human_review_then_draft to human_review_then_publish.",
+    "Future publish handoffs still require explicit human approval and account-state checks before the publish command starts."
+  ],
+  "next_review_required": true
+}

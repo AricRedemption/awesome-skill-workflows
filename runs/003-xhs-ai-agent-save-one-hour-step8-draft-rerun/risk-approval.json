@@ -1,0 +1,20 @@
+{
+  "review_type": "pre_draft_risk_approval",
+  "reviewed_content_version": "runs/003-xhs-ai-agent-save-one-hour-step8-draft-rerun/publish-package.json",
+  "reviewed_at": "2026-05-25T14:11:12+08:00",
+  "decision": "approved_for_draft_only",
+  "risk_check_passed": true,
+  "publish_approved": false,
+  "risk_notes": [
+    "No medical, financial, legal, or guaranteed outcome claim is made.",
+    "The content frames AI Agent use as user-supervised workflow assistance.",
+    "The run is limited to draft save; live publish requires a separate approval."
+  ],
+  "prohibited_actions_checked": {
+    "automatic_like": false,
+    "automatic_comment": false,
+    "automatic_follow": false,
+    "account_warming": false,
+    "live_publish": false
+  }
+}

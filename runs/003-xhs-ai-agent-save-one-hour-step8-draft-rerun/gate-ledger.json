@@ -1,0 +1,33 @@
+{
+  "run_id": "003-xhs-ai-agent-save-one-hour-step8-draft-rerun",
+  "platform": "xiaohongshu",
+  "publish_mode": "human_review_then_draft",
+  "allowed_action": "save_draft_only",
+  "do_not_publish": true,
+  "gates": {
+    "human_review": {
+      "status": "passed",
+      "passed_at": "2026-05-25T14:11:11+08:00",
+      "evidence": "runs/003-xhs-ai-agent-save-one-hour-step8-draft-rerun/human-review.json"
+    },
+    "risk_approval": {
+      "status": "passed",
+      "passed_at": "2026-05-25T14:11:12+08:00",
+      "evidence": "runs/003-xhs-ai-agent-save-one-hour-step8-draft-rerun/risk-approval.json"
+    },
+    "account_state": {
+      "status": "passed",
+      "passed_at": "2026-05-25T06:15:06.234Z",
+      "evidence": "runs/003-xhs-ai-agent-save-one-hour-step8-draft-rerun/draft-proof.json",
+      "account_name": "沐光",
+      "url": "https://creator.xiaohongshu.com/publish/publish?source=official&from=menu&target=image"
+    },
+    "draft_action": {
+      "status": "passed",
+      "started_at": "2026-05-25T06:15:06.236Z",
+      "finished_at": "2026-05-25T06:15:47.416Z",
+      "evidence": "runs/003-xhs-ai-agent-save-one-hour-step8-draft-rerun/draft-proof.json"
+    }
+  },
+  "final_status": "passed"
+}
