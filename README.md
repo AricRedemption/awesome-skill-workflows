@@ -13,6 +13,7 @@
   <img alt="Scope: agent workflows" src="https://img.shields.io/badge/scope-agent_workflows-3b82f6">
   <img alt="Evidence: required" src="https://img.shields.io/badge/evidence-required-f97316">
   <img alt="Promotion: gated" src="https://img.shields.io/badge/promotion-gated-8b5cf6">
+  <a href="./LICENSE"><img alt="License: Apache-2.0" src="https://img.shields.io/badge/license-Apache--2.0-orange"></a>
 </p>
 
 <p>
@@ -270,3 +271,7 @@ Key operating expectations:
 - make refactors and submissions atomic,
 - validate before promotion,
 - preserve sensitive local files outside git.
+
+## License
+
+Licensed under the Apache License, Version 2.0. See `LICENSE`.
