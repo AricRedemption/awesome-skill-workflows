@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "workflow.schema.json",
+  "title": "Workflow",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "scenario_id",
+    "goal",
+    "steps",
+    "risk_boundary",
+    "success_criteria"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "scenario_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "goal": {
+      "type": "string",
+      "minLength": 1
+    },
+    "steps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "step_id",
+          "capability_required",
+          "candidate_skills",
+          "selected_skill",
+          "input",
+          "output",
+          "fallback",
+          "evaluation"
+        ],
+        "properties": {
+          "step_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "capability_required": {
+            "type": "string",
+            "minLength": 1
+          },
+          "candidate_skills": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "selected_skill": {
+            "type": "string",
+            "minLength": 1
+          },
+          "input": {
+            "type": "array",
+            "items": {}
+          },
+          "output": {
+            "type": "array",
+            "items": {}
+          },
+          "fallback": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "object",
+                "additionalProperties": true
+              }
+            ]
+          },
+          "evaluation": {
+            "type": "array",
+            "items": {}
+          }
+        }
+      }
+    },
+    "risk_boundary": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object",
+          "additionalProperties": true
+        }
+      ]
+    },
+    "success_criteria": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "scoring.schema.json",
+  "title": "Step 6 Xiaohongshu Quality Score",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "scores",
+    "total_score",
+    "compliance_score",
+    "xhs_style_fit",
+    "content_quality_passed",
+    "numeric_threshold_passed",
+    "human_review_required",
+    "human_review_status",
+    "human_review_ref",
+    "human_review_history_refs",
+    "publish_threshold_passed",
+    "passed_threshold",
+    "failed_reasons",
+    "workflow_gap_detected",
+    "workflow_gap_status",
+    "workflow_gap_reasons",
+    "evolution_trigger_reasons",
+    "improvement_suggestions",
+    "should_trigger_evolution"
+  ],
+  "properties": {
+    "scores": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "topic_attraction",
+        "painpoint_clarity",
+        "title_cover_clickability",
+        "xhs_voice_fit",
+        "body_structure",
+        "save_value",
+        "hashtag_fit",
+        "interaction_hook",
+        "compliance_risk"
+      ],
+      "properties": {
+        "topic_attraction": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 15
+        },
+        "painpoint_clarity": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 15
+        },
+        "title_cover_clickability": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 15
+        },
+        "xhs_voice_fit": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 15
+        },
+        "body_structure": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 10
+        },
+        "save_value": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 10
+        },
+        "hashtag_fit": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 5
+        },
+        "interaction_hook": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 5
+        },
+        "compliance_risk": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 10
+        }
+      }
+    },
+    "total_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "compliance_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "xhs_style_fit": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "content_quality_passed": {
+      "type": "boolean"
+    },
+    "numeric_threshold_passed": {
+      "type": "boolean"
+    },
+    "human_review_required": {
+      "type": "boolean"
+    },
+    "human_review_status": {
+      "type": "string",
+      "enum": ["pending", "approved", "rejected", "changes_requested"]
+    },
+    "human_review_ref": {
+      "type": ["string", "null"]
+    },
+    "human_review_history_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "publish_threshold_passed": {
+      "type": "boolean"
+    },
+    "passed_threshold": {
+      "type": "boolean"
+    },
+    "failed_reasons": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "workflow_gap_detected": {
+      "type": "boolean"
+    },
+    "workflow_gap_status": {
+      "type": "string",
+      "enum": ["none", "open", "resolved"]
+    },
+    "workflow_gap_reasons": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "evolution_trigger_reasons": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "improvement_suggestions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "should_trigger_evolution": {
+      "type": "boolean"
+    }
+  }
+}

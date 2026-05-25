@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "evolution-event.schema.json",
+  "title": "Evolution Event",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "timestamp",
+    "trigger",
+    "problem_detected",
+    "previous_workflow",
+    "change_made",
+    "reason",
+    "score_before",
+    "score_after",
+    "status"
+  ],
+  "properties": {
+    "version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "timestamp": {
+      "type": "string",
+      "minLength": 1
+    },
+    "trigger": {
+      "type": "string",
+      "minLength": 1
+    },
+    "problem_detected": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "previous_workflow": {
+      "type": "array",
+      "items": {}
+    },
+    "change_made": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "reason": {
+      "type": "string",
+      "minLength": 1
+    },
+    "score_before": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "number"
+      }
+    },
+    "score_after": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "number"
+      }
+    },
+    "status": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}

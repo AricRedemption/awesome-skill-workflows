@@ -1,0 +1,153 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "skill.schema.json",
+  "title": "Skill",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "name",
+    "source",
+    "description",
+    "capabilities",
+    "inputs",
+    "outputs",
+    "compatible_agents",
+    "risk_level",
+    "requires_auth",
+    "requires_human_review",
+    "candidate_workflows",
+    "confidence",
+    "discovery_priority",
+    "mocked",
+    "original_source_path",
+    "metadata"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "repo", "url"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["github", "local", "mcp", "api", "prompt"]
+        },
+        "repo": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        }
+      }
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1
+    },
+    "capabilities": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "inputs": {
+      "type": "array",
+      "items": {}
+    },
+    "outputs": {
+      "type": "array",
+      "items": {}
+    },
+    "compatible_agents": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "risk_level": {
+      "type": "string",
+      "enum": ["low", "medium", "high"]
+    },
+    "requires_auth": {
+      "type": "boolean"
+    },
+    "requires_human_review": {
+      "type": "boolean"
+    },
+    "candidate_workflows": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "discovery_priority": {
+      "type": "string",
+      "enum": ["P0", "P1", "P2", "P3", "P4"]
+    },
+    "mocked": {
+      "type": "boolean"
+    },
+    "original_source_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_group",
+        "source_priority",
+        "original_source_path",
+        "mocked",
+        "review_status",
+        "can_be_main_dependency",
+        "usage_condition"
+      ],
+      "properties": {
+        "source_group": {
+          "type": "string",
+          "enum": ["P0_MAIN", "P1_FALLBACK", "P2_EXTERNAL_PENDING", "P2_EXTERNAL_REVIEWED"]
+        },
+        "source_priority": {
+          "type": "string",
+          "enum": ["P0", "P1", "P2", "P3", "P4"]
+        },
+        "original_source_path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "mocked": {
+          "type": "boolean"
+        },
+        "review_status": {
+          "type": "string",
+          "enum": ["approved", "pending-review", "rejected"]
+        },
+        "can_be_main_dependency": {
+          "type": "boolean"
+        },
+        "usage_condition": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}

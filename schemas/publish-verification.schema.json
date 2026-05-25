@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "publish-verification.schema.json",
+  "title": "Publish Verification",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "platform",
+    "publish_mode",
+    "status",
+    "publish_fact_status",
+    "compliance_status",
+    "post_id",
+    "post_url",
+    "published_at",
+    "title",
+    "human_review_passed",
+    "risk_check_passed",
+    "evidence"
+  ],
+  "properties": {
+    "platform": {
+      "type": "string",
+      "minLength": 1
+    },
+    "publish_mode": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "type": "string",
+      "minLength": 1
+    },
+    "publish_fact_status": {
+      "type": "string",
+      "minLength": 1
+    },
+    "compliance_status": {
+      "type": "string",
+      "minLength": 1
+    },
+    "post_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "post_url": {
+      "type": "string",
+      "minLength": 1
+    },
+    "published_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "human_review_passed": {
+      "type": "boolean"
+    },
+    "risk_check_passed": {
+      "type": "boolean"
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["screenshot", "browser_log", "manual_note"],
+      "properties": {
+        "screenshot": {
+          "type": "string"
+        },
+        "browser_log": {
+          "type": "string"
+        },
+        "manual_note": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,137 @@
+[
+  {
+    "source_platform": "github",
+    "source_name": "Xiangyu-CAS/xiaohongshu-ops-skill",
+    "discovered_name": "xiaohongshu-ops-skill",
+    "source_url": "https://github.com/Xiangyu-CAS/xiaohongshu-ops-skill",
+    "why_pending": "External supplement source outside the approved whitelist; useful but not promoted.",
+    "raw_description": "Xiaohongshu-oriented operations skill covering homepage analysis, account analysis, topic ideas, knowledge-base capture, auto publish, and auto reply comments.",
+    "possible_capabilities": [
+      "content-research",
+      "topic-generation",
+      "knowledge-base-writeback",
+      "publish-draft-creation",
+      "post-verification",
+      "engagement-hook-generation"
+    ],
+    "why_needed": "Fills publish and account-ops workflow coverage that is still weak in the approved whitelist.",
+    "missing_capability_filled": [
+      "publish-draft-creation",
+      "post-verification",
+      "knowledge-base-writeback"
+    ],
+    "reviewer_decision": "pending-review",
+    "reviewer_comments": "High risk because it includes account operations and publish behavior; do not promote without explicit human review.",
+    "can_enter_candidate_pool": false,
+    "discovered_skills": [
+      "homepage analysis",
+      "account analysis",
+      "topic ideas",
+      "knowledge-base capture",
+      "auto publish",
+      "auto reply comments"
+    ],
+    "original_path": "README.md",
+    "source_type": "github",
+    "risk_note": "High; includes account operations and publish behavior.",
+    "mocked": false
+  },
+  {
+    "source_platform": "github",
+    "source_name": "getsentry/skills",
+    "discovered_name": "getsentry/skills",
+    "source_url": "https://github.com/getsentry/skills",
+    "why_pending": "External supplement source outside the approved whitelist; useful for writing and skill governance but not promoted.",
+    "raw_description": "Skill repository with writing and skill governance examples, including blog writing, skill authoring, and skill scanning patterns.",
+    "possible_capabilities": [
+      "documentation",
+      "writing",
+      "skill-discovery",
+      "quality-scoring",
+      "workflow-improvement"
+    ],
+    "why_needed": "Adds read-only governance patterns that support discovery, review, and normalization workflows.",
+    "missing_capability_filled": [
+      "skill-discovery",
+      "quality-scoring",
+      "workflow-improvement"
+    ],
+    "reviewer_decision": "approved",
+    "reviewer_comments": "Read-only and review-oriented; safe to enter candidate pool after approval.",
+    "can_enter_candidate_pool": true,
+    "discovered_skills": [
+      "blog-writing-guide",
+      "skill-writer",
+      "skill-scanner"
+    ],
+    "original_path": "plugins/sentry-skills/skills/*",
+    "source_type": "github",
+    "risk_note": "Low to medium; read-only / review oriented.",
+    "mocked": false
+  },
+  {
+    "source_platform": "github",
+    "source_name": "anthropics/skills",
+    "discovered_name": "anthropics/skills",
+    "source_url": "https://github.com/anthropics/skills",
+    "why_pending": "External supplement source outside the approved whitelist; useful for doc co-authoring but not promoted.",
+    "raw_description": "Document co-authoring skill source with structured writing workflows.",
+    "possible_capabilities": [
+      "documentation",
+      "writing",
+      "note-writing",
+      "workflow-improvement"
+    ],
+    "why_needed": "Provides a structured documentation workflow for drafting and editing skill text.",
+    "missing_capability_filled": [
+      "documentation",
+      "note-writing",
+      "workflow-improvement"
+    ],
+    "reviewer_decision": "approved",
+    "reviewer_comments": "Low-risk documentation workflow; acceptable for candidate pool.",
+    "can_enter_candidate_pool": true,
+    "discovered_skills": [
+      "doc-coauthoring"
+    ],
+    "original_path": "skills/doc-coauthoring/SKILL.md",
+    "source_type": "github",
+    "risk_note": "Low; document workflow only.",
+    "mocked": false
+  },
+  {
+    "source_platform": "github",
+    "source_name": "youcommit/promptlint",
+    "discovered_name": "promptlint",
+    "source_url": "https://github.com/youcommit/promptlint",
+    "why_pending": "External supplement source outside the approved whitelist; useful for compliance gating but not promoted.",
+    "raw_description": "Prompt linting and policy validation tool with init, scan, validation, and policy explanation commands.",
+    "possible_capabilities": [
+      "compliance-checking",
+      "quality-scoring",
+      "validation",
+      "workflow-improvement"
+    ],
+    "why_needed": "Covers policy gating and prompt validation before human review or publication steps.",
+    "missing_capability_filled": [
+      "compliance-checker",
+      "validation",
+      "quality-scoring"
+    ],
+    "reviewer_decision": "approved",
+    "reviewer_comments": "Medium risk as a policy gate only; useful as a preflight checker and safe to enter candidate pool.",
+    "can_enter_candidate_pool": true,
+    "discovered_skills": [
+      "init",
+      "scan",
+      "validate-policy",
+      "list-policies",
+      "list-detectors",
+      "explain"
+    ],
+    "original_path": "README.md",
+    "source_type": "github",
+    "risk_note": "Medium; policy gate only.",
+    "mocked": false
+  }
+]
