@@ -1,0 +1,19 @@
+team_plan.md
+team_findings.md
+team_progress.md
+
+# Local browser state and credentials
+.gstack/
+.xhs-creator-profile/
+**/.xhs-creator-profile/
+.env
+.env.*
+*.pem
+*.key
+*cookies*.json
+*cookie*.json
+
+# Local scratch output
+temp_images/
+tmp/
+.DS_Store
