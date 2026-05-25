@@ -5,7 +5,7 @@
 - run id: `002-xhs-meeting-notes-productivity`
 - step: `Step 10`
 - platform: `xiaohongshu`
-- task: `普通职场人如何用 AI 自动整理会议纪要并减少加班`
+- task: `localized text AI localized text`
 - mode: `content_package_only`
 - KB query first: `passed`
 - selected workflow: `xhs-ai-tool-topic-to-post.v1`

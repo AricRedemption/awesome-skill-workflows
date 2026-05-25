@@ -32,19 +32,19 @@
   "workflow_gap_detected": true,
   "workflow_gap_status": "resolved",
   "workflow_gap_reasons": [
-    "人工反馈指出小红书保存草稿或发布前的账号登录/授权状态没有作为独立前置门槛。",
-    "原始 Step 6 执行把账号状态放在发布建议和风险提示里，未及时沉淀为 workflow failure case。"
+    "localized text/localized text.",
+    "localized text Step 6 localized text,localized text workflow failure case."
   ],
   "evolution_trigger_reasons": [
     "human feedback identified a pre-handoff account-state gap",
     "workflow gap exists even though numeric content score passed"
   ],
   "improvement_suggestions": [
-    "如果后续要冲更高收藏率，可以补 1 个具体 Agent 模板示例。",
-    "如果要冲更强点击感，可以把标题再做一个更口语化版本做 AB 测试。",
-    "如果要提高传播性，可以补一张封面图文案版式建议。",
-    "账号登录和授权应该被单独抽成前置检查，不能只放在发布建议里。",
-    "后续生成流程应先检查账号态，再输出保存草稿、评论区配置或发布建议。"
+    "localized text,localized text 1 localized text Agent localized text.",
+    "localized text,localized text AB localized text.",
+    "localized text,localized text.",
+    "localized text,localized text.",
+    "localized text,localized text,localized text."
   ],
   "should_trigger_evolution": true
 }

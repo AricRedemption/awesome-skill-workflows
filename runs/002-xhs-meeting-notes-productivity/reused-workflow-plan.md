@@ -29,7 +29,7 @@
 ## Modified Step List
 
 1. Discovery is replaced by retrieval from `workflow-kb/retrieval-index.json`.
-2. Topic generation is constrained to "AI 自动整理会议纪要并减少加班".
+2. Topic generation is constrained to "AI localized text".
 3. Compliance check adds workplace confidentiality and meeting-recording consent risks.
 4. Handoff execution is not performed because this run is content package only.
 5. Verification records content generation and scoring only, not publish proof.
@@ -39,7 +39,7 @@
 - Original reusable angle: ordinary users use AI Agent to save one hour daily.
 - New angle: ordinary employees use AI to turn meeting audio, transcripts, and scattered action items into a usable meeting note, task list, and follow-up message.
 - Reader pain: meetings end late, notes are messy, action items are unclear, and people spend after-hours time rewriting records.
-- Promise boundary: reduce repetitive整理 work, not guarantee zero overtime.
+- Promise boundary: reduce repetitivelocalized text work, not guarantee zero overtime.
 - Safety boundary: remove confidential content before using external AI tools.
 
 ## Selected Skills

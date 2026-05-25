@@ -1,11 +1,11 @@
 {
   "url": "https://creator.xiaohongshu.com/login?source=&redirectReason=401&lastUrl=%252Fpublish%252Fpublish",
-  "title": "小红书创作服务平台",
-  "bodyTextSample": "创作服务平台\n创作百科\n加入我们\n解锁创作者专属功能\n让创作发布、数据分析、商业变现更高效。\n短信登录\n发送验证码\n收不到验证码？\n登 录\n登录即同意\n用户协议\n和\n隐私政策\n关于小红书\n沪ICP备 13030189号 Copyright © 2014-2026 行吟信息科技（上海）有限公司",
+  "title": "localized text",
+  "bodyTextSample": "localized text\nlocalized text\nlocalized text\nlocalized text\nlocalized text,localized text,localized text.\nlocalized text\nlocalized text\nlocalized text?\nlocalized text localized text\nlocalized text\nlocalized text\nlocalized text\nlocalized text\nlocalized text\nlocalized textICPlocalized text 13030189localized text Copyright © 2014-2026 localized text(localized text)localized text",
   "buttons": [
     {
       "tag": "button",
-      "text": "登 录",
+      "text": "localized text localized text",
       "placeholder": "",
       "ariaLabel": "",
       "role": "",
@@ -20,7 +20,7 @@
     {
       "tag": "input",
       "text": "",
-      "placeholder": "请选择选项",
+      "placeholder": "localized text",
       "ariaLabel": "",
       "role": "",
       "type": "",
@@ -32,7 +32,7 @@
     {
       "tag": "input",
       "text": "",
-      "placeholder": "手机号",
+      "placeholder": "localized text",
       "ariaLabel": "",
       "role": "",
       "type": "",
@@ -44,7 +44,7 @@
     {
       "tag": "input",
       "text": "",
-      "placeholder": "验证码",
+      "placeholder": "localized text",
       "ariaLabel": "",
       "role": "",
       "type": "",
@@ -56,7 +56,7 @@
     {
       "tag": "input",
       "text": "",
-      "placeholder": "邮箱",
+      "placeholder": "localized text",
       "ariaLabel": "",
       "role": "",
       "type": "text",
@@ -68,7 +68,7 @@
     {
       "tag": "input",
       "text": "",
-      "placeholder": "密码",
+      "placeholder": "localized text",
       "ariaLabel": "",
       "role": "",
       "type": "password",

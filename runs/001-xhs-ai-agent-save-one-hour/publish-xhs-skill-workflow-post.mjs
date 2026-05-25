@@ -31,10 +31,10 @@ async function pageState() {
       url: location.href,
       title: document.title,
       bodyTextSample: bodyText.slice(0, 2000),
-      hasLoginText: bodyText.includes('短信登录') || bodyText.includes('登 录'),
-      hasPublishPageText: bodyText.includes('上传图文') || bodyText.includes('发布') || bodyText.includes('拖拽图片'),
-      hasSuccessText: bodyText.includes('发布成功') || bodyText.includes('发布完成') || bodyText.includes('审核中'),
-      hasFailureText: bodyText.includes('发布失败') || bodyText.includes('失败') || bodyText.includes('错误'),
+      hasLoginText: bodyText.includes('localized text') || bodyText.includes('localized text localized text'),
+      hasPublishPageText: bodyText.includes('localized text') || bodyText.includes('localized text') || bodyText.includes('localized text'),
+      hasSuccessText: bodyText.includes('localized text') || bodyText.includes('localized text') || bodyText.includes('localized text'),
+      hasFailureText: bodyText.includes('localized text') || bodyText.includes('localized text') || bodyText.includes('localized text'),
     };
   });
 }
@@ -44,7 +44,7 @@ async function openPublishPage() {
   await sleep(6_000);
   const state = await pageState();
   if (state.hasLoginText || state.url.includes('/login')) {
-    throw new Error(`创作者平台登录态失效: ${state.url}`);
+    throw new Error(`localized text: ${state.url}`);
   }
 }
 
@@ -54,7 +54,7 @@ async function uploadMedia() {
     const candidates = await page.$$('div, button, [role="button"]');
     for (const candidate of candidates) {
       const text = await candidate.evaluate((el) => (el.textContent || '').trim()).catch(() => '');
-      if (text.includes('上传') || text.includes('拖拽')) {
+      if (text.includes('localized text') || text.includes('localized text')) {
         await candidate.click().catch(() => {});
         await sleep(1_000);
         fileInput = await page.$('input[type="file"]');
@@ -62,7 +62,7 @@ async function uploadMedia() {
       }
     }
   }
-  if (!fileInput) throw new Error('找不到图片上传 input[type=file]');
+  if (!fileInput) throw new Error('localized text input[type=file]');
 
   await fileInput.uploadFile(...pkg.media_paths);
   await page.evaluate((el) => el.dispatchEvent(new Event('change', { bubbles: true })), fileInput);
@@ -71,8 +71,8 @@ async function uploadMedia() {
 
 async function fillTitle() {
   const selectors = [
-    'input[placeholder*="标题"]',
-    'input[placeholder*="填写标题"]',
+    'input[placeholder*="localized text"]',
+    'input[placeholder*="localized text"]',
     'input[class*="title"]',
     'input[type="text"]',
   ];
@@ -88,7 +88,7 @@ async function fillTitle() {
       return;
     }
   }
-  throw new Error('找不到标题输入框');
+  throw new Error('localized text');
 }
 
 async function fillContent() {
@@ -96,7 +96,7 @@ async function fillContent() {
     'div[contenteditable="true"][role="textbox"]',
     '.tiptap.ProseMirror',
     'div[contenteditable="true"]',
-    'textarea[placeholder*="正文"]',
+    'textarea[placeholder*="localized text"]',
     'textarea',
     '[role="textbox"]',
   ];
@@ -111,7 +111,7 @@ async function fillContent() {
       return;
     }
   }
-  throw new Error('找不到正文输入框');
+  throw new Error('localized text');
 }
 
 async function findPublishTarget() {
@@ -127,7 +127,7 @@ async function findPublishTarget() {
         };
       })
       .filter((item) =>
-        item.text === '发布' &&
+        item.text === 'localized text' &&
         !item.disabled &&
         item.rect.width >= 40 &&
         item.rect.height >= 25 &&
@@ -150,7 +150,7 @@ async function findPublishTarget() {
         h: rect.height,
       };
     }).catch(() => null);
-    if (meta && meta.text.includes('发布') && meta.y > 500 && meta.w > 40 && meta.h > 25) return custom;
+    if (meta && meta.text.includes('localized text') && meta.y > 500 && meta.w > 40 && meta.h > 25) return custom;
   }
 
   const candidates = await page.$$('button, [role="button"], div, span');
@@ -165,7 +165,7 @@ async function findPublishTarget() {
       };
     }).catch(() => null);
     if (!meta || meta.disabled || meta.width <= 0 || meta.height <= 0) continue;
-    if ((meta.text === '发布' || meta.text === '发布笔记' || meta.text.includes('发布')) && meta.text.length <= 20) {
+    if ((meta.text === 'localized text' || meta.text === 'localized text' || meta.text.includes('localized text')) && meta.text.length <= 20) {
       return candidate;
     }
   }
@@ -174,7 +174,7 @@ async function findPublishTarget() {
 
 async function clickPublish() {
   const target = await findPublishTarget();
-  if (!target) throw new Error('找不到发布按钮');
+  if (!target) throw new Error('localized text');
 
   await page.evaluate((el) => {
     if (el && typeof el.scrollIntoView === 'function') {

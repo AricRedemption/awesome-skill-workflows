@@ -2,13 +2,13 @@
   "run_id": "002-xhs-meeting-notes-productivity",
   "step": "Step 10",
   "objective": "Prove the workflow knowledge base can be retrieved and reused for a second similar Xiaohongshu AI productivity content task.",
-  "account_direction": "AI 工具 / 效率提升",
+  "account_direction": "AI localized text / localized text",
   "target_users": [
-    "普通职场人",
-    "经常开会的一线员工",
-    "需要整理会议纪要的小团队负责人"
+    "localized text",
+    "localized text",
+    "localized text"
   ],
-  "topic": "普通职场人如何用 AI 自动整理会议纪要并减少加班",
+  "topic": "localized text AI localized text",
   "platform": "xiaohongshu",
   "publish_mode": "content_package_only",
   "required_kb_query_first": true,

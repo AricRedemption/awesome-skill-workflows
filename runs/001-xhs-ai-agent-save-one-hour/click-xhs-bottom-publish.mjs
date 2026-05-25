@@ -38,14 +38,14 @@ async function getState() {
           disabled: el.hasAttribute('disabled') || el.getAttribute('aria-disabled') === 'true',
         };
       })
-      .filter((item) => item.visible && item.text && item.text.includes('发布'))
+      .filter((item) => item.visible && item.text && item.text.includes('localized text'))
       .slice(0, 80);
     return {
       url: location.href,
       title: document.title,
       bodyTextSample: bodyText.slice(0, 1200),
-      hasSuccessText: bodyText.includes('发布成功') || bodyText.includes('审核中') || bodyText.includes('发布完成'),
-      hasLoginText: bodyText.includes('短信登录') || bodyText.includes('登 录'),
+      hasSuccessText: bodyText.includes('localized text') || bodyText.includes('localized text') || bodyText.includes('localized text'),
+      hasLoginText: bodyText.includes('localized text') || bodyText.includes('localized text localized text'),
       buttons,
     };
   });
@@ -56,7 +56,7 @@ await sleep(8_000);
 
 let state = await getState();
 if (state.hasLoginText || state.url.includes('/login')) {
-  throw new Error(`创作者平台登录态失效: ${state.url}`);
+  throw new Error(`localized text: ${state.url}`);
 }
 
 const target = await page.evaluateHandle(() => {
@@ -71,7 +71,7 @@ const target = await page.evaluateHandle(() => {
       };
     })
     .filter((item) =>
-      item.text === '发布' &&
+      item.text === 'localized text' &&
       !item.disabled &&
       item.rect.width > 40 &&
       item.rect.height > 25 &&
@@ -86,12 +86,12 @@ if (!targetElement) {
   await page.screenshot({ path: screenshotPath, fullPage: true });
   await fs.writeFile(resultPath, JSON.stringify({
     status: 'failed',
-    error: '找不到底部发布按钮',
+    error: 'localized text',
     state,
     screenshotPath,
     checkedAt: new Date().toISOString(),
   }, null, 2));
-  throw new Error('找不到底部发布按钮');
+  throw new Error('localized text');
 }
 
 await page.evaluate((el) => {

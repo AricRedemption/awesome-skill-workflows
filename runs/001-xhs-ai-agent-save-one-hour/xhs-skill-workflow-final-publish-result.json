@@ -1,15 +1,15 @@
 {
   "status": "failed",
-  "error": "找不到底部发布按钮",
+  "error": "localized text",
   "state": {
     "url": "https://creator.xiaohongshu.com/publish/publish?source=official&from=menu&target=image",
-    "title": "小红书创作服务平台",
-    "bodyTextSample": "遇到问题\n创作服务平台\n沐光\n发布笔记\n首页\n笔记管理\n数据看板\n活动中心\n笔记灵感\n创作学院\n创作百科\n收起侧边栏\n上传视频\n上传视频\n上传图文\n上传图文\n上传图文\n写长文\n写长文\n发播客\n发播客\n草稿箱(2)\n\n上传图片，或写文字生成图片\n\n上传图片\n文字配图\n\n图片大小\n\n支持上传的图片大小，\n\n最大32MB的图片文件\n\n图片格式\n\n支持上传的图片格式，\n\n推荐使用png、jpg、jpeg、webp，不支持gif、live及其转化后的图片\n\n图片分辨率\n\n不限制宽高比例，推荐上传3:4至2:1之间、分辨率不低于720*960的照片，\n\n超过1280P的图片用网页端上传画质更清晰",
+    "title": "localized text",
+    "bodyTextSample": "localized text\nlocalized text\nlocalized text\nlocalized text\nlocalized text\nlocalized text\nlocalized text\nlocalized text\nlocalized text\nlocalized text\nlocalized text\nlocalized text\nlocalized text\nlocalized text\nlocalized text\nlocalized text\nlocalized text\nlocalized text\nlocalized text\nlocalized text\nlocalized text\nlocalized text(2)\n\nlocalized text,localized text\n\nlocalized text\nlocalized text\n\nlocalized text\n\nlocalized text,\n\nlocalized text32MBlocalized text\n\nlocalized text\n\nlocalized text,\n\nlocalized textpng,jpg,jpeg,webp,localized textgif,livelocalized text\n\nlocalized text\n\nlocalized text,localized text3:4localized text2:1localized text,localized text720*960localized text,\n\nlocalized text1280Plocalized text",
     "hasSuccessText": false,
     "hasLoginText": false,
     "buttons": [
       {
-        "text": "遇到问题创作服务平台沐光 退出登录 发布笔记首页 笔记管理 数据看板账号概览内容分析粉丝数据活动中心 笔记灵感 创作学院 创作百科 收起侧边栏上传视频上传视频上传图文上传图文上传图文写长文写长文发播客发播客草稿箱(2)上传图片，或写文字生成图片上传图片文字配图图片大小支持上传的图片大小，最大32MB的图片文件图片格式支持上传的图片格式，推荐使用png、jpg、jpeg、webp，不支持gif、live及其转化后的图片 图片分辨率不限制宽高比例，推荐上传3:4至2:1之间、分辨率不低于720*960的照片，超过1280P的图片用网页端上传画质更清晰",
+        "text": "localized text localized text localized text localized text localized text localized text localized text localized text localized text(2)localized text,localized text,localized text32MBlocalized text,localized textpng,jpg,jpeg,webp,localized textgif,livelocalized text localized text,localized text3:4localized text2:1localized text,localized text720*960localized text,localized text1280Plocalized text",
         "tag": "div",
         "className": "",
         "x": 0,
@@ -20,7 +20,7 @@
         "disabled": false
       },
       {
-        "text": "遇到问题创作服务平台沐光 退出登录 发布笔记首页 笔记管理 数据看板账号概览内容分析粉丝数据活动中心 笔记灵感 创作学院 创作百科 收起侧边栏上传视频上传视频上传图文上传图文上传图文写长文写长文发播客发播客草稿箱(2)上传图片，或写文字生成图片上传图片文字配图图片大小支持上传的图片大小，最大32MB的图片文件图片格式支持上传的图片格式，推荐使用png、jpg、jpeg、webp，不支持gif、live及其转化后的图片 图片分辨率不限制宽高比例，推荐上传3:4至2:1之间、分辨率不低于720*960的照片，超过1280P的图片用网页端上传画质更清晰",
+        "text": "localized text localized text localized text localized text localized text localized text localized text localized text localized text(2)localized text,localized text,localized text32MBlocalized text,localized textpng,jpg,jpeg,webp,localized textgif,livelocalized text localized text,localized text3:4localized text2:1localized text,localized text720*960localized text,localized text1280Plocalized text",
         "tag": "div",
         "className": "",
         "x": 0,
@@ -31,7 +31,7 @@
         "disabled": false
       },
       {
-        "text": "创作服务平台沐光 退出登录 发布笔记首页 笔记管理 数据看板账号概览内容分析粉丝数据活动中心 笔记灵感 创作学院 创作百科 收起侧边栏上传视频上传视频上传图文上传图文上传图文写长文写长文发播客发播客草稿箱(2)上传图片，或写文字生成图片上传图片文字配图图片大小支持上传的图片大小，最大32MB的图片文件图片格式支持上传的图片格式，推荐使用png、jpg、jpeg、webp，不支持gif、live及其转化后的图片 图片分辨率不限制宽高比例，推荐上传3:4至2:1之间、分辨率不低于720*960的照片，超过1280P的图片用网页端上传画质更清晰",
+        "text": "localized text localized text localized text localized text localized text localized text localized text localized text localized text(2)localized text,localized text,localized text32MBlocalized text,localized textpng,jpg,jpeg,webp,localized textgif,livelocalized text localized text,localized text3:4localized text2:1localized text,localized text720*960localized text,localized text1280Plocalized text",
         "tag": "div",
         "className": "",
         "x": 0,
@@ -42,7 +42,7 @@
         "disabled": false
       },
       {
-        "text": "创作服务平台沐光 退出登录 发布笔记首页 笔记管理 数据看板账号概览内容分析粉丝数据活动中心 笔记灵感 创作学院 创作百科 收起侧边栏上传视频上传视频上传图文上传图文上传图文写长文写长文发播客发播客草稿箱(2)上传图片，或写文字生成图片上传图片文字配图图片大小支持上传的图片大小，最大32MB的图片文件图片格式支持上传的图片格式，推荐使用png、jpg、jpeg、webp，不支持gif、live及其转化后的图片 图片分辨率不限制宽高比例，推荐上传3:4至2:1之间、分辨率不低于720*960的照片，超过1280P的图片用网页端上传画质更清晰",
+        "text": "localized text localized text localized text localized text localized text localized text localized text localized text localized text(2)localized text,localized text,localized text32MBlocalized text,localized textpng,jpg,jpeg,webp,localized textgif,livelocalized text localized text,localized text3:4localized text2:1localized text,localized text720*960localized text,localized text1280Plocalized text",
         "tag": "div",
         "className": "main-page-container",
         "x": 0,
@@ -53,7 +53,7 @@
         "disabled": false
       },
       {
-        "text": "发布笔记首页 笔记管理 数据看板账号概览内容分析粉丝数据活动中心 笔记灵感 创作学院 创作百科 收起侧边栏上传视频上传视频上传图文上传图文上传图文写长文写长文发播客发播客草稿箱(2)上传图片，或写文字生成图片上传图片文字配图图片大小支持上传的图片大小，最大32MB的图片文件图片格式支持上传的图片格式，推荐使用png、jpg、jpeg、webp，不支持gif、live及其转化后的图片 图片分辨率不限制宽高比例，推荐上传3:4至2:1之间、分辨率不低于720*960的照片，超过1280P的图片用网页端上传画质更清晰",
+        "text": "localized text localized text localized text localized text localized text localized text localized text(2)localized text,localized text,localized text32MBlocalized text,localized textpng,jpg,jpeg,webp,localized textgif,livelocalized text localized text,localized text3:4localized text2:1localized text,localized text720*960localized text,localized text1280Plocalized text",
         "tag": "div",
         "className": "",
         "x": 0,
@@ -64,7 +64,7 @@
         "disabled": false
       },
       {
-        "text": "发布笔记首页 笔记管理 数据看板账号概览内容分析粉丝数据活动中心 笔记灵感 创作学院 创作百科 收起侧边栏",
+        "text": "localized text localized text localized text localized text localized text localized text localized text",
         "tag": "div",
         "className": "menu-container menu-panel",
         "x": 0,
@@ -75,7 +75,7 @@
         "disabled": false
       },
       {
-        "text": "发布笔记首页 笔记管理 数据看板账号概览内容分析粉丝数据活动中心 笔记灵感 创作学院 创作百科 收起侧边栏",
+        "text": "localized text localized text localized text localized text localized text localized text localized text",
         "tag": "div",
         "className": "list",
         "x": 0,
@@ -86,7 +86,7 @@
         "disabled": false
       },
       {
-        "text": "发布笔记",
+        "text": "localized text",
         "tag": "div",
         "className": "publish-video",
         "x": 0,
@@ -97,7 +97,7 @@
         "disabled": false
       },
       {
-        "text": "发布笔记",
+        "text": "localized text",
         "tag": "div",
         "className": "btn-wrapper",
         "x": 24,
@@ -108,7 +108,7 @@
         "disabled": false
       },
       {
-        "text": "发布笔记",
+        "text": "localized text",
         "tag": "div",
         "className": "btn-inner",
         "x": 52,
@@ -119,7 +119,7 @@
         "disabled": false
       },
       {
-        "text": "发布笔记",
+        "text": "localized text",
         "tag": "span",
         "className": "btn-text",
         "x": 80,

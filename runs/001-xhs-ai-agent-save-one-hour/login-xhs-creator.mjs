@@ -22,7 +22,7 @@ await page.goto(publishUrl, { waitUntil: 'domcontentloaded', timeout: 90_000 });
 
 console.log(JSON.stringify({
   status: 'waiting_for_creator_login',
-  instruction: '请在打开的浏览器里完成小红书创作服务平台登录。脚本会等待进入发布页。',
+  instruction: 'localized text.localized text.',
   target: publishUrl,
 }, null, 2));
 
@@ -36,8 +36,8 @@ while (Date.now() < deadline) {
     return {
       url: location.href,
       title: document.title,
-      hasLoginText: bodyText.includes('短信登录') || bodyText.includes('登 录'),
-      hasPublishText: bodyText.includes('上传图文') || bodyText.includes('发布') || bodyText.includes('拖拽图片'),
+      hasLoginText: bodyText.includes('localized text') || bodyText.includes('localized text localized text'),
+      hasPublishText: bodyText.includes('localized text') || bodyText.includes('localized text') || bodyText.includes('localized text'),
       bodyTextSample: bodyText.slice(0, 500),
     };
   }).catch((error) => ({ error: String(error), url: page.url() }));

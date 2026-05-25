@@ -25,7 +25,7 @@ Each run must produce a publish proof that separates the platform fact from the 
   "post_id": "6a139f0d0000000037035783",
   "post_url": "https://www.xiaohongshu.com/explore/6a139f0d0000000037035783",
   "published_at": "2026-05-25T09:00:07+08:00",
-  "title": "别再囤Skill了",
+  "title": "Do not hoard skills",
   "human_review_passed": false,
   "risk_check_passed": false,
   "evidence": {

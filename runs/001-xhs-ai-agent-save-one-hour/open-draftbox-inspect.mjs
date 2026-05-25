@@ -37,10 +37,10 @@ const state = await page.evaluate(() => {
         h: Math.round(rect.height),
       };
     }).filter((e) => e.w > 0 && e.h > 0 && (
-      e.text.includes('别再囤') ||
-      e.text.includes('草稿') ||
-      e.text.includes('编辑') ||
-      e.text.includes('发布')
+      e.text.includes('localized text') ||
+      e.text.includes('localized text') ||
+      e.text.includes('localized text') ||
+      e.text.includes('localized text')
     )).slice(0, 120),
   };
 });

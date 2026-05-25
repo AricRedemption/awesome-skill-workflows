@@ -34,7 +34,7 @@ async function state() {
         h: Math.round(rect.height),
         visible: rect.width > 0 && rect.height > 0,
       };
-    }).filter((x) => x.visible && (x.text.includes('草稿') || x.text === '发布'));
+    }).filter((x) => x.visible && (x.text.includes('localized text') || x.text === 'localized text'));
     return { url: location.href, bodyTextSample: bodyText.slice(0, 1000), items };
   });
 }
@@ -43,11 +43,11 @@ async function state() {
 const draftTarget = await page.evaluateHandle(() => {
   const candidates = Array.from(document.querySelectorAll('*'))
     .map((el) => ({ el, text: (el.textContent || '').trim(), rect: el.getBoundingClientRect() }))
-    .filter((x) => x.text.includes('草稿箱') && x.rect.width > 0 && x.rect.height > 0)
+    .filter((x) => x.text.includes('localized text') && x.rect.width > 0 && x.rect.height > 0)
     .sort((a, b) => (b.rect.width * b.rect.height) - (a.rect.width * a.rect.height));
   return candidates[0]?.el || null;
 });
-if (!draftTarget.asElement()) throw new Error('找不到草稿箱入口');
+if (!draftTarget.asElement()) throw new Error('localized text');
 await draftTarget.asElement().click();
 await sleep(5_000);
 
@@ -58,15 +58,15 @@ const draftCard = await page.evaluateHandle(() => {
     .filter((x) =>
       x.rect.width > 80 &&
       x.rect.height > 40 &&
-      (x.text.includes('别再囤Skill了') || x.text.includes('刚刚') || x.text.includes('编辑于'))
+      (x.text.includes('localized textSkilllocalized text') || x.text.includes('localized text') || x.text.includes('localized text'))
     )
     .sort((a, b) => a.rect.top - b.rect.top || a.rect.left - b.rect.left);
   return candidates[0]?.el || null;
 });
 if (!draftCard.asElement()) {
   await page.screenshot({ path: screenshotPath, fullPage: true });
-  await fs.writeFile(resultPath, JSON.stringify({ status: 'failed', error: '找不到最新草稿卡片', state: await state(), screenshotPath }, null, 2));
-  throw new Error('找不到最新草稿卡片');
+  await fs.writeFile(resultPath, JSON.stringify({ status: 'failed', error: 'localized text', state: await state(), screenshotPath }, null, 2));
+  throw new Error('localized text');
 }
 await draftCard.asElement().click();
 await sleep(8_000);
@@ -84,7 +84,7 @@ while (Date.now() - started < 180_000) {
     return {
       url: location.href,
       bodyTextSample: bodyText.slice(0, 1400),
-      hasSuccessText: bodyText.includes('发布成功') || bodyText.includes('审核中') || bodyText.includes('发布完成'),
+      hasSuccessText: bodyText.includes('localized text') || bodyText.includes('localized text') || bodyText.includes('localized text'),
       stillOnPublishPage: location.href.includes('/publish/publish'),
     };
   });

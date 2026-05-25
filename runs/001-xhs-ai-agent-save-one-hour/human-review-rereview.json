@@ -4,7 +4,7 @@
   "review_status": "post_publish_review_not_gate_approval",
   "reviewed_at": "2026-05-25",
   "review_scope": "step_7_self_evolution_repair_and_publish_flow",
-  "summary": "复审确认 Step 7 self-evolution 修复可作为失败证据保留，账号登录/授权前置缺口已沉淀；但该复审引用了发布结果，不能作为发布前 human review gate approval。",
+  "summary": "localized text Step 7 self-evolution localized text,localized text/localized text;localized text,localized text human review gate approval.",
   "approval_scope": {
     "content_generation": "pass",
     "quality_scoring": "pass",

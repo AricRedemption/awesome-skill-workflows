@@ -1,24 +1,24 @@
-# Evolution Note: Login-First Publishing Gap
+# Evolution Note: Account-State Precheck Gap
 
-## Run
-- `runs/001-xhs-ai-agent-save-one-hour`
-- Scenario: `小红书创作者 v0.1`
-- Topic: `普通人如何用 AI Agent 每天省 1 小时`
+## Context
 
-## Human Review Feedback
-- 这次内容生成里对小红书发帖的账号登录前置条件考虑不够靠前，容易让发布建议看起来默认账号已经可用。
+- Scenario: `xiaohongshu-creator v0.1`
+- Topic: `How ordinary users can save one hour per day with AI agents`
+- Run: `runs/001-xhs-ai-agent-save-one-hour`
 
-## Failure Case
-- 发布建议虽然提到了登录，但没有把“先登录账号 / 完成授权 / 再保存草稿或发布”作为明确前置门槛。
+## Problem
 
-## Improvement Candidate
-- 在内容生成链路中增加 `account-state-check` 前置检查，并把它作为独立步骤而不是发布建议附注。
-- 在 `publish建议` 和 `风险提示` 中显式区分：
-  - 未登录
-  - 已登录但未授权
-  - 可保存草稿
-  - 可进入发布
+The first workflow treated account login and authorization as a late publishing note instead of a hard pre-handoff gate. That ordering could make draft or publish advice look safe before the platform account was proven ready.
 
-## Reusable Pattern
-- 任何涉及平台发布的内容包，都应先输出账号状态前提，再输出内容建议。
-- 发布建议不能默认“已登录”，必须显式写出账号门槛。
+## Change
+
+- Add `account-state-check` before platform handoff.
+- Require the workflow to record:
+  - login status,
+  - authorization status,
+  - selected account context,
+  - approved handoff mode.
+
+## Reuse Rule
+
+Any workflow that hands content to an account-bound platform must check account state before draft or publish actions. If the account is not ready, halt the workflow and record failure evidence.

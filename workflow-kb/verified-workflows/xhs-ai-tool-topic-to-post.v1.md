@@ -30,7 +30,7 @@ This workflow is verified for compliant draft save. It does not claim live publi
 - Account-state check passed before draft action.
 - `human_review_then_draft` stayed draft-only.
 - `clicked_publish` is `false`.
-- Draft box evidence contains `AI Agent每天省1小时 保存于2026-05-25 14:15:36`.
+- Draft box evidence contains `AI Agent saves one hour per day, saved at 2026-05-25 14:15:36`.
 
 ## Evidence
 

@@ -1,72 +1,82 @@
 # Xiaohongshu Creator Scoring Rubric
 
 ## Purpose
-用于评估 `普通人如何用 AI Agent 每天省 1 小时` 这类小红书内容是否适合进入 human review 和 draft/publish 流程。
+
+This rubric evaluates whether an AI-tools productivity note is ready for human review and draft or publish handoff in the Xiaohongshu creator validation scenario.
 
 ## Total
-- 总分 100
-- 发布门槛：
+
+- Maximum score: 100
+- Promotion thresholds:
   - `total_score >= 80`
   - `compliance_score >= 90`
   - `xhs_style_fit >= 75`
-  - 必须通过 human review
+  - human review must pass before any draft or publish handoff
 
 ## Dimensions
 
-### 1. 选题吸引力：15
-- 13-15：话题贴近高频需求，能立刻看懂收益。
-- 9-12：方向正确，但吸引力普通。
-- 0-8：题目泛、空、缺少实际使用场景。
+### 1. Topic Attraction: 15
 
-### 2. 用户痛点明确度：15
-- 13-15：明确指出职场人、创作者、小团队最常见的时间损耗点。
-- 9-12：有痛点，但不够具体。
-- 0-8：只有概念，没有可感知问题。
+- 13-15: The topic is concrete, useful, and immediately understandable.
+- 9-12: The topic is useful but the promise is too broad or generic.
+- 0-8: The topic is vague, low-value, or hard to act on.
 
-### 3. 标题/封面点击感：15
-- 13-15：标题和封面形成强钩子，收益清晰，具有人味和即时性。
-- 9-12：可读，但不够抓眼。
-- 0-8：标题平淡，封面缺少点击动力。
+### 2. Audience Pain Point Clarity: 15
 
-### 4. 小红书语感：15
-- 13-15：口语化、生活化、像真实创作者写的笔记。
-- 9-12：基本自然，但略像通稿。
-- 0-8：过于书面、抽象或工具化。
+- 13-15: The note names a clear audience and a specific recurring pain.
+- 9-12: The audience is visible but the pain point needs sharper framing.
+- 0-8: The content does not clearly explain who it helps.
 
-### 5. 正文结构：10
-- 9-10：有清晰分层，读起来顺。
-- 6-8：结构可用，但层次不够稳定。
-- 0-5：内容散乱，缺少阅读路径。
+### 3. Title And Cover Fit: 15
 
-### 6. 收藏价值：10
-- 9-10：有可复用方法、步骤、模板或清单。
-- 6-8：有一点实用性，但不够可抄。
-- 0-5：主要是观点，没有可保存价值。
+- 13-15: Title and cover copy are specific, credible, and clickable.
+- 9-12: They are understandable but not especially memorable.
+- 0-8: They are vague, exaggerated, or disconnected from the body.
 
-### 7. 标签适配：5
-- 5：标签与 AI 工具、效率提升、职场场景一致。
-- 3-4：基本相关，但不够精准。
-- 0-2：标签跑偏或缺失。
+### 4. Platform Voice: 15
 
-### 8. 互动引导：5
-- 5：评论问题明确，能促成真实互动。
-- 3-4：有引导，但不够自然。
-- 0-2：没有互动入口。
+- 13-15: The writing feels practical, direct, low-hype, and save-worthy.
+- 9-12: The tone is mostly appropriate but still generic.
+- 0-8: The tone feels like generic AI copy or over-promises results.
 
-### 9. 合规风险：10
-- 9-10：不夸大效果，不承诺确定收益，不涉及隐私和违规自动化。
-- 6-8：轻微夸张，但可修正。
-- 0-5：明显高风险、误导或不合规。
+### 5. Body Structure: 10
+
+- 9-10: The structure is easy to scan and the steps are clear.
+- 6-8: The structure is usable but needs tighter ordering.
+- 0-5: The body is hard to follow.
+
+### 6. Save Value: 10
+
+- 9-10: The note includes a reusable checklist, template, or workflow.
+- 6-8: The note has useful ideas but limited copyable value.
+- 0-5: The note gives advice without reusable artifacts.
+
+### 7. Hashtags: 5
+
+- 5: Tags match the topic, audience, and platform context.
+- 3-4: Tags are mostly relevant but incomplete.
+- 0-2: Tags are generic or misleading.
+
+### 8. Engagement Hook: 5
+
+- 5: The hook invites a concrete, low-friction reply.
+- 3-4: The hook is usable but not specific.
+- 0-2: The hook is absent or spammy.
+
+### 9. Compliance And Risk: 10
+
+- 9-10: No exaggerated claims, automation abuse, privacy risk, or unsafe account action.
+- 6-8: Minor wording needs review.
+- 0-5: The content requires revision before review or handoff.
 
 ## Scoring Rules
-- 每个维度先给分，再判断是否达到发布门槛。
-- 任何高风险夸大、隐私泄露、违规自动化暗示，直接拉低合规分。
-- 评分应优先看“能否被人审通过”，而不是只看文案好不好看。
+
+- A high content score does not replace human review.
+- Compliance, account state, and platform handoff gates remain separate.
+- Failed publish proof cannot be promoted as verified publication.
 
 ## Human Review Notes
-- 标题是否过度承诺。
-- 封面是否和正文一致。
-- 正文是否包含可验证、可复用的信息。
-- 是否存在“全自动”“稳赚”“零风险”之类表述。
-- 是否需要在发布前改成更保守的 draft 版本。
 
+- Review the exact content artifact that will be handed off.
+- Record the approved mode: package only, draft only, or publish.
+- Block handoff if approval, risk, or account-state evidence is missing.

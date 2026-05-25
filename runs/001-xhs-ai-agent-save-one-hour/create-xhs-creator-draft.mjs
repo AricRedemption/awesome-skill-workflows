@@ -48,7 +48,7 @@ async function summarizePage() {
       buttons: Array.from(document.querySelectorAll('button, [role="button"], xhs-publish-btn')).map(summarize),
       inputs: Array.from(document.querySelectorAll('input, textarea, [contenteditable="true"]')).map(summarize),
       fileInputCount: document.querySelectorAll('input[type="file"]').length,
-      hasLoginText: bodyText.includes('短信登录') || bodyText.includes('登 录'),
+      hasLoginText: bodyText.includes('localized text') || bodyText.includes('localized text localized text'),
     };
   });
 }
@@ -59,7 +59,7 @@ async function clickImageTabIfNeeded() {
   const tabs = await page.$$('div, span, button, [role="tab"]');
   for (const tab of tabs) {
     const text = await tab.evaluate((el) => (el.textContent || '').trim()).catch(() => '');
-    if (text.includes('上传图文') || text === '图文') {
+    if (text.includes('localized text') || text === 'localized text') {
       const visible = await tab.isIntersectingViewport().catch(() => false);
       if (visible) {
         await tab.click().catch(() => {});
@@ -76,7 +76,7 @@ async function uploadMedia() {
     const uploadCandidates = await page.$$('div, button, [role="button"]');
     for (const candidate of uploadCandidates) {
       const text = await candidate.evaluate((el) => (el.textContent || '').trim()).catch(() => '');
-      if (text.includes('上传') || text.includes('拖拽')) {
+      if (text.includes('localized text') || text.includes('localized text')) {
         await candidate.click().catch(() => {});
         await sleep(1_000);
         fileInput = await page.$('input[type="file"]');
@@ -84,7 +84,7 @@ async function uploadMedia() {
       }
     }
   }
-  if (!fileInput) throw new Error('找不到图片上传 input[type=file]');
+  if (!fileInput) throw new Error('localized text input[type=file]');
 
   await fileInput.uploadFile(...pkg.media_paths);
   await page.evaluate((el) => el.dispatchEvent(new Event('change', { bubbles: true })), fileInput);
@@ -93,8 +93,8 @@ async function uploadMedia() {
 
 async function fillTitle() {
   const selectors = [
-    'input[placeholder*="标题"]',
-    'input[placeholder*="填写标题"]',
+    'input[placeholder*="localized text"]',
+    'input[placeholder*="localized text"]',
     'input[class*="title"]',
     'input[type="text"]',
   ];
@@ -110,7 +110,7 @@ async function fillTitle() {
       return;
     }
   }
-  throw new Error('找不到标题输入框');
+  throw new Error('localized text');
 }
 
 async function fillContent() {
@@ -118,7 +118,7 @@ async function fillContent() {
     'div[contenteditable="true"][role="textbox"]',
     '.tiptap.ProseMirror',
     'div[contenteditable="true"]',
-    'textarea[placeholder*="正文"]',
+    'textarea[placeholder*="localized text"]',
     'textarea',
     '[role="textbox"]',
   ];
@@ -133,7 +133,7 @@ async function fillContent() {
       return;
     }
   }
-  throw new Error('找不到正文输入框');
+  throw new Error('localized text');
 }
 
 async function findDraftButton() {
@@ -150,7 +150,7 @@ async function findDraftButton() {
         };
       })
       .filter((item) => item.visible && item.text && item.text.length <= 30)
-      .filter((item) => item.text.includes('草稿') || item.text.includes('暂存') || item.text.includes('保存'));
+      .filter((item) => item.text.includes('localized text') || item.text.includes('localized text') || item.text.includes('localized text'));
   });
 }
 
@@ -158,7 +158,7 @@ try {
   await clickImageTabIfNeeded();
   let state = await summarizePage();
   if (state.hasLoginText || state.url.includes('/login')) {
-    throw new Error(`创作者平台登录态失效: ${state.url}`);
+    throw new Error(`localized text: ${state.url}`);
   }
 
   await uploadMedia();
@@ -177,8 +177,8 @@ try {
     clickedPublish: false,
     savedDraft: false,
     reason: draftButtons.length
-      ? '页面已填充，检测到疑似草稿/保存按钮，但未点击发布。'
-      : '页面已填充，未检测到明确保存草稿按钮；停在发布前人工确认状态。',
+      ? 'localized text,localized text/localized text,localized text.'
+      : 'localized text,localized text;localized text.',
     url: finalState.url,
     title: pkg.title,
     mediaCount: pkg.media_paths.length,

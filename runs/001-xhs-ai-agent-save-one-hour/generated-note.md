@@ -1,116 +1,116 @@
-# 选题
-普通人如何用 AI Agent 每天省 1 小时
+# localized text
+localized text AI Agent localized text 1 localized text
 
-# 标题
-我把每天最烦的 6 件事交给 AI Agent，1 周后真的省出 1 小时
+# localized text
+localized text 6 localized text AI Agent,1 localized text 1 localized text
 
-# 封面文案
-每天省 1 小时，不靠加班
+# localized text
+localized text 1 localized text,localized text
 
-# 账号前置检查
-- 未登录：先登录小红书账号，再进入草稿或发布流程。
-- 已登录但未授权：先完成必要授权，再保存草稿或发布。
-- 已登录且可操作：再进入内容发布、草稿保存和评论区配置。
-- 这一步是前置门槛，不是发布建议的附注。
+# localized text
+- localized text:localized text,localized text.
+- localized text:localized text,localized text.
+- localized text:localized text,localized text.
+- localized text,localized text.
 
-# 正文
-先说结论：AI Agent 不是让你“变懒”，而是把重复、低价值、容易拖延的事情先接走。
+# localized text
+localized text:AI Agent localized text"localized text",localized text,localized text,localized text.
 
-我这周最明显的感受是，很多人不是不够努力，而是每天被这些小事切碎了时间：
+localized text,localized text,localized text:
 
-- 收集资料
-- 整理会议纪要
-- 回消息
-- 写初稿
-- 做待办清单
-- 反复改格式
+- localized text
+- localized text
+- localized text
+- localized text
+- localized text
+- localized text
 
-这些事单个看都不大，但加起来很吃时间。我的做法很简单：把它们拆成 3 类，再交给 AI Agent。
+localized text,localized text.localized text:localized text 3 localized text,localized text AI Agent.
 
-## 1. 先让 AI Agent 接“重复型任务”
+## 1. localized text AI Agent localized text"localized text"
 
-比如：
+localized text:
 
-- 每天固定整理邮件要点
-- 会后自动总结行动项
-- 把零散灵感整理成选题清单
-- 把杂乱素材整理成可发布草稿
+- localized text
+- localized text
+- localized text
+- localized text
 
-这类事情最适合交给 Agent，因为规则清楚、输出稳定、出错成本低。
+localized text Agent,localized text,localized text,localized text.
 
-## 2. 再让 AI Agent 接“半结构化任务”
+## 2. localized text AI Agent localized text"localized text"
 
-比如：
+localized text:
 
-- 根据一段访谈生成文章大纲
-- 根据产品卖点生成 3 个不同版本标题
-- 根据用户反馈提炼痛点
-- 根据一堆笔记整理成对外表达
+- localized text
+- localized text 3 localized text
+- localized text
+- localized text
 
-这类任务我不会直接让 AI 一步到位，而是先给它明确格式：
+localized text AI localized text,localized text:
 
-> 输入是什么  
-> 目标是什么  
-> 输出要长什么样  
-> 哪些内容不能写
+> localized text
+> localized text
+> localized text
+> localized text
 
-这样结果会稳定很多，也更适合人审。
+localized text,localized text.
 
-## 3. 最后让 AI Agent 接“容易卡住的起稿”
+## 3. localized text AI Agent localized text"localized text"
 
-很多人最耗时间的，不是修改，而是“第一版一直憋不出来”。
+localized text,localized text,localized text"localized text".
 
-我现在会让 AI 先出一个能看的底稿，再自己做判断：
+localized text AI localized text,localized text:
 
-- 哪些保留
-- 哪些删掉
-- 哪些要补证据
-- 哪些要换成更像人话的表达
+- localized text
+- localized text
+- localized text
+- localized text
 
-你会发现，真正省时间的不是让 AI 替你思考，而是让它先把 0 到 1 的阻力降下来。
+localized text,localized text AI localized text,localized text 0 localized text 1 localized text.
 
-# 标签
-#AI工具 #效率提升 #职场效率 #AIAgent #内容创作 #工作流 #自我提升
+# localized text
+#AIlocalized text #localized text #localized text #AIAgent #localized text #localized text #localized text
 
-## 我最推荐的 1 小时节省法
+## localized text 1 localized text
 
-如果你今天只想试一个动作，先从这 1 个场景开始：
+localized text,localized text 1 localized text:
 
-**把你每天重复做 3 次以上的事情，挑 1 个交给 AI Agent。**
+**localized text 3 localized text,localized text 1 localized text AI Agent.**
 
-不要一上来就想全自动化，先做一个最稳定、最容易复用的环节。
+localized text,localized text,localized text.
 
-我建议优先做这 3 类：
+localized text 3 localized text:
 
-1. 信息整理
-2. 文案起稿
-3. 会议/待办总结
+1. localized text
+2. localized text
+3. localized text/localized text
 
-做完一轮之后，你大概率就能感受到：
+localized text,localized text:
 
-- 每天少一点机械劳动
-- 思路更集中
-- 晚上不用靠硬扛补进度
+- localized text
+- localized text
+- localized text
 
-如果你是职场人、独立创作者，或者小团队创业者，这件事的价值尤其明显。
+localized text,localized text,localized text,localized text.
 
-因为你缺的通常不是能力，而是一个能把琐事往前推的“第二大脑”。
+localized text,localized text"localized text".
 
-## 评论区引导
-你现在最想交给 AI Agent 的，是哪一件重复工作？
+## localized text
+localized text AI Agent localized text,localized text?
 
-我可以按你的场景，帮你拆成一个可直接照抄的 Agent 任务模板。
+localized text,localized text Agent localized text.
 
-# 发布建议
-- 适合发在工作日早上 8:00-9:30，或者晚上 20:00-22:00。
-- 首图优先做强对比：`每天省 1 小时`、`不用加班也能多做一件事`。
-- 正文不要堆术语，重点写“具体省掉了什么时间”。
-- 如果要配图，建议 3 到 5 张，结构是：痛点页、方法页、模板页、总结页。
-- 人审时重点检查标题是否过度承诺，正文是否有夸大“全自动”“零成本”的表达。
+# localized text
+- localized text 8:00-9:30,localized text 20:00-22:00.
+- localized text:`localized text 1 localized text`,`localized text`.
+- localized text,localized text"localized text".
+- localized text,localized text 3 localized text 5 localized text,localized text:localized text,localized text,localized text,localized text.
+- localized text,localized text"localized text""localized text"localized text.
 
-# 风险提示
-- 不要写成“AI Agent 一键替你赚钱”这类夸张承诺。
-- 不要暗示无需人工判断，真实工作里仍然需要人审和复核。
-- 不要加入未经验证的具体效果数据，除非你自己有真实记录。
-- 不要涉及隐私信息、账号密码、客户敏感资料。
-- 如果发布前要保存草稿或正式发布，通常需要先登录对应账号并完成平台授权。
+# localized text
+- localized text"AI Agent localized text"localized text.
+- localized text,localized text.
+- localized text,localized text.
+- localized text,localized text,localized text.
+- localized text,localized text.

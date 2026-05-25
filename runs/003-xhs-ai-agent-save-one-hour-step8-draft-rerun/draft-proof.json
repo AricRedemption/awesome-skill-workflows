@@ -7,7 +7,7 @@
   "post_id": "N/A",
   "post_url": "N/A",
   "published_at": "N/A",
-  "title": "AI Agent每天省1小时",
+  "title": "AI Agentlocalized text1localized text",
   "human_review_passed": true,
   "risk_check_passed": true,
   "account_state_checked": true,
@@ -19,7 +19,7 @@
   "save_button": {
     "clicked": true,
     "method": "coordinate_fallback",
-    "text": "暂存离开",
+    "text": "localized text",
     "x": 602,
     "y": 955
   },
@@ -27,11 +27,11 @@
     "title_found_in_draftbox": true,
     "draftbox_visible": true,
     "url": "https://creator.xiaohongshu.com/publish/publish?source=official&from=menu&target=image",
-    "bodyTextSample": "遇到问题\n创作服务平台\n沐光\n发布笔记\n首页\n笔记管理\n数据看板\n活动中心\n笔记灵感\n创作学院\n创作百科\n收起侧边栏\n上传视频\n上传视频\n上传图文\n上传图文\n写长文\n写长文\n发播客\n发播客\n草稿箱(5)\n\n上传图片，或写文字生成图片\n\n上传图片\n文字配图\n\n图片大小\n\n支持上传的图片大小，\n\n最大32MB的图片文件\n\n图片格式\n\n支持上传的图片格式，\n\n推荐使用png、jpg、jpeg、webp，不支持gif、live及其转化后的图片\n\n图片分辨率\n\n不限制宽高比例，推荐上传3:4至2:1之间、分辨率不低于720*960的照片，\n\n超过1280P的图片用网页端上传画质更清晰\n\n草稿箱\n视频笔记(0)\n图文笔记(5)\n长文笔记(0)\n播客笔记(0)\n草稿存储于当前使用的浏览器本地，在清除浏览器数据时会被删除；图文笔记最多支持保存100篇草稿，超出后将默认删除最后一篇草稿，请及时发布。\nAI Agent每天省1小时\n保存于2026-05-25 14:15:36\n编辑\n删除\nAI Agent每天省1小时\n保存于2026-05-25 14:14:00\n编辑\n删除\n别再囤Skill了\n保存于2026-05-24 18:38:51\n编辑\n删除\n别再囤Skill了\n保存于2026-05-24 18:08:48\n编辑\n删除\nAI Agent每天省1小时\n保存于2026-05-24 17:31:24\n编辑\n删除",
+    "bodyTextSample": "localized text\nlocalized text\nlocalized text\nlocalized text\nlocalized text\nlocalized text\nlocalized text\nlocalized text\nlocalized text\nlocalized text\nlocalized text\nlocalized text\nlocalized text\nlocalized text\nlocalized text\nlocalized text\nlocalized text\nlocalized text\nlocalized text\nlocalized text\nlocalized text(5)\n\nlocalized text,localized text\n\nlocalized text\nlocalized text\n\nlocalized text\n\nlocalized text,\n\nlocalized text32MBlocalized text\n\nlocalized text\n\nlocalized text,\n\nlocalized textpng,jpg,jpeg,webp,localized textgif,livelocalized text\n\nlocalized text\n\nlocalized text,localized text3:4localized text2:1localized text,localized text720*960localized text,\n\nlocalized text1280Plocalized text\n\nlocalized text\nlocalized text(0)\nlocalized text(5)\nlocalized text(0)\nlocalized text(0)\nlocalized text,localized text;localized text100localized text,localized text,localized text.\nAI Agentlocalized text1localized text\nlocalized text2026-05-25 14:15:36\nlocalized text\nlocalized text\nAI Agentlocalized text1localized text\nlocalized text2026-05-25 14:14:00\nlocalized text\nlocalized text\nlocalized textSkilllocalized text\nlocalized text2026-05-24 18:38:51\nlocalized text\nlocalized text\nlocalized textSkilllocalized text\nlocalized text2026-05-24 18:08:48\nlocalized text\nlocalized text\nAI Agentlocalized text1localized text\nlocalized text2026-05-24 17:31:24\nlocalized text\nlocalized text",
     "draftRelated": [
       {
         "tag": "div",
-        "text": "遇到问题 创作服务平台 沐光 发布笔记 首页 笔记管理 数据看板 活动中心 笔记灵感 创作学院 创作百科 收起侧边栏 上传视频 上传视频 上传图文 上传图文 写长文 写长文 发播客 发播客 草稿箱(5) 上传图片，或写文字生成图片 上传图片",
+        "text": "localized text localized text localized text localized text localized text localized text localized text localized text localized text localized text localized text localized text localized text localized text localized text localized text localized text localized text localized text localized text localized text(5) localized text,localized text localized text",
         "placeholder": "",
         "role": "",
         "type": "",
@@ -43,7 +43,7 @@
       },
       {
         "tag": "div",
-        "text": "遇到问题 创作服务平台 沐光 发布笔记 首页 笔记管理 数据看板 活动中心 笔记灵感 创作学院 创作百科 收起侧边栏 上传视频 上传视频 上传图文 上传图文 写长文 写长文 发播客 发播客 草稿箱(5) 上传图片，或写文字生成图片 上传图片",
+        "text": "localized text localized text localized text localized text localized text localized text localized text localized text localized text localized text localized text localized text localized text localized text localized text localized text localized text localized text localized text localized text localized text(5) localized text,localized text localized text",
         "placeholder": "",
         "role": "",
         "type": "",
@@ -55,7 +55,7 @@
       },
       {
         "tag": "div",
-        "text": "创作服务平台 沐光 发布笔记 首页 笔记管理 数据看板 活动中心 笔记灵感 创作学院 创作百科 收起侧边栏 上传视频 上传视频 上传图文 上传图文 写长文 写长文 发播客 发播客 草稿箱(5) 上传图片，或写文字生成图片 上传图片 文字配图",
+        "text": "localized text localized text localized text localized text localized text localized text localized text localized text localized text localized text localized text localized text localized text localized text localized text localized text localized text localized text localized text localized text(5) localized text,localized text localized text localized text",
         "placeholder": "",
         "role": "",
         "type": "",
@@ -67,7 +67,7 @@
       },
       {
         "tag": "div",
-        "text": "创作服务平台 沐光 发布笔记 首页 笔记管理 数据看板 活动中心 笔记灵感 创作学院 创作百科 收起侧边栏 上传视频 上传视频 上传图文 上传图文 写长文 写长文 发播客 发播客 草稿箱(5) 上传图片，或写文字生成图片 上传图片 文字配图",
+        "text": "localized text localized text localized text localized text localized text localized text localized text localized text localized text localized text localized text localized text localized text localized text localized text localized text localized text localized text localized text localized text(5) localized text,localized text localized text localized text",
         "placeholder": "",
         "role": "",
         "type": "",
@@ -79,7 +79,7 @@
       },
       {
         "tag": "div",
-        "text": "发布笔记 首页 笔记管理 数据看板 活动中心 笔记灵感 创作学院 创作百科 收起侧边栏 上传视频 上传视频 上传图文 上传图文 写长文 写长文 发播客 发播客 草稿箱(5) 上传图片，或写文字生成图片 上传图片 文字配图 图片大小 支持上传",
+        "text": "localized text localized text localized text localized text localized text localized text localized text localized text localized text localized text localized text localized text localized text localized text localized text localized text localized text localized text(5) localized text,localized text localized text localized text localized text localized text",
         "placeholder": "",
         "role": "",
         "type": "",
@@ -91,7 +91,7 @@
       },
       {
         "tag": "div",
-        "text": "上传视频 上传视频 上传图文 上传图文 写长文 写长文 发播客 发播客 草稿箱(5) 上传图片，或写文字生成图片 上传图片 文字配图 图片大小 支持上传的图片大小， 最大32MB的图片文件 图片格式 支持上传的图片格式， 推荐使用png、j",
+        "text": "localized text localized text localized text localized text localized text localized text localized text localized text localized text(5) localized text,localized text localized text localized text localized text localized text, localized text32MBlocalized text localized text localized text, localized textpng,j",
         "placeholder": "",
         "role": "",
         "type": "",
@@ -103,7 +103,7 @@
       },
       {
         "tag": "div",
-        "text": "上传视频 上传视频 上传图文 上传图文 写长文 写长文 发播客 发播客 草稿箱(5) 上传图片，或写文字生成图片 上传图片 文字配图 图片大小 支持上传的图片大小， 最大32MB的图片文件 图片格式 支持上传的图片格式， 推荐使用png、j",
+        "text": "localized text localized text localized text localized text localized text localized text localized text localized text localized text(5) localized text,localized text localized text localized text localized text localized text, localized text32MBlocalized text localized text localized text, localized textpng,j",
         "placeholder": "",
         "role": "",
         "type": "",
@@ -115,7 +115,7 @@
       },
       {
         "tag": "div",
-        "text": "上传视频 上传视频 上传图文 上传图文 写长文 写长文 发播客 发播客 草稿箱(5) 上传图片，或写文字生成图片 上传图片 文字配图 图片大小 支持上传的图片大小， 最大32MB的图片文件 图片格式 支持上传的图片格式， 推荐使用png、j",
+        "text": "localized text localized text localized text localized text localized text localized text localized text localized text localized text(5) localized text,localized text localized text localized text localized text localized text, localized text32MBlocalized text localized text localized text, localized textpng,j",
         "placeholder": "",
         "role": "",
         "type": "",
@@ -127,7 +127,7 @@
       },
       {
         "tag": "div",
-        "text": "上传视频 上传视频 上传图文 上传图文 写长文 写长文 发播客 发播客 草稿箱(5) 上传图片，或写文字生成图片 上传图片 文字配图 图片大小 支持上传的图片大小， 最大32MB的图片文件 图片格式 支持上传的图片格式， 推荐使用png、j",
+        "text": "localized text localized text localized text localized text localized text localized text localized text localized text localized text(5) localized text,localized text localized text localized text localized text localized text, localized text32MBlocalized text localized text localized text, localized textpng,j",
         "placeholder": "",
         "role": "",
         "type": "",
@@ -139,7 +139,7 @@
       },
       {
         "tag": "div",
-        "text": "上传视频 上传视频 上传图文 上传图文 写长文 写长文 发播客 发播客 草稿箱(5) 上传图片，或写文字生成图片 上传图片 文字配图 图片大小 支持上传的图片大小， 最大32MB的图片文件 图片格式 支持上传的图片格式， 推荐使用png、j",
+        "text": "localized text localized text localized text localized text localized text localized text localized text localized text localized text(5) localized text,localized text localized text localized text localized text localized text, localized text32MBlocalized text localized text localized text, localized textpng,j",
         "placeholder": "",
         "role": "",
         "type": "",
@@ -151,7 +151,7 @@
       },
       {
         "tag": "div",
-        "text": "上传视频 上传视频 上传图文 上传图文 写长文 写长文 发播客 发播客 草稿箱(5) 上传图片，或写文字生成图片 上传图片 文字配图 图片大小 支持上传的图片大小， 最大32MB的图片文件 图片格式 支持上传的图片格式， 推荐使用png、j",
+        "text": "localized text localized text localized text localized text localized text localized text localized text localized text localized text(5) localized text,localized text localized text localized text localized text localized text, localized text32MBlocalized text localized text localized text, localized textpng,j",
         "placeholder": "",
         "role": "",
         "type": "",
@@ -163,7 +163,7 @@
       },
       {
         "tag": "div",
-        "text": "上传视频 上传视频 上传图文 上传图文 写长文 写长文 发播客 发播客 草稿箱(5) 上传图片，或写文字生成图片 上传图片 文字配图 图片大小 支持上传的图片大小， 最大32MB的图片文件 图片格式 支持上传的图片格式， 推荐使用png、j",
+        "text": "localized text localized text localized text localized text localized text localized text localized text localized text localized text(5) localized text,localized text localized text localized text localized text localized text, localized text32MBlocalized text localized text localized text, localized textpng,j",
         "placeholder": "",
         "role": "",
         "type": "",
@@ -175,7 +175,7 @@
       },
       {
         "tag": "div",
-        "text": "上传视频 上传视频 上传图文 上传图文 写长文 写长文 发播客 发播客 草稿箱(5)",
+        "text": "localized text localized text localized text localized text localized text localized text localized text localized text localized text(5)",
         "placeholder": "",
         "role": "",
         "type": "",
@@ -187,7 +187,7 @@
       },
       {
         "tag": "div",
-        "text": "草稿箱(5)",
+        "text": "localized text(5)",
         "placeholder": "",
         "role": "",
         "type": "",
@@ -199,7 +199,7 @@
       },
       {
         "tag": "div",
-        "text": "草稿箱(5)",
+        "text": "localized text(5)",
         "placeholder": "",
         "role": "",
         "type": "",
@@ -211,7 +211,7 @@
       },
       {
         "tag": "span",
-        "text": "草稿箱(5)",
+        "text": "localized text(5)",
         "placeholder": "",
         "role": "",
         "type": "",
@@ -223,7 +223,7 @@
       },
       {
         "tag": "div",
-        "text": "草稿箱 视频笔记(0) 图文笔记(5) 长文笔记(0) 播客笔记(0) 草稿存储于当前使用的浏览器本地，在清除浏览器数据时会被删除；图文笔记最多支持保存100篇草稿，超出后将默认删除最后一篇草稿，请及时发布。 AI Agent每天省1小时 ",
+        "text": "localized text localized text(0) localized text(5) localized text(0) localized text(0) localized text,localized text;localized text100localized text,localized text,localized text. AI Agentlocalized text1localized text ",
         "placeholder": "",
         "role": "",
         "type": "",
@@ -235,7 +235,7 @@
       },
       {
         "tag": "div",
-        "text": "草稿箱",
+        "text": "localized text",
         "placeholder": "",
         "role": "",
         "type": "",
@@ -247,7 +247,7 @@
       },
       {
         "tag": "div",
-        "text": "视频笔记(0) 图文笔记(5) 长文笔记(0) 播客笔记(0) 草稿存储于当前使用的浏览器本地，在清除浏览器数据时会被删除；图文笔记最多支持保存100篇草稿，超出后将默认删除最后一篇草稿，请及时发布。 AI Agent每天省1小时 保存于2",
+        "text": "localized text(0) localized text(5) localized text(0) localized text(0) localized text,localized text;localized text100localized text,localized text,localized text. AI Agentlocalized text1localized text localized text2",
         "placeholder": "",
         "role": "",
         "type": "",
@@ -259,7 +259,7 @@
       },
       {
         "tag": "div",
-        "text": "草稿存储于当前使用的浏览器本地，在清除浏览器数据时会被删除；图文笔记最多支持保存100篇草稿，超出后将默认删除最后一篇草稿，请及时发布。",
+        "text": "localized text,localized text;localized text100localized text,localized text,localized text.",
         "placeholder": "",
         "role": "",
         "type": "",
@@ -271,7 +271,7 @@
       },
       {
         "tag": "div",
-        "text": "草稿存储于当前使用的浏览器本地，在清除浏览器数据时会被删除；图文笔记最多支持保存100篇草稿，超出后将默认删除最后一篇草稿，请及时发布。",
+        "text": "localized text,localized text;localized text100localized text,localized text,localized text.",
         "placeholder": "",
         "role": "",
         "type": "",
@@ -283,7 +283,7 @@
       },
       {
         "tag": "div",
-        "text": "草稿存储于当前使用的浏览器本地，在清除浏览器数据时会被删除；图文笔记最多支持保存100篇草稿，超出后将默认删除最后一篇草稿，请及时发布。",
+        "text": "localized text,localized text;localized text100localized text,localized text,localized text.",
         "placeholder": "",
         "role": "",
         "type": "",
@@ -295,7 +295,7 @@
       },
       {
         "tag": "div",
-        "text": "草稿存储于当前使用的浏览器本地，在清除浏览器数据时会被删除；图文笔记最多支持保存100篇草稿，超出后将默认删除最后一篇草稿，请及时发布。",
+        "text": "localized text,localized text;localized text100localized text,localized text,localized text.",
         "placeholder": "",
         "role": "",
         "type": "",
@@ -307,7 +307,7 @@
       },
       {
         "tag": "div",
-        "text": "草稿存储于当前使用的浏览器本地，在清除浏览器数据时会被删除；图文笔记最多支持保存100篇草稿，超出后将默认删除最后一篇草稿，请及时发布。",
+        "text": "localized text,localized text;localized text100localized text,localized text,localized text.",
         "placeholder": "",
         "role": "",
         "type": "",
@@ -319,7 +319,7 @@
       },
       {
         "tag": "div",
-        "text": "AI Agent每天省1小时 保存于2026-05-25 14:15:36 编辑 删除 AI Agent每天省1小时 保存于2026-05-25 14:14:00 编辑 删除 别再囤Skill了 保存于2026-05-24 18:38:51",
+        "text": "AI Agentlocalized text1localized text localized text2026-05-25 14:15:36 localized text localized text AI Agentlocalized text1localized text localized text2026-05-25 14:14:00 localized text localized text localized textSkilllocalized text localized text2026-05-24 18:38:51",
         "placeholder": "",
         "role": "",
         "type": "",
@@ -331,7 +331,7 @@
       },
       {
         "tag": "div",
-        "text": "AI Agent每天省1小时 保存于2026-05-25 14:15:36 编辑 删除",
+        "text": "AI Agentlocalized text1localized text localized text2026-05-25 14:15:36 localized text localized text",
         "placeholder": "",
         "role": "",
         "type": "",
@@ -343,7 +343,7 @@
       },
       {
         "tag": "div",
-        "text": "AI Agent每天省1小时 保存于2026-05-25 14:15:36 编辑 删除",
+        "text": "AI Agentlocalized text1localized text localized text2026-05-25 14:15:36 localized text localized text",
         "placeholder": "",
         "role": "",
         "type": "",
@@ -355,7 +355,7 @@
       },
       {
         "tag": "div",
-        "text": "AI Agent每天省1小时 保存于2026-05-25 14:15:36",
+        "text": "AI Agentlocalized text1localized text localized text2026-05-25 14:15:36",
         "placeholder": "",
         "role": "",
         "type": "",
@@ -367,7 +367,7 @@
       },
       {
         "tag": "div",
-        "text": "AI Agent每天省1小时",
+        "text": "AI Agentlocalized text1localized text",
         "placeholder": "",
         "role": "",
         "type": "",
@@ -379,7 +379,7 @@
       },
       {
         "tag": "div",
-        "text": "保存于2026-05-25 14:15:36",
+        "text": "localized text2026-05-25 14:15:36",
         "placeholder": "",
         "role": "",
         "type": "",
@@ -391,7 +391,7 @@
       },
       {
         "tag": "div",
-        "text": "AI Agent每天省1小时 保存于2026-05-25 14:14:00 编辑 删除",
+        "text": "AI Agentlocalized text1localized text localized text2026-05-25 14:14:00 localized text localized text",
         "placeholder": "",
         "role": "",
         "type": "",
@@ -403,7 +403,7 @@
       },
       {
         "tag": "div",
-        "text": "AI Agent每天省1小时 保存于2026-05-25 14:14:00 编辑 删除",
+        "text": "AI Agentlocalized text1localized text localized text2026-05-25 14:14:00 localized text localized text",
         "placeholder": "",
         "role": "",
         "type": "",
@@ -415,7 +415,7 @@
       },
       {
         "tag": "div",
-        "text": "AI Agent每天省1小时 保存于2026-05-25 14:14:00",
+        "text": "AI Agentlocalized text1localized text localized text2026-05-25 14:14:00",
         "placeholder": "",
         "role": "",
         "type": "",
@@ -427,7 +427,7 @@
       },
       {
         "tag": "div",
-        "text": "AI Agent每天省1小时",
+        "text": "AI Agentlocalized text1localized text",
         "placeholder": "",
         "role": "",
         "type": "",
@@ -439,7 +439,7 @@
       },
       {
         "tag": "div",
-        "text": "保存于2026-05-25 14:14:00",
+        "text": "localized text2026-05-25 14:14:00",
         "placeholder": "",
         "role": "",
         "type": "",
@@ -451,7 +451,7 @@
       },
       {
         "tag": "div",
-        "text": "别再囤Skill了 保存于2026-05-24 18:38:51 编辑 删除",
+        "text": "localized textSkilllocalized text localized text2026-05-24 18:38:51 localized text localized text",
         "placeholder": "",
         "role": "",
         "type": "",
@@ -463,7 +463,7 @@
       },
       {
         "tag": "div",
-        "text": "别再囤Skill了 保存于2026-05-24 18:38:51 编辑 删除",
+        "text": "localized textSkilllocalized text localized text2026-05-24 18:38:51 localized text localized text",
         "placeholder": "",
         "role": "",
         "type": "",
@@ -475,7 +475,7 @@
       },
       {
         "tag": "div",
-        "text": "别再囤Skill了 保存于2026-05-24 18:38:51",
+        "text": "localized textSkilllocalized text localized text2026-05-24 18:38:51",
         "placeholder": "",
         "role": "",
         "type": "",
@@ -487,7 +487,7 @@
       },
       {
         "tag": "div",
-        "text": "保存于2026-05-24 18:38:51",
+        "text": "localized text2026-05-24 18:38:51",
         "placeholder": "",
         "role": "",
         "type": "",
@@ -499,7 +499,7 @@
       },
       {
         "tag": "div",
-        "text": "别再囤Skill了 保存于2026-05-24 18:08:48 编辑 删除",
+        "text": "localized textSkilllocalized text localized text2026-05-24 18:08:48 localized text localized text",
         "placeholder": "",
         "role": "",
         "type": "",
@@ -511,7 +511,7 @@
       },
       {
         "tag": "div",
-        "text": "别再囤Skill了 保存于2026-05-24 18:08:48 编辑 删除",
+        "text": "localized textSkilllocalized text localized text2026-05-24 18:08:48 localized text localized text",
         "placeholder": "",
         "role": "",
         "type": "",
@@ -523,7 +523,7 @@
       },
       {
         "tag": "div",
-        "text": "别再囤Skill了 保存于2026-05-24 18:08:48",
+        "text": "localized textSkilllocalized text localized text2026-05-24 18:08:48",
         "placeholder": "",
         "role": "",
         "type": "",
@@ -535,7 +535,7 @@
       },
       {
         "tag": "div",
-        "text": "保存于2026-05-24 18:08:48",
+        "text": "localized text2026-05-24 18:08:48",
         "placeholder": "",
         "role": "",
         "type": "",
@@ -547,7 +547,7 @@
       },
       {
         "tag": "div",
-        "text": "AI Agent每天省1小时 保存于2026-05-24 17:31:24 编辑 删除",
+        "text": "AI Agentlocalized text1localized text localized text2026-05-24 17:31:24 localized text localized text",
         "placeholder": "",
         "role": "",
         "type": "",
@@ -559,7 +559,7 @@
       },
       {
         "tag": "div",
-        "text": "AI Agent每天省1小时 保存于2026-05-24 17:31:24 编辑 删除",
+        "text": "AI Agentlocalized text1localized text localized text2026-05-24 17:31:24 localized text localized text",
         "placeholder": "",
         "role": "",
         "type": "",
@@ -571,7 +571,7 @@
       },
       {
         "tag": "div",
-        "text": "AI Agent每天省1小时 保存于2026-05-24 17:31:24",
+        "text": "AI Agentlocalized text1localized text localized text2026-05-24 17:31:24",
         "placeholder": "",
         "role": "",
         "type": "",
@@ -583,7 +583,7 @@
       },
       {
         "tag": "div",
-        "text": "AI Agent每天省1小时",
+        "text": "AI Agentlocalized text1localized text",
         "placeholder": "",
         "role": "",
         "type": "",
@@ -595,7 +595,7 @@
       },
       {
         "tag": "div",
-        "text": "保存于2026-05-24 17:31:24",
+        "text": "localized text2026-05-24 17:31:24",
         "placeholder": "",
         "role": "",
         "type": "",

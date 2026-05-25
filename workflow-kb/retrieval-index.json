@@ -23,7 +23,7 @@
       "capabilities": ["scenario-recipe", "post-package", "quality-score", "human-review", "draft-proof", "account-state-check"],
       "tags": ["xhs", "ai-agent", "save-time", "recipe", "draft-verified"],
       "source_path": "workflow-kb/scenario-recipes/xhs-ai-agent-save-one-hour.recipe.md",
-      "summary": "Draft-verified scenario recipe for the topic '普通人如何用 AI Agent 每天省 1 小时'; Step 8 rerun saved a compliant draft after human review, risk approval, and account-state check.",
+      "summary": "Draft-verified scenario recipe for the topic 'How ordinary users can save one hour per day with AI agents'; Step 8 rerun saved a compliant draft after human review, risk approval, and account-state check.",
       "reusable_for": ["future XHS AI productivity drafts", "recipe reproduction", "proof-chain tests", "draft-first content workflows"],
       "risk_level": "high",
       "verified_status": "draft_verified"

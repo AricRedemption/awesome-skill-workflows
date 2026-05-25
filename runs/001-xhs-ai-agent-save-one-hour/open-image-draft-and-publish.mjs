@@ -42,10 +42,10 @@ let debug = await page.evaluate(() => {
         h: Math.round(rect.height),
       };
     }).filter((x) => x.w > 20 && x.h > 20 && (
-      x.text.includes('别再囤') ||
+      x.text.includes('localized text') ||
       x.text.includes('Skill') ||
-      x.text.includes('刚刚') ||
-      x.text.includes('编辑')
+      x.text.includes('localized text') ||
+      x.text.includes('localized text')
     )).slice(0, 120),
   };
 });
@@ -59,7 +59,7 @@ const card = await page.evaluateHandle(() => {
       x.rect.height > 50 &&
       x.rect.left > window.innerWidth * 0.55 &&
       x.rect.top > 120 &&
-      (x.text.includes('别再囤') || x.text.includes('Skill') || x.text.includes('刚刚') || x.text.includes('编辑'))
+      (x.text.includes('localized text') || x.text.includes('Skill') || x.text.includes('localized text') || x.text.includes('localized text'))
     )
     .sort((a, b) => a.rect.top - b.rect.top || a.rect.left - b.rect.left);
   return candidates[0]?.el || null;
@@ -67,8 +67,8 @@ const card = await page.evaluateHandle(() => {
 
 if (!card.asElement()) {
   await page.screenshot({ path: screenshotPath, fullPage: true });
-  await fs.writeFile(resultPath, JSON.stringify({ status: 'failed', error: '找不到图文草稿卡片', debug, screenshotPath }, null, 2));
-  throw new Error('找不到图文草稿卡片');
+  await fs.writeFile(resultPath, JSON.stringify({ status: 'failed', error: 'localized text', debug, screenshotPath }, null, 2));
+  throw new Error('localized text');
 }
 await card.asElement().click();
 await sleep(8_000);
@@ -86,7 +86,7 @@ while (Date.now() - started < 180_000) {
     return {
       url: location.href,
       bodyTextSample: bodyText.slice(0, 1400),
-      hasSuccessText: bodyText.includes('发布成功') || bodyText.includes('审核中') || bodyText.includes('发布完成'),
+      hasSuccessText: bodyText.includes('localized text') || bodyText.includes('localized text') || bodyText.includes('localized text'),
       stillOnPublishPage: location.href.includes('/publish/publish'),
     };
   });

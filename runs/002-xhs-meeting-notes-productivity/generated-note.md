@@ -2,76 +2,76 @@
 
 ## Title
 
-开完会别再加班补纪要了
+localized text
 
 ## Cover Copy
 
-用 AI 先整理出 80% 初稿
+localized text AI localized text 80% localized text
 
 ## Body
 
-以前我最怕下午 5 点半开会。
+localized text 5 localized text.
 
-会开完已经快下班，脑子里全是零散信息：谁负责什么、ddl 是哪天、老板刚刚到底拍板了什么。真正痛苦的不是开会，是会后还要重新听录音、翻聊天记录、补纪要。
+localized text,localized text:localized text,ddl localized text,localized text.localized text,localized text,localized text,localized text.
 
-后来我把会议纪要拆成了一个固定流程，AI 不负责替我判断业务，只负责先把脏活整理出来。
+localized text,AI localized text,localized text.
 
-### 我的做法是 4 步
+### localized text 4 localized text
 
-1. 会前先建一个空模板
-   - 会议主题
-   - 背景
-   - 已确认结论
-   - 待确认问题
-   - 行动项
-   - 负责人
-   - 截止时间
+1. localized text
+   - localized text
+   - localized text
+   - localized text
+   - localized text
+   - localized text
+   - localized text
+   - localized text
 
-2. 会中只记录关键词
-   不追求逐字稿，只标记这几类信息：决定、风险、任务、时间点、人名。
+2. localized text
+   localized text,localized text:localized text,localized text,localized text,localized text,localized text.
 
-3. 会后把材料丢给 AI 做第一版整理
-   可以用会议转写、自己的关键词、聊天记录摘要。注意：涉及客户名、金额、内部数据的内容先脱敏。
+3. localized text AI localized text
+   localized text,localized text,localized text.localized text:localized text,localized text,localized text.
 
-4. 人再做最后 20% 校对
-   AI 的作用是帮你归类和补结构，不是替你确认事实。最后一定要自己核对结论、负责人和时间。
+4. localized text 20% localized text
+   AI localized text,localized text.localized text,localized text.
 
-### 我常用的提示词
+### localized text
 
-你是一名会议纪要助理。请根据下面材料，整理成一份适合发给团队的会议纪要。
+localized text.localized text,localized text.
 
-要求：
-- 先输出 3 条会议结论
-- 再输出行动项表格，字段包括：任务、负责人、截止时间、依赖、风险
-- 单独列出待确认问题
-- 不要补充材料里没有的信息
-- 对不确定内容标记为「需确认」
-- 语气简洁，适合发到工作群
+localized text:
+- localized text 3 localized text
+- localized text,localized text:localized text,localized text,localized text,localized text,localized text
+- localized text
+- localized text
+- localized text"localized text"
+- localized text,localized text
 
-会议材料：
-【粘贴脱敏后的转写或关键词】
+localized text:
+[localized text]
 
-### 这个方法适合谁
+### localized text
 
-如果你经常遇到这几种情况，可以试：
+localized text,localized text:
 
-- 会开完才发现没人记行动项
-- 纪要写到晚上还没发
-- 老板问进度时，你还在翻聊天记录
-- 每次复盘都靠记忆补细节
+- localized text
+- localized text
+- localized text,localized text
+- localized text
 
-它不能让所有加班消失，但能把「从零整理纪要」变成「校对一份结构化初稿」。对普通职场人来说，这一步已经能少耗很多脑力。
+localized text,localized text"localized text"localized text"localized text".localized text,localized text.
 
-### 一个小提醒
+### localized text
 
-公司会议内容不一定适合直接上传到外部 AI 工具。能用公司批准的工具就用公司工具；必须用外部工具时，先删掉客户名、合同金额、内部项目代号和个人隐私。
+localized text AI localized text.localized text;localized text,localized text,localized text,localized text.
 
-如果你愿意，我也可以下一篇直接整理一版「会议纪要 AI 模板」，复制就能用。
+localized text,localized text"localized text AI localized text",localized text.
 
 ## Hashtags
 
-#AI办公 #会议纪要 #职场效率 #打工人自救 #AI工具 #减少加班 #工作流
+#AIlocalized text #localized text #localized text #localized text #AIlocalized text #localized text #localized text
 
 ## Comment Hook
 
-你最讨厌写哪种会议纪要？项目会、周会还是复盘会？
+localized text?localized text,localized text?

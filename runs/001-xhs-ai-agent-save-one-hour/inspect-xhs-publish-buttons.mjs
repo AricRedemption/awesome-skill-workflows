@@ -33,7 +33,7 @@ const data = await page.evaluate(() => {
         visible: rect.width > 0 && rect.height > 0,
       };
     })
-    .filter((item) => item.visible && item.text.includes('发布'))
+    .filter((item) => item.visible && item.text.includes('localized text'))
     .sort((a, b) => a.y - b.y || a.x - b.x);
   return {
     url: location.href,

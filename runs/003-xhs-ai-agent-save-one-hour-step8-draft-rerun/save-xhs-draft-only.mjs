@@ -46,7 +46,7 @@ async function summarizePage(page) {
     const accountName =
       Array.from(document.querySelectorAll('*'))
         .map((el) => (el.textContent || '').trim())
-        .find((text) => text === '沐光') || null;
+        .find((text) => text === 'localized text') || null;
     const elements = Array.from(document.querySelectorAll('button, [role="button"], input, textarea, [contenteditable="true"], div, span'))
       .map((el) => {
         const rect = el.getBoundingClientRect();
@@ -68,15 +68,15 @@ async function summarizePage(page) {
       url: location.href,
       title: document.title,
       bodyTextSample: bodyText.slice(0, 2500),
-      loggedIn: Boolean(accountName) && !bodyText.includes('短信登录') && !bodyText.includes('登 录'),
+      loggedIn: Boolean(accountName) && !bodyText.includes('localized text') && !bodyText.includes('localized text localized text'),
       accountName,
       fileInputCount: document.querySelectorAll('input[type="file"]').length,
       draftRelated: elements.filter((item) =>
-        item.text.includes('草稿') ||
-        item.text.includes('保存') ||
-        item.text.includes('暂存') ||
+        item.text.includes('localized text') ||
+        item.text.includes('localized text') ||
+        item.text.includes('localized text') ||
         item.text.includes('AI Agent') ||
-        item.text.includes('每天省1小时')
+        item.text.includes('localized text1localized text')
       ).slice(0, 120),
       inputs: elements.filter((item) => item.tag === 'input' || item.tag === 'textarea' || item.role === 'textbox' || item.className.includes('ProseMirror')).slice(0, 40),
     };
@@ -89,7 +89,7 @@ async function uploadMedia(page) {
     const uploadCandidates = await page.$$('div, button, [role="button"]');
     for (const candidate of uploadCandidates) {
       const text = await candidate.evaluate((el) => (el.textContent || '').trim()).catch(() => '');
-      if (text.includes('上传') || text.includes('拖拽')) {
+      if (text.includes('localized text') || text.includes('localized text')) {
         await candidate.click().catch(() => {});
         await sleep(1_000);
         fileInput = await page.$('input[type="file"]');
@@ -97,7 +97,7 @@ async function uploadMedia(page) {
       }
     }
   }
-  if (!fileInput) throw new Error('找不到图片上传 input[type=file]');
+  if (!fileInput) throw new Error('localized text input[type=file]');
   await fileInput.uploadFile(...pkg.media_paths);
   await page.evaluate((el) => el.dispatchEvent(new Event('change', { bubbles: true })), fileInput);
   await sleep(18_000);
@@ -105,8 +105,8 @@ async function uploadMedia(page) {
 
 async function fillTitle(page) {
   const selectors = [
-    'input[placeholder*="标题"]',
-    'input[placeholder*="填写标题"]',
+    'input[placeholder*="localized text"]',
+    'input[placeholder*="localized text"]',
     'input[class*="title"]',
     'input[type="text"]',
   ];
@@ -122,7 +122,7 @@ async function fillTitle(page) {
       return;
     }
   }
-  throw new Error('找不到标题输入框');
+  throw new Error('localized text');
 }
 
 async function fillContent(page) {
@@ -130,7 +130,7 @@ async function fillContent(page) {
     'div[contenteditable="true"][role="textbox"]',
     '.tiptap.ProseMirror',
     'div[contenteditable="true"]',
-    'textarea[placeholder*="正文"]',
+    'textarea[placeholder*="localized text"]',
     'textarea',
     '[role="textbox"]',
   ];
@@ -145,7 +145,7 @@ async function fillContent(page) {
       return;
     }
   }
-  throw new Error('找不到正文输入框');
+  throw new Error('localized text');
 }
 
 async function findAndClickSaveDraft(page) {
@@ -164,10 +164,10 @@ async function findAndClickSaveDraft(page) {
       })
       .filter((item) => item.visible && item.text.length > 0 && item.text.length <= 40)
       .filter((item) =>
-        item.text.includes('保存草稿') ||
-        item.text.includes('存草稿') ||
-        item.text.includes('暂存离开') ||
-        item.text === '暂存'
+        item.text.includes('localized text') ||
+        item.text.includes('localized text') ||
+        item.text.includes('localized text') ||
+        item.text === 'localized text'
       )
       .sort((a, b) => (a.w * a.h) - (b.w * b.h));
     return candidates[0] || null;
@@ -185,10 +185,10 @@ async function findAndClickSaveDraft(page) {
     };
   }
 
-  // The creator UI renders the draft action as "暂存离开" near the bottom.
+  // The creator UI renders the draft action as "localized text" near the bottom.
   // Use a coordinate fallback only for that draft action area; never click publish.
   await page.mouse.click(602, 955);
-  return { clicked: true, method: 'coordinate_fallback', text: '暂存离开', x: 602, y: 955 };
+  return { clicked: true, method: 'coordinate_fallback', text: 'localized text', x: 602, y: 955 };
 }
 
 async function openDraftBoxAndVerify(page) {
@@ -196,7 +196,7 @@ async function openDraftBoxAndVerify(page) {
   await sleep(5_000);
   const state = await summarizePage(page);
   const titleFound = state.bodyTextSample.includes(pkg.title) || state.draftRelated.some((item) => item.text.includes(pkg.title));
-  const draftBoxVisible = state.bodyTextSample.includes('草稿箱') || state.draftRelated.some((item) => item.text.includes('草稿'));
+  const draftBoxVisible = state.bodyTextSample.includes('localized text') || state.draftRelated.some((item) => item.text.includes('localized text'));
   return { titleFound, draftBoxVisible, state };
 }
 
@@ -218,7 +218,7 @@ try {
   await sleep(6_000);
   const accountState = await summarizePage(page);
   if (!accountState.loggedIn || accountState.url.includes('/login')) {
-    throw new Error(`创作者平台登录态失效: ${accountState.url}`);
+    throw new Error(`localized text: ${accountState.url}`);
   }
   const accountCheckedAt = new Date().toISOString();
   await writeLedger((current) => {

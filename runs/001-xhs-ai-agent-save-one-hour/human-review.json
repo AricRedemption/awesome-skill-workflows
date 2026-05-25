@@ -4,7 +4,7 @@
   "review_status": "changes_requested",
   "reviewed_at": "2026-05-25",
   "review_scope": "step_6_content_generation_and_quality_gate",
-  "summary": "内容生成和评分文件本身基本完整，数值评分达标；发布前门槛未通过，因为 human review 未批准且 workflow gap 需要进入 Step 7 self-evolution。",
+  "summary": "localized text,localized text;localized text,localized text human review localized text workflow gap localized text Step 7 self-evolution.",
   "approval_scope": {
     "content_generation": "pass",
     "quality_scoring": "pass",

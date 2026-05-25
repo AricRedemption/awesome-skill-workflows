@@ -34,7 +34,7 @@ while (Date.now() - started < 180_000) {
     return {
       url: location.href,
       bodyTextSample: bodyText.slice(0, 1200),
-      hasSuccessText: bodyText.includes('发布成功') || bodyText.includes('审核中') || bodyText.includes('发布完成'),
+      hasSuccessText: bodyText.includes('localized text') || bodyText.includes('localized text') || bodyText.includes('localized text'),
       stillOnPublishPage: location.href.includes('/publish/publish'),
     };
   });

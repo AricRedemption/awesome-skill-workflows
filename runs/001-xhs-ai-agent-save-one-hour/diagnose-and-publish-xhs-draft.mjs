@@ -26,9 +26,9 @@ async function snapshot(label) {
       label: labelValue,
       url: location.href,
       bodyTextSample: bodyText.slice(0, 1800),
-      hasEditor: bodyText.includes('图片编辑') && bodyText.includes('笔记预览'),
-      hasUploadHome: bodyText.includes('上传图片') && bodyText.includes('草稿箱'),
-      hasSuccessText: bodyText.includes('发布成功') || bodyText.includes('审核中') || bodyText.includes('发布完成'),
+      hasEditor: bodyText.includes('localized text') && bodyText.includes('localized text'),
+      hasUploadHome: bodyText.includes('localized text') && bodyText.includes('localized text'),
+      hasSuccessText: bodyText.includes('localized text') || bodyText.includes('localized text') || bodyText.includes('localized text'),
       publishCandidates: Array.from(document.querySelectorAll('button, [role="button"], xhs-publish-btn, div, span'))
         .map((el) => {
           const rect = el.getBoundingClientRect();
@@ -52,7 +52,7 @@ async function snapshot(label) {
         .filter((item) =>
           item.w > 20 &&
           item.h > 20 &&
-          (item.text === '发布' || item.text.includes('发布') || item.submitText.includes('发布'))
+          (item.text === 'localized text' || item.text.includes('localized text') || item.submitText.includes('localized text'))
         )
         .sort((a, b) => b.y - a.y),
     };
@@ -61,12 +61,12 @@ async function snapshot(label) {
 
 async function openLatestImageDraftIfNeeded() {
   const initial = await snapshot('initial');
-  if (initial.hasEditor && initial.bodyTextSample.includes('别再囤Skill了')) return initial;
+  if (initial.hasEditor && initial.bodyTextSample.includes('localized textSkilllocalized text')) return initial;
 
   await page.goto(publishUrl, { waitUntil: 'domcontentloaded', timeout: 90_000 });
   await sleep(5_000);
   const pageAfterGoto = await snapshot('after-goto');
-  if (pageAfterGoto.hasEditor && pageAfterGoto.bodyTextSample.includes('别再囤Skill了')) return pageAfterGoto;
+  if (pageAfterGoto.hasEditor && pageAfterGoto.bodyTextSample.includes('localized textSkilllocalized text')) return pageAfterGoto;
 
   await page.mouse.click(1330, 101);
   await sleep(2_000);
@@ -81,7 +81,7 @@ async function openLatestImageDraftIfNeeded() {
         item.rect.height > 16 &&
         item.rect.left > window.innerWidth * 0.45 &&
         item.rect.top > 180 &&
-        item.text.includes('别再囤Skill了')
+        item.text.includes('localized textSkilllocalized text')
       )
       .sort((a, b) => a.rect.top - b.rect.top || a.rect.left - b.rect.left);
     const latestTitle = titleCandidates[0];
@@ -91,7 +91,7 @@ async function openLatestImageDraftIfNeeded() {
     const editCandidates = Array.from(document.querySelectorAll('*'))
       .map((el) => ({ el, text: (el.textContent || '').trim(), rect: el.getBoundingClientRect() }))
       .filter((item) =>
-        item.text === '编辑' &&
+        item.text === 'localized text' &&
         item.rect.left > latestTitle.rect.left &&
         Math.abs((item.rect.top + item.rect.height / 2) - targetY) < 40
       )
@@ -99,7 +99,7 @@ async function openLatestImageDraftIfNeeded() {
     return editCandidates[0]?.el || null;
   });
 
-  if (!card.asElement()) throw new Error('找不到包含当前标题的图文草稿卡片');
+  if (!card.asElement()) throw new Error('localized text');
   await card.asElement().click();
   await sleep(8_000);
   return snapshot('after-open-draft');
@@ -126,7 +126,7 @@ async function clickBottomPublish() {
         item.rect.width >= 40 &&
         item.rect.height >= 25 &&
         item.rect.top > window.innerHeight * 0.65 &&
-        (item.text === '发布' || item.submitText.includes('发布'))
+        (item.text === 'localized text' || item.submitText.includes('localized text'))
       )
       .sort((a, b) => b.rect.top - a.rect.top || b.rect.width - a.rect.width);
     const item = candidates[0];
@@ -145,7 +145,7 @@ async function clickBottomPublish() {
     };
   });
 
-  if (!target) throw new Error('找不到底部可点击的发布按钮');
+  if (!target) throw new Error('localized text');
   await page.mouse.move(target.x, target.y);
   await sleep(300);
   await page.mouse.down();
