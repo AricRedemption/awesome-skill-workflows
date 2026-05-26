@@ -608,9 +608,9 @@
     ]
   },
   "evidence": {
-    "screenshot": "runs/003-xhs-ai-agent-save-one-hour-step8-draft-rerun/xhs-draft-save-proof.png",
+    "screenshot": "user-sensitive-state/archive/runs/003-xhs-ai-agent-save-one-hour-step8-draft-rerun/screenshots/xhs-draft-save-proof.png",
     "browser_log": "runs/003-xhs-ai-agent-save-one-hour-step8-draft-rerun/draft-proof.json",
-    "editor_screenshot": "runs/003-xhs-ai-agent-save-one-hour-step8-draft-rerun/xhs-draft-editor-filled.png",
+    "editor_screenshot": "user-sensitive-state/archive/runs/003-xhs-ai-agent-save-one-hour-step8-draft-rerun/screenshots/xhs-draft-editor-filled.png",
     "manual_note": "Draft-only Step 8 passed. Human review, risk approval, and account-state check preceded the draft action. No live publish was attempted."
   }
 }

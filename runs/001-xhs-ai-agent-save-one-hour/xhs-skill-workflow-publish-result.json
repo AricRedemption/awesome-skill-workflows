@@ -13,7 +13,7 @@
   "mediaCount": 3,
   "contentLength": 839,
   "clickedPublish": true,
-  "beforeScreenshotPath": "/Users/aricredemption/Projects/awesome-skill-workflows/runs/001-xhs-ai-agent-save-one-hour/xhs-skill-workflow-before-publish.png",
-  "afterScreenshotPath": "/Users/aricredemption/Projects/awesome-skill-workflows/runs/001-xhs-ai-agent-save-one-hour/xhs-skill-workflow-after-publish.png",
+  "beforeScreenshotPath": "/Users/aricredemption/Projects/awesome-skill-workflows/user-sensitive-state/archive/runs/001-xhs-ai-agent-save-one-hour/screenshots/xhs-skill-workflow-before-publish.png",
+  "afterScreenshotPath": "/Users/aricredemption/Projects/awesome-skill-workflows/user-sensitive-state/archive/runs/001-xhs-ai-agent-save-one-hour/screenshots/xhs-skill-workflow-after-publish.png",
   "checkedAt": "2026-05-24T10:22:33.722Z"
 }

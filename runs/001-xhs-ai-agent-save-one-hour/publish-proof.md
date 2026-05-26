@@ -16,7 +16,7 @@
   "human_review_passed": false,
   "risk_check_passed": false,
   "evidence": {
-    "screenshot": "runs/001-xhs-ai-agent-save-one-hour/xhs-skill-workflow-diagnose-publish.png",
+    "screenshot": "user-sensitive-state/archive/runs/001-xhs-ai-agent-save-one-hour/screenshots/xhs-skill-workflow-diagnose-publish.png",
     "browser_log": "runs/001-xhs-ai-agent-save-one-hour/xhs-mcp-publish-result.json",
     "manual_note": "This proves the post was published, but it does not prove compliant publication. The final rereview evidence includes the publish result itself, so human review precedence is not established."
   }
@@ -34,7 +34,7 @@ The publish command succeeded and returned note ID `6a139f0d0000000037035783`. T
 
 ## Evidence
 
-- screenshot: `runs/001-xhs-ai-agent-save-one-hour/xhs-skill-workflow-diagnose-publish.png`
+- screenshot: `user-sensitive-state/archive/runs/001-xhs-ai-agent-save-one-hour/screenshots/xhs-skill-workflow-diagnose-publish.png`
 - browser log: `runs/001-xhs-ai-agent-save-one-hour/xhs-mcp-publish-result.json`
 - initial human review: `runs/001-xhs-ai-agent-save-one-hour/human-review.json`
 - final rereview that is not valid as pre-publish proof: `runs/001-xhs-ai-agent-save-one-hour/human-review-rereview.json`

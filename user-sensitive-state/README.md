@@ -16,3 +16,9 @@ Only this README is tracked. All other files in this directory are ignored by gi
 
 Durable, sanitized evidence should still be written to the appropriate project locations, such as `runs/`, `workflow-kb/`, `failed-recipes/`, or `evolution/`.
 
+Before promoting evidence from this directory or from an account-bound run, use
+`docs/sensitive-data-policy.md` and run:
+
+```bash
+node scripts/validate-sensitive-boundaries.mjs
+```

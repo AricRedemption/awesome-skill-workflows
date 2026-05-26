@@ -27,7 +27,7 @@ The required ordering is satisfied: human review and risk approval existed befor
 - creator account detected: `localized text`
 - draft box count after save: `localized text(5)`
 - proof text found: `AI Agentlocalized text1localized text localized text2026-05-25 14:15:36`
-- screenshot: `runs/003-xhs-ai-agent-save-one-hour-step8-draft-rerun/xhs-draft-save-proof.png`
+- screenshot: `user-sensitive-state/archive/runs/003-xhs-ai-agent-save-one-hour-step8-draft-rerun/screenshots/xhs-draft-save-proof.png`
 - machine proof: `runs/003-xhs-ai-agent-save-one-hour-step8-draft-rerun/draft-proof.json`
 
 ## Boundary

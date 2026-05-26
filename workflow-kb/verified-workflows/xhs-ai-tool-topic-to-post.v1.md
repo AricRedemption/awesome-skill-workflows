@@ -45,7 +45,8 @@ The checklist is not a new verified workflow by itself. It is a hard execution g
 
 - Draft proof: `runs/003-xhs-ai-agent-save-one-hour-step8-draft-rerun/draft-proof.json`
 - Gate ledger: `runs/003-xhs-ai-agent-save-one-hour-step8-draft-rerun/gate-ledger.json`
-- Screenshot: `runs/003-xhs-ai-agent-save-one-hour-step8-draft-rerun/xhs-draft-save-proof.png`
+- Proof summary: `runs/003-xhs-ai-agent-save-one-hour-step8-draft-rerun/draft-proof.md`
+- Sensitive artifact migration note: `runs/003-xhs-ai-agent-save-one-hour-step8-draft-rerun/sensitive-artifacts.md`
 
 ## Boundary
 

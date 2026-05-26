@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { execFileSync } from 'node:child_process';
 
 const root = process.cwd();
 
@@ -21,6 +22,19 @@ function listMarkdownFiles(relativePath) {
 }
 
 const failures = [];
+
+try {
+  execFileSync('node', ['scripts/validate-sensitive-boundaries.mjs'], {
+    cwd: root,
+    stdio: 'pipe'
+  });
+} catch (error) {
+  const output = [
+    error.stdout?.toString(),
+    error.stderr?.toString()
+  ].filter(Boolean).join('\n');
+  failures.push(`sensitive boundary validation failed${output ? `: ${output}` : ''}`);
+}
 
 for (const file of listMarkdownFiles('verified-recipes')) {
   const text = readText(file);

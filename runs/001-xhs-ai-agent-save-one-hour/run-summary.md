@@ -33,7 +33,7 @@
 - human review repair record: `runs/001-xhs-ai-agent-save-one-hour/human-review.md`
 - publish fact proof: `runs/001-xhs-ai-agent-save-one-hour/publish-proof.md`
 - publish browser log: `runs/001-xhs-ai-agent-save-one-hour/xhs-mcp-publish-result.json`
-- screenshot: `runs/001-xhs-ai-agent-save-one-hour/xhs-skill-workflow-diagnose-publish.png`
+- screenshot: `user-sensitive-state/archive/runs/001-xhs-ai-agent-save-one-hour/screenshots/xhs-skill-workflow-diagnose-publish.png`
 - original input mode: `runs/001-xhs-ai-agent-save-one-hour/input.json`
 - workflow plan: `runs/001-xhs-ai-agent-save-one-hour/workflow-plan.md`
 - Step 7 revision: `runs/001-xhs-ai-agent-save-one-hour/step-7-self-evolution-result.json`
