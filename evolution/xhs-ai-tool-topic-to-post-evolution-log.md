@@ -12,3 +12,8 @@
   - keep `account-state-check` before platform handoff,
   - keep failed publish evidence outside verified recipe paths.
 - Result: The improved content score increased from 95 to 98, but promotion remained limited to draft verification until the gate ledger and draft proof passed.
+
+## Detailed Review
+
+The detailed evolution review for this run is recorded in
+`evolution/xhs-ai-agent-save-one-hour-detailed-evolution-review.md`.
