@@ -8,6 +8,8 @@ team_progress.md
 **/.xhs-creator-profile/
 .xhs-headless-draft-profiles/
 **/.xhs-headless-draft-profiles/
+/user-sensitive-state/*
+!/user-sensitive-state/README.md
 .env
 .env.*
 *.pem
