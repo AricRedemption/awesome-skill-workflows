@@ -24,3 +24,32 @@ The workflow knowledge base is the durable memory of this project.
 ## Usage
 
 The knowledge base should be queried before a new run and updated after every verified run.
+
+## Success Archive Contract
+
+A successful run is not reusable knowledge until it has a clear evidence chain:
+
+1. source run under `runs/<run-id>/`,
+2. gate ledger or equivalent proof,
+3. sensitive-data review,
+4. reusable conclusion in `workflow-kb/`,
+5. retrieval entry in `workflow-kb/retrieval-index.json`,
+6. recipe promotion only when the promotion gates pass.
+
+Every reusable KB record should include:
+
+- `source_path`,
+- `evidence_refs`,
+- `verified_status`,
+- `risk_level`,
+- `sensitive_data_status`,
+- `reusable_for`,
+- explicit scope and non-scope in the source asset.
+
+## Sensitive Data Rule
+
+Do not copy private runtime details from `runs/` into reusable knowledge. A KB
+entry may record non-sensitive classes such as `automation_profile`,
+`user_visible_profile`, or `mcp_cookie_file`, but it must not record cookies,
+account names, local profile paths, browser history, private URLs, or personal
+identifiers.

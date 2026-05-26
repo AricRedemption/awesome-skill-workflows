@@ -68,3 +68,6 @@ This layer may contain Xiaohongshu-specific assumptions, but those assumptions m
 - `workflow-kb/`: verified reusable knowledge only
 - `evolution/`: evolution artifacts and iteration outputs only
 - `runs/`: immutable run records only
+
+For the full directory placement rules, see
+`docs/directory-architecture.md`.

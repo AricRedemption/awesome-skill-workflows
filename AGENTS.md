@@ -17,11 +17,14 @@ This project is an AI agent skill workflow framework. It is not a single-scenari
 - `workflow-kb/`: durable reusable knowledge, retrieval entries, patterns, rubrics, fallback strategies, and failure cases.
 - `runs/`: records from specific workflow runs. Treat run records as evidence, not reusable truth by themselves.
 - `evolution/`: evidence-backed improvement notes and self-evolution outputs.
+- `evolution-drafts/`: pending, approved, and rejected proposals for upgrading repeated lessons into long-lived agent rules.
 - `verified-recipes/`: recipes promoted only after verification, human review, and reuse evidence.
 - `failed-recipes/`: failed recipes that still produced reusable evidence.
 - `docs/`: architecture, principles, scoring, self-evolution, and scenario boundary documentation.
 - `reports/`: generated summaries and review outputs.
 - `schemas/`: JSON schemas for workflow, skill, scoring, gate, recipe, and verification records.
+- `TOOLS.md`: durable tool, command, environment, path, and platform usage notes promoted through approved evolution drafts.
+- `MEMORY.md`: durable project-local preferences and facts promoted through approved evolution drafts.
 
 ## Operating Rules
 
@@ -118,9 +121,20 @@ Use the smallest correct writeback:
 - `workflow-kb/retrieval-index.json` for searchable reusable assets,
 - `verified-recipes/` only after verification, human review, and reuse evidence are complete.
 
+Use `evolution-drafts/` when a run-level lesson should become a long-lived rule
+in `AGENTS.md`, `TOOLS.md`, `MEMORY.md`, or a managed `SKILL.md`. Draft first
+and wait for user approval; do not directly rewrite those target files from a
+single run.
+
+When writing self-evolution records, include the learning loop: what went wrong,
+what was learned, what changed, evidence references, validation performed, and
+what remains unverified.
+
 ## Validation Commands
 
 - MVP acceptance: `node scripts/validate-mvp-acceptance.mjs`
+- Evolution drafts: `node scripts/validate-evolution-drafts.mjs`
+- Sensitive boundaries: `node scripts/validate-sensitive-boundaries.mjs`
 - Promotion gates: `node scripts/validate-promotion-gates.mjs`
 
 Run the narrowest relevant validator after changing schemas, recipes, workflow KB entries, or promotion evidence.

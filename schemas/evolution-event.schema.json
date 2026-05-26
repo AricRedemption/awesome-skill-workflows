@@ -7,13 +7,19 @@
   "required": [
     "version",
     "timestamp",
+    "source_run",
+    "evidence_refs",
     "trigger",
     "problem_detected",
     "previous_workflow",
     "change_made",
+    "affected_assets",
+    "writeback_target",
     "reason",
     "score_before",
     "score_after",
+    "sensitive_data_review",
+    "next_validator",
     "status"
   ],
   "properties": {
@@ -24,6 +30,17 @@
     "timestamp": {
       "type": "string",
       "minLength": 1
+    },
+    "source_run": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
     },
     "trigger": {
       "type": "string",
@@ -47,6 +64,24 @@
         "minLength": 1
       }
     },
+    "affected_assets": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "writeback_target": {
+      "type": "string",
+      "enum": [
+        "evolution",
+        "workflow-kb/failure-cases",
+        "workflow-kb/composition-patterns",
+        "workflow-kb/verified-workflows",
+        "verified-recipes",
+        "blocked"
+      ]
+    },
     "reason": {
       "type": "string",
       "minLength": 1
@@ -62,6 +97,24 @@
       "additionalProperties": {
         "type": "number"
       }
+    },
+    "sensitive_data_review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "notes"],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": ["not_reviewed", "passed", "blocked"]
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "next_validator": {
+      "type": "string",
+      "minLength": 1
     },
     "status": {
       "type": "string",

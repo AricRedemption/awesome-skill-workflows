@@ -51,5 +51,42 @@ Use the smallest durable writeback level supported by evidence:
 - `workflow-kb/failure-cases/`: reusable failure cases with root cause and prevention rules
 - `workflow-kb/retrieval-index.json`: retrieval entries for reusable KB assets
 - `verified-recipes/`: promoted recipes only after human review, verification, and reuse evidence are complete
+- `evolution-drafts/`: human-approved proposals for upgrading repeated lessons into long-lived `AGENTS.md`, `TOOLS.md`, `MEMORY.md`, or managed `SKILL.md` rules
 
 If evidence is incomplete, write a failure case or evolution note, but do not promote it to a verified recipe.
+
+## Event Contract
+
+Each self-evolution event should answer:
+
+- what source run or review triggered it,
+- what evidence proves the gap,
+- which assets changed or should change,
+- whether the change is a run-specific note, reusable failure case, pattern, workflow, or recipe,
+- whether sensitive data was reviewed before writeback,
+- which validator should be run next.
+
+Keep event records small. Use `evolution/` for the human-readable note and, when
+machine validation is needed, store the structured event against
+`schemas/evolution-event.schema.json`.
+
+## Long-Lived Rule Proposals
+
+Do not automatically rewrite long-lived agent rules from a single run.
+
+When a run-level lesson should change future agent behavior, tool usage, stable
+memory, or a managed skill, create a draft under `evolution-drafts/pending/`
+instead of directly editing the target file. Use this only for strong signals:
+
+- explicit user correction,
+- stable user preference,
+- reusable multi-step workflow,
+- obvious failure/retry before success.
+
+Skip the proposal when the lesson is one-off, already covered, or only useful as
+run evidence. A pending proposal must identify the target file, evidence,
+duplicate check, proposed change, apply plan, and validation plan.
+
+After approval, apply the proposal to the target file and move the draft to
+`evolution-drafts/approved/`. If rejected, move it to
+`evolution-drafts/rejected/`.

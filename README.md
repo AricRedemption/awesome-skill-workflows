@@ -18,9 +18,13 @@
 
 <p>
   <a href="./docs/architecture.md"><strong>Architecture</strong></a> &bull;
+  <a href="./docs/directory-architecture.md"><strong>Directory Map</strong></a> &bull;
+  <a href="./docs/sensitive-data-policy.md"><strong>Sensitive Data</strong></a> &bull;
   <a href="./docs/workflow-knowledge-base.md"><strong>Workflow KB</strong></a> &bull;
   <a href="./verified-recipes/xhs-ai-agent-save-one-hour.recipe.md"><strong>Verified Recipe</strong></a> &bull;
   <a href="./reports/first-mvp-validation-report.md"><strong>MVP Report</strong></a> &bull;
+  <a href="./TOOLS.md"><strong>Tools</strong></a> &bull;
+  <a href="./MEMORY.md"><strong>Memory</strong></a> &bull;
   <a href="./AGENTS.md"><strong>Agent Rules</strong></a>
 </p>
 
@@ -121,18 +125,28 @@ The MVP is considered complete only when the following loop works end to end:
 
 ## Repository Layout
 
-- `docs/`: architecture, principles, scoring, and scenario boundaries
-- `skills/`: reusable skill assets
-- `workflows/`: workflow definitions and orchestration layer
-- `scenarios/`: scenario-specific validation wrappers
-- `workflow-kb/`: knowledge assets and retrieval index, including verified assets and explicitly failed evidence
-- `runs/`: scenario run records
-- `evolution/`: self-evolution outputs and refinement artifacts
-- `verified-recipes/`: proven reusable recipes
-- `failed-recipes/`: recipes that produced reusable evidence but failed promotion gates
-- `reports/`: generated summaries and review outputs
-- `schemas/`: JSON schemas for skills, workflows, scoring, gate ledgers, recipes, and verification records
+See `docs/directory-architecture.md` for the placement rules and cleanup policy.
+
+Core framework:
+
+- `skills/`: reusable skill assets, raw discovery, indexes, and capability maps
+- `workflows/`: workflow definitions and orchestration patterns
+- `workflow-kb/`: durable reusable knowledge, retrieval entries, patterns, rubrics, fallback strategies, and failure cases
+- `schemas/`: JSON schemas for skills, workflows, scenarios, scoring, gates, recipes, and verification records
 - `scripts/`: project validators and promotion gate checks
+- `docs/`: architecture, principles, scoring, self-evolution, and directory rules
+- `TOOLS.md`: durable tool, command, environment, path, and platform usage notes
+- `MEMORY.md`: durable project-local preferences and facts
+
+Scenario and evidence:
+
+- `scenarios/`: scenario-specific validation wrappers, constraints, risk rules, and scoring rubrics
+- `runs/`: records from specific workflow runs; evidence, not reusable truth by itself
+- `evolution/`: evidence-backed improvement notes and self-evolution outputs
+- `evolution-drafts/`: pending, approved, and rejected proposals for long-lived rule updates
+- `verified-recipes/`: recipes promoted only after verification, human review, and reuse evidence
+- `failed-recipes/`: failed recipes that still produced reusable evidence
+- `reports/`: generated summaries and review outputs
 
 ## Evidence Map
 
@@ -180,9 +194,11 @@ Start with:
 
 1. `AGENTS.md` for agent operating rules.
 2. `docs/architecture.md` for the system model.
-3. `docs/workflow-knowledge-base.md` for KB writeback rules.
-4. `scenarios/<scenario>/` for scenario-specific boundaries.
-5. `workflow-kb/retrieval-index.json` before starting any new run.
+3. `docs/directory-architecture.md` for placement rules.
+4. `docs/sensitive-data-policy.md` before any account-bound run or promotion.
+5. `docs/workflow-knowledge-base.md` for KB writeback rules.
+6. `scenarios/<scenario>/` for scenario-specific boundaries.
+7. `workflow-kb/retrieval-index.json` before starting any new run.
 
 ### Run A New Scenario
 
@@ -210,6 +226,7 @@ Before promoting a workflow or recipe:
 4. Keep failed evidence under failed namespaces.
 5. Update the retrieval index only with reusable assets.
 6. Run the promotion validator.
+7. Run the sensitive-boundary validator.
 
 ## Promotion Rules
 
@@ -238,18 +255,28 @@ Do not commit:
 
 The `.gitignore` excludes known local-sensitive paths such as `.gstack/`, `.xhs-creator-profile/`, cookie JSON files, and local team planning files.
 
+Before promoting reusable evidence, run:
+
+```bash
+node scripts/validate-sensitive-boundaries.mjs
+```
+
 ## Validation
 
 Run the validators after changing schemas, workflows, recipes, KB entries, reports, or promotion evidence:
 
 ```bash
 node scripts/validate-mvp-acceptance.mjs
+node scripts/validate-sensitive-boundaries.mjs
+node scripts/validate-evolution-drafts.mjs
 node scripts/validate-promotion-gates.mjs
 ```
 
 Expected current result:
 
 - MVP acceptance: `PASS`
+- Sensitive boundaries: `passed`
+- Evolution drafts: `passed`
 - Promotion gates: `passed`
 
 ## Development Notes
