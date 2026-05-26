@@ -42,6 +42,19 @@
       "verified_status": "draft"
     },
     {
+      "id": "xhs-draft-execution-checklist",
+      "type": "composition_pattern",
+      "title": "XHS Draft Execution Checklist",
+      "scenario": "xiaohongshu-creator",
+      "capabilities": ["draft-handoff", "browser-profile-boundary", "draft-proof", "tag-verification", "human-inspection"],
+      "tags": ["xhs", "draft", "execution-checklist", "browser-profile", "one-pass"],
+      "source_path": "workflow-kb/composition-patterns/xhs-draft-execution-checklist.md",
+      "summary": "Execution checklist for one-pass Xiaohongshu draft handoff: profile-class confirmation, draft-only action, draft-box save timestamp proof, saved body/tag verification, and keeping the browser open for human inspection.",
+      "reusable_for": ["XHS draft workflows", "profile-local draft handoff", "tag revision verification", "human-visible platform review"],
+      "risk_level": "high",
+      "verified_status": "draft"
+    },
+    {
       "id": "xhs-content-rubric",
       "type": "evaluation_rubric",
       "title": "XHS Content Rubric",
@@ -129,6 +142,45 @@
       "source_path": "workflow-kb/failure-cases/xhs-content-failure-cases.md",
       "summary": "Step 10 added a reusable caution that AI meeting-note content must warn readers to remove client names, internal numbers, project code names, personal data, and confidential decisions before using external AI tools.",
       "reusable_for": ["meeting-note automation posts", "workplace AI productivity content", "compliance-sensitive XHS posts"],
+      "risk_level": "high",
+      "verified_status": "verified_failure"
+    },
+    {
+      "id": "xhs-local-draft-profile-and-proof-gap",
+      "type": "failure_case",
+      "title": "XHS Local Draft Profile And Proof Gap",
+      "scenario": "xiaohongshu-creator",
+      "capabilities": ["draft-proof", "browser-profile-boundary", "platform-handoff", "human-review", "tag-verification"],
+      "tags": ["xhs", "draft-proof", "browser-profile", "local-draft", "human-feedback", "tag-verification"],
+      "source_path": "workflow-kb/failure-cases/xhs-local-draft-profile-and-proof-gap.md",
+      "summary": "Failure case showing that Xiaohongshu web drafts are browser-profile-local, editor-filled state is not sufficient draft proof, browsers should stay open after handoff, and body hashtags must be distinguished from platform-suggested topic chips.",
+      "reusable_for": ["XHS draft workflows", "browser automation handoff", "draft proof verification", "tag revision checks"],
+      "risk_level": "high",
+      "verified_status": "verified_failure"
+    },
+    {
+      "id": "xhs-headless-draft-cookie-reuse",
+      "type": "composition_pattern",
+      "title": "XHS Headless Draft Cookie Reuse",
+      "scenario": "xiaohongshu-creator",
+      "capabilities": ["headless-browser", "cookie-reuse", "draft-handoff", "draft-proof", "account-state-check"],
+      "tags": ["xhs", "headless", "draft", "mcp-cookie", "no-visible-browser", "experimental"],
+      "source_path": "workflow-kb/composition-patterns/xhs-headless-draft-cookie-reuse.md",
+      "summary": "Experimental pattern showing that a no-visible-window headless Chromium flow can reuse MCP cookies to save an XHS draft and verify the draft box in the same run, while post-restart persistence remains unverified.",
+      "reusable_for": ["XHS server-side draft tests", "headless draft handoff", "cookie reuse validation", "no-GUI execution"],
+      "risk_level": "high",
+      "verified_status": "experimental"
+    },
+    {
+      "id": "xhs-browserless-http-draft-unverified",
+      "type": "failure_case",
+      "title": "XHS Browserless HTTP Draft Unverified",
+      "scenario": "xiaohongshu-creator",
+      "capabilities": ["browserless-boundary", "http-draft", "risk-boundary", "platform-handoff"],
+      "tags": ["xhs", "browserless", "http", "draft", "unsupported", "risk-boundary"],
+      "source_path": "workflow-kb/failure-cases/xhs-browserless-http-draft-unverified.md",
+      "summary": "Boundary note stating that pure HTTP draft creation without any browser engine is not verified or supported; current evidence covers headless browser execution only.",
+      "reusable_for": ["XHS platform automation boundary checks", "server execution planning", "draft support scoping"],
       "risk_level": "high",
       "verified_status": "verified_failure"
     }

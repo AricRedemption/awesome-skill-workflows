@@ -78,6 +78,11 @@ When `status` is `draft_saved`:
 - screenshot evidence or a manual proof note is required.
 - copyable publish content must be preserved.
 - no live publish proof may be claimed.
+- proof must record the non-sensitive browser profile class used for handoff.
+- proof must show the draft box contains the target title and a visible save timestamp.
+- the browser must remain open after handoff unless the reviewer explicitly asks to close it.
+- when title, body, hashtags, or images changed, the latest saved draft must be opened or previewed before claiming the saved content is correct.
+- body hashtags must be verified separately from platform-suggested topic chips.
 
 ## Published Requirements
 

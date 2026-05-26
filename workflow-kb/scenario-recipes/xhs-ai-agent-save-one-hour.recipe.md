@@ -26,9 +26,13 @@ verified_run: runs/003-xhs-ai-agent-save-one-hour-step8-draft-rerun
 4. Pass human review.
 5. Pass risk approval.
 6. Confirm account state before platform handoff.
-7. Save a draft only.
-8. Verify `clicked_publish=false`.
-9. Write the outcome back to the workflow knowledge base.
+7. Confirm the target browser profile class and tell the reviewer where the local draft will be visible.
+8. Save a draft only.
+9. Verify `clicked_publish=false`.
+10. Verify the draft box contains the target title and save timestamp.
+11. If body fields such as hashtags changed, open or preview the latest draft and verify the saved body content separately from platform-suggested topic chips.
+12. Keep the browser open for human inspection unless the reviewer explicitly asks to close it.
+13. Write the outcome back to the workflow knowledge base.
 
 ## Evidence
 
@@ -40,3 +44,5 @@ verified_run: runs/003-xhs-ai-agent-save-one-hour-step8-draft-rerun
 ## Reuse Boundary
 
 This recipe is verified for compliant draft save only. It does not prove compliant live publication.
+
+For new executions, also retrieve `workflow-kb/composition-patterns/xhs-draft-execution-checklist.md` before platform handoff. The original verified proof remains `runs/003...`; later execution lessons strengthen future one-pass behavior but do not automatically promote later runs.

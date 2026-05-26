@@ -17,6 +17,9 @@ Prevent content workflows from taking irreversible platform actions when proof, 
 | Requested mode is draft-only | Save draft only if all draft gates pass; never publish. |
 | Publish fails | Fall back to draft-only when draft is allowed and account state is valid. |
 | Publish proof incomplete | Record publish fact separately and mark compliant verification failed. |
+| Draft saved in a different browser profile than the reviewer is checking | Treat as profile-local draft evidence only; explain the profile mismatch and do not claim the reviewer can see it in another browser profile. |
+| Editor filled but draft box proof is missing | Do not mark draft saved; keep the browser open and require draft-box verification with title and save timestamp. |
+| Body tags changed but only editor state was checked | Open or preview the latest saved draft and verify body hashtags separately from platform-suggested topic chips. |
 
 ## Publish Failed To Draft-Only
 
@@ -31,3 +34,5 @@ If the approved mode includes publish and the platform publish action fails:
 ## Non-Negotiable Rule
 
 The fallback for missing review, missing account state, or missing risk approval is not publish retry. It is draft-only or local draft package, depending on the approved mode.
+
+For browser-local draft systems, a saved draft is only proven for the browser profile where it was created. Keep the browser open after draft or publish handoff unless the reviewer explicitly asks to close it.

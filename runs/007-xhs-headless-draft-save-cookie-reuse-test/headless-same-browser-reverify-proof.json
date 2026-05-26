@@ -1,0 +1,35 @@
+{
+  "run_id": "007-xhs-headless-same-browser-reverify",
+  "mode": "headless_same_browser_live_session",
+  "test_title": "同浏览器验证141148",
+  "profile_class": "external_persistent_profile",
+  "profile_path_recorded": false,
+  "clicked_publish": false,
+  "live_publish_allowed": false,
+  "draft_button": {
+    "method": "draft_button_coordinate",
+    "x": 602,
+    "y": 955,
+    "point_meta": {
+      "tag": "xhs-publish-btn",
+      "x": 338,
+      "y": 910,
+      "w": 680,
+      "h": 90
+    }
+  },
+  "first_check": {
+    "draftbox_detected": true,
+    "title_found_in_draftbox": true,
+    "screenshot_committed": false
+  },
+  "second_check_same_browser_after_ms": 60000,
+  "second_check": {
+    "draftbox_detected": true,
+    "title_found_in_draftbox": true,
+    "screenshot_committed": false
+  },
+  "screenshot_omitted_reason": "visual proof may contain account UI or private platform state",
+  "saved_draft_visible_in_same_browser": true,
+  "checked_at": "2026-05-26T06:13:42.918Z"
+}

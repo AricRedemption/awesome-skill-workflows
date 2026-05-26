@@ -1,0 +1,16 @@
+{
+  "run_id": "007-xhs-headless-reopen-verify",
+  "mode": "headless_browser_reopen_verify",
+  "target_title": "持久草稿验证135932",
+  "profile_class": "external_persistent_profile",
+  "profile_path_recorded": false,
+  "clicked_publish": false,
+  "saved_draft_visible_after_reopen": false,
+  "draftbox_detected": true,
+  "title_found_in_draftbox": false,
+  "upload_ui_detected": true,
+  "login_detected": false,
+  "screenshot_committed": false,
+  "screenshot_omitted_reason": "visual proof may contain account UI or private platform state",
+  "checked_at": "2026-05-26T06:02:00.453Z"
+}
