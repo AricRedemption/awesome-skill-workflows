@@ -6,6 +6,8 @@ team_progress.md
 .gstack/
 .xhs-creator-profile/
 **/.xhs-creator-profile/
+.xhs-headless-draft-profiles/
+**/.xhs-headless-draft-profiles/
 .env
 .env.*
 *.pem
@@ -17,3 +19,15 @@ team_progress.md
 temp_images/
 tmp/
 .DS_Store
+
+# Xiaohongshu platform handoff scratch artifacts
+# These may contain account UI text, local file paths, browser-profile paths,
+# screenshots of authenticated pages, or scripts that read local cookies.
+runs/004-xhs-awesome-skill-workflows-layer1-draft/
+runs/005-xhs-awesome-skill-workflows-layer1-draft-relogin/
+runs/006-xhs-awesome-skill-workflows-layer1-retagged-draft/
+runs/007-xhs-headless-draft-save-cookie-reuse-test/*.png
+runs/007-xhs-headless-draft-save-cookie-reuse-test/*.mjs
+runs/007-xhs-headless-draft-save-cookie-reuse-test/debug-*.json
+runs/007-xhs-headless-draft-save-cookie-reuse-test/headless-draft-save-proof.json
+runs/007-xhs-headless-draft-save-cookie-reuse-test/headless-publish-actions-inspection.json
