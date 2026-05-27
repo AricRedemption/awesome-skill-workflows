@@ -21,12 +21,10 @@ export const links = {
 } as const;
 
 export const navItems = [
-  { label: "Validated", href: "#validated" },
   { label: "Problem", href: "#problem" },
+  { label: "Validated", href: "#validated" },
+  { label: "Heatmap", href: "#skill-heatmap" },
   { label: "Model", href: "#model" },
-  { label: "Lifecycle", href: "#lifecycle" },
-  { label: "Evidence", href: "#evidence" },
-  { label: "Use cases", href: "#use-cases" },
 ] as const;
 
 export const hero = {
@@ -163,15 +161,13 @@ export const ecosystem = {
 
 export const validatedProof = {
   eyebrow: "Validated in the wild",
-  title: "One concrete workflow already proves what kinds of skills this system can validate.",
+  title: "The current proof is narrow, real, and evidence-backed.",
   description:
-    "The strongest proof is not a generic use-case list. It is that a real skill chain has already been verified, reused, and improved through failure evidence.",
+    "The point is not to claim every scenario is solved. The point is that one real workflow has already moved through review gates, reuse, failure capture, and verified promotion.",
   stats: [
     { value: "1", label: "verified recipe", detail: "promoted with draft proof, gate ledger, and review ordering" },
     { value: "1", label: "verified workflow", detail: "scenario workflow promoted into reusable workflow shape" },
     { value: "80%", label: "reuse ratio", detail: "second run reused 8 of 10 base workflow steps" },
-    { value: "95", label: "quality score", detail: "second scenario passed threshold without rediscovery from zero" },
-    { value: "3", label: "passed gates", detail: "human review, risk approval, and account-state check ordered before handoff" },
     { value: "1", label: "failure chain", detail: "invalid publish proof converted into reusable guardrails instead of promotion" },
   ],
   spotlight: {
@@ -221,66 +217,164 @@ export const validatedProof = {
       href: links.failureRun,
     },
   ],
-  heatmap: {
-    eyebrow: "Validated skill heatmap",
-    title: "What has actually been validated so far",
-    rows: [
-      {
-        skill: "Skill discovery and normalization",
-        cells: [
-          { label: "creator workflow", level: 3 },
-          { label: "meeting-notes reuse", level: 2 },
-          { label: "live publish safety", level: 1 },
-        ],
-      },
-      {
-        skill: "Workflow composition",
-        cells: [
-          { label: "topic-to-post flow", level: 3 },
-          { label: "reuse without zero restart", level: 3 },
-          { label: "approval ordering repair", level: 2 },
-        ],
-      },
-      {
-        skill: "Content generation and style rewrite",
-        cells: [
-          { label: "xhs draft asset", level: 3 },
-          { label: "meeting-notes scenario", level: 3 },
-          { label: "publish-safe adaptation", level: 1 },
-        ],
-      },
-      {
-        skill: "Quality scoring and review gates",
-        cells: [
-          { label: "draft verification", level: 3 },
-          { label: "content-package scoring", level: 3 },
-          { label: "failed publish rejection", level: 3 },
-        ],
-      },
-      {
-        skill: "Account-state and handoff control",
-        cells: [
-          { label: "draft-only mode", level: 3 },
-          { label: "confidentiality boundary", level: 2 },
-          { label: "publish proof boundary", level: 3 },
-        ],
-      },
-      {
-        skill: "KB writeback and self-evolution",
-        cells: [
-          { label: "verified recipe promotion", level: 3 },
-          { label: "reuse memory retrieval", level: 3 },
-          { label: "failure to guardrail", level: 3 },
-        ],
-      },
-    ],
-    columns: ["Scenario fit", "Reuse proof", "Risk boundary"],
-    legend: [
-      { label: "strong", level: 3 },
-      { label: "partial", level: 2 },
-      { label: "emerging", level: 1 },
-    ],
-  },
+} as const;
+
+export const scenarioHeatmap = {
+  eyebrow: "Use cases + validated skill heatmap",
+  title: "Show the application surface, but grade it by evidence.",
+  description:
+    "Each scenario is useful only insofar as it proves reusable workflow skills. The heatmap separates what has been executed, reviewed, verified, and made reusable.",
+  columns: ["Executed", "Reviewed", "Verified", "Reusable"],
+  legend: [
+    { status: "verified", label: "verified" },
+    { status: "partial", label: "partial" },
+    { status: "emerging", label: "emerging" },
+    { status: "none", label: "not claimed" },
+  ],
+  scenarios: [
+    {
+      key: "xiaohongshu",
+      tag: "Xiaohongshu Creator",
+      status: "default verified scenario",
+      title: "The v0.1 validation wrapper with the strongest evidence chain.",
+      description:
+        "A topic-to-draft workflow proved that multiple reusable skills can be selected, composed, reviewed, verified, reused, and improved through failure evidence.",
+      evidence: [
+        "verified recipe and verified workflow records",
+        "draft proof with clicked_publish=false",
+        "second run reused 8 of 10 base steps",
+        "failed publish proof retained as guardrail evidence",
+      ],
+      boundary: "Verified for compliant draft save. Live publish is explicitly not claimed.",
+      assets: ["verified-recipes/", "workflow-kb/verified-workflows/", "workflow-kb/failure-cases/"],
+      rows: [
+        { skill: "Skill discovery and normalization", cells: ["verified", "verified", "verified", "verified"] },
+        { skill: "Workflow composition", cells: ["verified", "verified", "verified", "verified"] },
+        { skill: "Content generation and style rewrite", cells: ["verified", "verified", "partial", "partial"] },
+        { skill: "Quality scoring", cells: ["verified", "verified", "verified", "partial"] },
+        { skill: "Human review gate", cells: ["verified", "verified", "verified", "verified"] },
+        { skill: "Risk and account-state gate", cells: ["verified", "verified", "verified", "verified"] },
+        { skill: "Draft/proof verification", cells: ["verified", "verified", "verified", "partial"] },
+        { skill: "KB writeback", cells: ["verified", "verified", "verified", "verified"] },
+        { skill: "Failure-to-guardrail", cells: ["verified", "verified", "verified", "verified"] },
+        { skill: "Skill optimization", cells: ["emerging", "emerging", "none", "none"] },
+      ],
+    },
+    {
+      key: "agora",
+      tag: "Agora Voice Agent",
+      status: "scenario evidence emerging",
+      title: "A real-time agent scenario for checking workflow validation beyond content.",
+      description:
+        "Agora expands the validation surface toward environment checks, runtime proof, CLI readiness, and scenario-owned risk gates without redefining the core architecture.",
+      evidence: [
+        "scenario boundary and scoring rubric exist",
+        "baseline run records environment and runtime proof",
+        "reusable patterns remain candidate-level",
+      ],
+      boundary: "Not promoted as a verified reusable recipe. Evidence is scenario-run level.",
+      assets: ["scenarios/agora-voice-agent-demo/", "runs/001-agora-voice-agent-quickstart-baseline/", "skills/agora-e2e-workflow-validation/"],
+      rows: [
+        { skill: "Skill discovery and normalization", cells: ["partial", "partial", "emerging", "emerging"] },
+        { skill: "Workflow composition", cells: ["partial", "partial", "emerging", "none"] },
+        { skill: "Environment readiness", cells: ["partial", "partial", "emerging", "none"] },
+        { skill: "Runtime proof capture", cells: ["partial", "partial", "emerging", "none"] },
+        { skill: "Quality scoring", cells: ["partial", "partial", "none", "none"] },
+        { skill: "Risk gate", cells: ["partial", "partial", "none", "none"] },
+        { skill: "KB writeback", cells: ["emerging", "none", "none", "none"] },
+        { skill: "Verified promotion", cells: ["none", "none", "none", "none"] },
+      ],
+    },
+    {
+      key: "skillopt",
+      tag: "Skill Optimization",
+      status: "layer 1 method under validation",
+      title: "A generic optimization loop for improving reusable skill documents.",
+      description:
+        "SkillOpt-style work is treated as Layer 1 skill optimization: bounded edits, split evidence, held-out selection, and explicit rejection records.",
+      evidence: [
+        "schema contracts for skill edits and optimization runs",
+        "validator checks train/selection evidence split",
+        "minimal XHS KB-reuse optimization run passes",
+      ],
+      boundary: "Experimental local architecture only. No official SkillOpt code or external benchmark is claimed.",
+      assets: ["docs/skillopt-integration.md", "workflows/skill-optimization/", "runs/008-xhs-skillopt-kb-reuse-minimal/"],
+      rows: [
+        { skill: "Evidence split", cells: ["verified", "verified", "partial", "partial"] },
+        { skill: "Bounded skill edits", cells: ["verified", "verified", "partial", "partial"] },
+        { skill: "Held-out selection gate", cells: ["verified", "verified", "partial", "partial"] },
+        { skill: "Risk gate compatibility", cells: ["verified", "verified", "partial", "partial"] },
+        { skill: "Rejected-edit preservation", cells: ["emerging", "none", "none", "none"] },
+        { skill: "Official optimizer integration", cells: ["none", "none", "none", "none"] },
+      ],
+    },
+    {
+      key: "research",
+      tag: "Research / Analysis",
+      status: "transfer target",
+      title: "A repeatable analysis workflow target, not yet a promoted recipe.",
+      description:
+        "The framework fits market scans, competitor research, literature review, and due diligence when source selection and review notes need to become reusable evidence.",
+      evidence: [
+        "supported by the generic workflow model",
+        "no dedicated verified research recipe yet",
+        "requires scenario rubric before promotion",
+      ],
+      boundary: "Use-case fit is claimed. Verified workflow status is not claimed.",
+      assets: ["docs/architecture.md", "docs/workflow-knowledge-base.md"],
+      rows: [
+        { skill: "Source selection", cells: ["emerging", "none", "none", "none"] },
+        { skill: "Synthesis workflow", cells: ["emerging", "none", "none", "none"] },
+        { skill: "Review rubric", cells: ["emerging", "none", "none", "none"] },
+        { skill: "KB writeback", cells: ["emerging", "none", "none", "none"] },
+        { skill: "Verified promotion", cells: ["none", "none", "none", "none"] },
+      ],
+    },
+    {
+      key: "engineering",
+      tag: "Engineering Delivery",
+      status: "transfer target",
+      title: "A natural fit for bug triage, PR review, migrations, and release checks.",
+      description:
+        "Engineering workflows can preserve commands, failures, verifier output, reviewer feedback, and the exact execution path that worked.",
+      evidence: [
+        "framework model supports validator-backed runs",
+        "no dedicated engineering verified recipe yet",
+        "promotion would need repo-specific gates",
+      ],
+      boundary: "Workflow pattern fit only. No engineering delivery recipe is promoted.",
+      assets: ["docs/principles.md", "docs/directory-architecture.md"],
+      rows: [
+        { skill: "Command capture", cells: ["emerging", "none", "none", "none"] },
+        { skill: "Review feedback loop", cells: ["emerging", "none", "none", "none"] },
+        { skill: "Validator evidence", cells: ["emerging", "none", "none", "none"] },
+        { skill: "Release gate", cells: ["none", "none", "none", "none"] },
+        { skill: "Reusable recipe", cells: ["none", "none", "none", "none"] },
+      ],
+    },
+    {
+      key: "ops",
+      tag: "Monitoring / Ops Review",
+      status: "transfer target",
+      title: "Recurring review loops can become KB-backed operational memory.",
+      description:
+        "The same evidence model can support watchlists, incident reviews, weekly reports, competitive changes, and operational checkups.",
+      evidence: [
+        "recurring-loop fit follows from KB writeback model",
+        "no dedicated monitoring verified run yet",
+        "needs freshness, source, and review gates",
+      ],
+      boundary: "Potential application area only. Not verified as a scenario recipe.",
+      assets: ["workflow-kb/", "reports/"],
+      rows: [
+        { skill: "Freshness checks", cells: ["emerging", "none", "none", "none"] },
+        { skill: "Recurring evidence capture", cells: ["emerging", "none", "none", "none"] },
+        { skill: "Fallback strategy", cells: ["emerging", "none", "none", "none"] },
+        { skill: "Human review", cells: ["none", "none", "none", "none"] },
+        { skill: "Verified promotion", cells: ["none", "none", "none", "none"] },
+      ],
+    },
+  ],
 } as const;
 
 export const useCases = {
@@ -318,9 +412,10 @@ export const useCases = {
 
 export const coreModel = {
   eyebrow: "Core model",
-  title: "Separate assets, proof, and promotion.",
+  title: "One loop: assets, evidence, gates, writeback, promotion.",
   description:
-    "The framework is built around three things that should not be mixed: reusable workflow assets, evidence from concrete runs, and the gates that decide whether evidence can be promoted.",
+    "The homepage now keeps the model in one place: reusable assets are selected, concrete runs create evidence, gates decide whether anything can be written back, and promotion remains explicit.",
+  flow: ["Assets", "Run evidence", "Review gates", "KB writeback", "Promotion"],
   pillars: [
     {
       title: "Skill assets",
@@ -340,6 +435,11 @@ export const coreModel = {
       body: "Verified recipes, failed recipes, reusable KB entries, and evolution drafts are separated by evidence state.",
       paths: ["verified-recipes/", "failed-recipes/", "evolution-drafts/"],
     },
+  ],
+  rules: [
+    "A quality score is not human approval.",
+    "Scenario risk stays inside the scenario boundary.",
+    "Failed evidence is reusable, but it stays failed.",
   ],
   visual: {
     src: "/architecture/workflow-architecture-dark.png",

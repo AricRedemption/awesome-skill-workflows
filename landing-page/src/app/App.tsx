@@ -1,16 +1,11 @@
 import { ArchitectureSection } from "./components/ArchitectureSection";
-import { EcosystemMarquee } from "./components/EcosystemMarquee";
-import { EvidenceGates } from "./components/EvidenceGates";
 import { FinalCta } from "./components/FinalCta";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
-import { KnowledgeBase } from "./components/KnowledgeBase";
 import { ProblemSection } from "./components/ProblemSection";
-import { ScenarioBoundary } from "./components/ScenarioBoundary";
-import { UseCasesSection } from "./components/UseCasesSection";
+import { ScenarioSkillHeatmap } from "./components/ScenarioSkillHeatmap";
 import { ValidatedProofSection } from "./components/ValidatedProofSection";
-import { WorkflowLoop } from "./components/WorkflowLoop";
 
 export default function App() {
   return (
@@ -18,15 +13,10 @@ export default function App() {
       <Header />
       <main>
         <Hero />
-        <ValidatedProofSection />
         <ProblemSection />
+        <ValidatedProofSection />
+        <ScenarioSkillHeatmap />
         <ArchitectureSection />
-        <WorkflowLoop />
-        <EvidenceGates />
-        <KnowledgeBase />
-        <EcosystemMarquee />
-        <UseCasesSection />
-        <ScenarioBoundary />
         <FinalCta />
       </main>
       <Footer />

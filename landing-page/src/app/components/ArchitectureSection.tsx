@@ -10,6 +10,16 @@ export function ArchitectureSection() {
         <h2 className="text-[clamp(1.65rem,3.2vw,2.75rem)] font-bold leading-[1.08] text-[#f8f3e8]">{coreModel.title}</h2>
         <p className="mt-4 text-base leading-[1.72] text-[#ebe1c8]/75">{coreModel.description}</p>
       </div>
+      <div className="mb-4 grid grid-cols-[1fr_auto] items-center gap-2 rounded-[22px] border border-[#d1bf94]/15 bg-gradient-to-r from-[#1e241d]/95 to-[#10120f]/95 p-4 shadow-[0_0_0_1px_rgba(122,170,119,0.14),0_28px_90px_rgba(0,0,0,0.32)] max-[900px]:grid-cols-1">
+        <div className="grid grid-cols-5 gap-2 max-[900px]:grid-cols-1">
+          {coreModel.flow.map((step, index) => (
+            <div className="relative rounded-[16px] border border-[#d1bf94]/14 bg-[#0f130f]/82 px-4 py-3" key={step}>
+              <div className="text-[11px] font-extrabold uppercase tracking-[0.08em] text-[#d6ad69]">0{index + 1}</div>
+              <div className="mt-1 text-sm font-bold text-[#f8f3e8]">{step}</div>
+            </div>
+          ))}
+        </div>
+      </div>
       <figure className="mx-auto mb-4 w-[min(980px,100%)] overflow-hidden rounded-[22px] border border-[#d1bf94]/16 bg-[#0b1018] p-3 shadow-[0_0_0_1px_rgba(122,170,119,0.10),0_24px_80px_rgba(0,0,0,0.28)]">
         <img className="block h-auto w-full rounded-[16px]" src={coreModel.visual.src} alt={coreModel.visual.alt} />
       </figure>
@@ -28,6 +38,13 @@ export function ArchitectureSection() {
               ))}
             </ul>
           </article>
+        ))}
+      </div>
+      <div className="mt-4 grid grid-cols-3 gap-3.5 max-[900px]:grid-cols-1">
+        {coreModel.rules.map((rule) => (
+          <div className="rounded-[18px] border border-[#d6ad69]/16 bg-[#d6ad69]/8 px-4 py-4 text-sm font-semibold leading-6 text-[#efe5c7]/78" key={rule}>
+            {rule}
+          </div>
         ))}
       </div>
     </section>
