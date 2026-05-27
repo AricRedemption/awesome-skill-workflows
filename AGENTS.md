@@ -36,6 +36,20 @@ This project is an AI agent skill workflow framework. It is not a single-scenari
 - Store failed evidence only under explicit failed locations such as `failed-recipes/` or `workflow-kb/failure-cases/`.
 - Keep every reusable knowledge item in one primary home. Link to it instead of duplicating it across many files.
 
+## Skill Optimization Rules
+
+This project may use SkillOpt-style optimization as a Layer 1 method for
+improving reusable skill documents from scored rollout evidence. See
+`docs/skillopt-integration.md`.
+
+- Treat SkillOpt-style work as generic skill optimization, not as a Xiaohongshu, Agora, or platform-specific scenario rule.
+- Keep the target agent, harness, scoring method, and evidence split explicit before proposing edits to a skill.
+- Prefer bounded `add`, `delete`, and `replace` edits over full rewrites. A full rewrite needs an explicit reason and validation plan.
+- Accept a candidate skill only when held-out selection evidence improves over the baseline and required scenario risk gates still pass.
+- Preserve rejected edits with their score drop or failure reason when they provide reusable negative evidence.
+- Do not export optimizer-side memory, rejected-edit buffers, or slow/meta notes as deployed skill instructions unless they pass the normal promotion gates.
+- Do not vendor external SkillOpt code, benchmark data, or generated prompt dumps into this repository without a separate dependency, license, and evidence review.
+
 ## Execution Discipline
 
 These rules adapt general LLM coding guardrails to this workflow framework. They bias toward clear, small, evidence-backed changes.
@@ -135,6 +149,7 @@ what remains unverified.
 - MVP acceptance: `node scripts/validate-mvp-acceptance.mjs`
 - Evolution drafts: `node scripts/validate-evolution-drafts.mjs`
 - Sensitive boundaries: `node scripts/validate-sensitive-boundaries.mjs`
+- Skill optimization: `node scripts/validate-skill-optimization.mjs`
 - Promotion gates: `node scripts/validate-promotion-gates.mjs`
 
 Run the narrowest relevant validator after changing schemas, recipes, workflow KB entries, or promotion evidence.

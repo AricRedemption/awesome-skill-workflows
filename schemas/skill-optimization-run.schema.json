@@ -1,0 +1,202 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "skill-optimization-run.schema.json",
+  "title": "Skill Optimization Run",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "run_id",
+    "status",
+    "scenario_id",
+    "source_skill_path",
+    "candidate_skill_path",
+    "optimizer_mode",
+    "evidence_split",
+    "edit_budget",
+    "edits",
+    "baseline_score",
+    "candidate_score",
+    "selection_gate",
+    "risk_gate",
+    "promotion_target",
+    "accepted",
+    "rejected_reason",
+    "evidence_refs",
+    "sensitive_data_status"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "type": "string",
+      "enum": ["experimental", "accepted_candidate", "rejected_candidate", "blocked"]
+    },
+    "scenario_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_skill_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "candidate_skill_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "optimizer_mode": {
+      "type": "string",
+      "enum": ["manual_skillopt_style", "external_skillopt", "hybrid"]
+    },
+    "evidence_split": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["train_refs", "selection_refs", "test_refs"],
+      "properties": {
+        "train_refs": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "selection_refs": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "test_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "edit_budget": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "edits": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "skill-edit.schema.json"
+      }
+    },
+    "baseline_score": {
+      "$ref": "#/$defs/score"
+    },
+    "candidate_score": {
+      "$ref": "#/$defs/score"
+    },
+    "selection_gate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "baseline_score",
+        "candidate_score",
+        "improvement",
+        "evidence_refs"
+      ],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": ["passed", "failed", "blocked"]
+        },
+        "baseline_score": {
+          "type": "number"
+        },
+        "candidate_score": {
+          "type": "number"
+        },
+        "improvement": {
+          "type": "number"
+        },
+        "evidence_refs": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "risk_gate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "notes", "evidence_refs"],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": ["passed", "failed", "blocked"]
+        },
+        "notes": {
+          "type": "string"
+        },
+        "evidence_refs": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "promotion_target": {
+      "type": "string",
+      "enum": ["none", "evolution", "workflow-kb", "verified-recipes"]
+    },
+    "accepted": {
+      "type": "boolean"
+    },
+    "rejected_reason": {
+      "type": "string"
+    },
+    "evidence_refs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "sensitive_data_status": {
+      "type": "string",
+      "enum": ["not_reviewed", "sanitized", "blocked"]
+    }
+  },
+  "$defs": {
+    "score": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["metric", "value", "evidence_refs"],
+      "properties": {
+        "metric": {
+          "type": "string",
+          "minLength": 1
+        },
+        "value": {
+          "type": "number"
+        },
+        "evidence_refs": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  }
+}

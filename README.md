@@ -21,6 +21,7 @@
   <a href="./docs/directory-architecture.md"><strong>Directory Map</strong></a> &bull;
   <a href="./docs/sensitive-data-policy.md"><strong>Sensitive Data</strong></a> &bull;
   <a href="./docs/workflow-knowledge-base.md"><strong>Workflow KB</strong></a> &bull;
+  <a href="./docs/skillopt-integration.md"><strong>Skill Optimization</strong></a> &bull;
   <a href="./verified-recipes/xhs-ai-agent-save-one-hour.recipe.md"><strong>Verified Recipe</strong></a> &bull;
   <a href="./reports/first-mvp-validation-report.md"><strong>MVP Report</strong></a> &bull;
   <a href="./TOOLS.md"><strong>Tools</strong></a> &bull;
@@ -51,6 +52,12 @@ This repository treats workflows as the durable asset:
 - run evidence is the proof layer,
 - the workflow knowledge base is the reusable memory,
 - self-evolution turns failures and review notes into better future assets.
+
+The SkillOpt-style direction extends that loop by treating reusable skill
+documents as candidate artifacts that can be optimized from scored rollout
+evidence. Edits should be bounded, evidence-backed, and accepted only through
+validation gates rather than promoted because they look plausible. See
+`docs/skillopt-integration.md`.
 
 ## What This Project Is
 
@@ -156,6 +163,7 @@ Use these files to understand the current validated state:
 | --- | --- |
 | What is the system architecture? | `docs/architecture.md` |
 | What principles constrain the project? | `docs/principles.md` |
+| How should SkillOpt-style optimization fit? | `docs/skillopt-integration.md` |
 | What is the current scenario? | `scenarios/xiaohongshu-creator/scenario.md` |
 | What workflow was validated? | `workflows/xiaohongshu/xhs-ai-tool-topic-to-post.workflow.md` |
 | What run passed draft validation? | `runs/003-xhs-ai-agent-save-one-hour-step8-draft-rerun/` |

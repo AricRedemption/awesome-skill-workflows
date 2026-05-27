@@ -574,5 +574,37 @@
       "can_be_main_dependency": true,
       "usage_condition": "Use after a human-approved action to confirm the post or draft state."
     }
+  },
+  {
+    "id": "agora-real-time-ai-integration",
+    "name": "agora-real-time-ai-integration",
+    "source": {
+      "type": "github",
+      "repo": "AgoraIO/skills",
+      "url": "https://github.com/AgoraIO/skills"
+    },
+    "description": "External pending Agora skill pack for real-time AI voice agents, RTC/RTM integration, CLI onboarding, token/auth flows, recording, and server gateway work.",
+    "capabilities": ["agora-conversational-ai-quickstart", "agora-rtc-integration", "agora-rtm-messaging", "agora-token-server", "agora-cli-project-onboarding", "agora-cloud-recording", "agora-server-gateway", "real-time-voice-agent-integration"],
+    "inputs": ["Agora app goal", "target platform", "agent or RTC requirements", "credential plan", "human approval state"],
+    "outputs": ["route selection", "quickstart plan", "integration checklist", "risk-gated setup steps"],
+    "compatible_agents": ["claude-code", "codex", "cursor", "windsurf", "github-copilot"],
+    "risk_level": "high",
+    "requires_auth": true,
+    "requires_human_review": true,
+    "candidate_workflows": ["agora-voice-agent-baseline", "rtc-rtm-app-integration", "agora-token-server-setup"],
+    "confidence": 0.72,
+    "discovery_priority": "P2",
+    "mocked": false,
+    "original_source_path": "skills/agora/SKILL.md",
+    "metadata": {
+      "source_group": "P2_EXTERNAL_PENDING",
+      "source_priority": "P2",
+      "discovery_priority": "P2",
+      "original_source_path": "skills/agora/SKILL.md",
+      "mocked": false,
+      "review_status": "pending-review",
+      "can_be_main_dependency": false,
+      "usage_condition": "Use only as a pending candidate for an Agora-specific scenario; do not execute account-bound setup, credential writes, recording, or live session operations without scenario-local risk gates and human review."
+    }
   }
 ]

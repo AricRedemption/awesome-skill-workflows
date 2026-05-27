@@ -1,0 +1,107 @@
+{
+  "run_id": "008-xhs-skillopt-kb-reuse-minimal",
+  "status": "accepted_candidate",
+  "scenario_id": "xiaohongshu-creator",
+  "source_skill_path": "runs/008-xhs-skillopt-kb-reuse-minimal/baseline-skill.md",
+  "candidate_skill_path": "runs/008-xhs-skillopt-kb-reuse-minimal/candidate-skill.md",
+  "optimizer_mode": "manual_skillopt_style",
+  "evidence_split": {
+    "train_refs": [
+      "runs/001-xhs-ai-agent-save-one-hour/step-7-self-evolution-result.json",
+      "workflow-kb/failure-cases/xhs-account-state-precheck-missing.md",
+      "workflow-kb/failure-cases/xhs-content-failure-cases.md"
+    ],
+    "selection_refs": [
+      "runs/002-xhs-meeting-notes-productivity/run-summary.md",
+      "workflow-kb/verified-workflows/xhs-ai-tool-topic-to-post.v1.md"
+    ],
+    "test_refs": [
+      "runs/003-xhs-ai-agent-save-one-hour-step8-draft-rerun/gate-ledger.json",
+      "runs/003-xhs-ai-agent-save-one-hour-step8-draft-rerun/draft-proof.json"
+    ]
+  },
+  "edit_budget": 3,
+  "edits": [
+    {
+      "edit_id": "edit-001-add-failed-proof-boundary",
+      "operation": "add",
+      "target_section": "Instruction",
+      "rationale": "The historical run showed that publish facts, draft facts, content score, and compliant proof must remain separate evidence states.",
+      "before": "Reuse matching workflow-KB entries before composing a new XHS content workflow.",
+      "after": "Reuse failed publish evidence as negative evidence only; do not treat it as compliant publish proof.",
+      "evidence_refs": [
+        "runs/001-xhs-ai-agent-save-one-hour/step-7-self-evolution-result.json",
+        "workflow-kb/failure-cases/xhs-content-failure-cases.md"
+      ],
+      "risk_impact": "reduces_risk"
+    },
+    {
+      "edit_id": "edit-002-add-account-state-gate",
+      "operation": "add",
+      "target_section": "Instruction",
+      "rationale": "Human feedback identified account login and authorization as a required pre-handoff gate, not a post-generation note.",
+      "before": "Generate and score the content package before writeback.",
+      "after": "Keep account state as a hard pre-handoff gate; stop before draft or publish if account state is unknown.",
+      "evidence_refs": [
+        "workflow-kb/failure-cases/xhs-account-state-precheck-missing.md"
+      ],
+      "risk_impact": "reduces_risk"
+    },
+    {
+      "edit_id": "edit-003-add-selection-gate",
+      "operation": "add",
+      "target_section": "Instruction",
+      "rationale": "The SkillOpt-style loop requires candidate workflow changes to be accepted only when held-out evidence improves the selected metric without weakening scenario gates.",
+      "before": "Write back new reusable lessons after the run.",
+      "after": "Accept candidate workflow changes only when held-out evidence improves the selected metric and required scenario gates remain intact.",
+      "evidence_refs": [
+        "runs/002-xhs-meeting-notes-productivity/run-summary.md",
+        "workflow-kb/verified-workflows/xhs-ai-tool-topic-to-post.v1.md"
+      ],
+      "risk_impact": "reduces_risk"
+    }
+  ],
+  "baseline_score": {
+    "metric": "xhs_kb_reuse_safety_score",
+    "value": 80,
+    "evidence_refs": [
+      "runs/002-xhs-meeting-notes-productivity/run-summary.md"
+    ]
+  },
+  "candidate_score": {
+    "metric": "xhs_kb_reuse_safety_score",
+    "value": 95,
+    "evidence_refs": [
+      "runs/002-xhs-meeting-notes-productivity/run-summary.md",
+      "workflow-kb/verified-workflows/xhs-ai-tool-topic-to-post.v1.md"
+    ]
+  },
+  "selection_gate": {
+    "status": "passed",
+    "baseline_score": 80,
+    "candidate_score": 95,
+    "improvement": 15,
+    "evidence_refs": [
+      "runs/002-xhs-meeting-notes-productivity/run-summary.md",
+      "workflow-kb/verified-workflows/xhs-ai-tool-topic-to-post.v1.md"
+    ]
+  },
+  "risk_gate": {
+    "status": "passed",
+    "notes": "The candidate only tightens KB-first reuse and proof boundaries. It does not authorize draft creation, live publish, browser automation, account operations, or direct recipe promotion.",
+    "evidence_refs": [
+      "workflow-kb/verified-workflows/xhs-ai-tool-topic-to-post.v1.md",
+      "workflow-kb/failure-cases/xhs-account-state-precheck-missing.md"
+    ]
+  },
+  "promotion_target": "none",
+  "accepted": true,
+  "rejected_reason": "",
+  "evidence_refs": [
+    "runs/001-xhs-ai-agent-save-one-hour/step-7-self-evolution-result.json",
+    "runs/002-xhs-meeting-notes-productivity/run-summary.md",
+    "workflow-kb/verified-workflows/xhs-ai-tool-topic-to-post.v1.md",
+    "workflow-kb/failure-cases/xhs-account-state-precheck-missing.md"
+  ],
+  "sensitive_data_status": "sanitized"
+}

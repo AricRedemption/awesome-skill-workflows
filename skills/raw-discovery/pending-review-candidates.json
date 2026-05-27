@@ -133,5 +133,47 @@
     "source_type": "github",
     "risk_note": "Medium; policy gate only.",
     "mocked": false
+  },
+  {
+    "source_platform": "github",
+    "source_name": "AgoraIO/skills",
+    "discovered_name": "agora",
+    "source_url": "https://github.com/AgoraIO/skills",
+    "why_pending": "External product-specific skill pack outside the approved whitelist; useful for real-time AI and RTC workflows but not promoted.",
+    "raw_description": "Official Agora skill pack for Conversational AI voice agents, RTC, RTM, CLI onboarding, token/auth flows, cloud recording, server gateway, and cross-product integration patterns.",
+    "possible_capabilities": [
+      "agora-conversational-ai-quickstart",
+      "agora-rtc-integration",
+      "agora-rtm-messaging",
+      "agora-token-server",
+      "agora-cli-project-onboarding",
+      "agora-cloud-recording",
+      "agora-server-gateway",
+      "real-time-voice-agent-integration"
+    ],
+    "why_needed": "Adds a candidate source for validating real-time voice agent and RTC/RTM application workflows against the reusable skill-workflow framework.",
+    "missing_capability_filled": [
+      "agora-conversational-ai-quickstart",
+      "agora-rtc-integration",
+      "agora-token-server",
+      "real-time-voice-agent-integration"
+    ],
+    "reviewer_decision": "pending-review",
+    "reviewer_comments": "High risk because the workflow can involve Agora login, project creation, credentials, token generation, recording, and live real-time sessions; do not promote without an Agora-specific scenario run and human review.",
+    "can_enter_candidate_pool": false,
+    "discovered_skills": [
+      "Conversational AI",
+      "RTC",
+      "RTM",
+      "Agora CLI",
+      "Cloud Recording",
+      "Server token generation",
+      "Server Gateway",
+      "Cross-product coordination"
+    ],
+    "original_path": "skills/agora/SKILL.md",
+    "source_type": "github",
+    "risk_note": "High; includes account-bound setup, credentials, recording, and live RTC/RTM operations.",
+    "mocked": false
   }
 ]

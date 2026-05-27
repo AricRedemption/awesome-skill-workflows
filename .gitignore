@@ -18,6 +18,9 @@ team_progress.md
 *cookie*.json
 
 # Local scratch output
+.superpowers/
+node_modules/
+dist/
 temp_images/
 tmp/
 .DS_Store

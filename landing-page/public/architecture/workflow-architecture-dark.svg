@@ -1,0 +1,201 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#08101D"/>
+      <stop offset="1" stop-color="#0B1320"/>
+    </linearGradient>
+    <linearGradient id="badge" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#2F75FF"/>
+      <stop offset="1" stop-color="#123C93"/>
+    </linearGradient>
+    <linearGradient id="human" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#2A1E15"/>
+      <stop offset="1" stop-color="#1E1712"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#171F2B"/>
+      <stop offset="1" stop-color="#121923"/>
+    </linearGradient>
+    <filter id="glowBlue" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#000000" flood-opacity="0.28"/>
+    </filter>
+    <style>
+      .title{font:700 30px ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; fill:#F5F7FA}
+      .sub{font:400 14px ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; fill:#A8B2C4}
+      .laneTitle{font:700 28px ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; fill:#FFFFFF}
+      .laneBody{font:400 16px ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; fill:#C8D4E8}
+      .cardText{font:700 18px ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; fill:#F3F6FB}
+      .smallTag{font:700 11px ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; fill:#95B8FF; letter-spacing:1px}
+      .topTitle{font:800 42px ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; fill:#F7F9FC}
+      .topAccent{fill:#E3CF7A}
+      .topAccent2{fill:#B9D872}
+      .footerTitle{font:700 18px ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+      .footerBody{font:400 14px ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; fill:#ADB8CA}
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" rx="28" fill="url(#bg)"/>
+  <rect x="1" y="1" width="1598" height="898" rx="27" stroke="#1A2638"/>
+
+  <text x="800" y="74" text-anchor="middle" class="topTitle">Skill Workflow:<tspan class="topAccent"> Three-Layer </tspan><tspan class="topAccent2">Architecture</tspan></text>
+  <text x="800" y="122" text-anchor="middle" class="sub" style="font-size:18px">Use validation to turn isolated skills into reusable workflow assets</text>
+
+  <!-- Lanes -->
+  <g filter="url(#softShadow)">
+    <rect x="90" y="160" width="1280" height="170" rx="22" fill="#0D141E" stroke="#334154"/>
+    <rect x="90" y="360" width="1280" height="210" rx="22" fill="#0D141E" stroke="#334154"/>
+    <rect x="90" y="600" width="1280" height="170" rx="22" fill="#0D141E" stroke="#334154"/>
+  </g>
+
+  <!-- Left badges -->
+  <g>
+    <rect x="90" y="160" width="116" height="170" rx="22" fill="url(#badge)"/>
+    <rect x="90" y="360" width="116" height="210" rx="22" fill="url(#badge)"/>
+    <rect x="90" y="600" width="116" height="170" rx="22" fill="url(#badge)"/>
+    <text x="148" y="232" text-anchor="middle" style="font:800 34px ui-sans-serif; fill:white">01</text>
+    <text x="148" y="452" text-anchor="middle" style="font:800 34px ui-sans-serif; fill:white">02</text>
+    <text x="148" y="672" text-anchor="middle" style="font:800 34px ui-sans-serif; fill:white">03</text>
+    <line x1="116" y1="245" x2="180" y2="245" stroke="white" stroke-opacity="0.2"/>
+    <line x1="116" y1="466" x2="180" y2="466" stroke="white" stroke-opacity="0.2"/>
+    <line x1="116" y1="686" x2="180" y2="686" stroke="white" stroke-opacity="0.2"/>
+    <text x="148" y="294" text-anchor="middle" style="font:700 42px ui-sans-serif; fill:#CFE0FF">◫</text>
+    <text x="148" y="528" text-anchor="middle" style="font:700 42px ui-sans-serif; fill:#CFE0FF">⌘</text>
+    <text x="148" y="744" text-anchor="middle" style="font:700 42px ui-sans-serif; fill:#CFE0FF">↻</text>
+  </g>
+
+  <!-- Descriptions -->
+  <g>
+    <text x="240" y="210" class="laneTitle">Skill Registry</text>
+    <text x="240" y="254" class="laneBody">Unify capability sources</text>
+    <text x="240" y="289" class="laneBody">and collect reusable</text>
+    <text x="240" y="324" class="laneBody">assets.</text>
+
+    <text x="240" y="408" class="laneTitle">Workflow</text>
+    <text x="240" y="446" class="laneTitle">Orchestration</text>
+    <text x="240" y="492" class="laneBody">Plan and execute,</text>
+    <text x="240" y="527" class="laneBody">combining capabilities</text>
+    <text x="240" y="562" class="laneBody">into verifiable workflows.</text>
+
+    <text x="240" y="650" class="laneTitle">Validation &amp;</text>
+    <text x="240" y="688" class="laneTitle">Evolution</text>
+    <text x="240" y="732" class="laneBody">Verify results, keep</text>
+    <text x="240" y="767" class="laneBody">improving, and form</text>
+    <text x="240" y="802" class="laneBody">a reusable loop.</text>
+  </g>
+
+  <!-- top cards -->
+  <g filter="url(#softShadow)">
+    <rect x="480" y="185" width="220" height="120" rx="18" fill="url(#card)" stroke="#3E4B5F"/>
+    <rect x="726" y="185" width="220" height="120" rx="18" fill="url(#card)" stroke="#3E4B5F"/>
+    <rect x="972" y="185" width="220" height="120" rx="18" fill="url(#card)" stroke="#3E4B5F"/>
+    <rect x="1178" y="185" width="160" height="120" rx="18" fill="url(#card)" stroke="#3E4B5F"/>
+  </g>
+  <text x="590" y="235" text-anchor="middle" style="font:700 46px ui-sans-serif; fill:#A3D76B">○</text>
+  <text x="590" y="270" text-anchor="middle" class="cardText">Local Skills</text>
+  <text x="836" y="235" text-anchor="middle" style="font:700 46px ui-sans-serif; fill:#B7D873">◎</text>
+  <text x="836" y="270" text-anchor="middle" class="cardText">External Skills</text>
+  <text x="1082" y="235" text-anchor="middle" style="font:700 46px ui-sans-serif; fill:#A3D76B">✦</text>
+  <text x="1082" y="270" text-anchor="middle" class="cardText">Tool Capabilities</text>
+  <text x="1258" y="235" text-anchor="middle" style="font:700 46px ui-sans-serif; fill:#B7D873">◉</text>
+  <text x="1258" y="270" text-anchor="middle" style="font:700 16px ui-sans-serif; fill:#F3F6FB">Candidate</text>
+  <text x="1258" y="296" text-anchor="middle" style="font:700 16px ui-sans-serif; fill:#F3F6FB">Capabilities</text>
+
+  <!-- middle flow -->
+  <g filter="url(#softShadow)">
+    <rect x="480" y="390" width="118" height="132" rx="16" fill="url(#card)" stroke="#3E4B5F"/>
+    <rect x="630" y="390" width="118" height="132" rx="16" fill="url(#card)" stroke="#3E4B5F"/>
+    <rect x="780" y="390" width="118" height="132" rx="16" fill="url(#card)" stroke="#3E4B5F"/>
+    <rect x="930" y="390" width="118" height="132" rx="16" fill="url(#card)" stroke="#3E4B5F"/>
+    <rect x="1080" y="390" width="138" height="132" rx="16" fill="url(#human)" stroke="#E99636"/>
+    <rect x="1250" y="390" width="118" height="132" rx="16" fill="url(#card)" stroke="#3E4B5F"/>
+  </g>
+  <text x="539" y="422" text-anchor="middle" class="smallTag">01</text>
+  <text x="689" y="422" text-anchor="middle" class="smallTag">02</text>
+  <text x="839" y="422" text-anchor="middle" class="smallTag">03</text>
+  <text x="989" y="422" text-anchor="middle" class="smallTag">04</text>
+  <text x="1149" y="422" text-anchor="middle" style="font:700 11px ui-sans-serif; fill:#F0A34A; letter-spacing:1px">05</text>
+  <text x="1309" y="422" text-anchor="middle" class="smallTag">06</text>
+  <text x="539" y="485" text-anchor="middle" class="cardText">Select</text>
+  <text x="689" y="485" text-anchor="middle" class="cardText">Plan</text>
+  <text x="839" y="485" text-anchor="middle" class="cardText">Run</text>
+  <text x="989" y="485" text-anchor="middle" class="cardText">Score</text>
+  <text x="1149" y="470" text-anchor="middle" style="font:700 18px ui-sans-serif; fill:#F0A34A">Human</text>
+  <text x="1149" y="500" text-anchor="middle" style="font:700 18px ui-sans-serif; fill:#F0A34A">Review</text>
+  <text x="1309" y="470" text-anchor="middle" class="cardText">Scenario</text>
+  <text x="1309" y="500" text-anchor="middle" class="cardText">Check</text>
+
+  <!-- flow arrows -->
+  <g stroke="#4D8DFF" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" filter="url(#glowBlue)">
+    <path d="M206 245H440" stroke-opacity="0"/>
+    <path d="M1060 330V375"/>
+    <path d="M1060 375L1051 366"/>
+    <path d="M1060 375L1069 366"/>
+    <path d="M1060 570V615"/>
+    <path d="M1060 615L1051 606"/>
+    <path d="M1060 615L1069 606"/>
+    <path d="M598 456H628"/>
+    <path d="M748 456H778"/>
+    <path d="M898 456H928"/>
+    <path d="M1048 456H1078"/>
+    <path d="M1218 456H1248"/>
+    <path d="M618 456L607 446"/>
+    <path d="M618 456L607 466"/>
+    <path d="M768 456L757 446"/>
+    <path d="M768 456L757 466"/>
+    <path d="M918 456L907 446"/>
+    <path d="M918 456L907 466"/>
+    <path d="M1068 456L1057 446"/>
+    <path d="M1068 456L1057 466"/>
+    <path d="M1238 456L1227 446"/>
+    <path d="M1238 456L1227 466"/>
+    <path d="M598 685H628"/>
+    <path d="M748 685H778"/>
+    <path d="M898 685H928"/>
+    <path d="M1048 685H1078"/>
+    <path d="M1198 685H1228"/>
+    <path d="M618 685L607 675"/>
+    <path d="M618 685L607 695"/>
+    <path d="M768 685L757 675"/>
+    <path d="M768 685L757 695"/>
+    <path d="M918 685L907 675"/>
+    <path d="M918 685L907 695"/>
+    <path d="M1068 685L1057 675"/>
+    <path d="M1068 685L1057 695"/>
+    <path d="M1248 685L1237 675"/>
+    <path d="M1248 685L1237 695"/>
+    <path d="M1370 245H1460V685H1370"/>
+    <path d="M1380 245L1391 234"/>
+    <path d="M1380 245L1391 256"/>
+  </g>
+
+  <!-- bottom cards -->
+  <g>
+    <circle cx="160" cy="835" r="18" stroke="#A3D76B" stroke-width="4"/>
+    <path d="M150 835L158 843L174 825" stroke="#A3D76B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="200" y="828" class="footerTitle" fill="#A3D76B">Reusable by design</text>
+    <text x="200" y="856" class="footerBody">Assets, workflows, and evidence are portable and reusable.</text>
+
+    <path d="M610 818L626 818L626 846L610 846Z" stroke="#E3CF7A" stroke-width="4"/>
+    <path d="M618 846L626 854L642 838" stroke="#E3CF7A" stroke-width="4" fill="none"/>
+    <text x="662" y="828" class="footerTitle" fill="#E3CF7A">Proof from execution</text>
+    <text x="662" y="856" class="footerBody">Every step leaves verifiable artifacts and quality signals.</text>
+
+    <path d="M1120 850L1148 822L1162 836L1182 816" stroke="#A3D76B" stroke-width="4" fill="none"/>
+    <path d="M1173 816H1182V825" stroke="#A3D76B" stroke-width="4" fill="none"/>
+    <text x="1188" y="828" class="footerTitle" fill="#A3D76B">Continuously improving</text>
+    <text x="1188" y="856" class="footerBody">Feedback loops turn outcomes into</text>
+    <text x="1188" y="878" class="footerBody">better assets.</text>
+  </g>
+
+  <text x="1512" y="468" text-anchor="middle" style="font:700 24px ui-sans-serif; fill:#4D8DFF">Update</text>
+  <text x="1512" y="503" text-anchor="middle" style="font:700 24px ui-sans-serif; fill:#4D8DFF">what</text>
+  <text x="1512" y="538" text-anchor="middle" style="font:700 24px ui-sans-serif; fill:#4D8DFF">actually</text>
+  <text x="1512" y="573" text-anchor="middle" style="font:700 24px ui-sans-serif; fill:#4D8DFF">ran</text>
+</svg>
