@@ -60,6 +60,48 @@ For server operation, the supported improvement path is a managed live browser s
 
 A protected external persistent profile is still useful for login/session reuse, but current evidence shows it is not sufficient by itself to preserve Xiaohongshu web drafts after process shutdown.
 
+## Successful Experience Runbook
+
+Use this as the reusable successful path for no-GUI Xiaohongshu draft handoff:
+
+1. Prepare a sanitized content package and images outside the browser.
+2. Confirm human review and risk approval before any account-state-changing action.
+3. Start one headless browser process with a protected external profile.
+4. Reuse MCP cookies from local sensitive state; never write cookie contents into run evidence.
+5. Open the creator image-publish page and verify upload UI readiness.
+6. Upload images, fill title, and fill body/hashtags.
+7. Click the draft-only action area (`xhs-publish-btn`, left-side draft action); never click the publish action.
+8. Open the draft box in the same browser process.
+9. Verify the target title appears in the draft box.
+10. Keep the same browser process alive.
+11. Recheck the same draft box in the same browser process before handoff or downstream confirmation.
+12. Record only sanitized proof fields: `headless=true`, `clicked_publish=false`, `draftbox_detected=true`, `title_found_in_draftbox=true`, and whether this was a same-browser live-session check.
+
+Do not mark the run successful if the only proof is editor-filled state, a stale draft title, or a proof captured after closing and reopening the browser.
+
+## Successful Evidence Contract
+
+The current successful evidence is:
+
+```json
+{
+  "mode": "headless_same_browser_live_session",
+  "clicked_publish": false,
+  "first_check": {
+    "draftbox_detected": true,
+    "title_found_in_draftbox": true
+  },
+  "second_check_same_browser_after_ms": 60000,
+  "second_check": {
+    "draftbox_detected": true,
+    "title_found_in_draftbox": true
+  },
+  "saved_draft_visible_in_same_browser": true
+}
+```
+
+This is successful no-GUI draft handoff evidence, not successful live publish evidence and not browserless HTTP evidence.
+
 ## Required Gates
 
 Before using this pattern:
