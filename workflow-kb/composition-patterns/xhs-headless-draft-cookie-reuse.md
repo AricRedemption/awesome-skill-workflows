@@ -28,6 +28,22 @@ Supported technical path:
 9. The script opens the draft box and verifies the target title.
 10. The proof records `clicked_publish=false`.
 
+## Reproduction Environment
+
+The successful path assumes this environment and state:
+
+- Execution mode: `headless_browser`, not `browserless_http`.
+- Browser engine: Chromium/Puppeteer or equivalent browser automation that can run the creator page JavaScript.
+- Browser visibility: no GUI window is required, but one browser process must remain alive through draft save and same-session verification.
+- Browser profile: protected external profile or equivalent local sensitive state. The full path must not be recorded in durable proof.
+- Cookie source: MCP/login cookies already created by an approved human login path. Cookie contents and cookie file paths must stay outside git evidence.
+- Viewport used by the successful run: desktop-sized headless viewport, `1440x1000`.
+- Target page state: creator image-publish page loaded with `target=image`, upload input present, and no login/verification prompt blocking the editor.
+- Content state before draft click: images uploaded, title filled, body/hashtags filled, and editor preview/render has had enough time to update.
+- Handoff state: keep the same browser process alive until proof is accepted.
+
+Do not count a reproduction as successful if the browser process exits before the same-browser draft-box recheck.
+
 ## Evidence From Run 007
 
 Run 007 produced this result:
@@ -79,6 +95,30 @@ Use this as the reusable successful path for no-GUI Xiaohongshu draft handoff:
 
 Do not mark the run successful if the only proof is editor-filled state, a stale draft title, or a proof captured after closing and reopening the browser.
 
+## Draft Action Identification
+
+The draft action is the most important reproduction detail.
+
+In the successful environment, the bottom action surface can render as one `xhs-publish-btn` composite component:
+
+- The component box may cover both the left draft action and the right publish action.
+- The DOM may not expose a separate button whose text is `存草稿`, `暂存离开`, or similar.
+- The component may expose `is-publish="true"` even though the left side of the same visual component is the draft-only action.
+
+Therefore, do not require an independent draft DOM node as the only valid reproduction path.
+
+Safe reproduction rule:
+
+1. Prefer a clear draft-only DOM target if one exists.
+2. If no draft DOM target exists and a single bottom `xhs-publish-btn` composite component is present, use the known left-side draft action area from the successful run.
+3. Do not click the right-side publish action area.
+4. Treat the click as successful only if the draft box opens and the unique target title appears.
+5. If the title does not appear in the draft box, mark the run failed even if the editor was filled.
+
+The known successful click evidence used the bottom `xhs-publish-btn` region and a left-side draft coordinate around `x=602, y=955` with a `1440x1000` viewport. Future reproductions should prefer relative positioning within the component over hard-coded absolute coordinates, but they must preserve the same safety property: left draft side only, never right publish side.
+
+The presence of `is-publish="true"` on `xhs-publish-btn` is not sufficient by itself to classify the entire composite component as publish-only. It is a warning signal that must be handled with the composite-button rule above.
+
 ## Successful Evidence Contract
 
 The current successful evidence is:
@@ -101,6 +141,18 @@ The current successful evidence is:
 ```
 
 This is successful no-GUI draft handoff evidence, not successful live publish evidence and not browserless HTTP evidence.
+
+## Failure Evidence From Reproduction Attempt
+
+A later reproduction attempt failed because it required a separate draft-only DOM control and refused to use the composite-button left-side rule. The page had:
+
+- upload input present,
+- title/body filling passed,
+- one visible bottom `xhs-publish-btn`,
+- no publish click,
+- no independent draft-only DOM node discovered.
+
+This is a documentation gap in this pattern, not proof that headless draft save is impossible. A reproducer must implement the composite-button rule and then rely on draft-box title verification as the success gate.
 
 ## Required Gates
 
@@ -127,6 +179,9 @@ The proof must include:
 - whether the draft was rechecked after browser restart
 - whether the headless browser session was kept alive for handoff
 - no account names, cookies, personal identifiers, or profile paths
+- if `xhs-publish-btn` was used, whether the composite-button left-side draft rule was used
+- first same-browser draft-box check result
+- second same-browser draft-box check result after a delay
 
 ## Known Limitation
 
