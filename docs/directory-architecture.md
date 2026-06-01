@@ -14,7 +14,7 @@ run artifacts should not become the framework's shape.
 
 These directories define reusable assets and contracts:
 
-- `skills/`: reusable skill assets, raw discovery, indexes, and capability maps.
+- `skills/`: reusable skill assets, wiki pages, raw discovery, indexes, and capability maps.
 - `workflows/`: reusable workflow definitions and orchestration patterns.
 - `workflow-kb/`: durable reusable knowledge promoted from evidence.
 - `schemas/`: JSON schemas for skills, workflows, scenarios, gates, recipes, and verification records.
@@ -64,7 +64,7 @@ These paths are not part of the reusable architecture:
 
 ## Placement Rules
 
-- Put reusable skill behavior in `skills/`.
+- Put reusable skill behavior and canonical skill wiki pages in `skills/`.
 - Put workflow composition in `workflows/`.
 - Put platform-specific constraints in `scenarios/<scenario>/`.
 - Put raw execution evidence in `runs/<run-id>/`.

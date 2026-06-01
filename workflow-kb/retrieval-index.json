@@ -118,36 +118,43 @@
     },
     {
       "id": "xhs-draft-execution-checklist",
-      "type": "composition_pattern",
-      "title": "XHS Draft Execution Checklist",
+      "type": "platform_ui_execution_aid",
+      "title": "XHS Draft UI Execution Checklist",
       "scenario": "xiaohongshu-creator",
       "capabilities": [
-        "draft-handoff",
+        "ui-draft-handoff",
         "browser-profile-boundary",
-        "draft-proof",
+        "ui-draft-proof-capture",
         "tag-verification",
-        "human-inspection"
+        "human-inspection",
+        "not-skill-validation"
       ],
       "tags": [
         "xhs",
         "draft",
-        "execution-checklist",
+        "ui-execution-checklist",
         "browser-profile",
-        "one-pass"
+        "one-pass",
+        "visible-browser",
+        "chrome-focus",
+        "not-xhs-mcp-validation"
       ],
       "source_path": "workflow-kb/composition-patterns/xhs-draft-execution-checklist.md",
-      "summary": "Execution checklist for one-pass Xiaohongshu draft handoff: profile-class confirmation, draft-only action, draft-box save timestamp proof, saved body/tag verification, and keeping the browser open for human inspection.",
+      "summary": "UI execution aid for Xiaohongshu draft handoff and fast visible-Chrome operation: direct image-publish URL, safe focus recovery without broad tab enumeration, file chooser multi-image upload, draft-only action, draft-box save timestamp proof, saved body/tag verification, and keeping the browser open for human inspection. This is not xhs-mcp skill validation evidence.",
       "reusable_for": [
-        "XHS draft workflows",
+        "XHS UI draft handoffs",
         "profile-local draft handoff",
         "tag revision verification",
-        "human-visible platform review"
+        "human-visible platform review",
+        "visible Chrome XHS image-post preparation"
       ],
       "risk_level": "high",
-      "verified_status": "draft",
+      "verified_status": "ui_execution_evidence_only",
       "evidence_refs": [
         "workflow-kb/failure-cases/xhs-local-draft-profile-and-proof-gap.md",
-        "runs/006-xhs-awesome-skill-workflows-layer1-retagged-draft/gate-ledger.json"
+        "runs/006-xhs-awesome-skill-workflows-layer1-retagged-draft/gate-ledger.json",
+        "runs/010-xhs-skillopt-paper-reproduction-human-published/run-summary.md",
+        "evolution/010-xhs-visible-browser-fast-path.md"
       ],
       "sensitive_data_status": "sanitized"
     },
@@ -440,18 +447,58 @@
         "experimental"
       ],
       "source_path": "workflow-kb/composition-patterns/xhs-headless-draft-cookie-reuse.md",
-      "summary": "Experimental pattern showing that a no-visible-window headless Chromium flow can reuse MCP cookies to save an XHS draft and verify the draft box in the same run, while post-restart persistence remains unverified.",
+      "summary": "Experimental pattern showing that a no-visible-window headless Chromium flow can reuse MCP cookies to save an XHS image draft, verify it under 草稿箱 -> 图文笔记, and re-open the same protected profile visibly to confirm the title. Drafts are browser-profile-local; cookies alone do not carry drafts across profiles.",
       "reusable_for": [
         "XHS server-side draft tests",
         "headless draft handoff",
         "cookie reuse validation",
-        "no-GUI execution"
+        "no-GUI execution",
+        "same-profile visible verification"
       ],
       "risk_level": "high",
       "verified_status": "experimental",
       "evidence_refs": [
         "runs/007-xhs-headless-draft-save-cookie-reuse-test/run-summary.md",
-        "runs/007-xhs-headless-draft-save-cookie-reuse-test/headless-live-session-proof.json"
+        "runs/007-xhs-headless-draft-save-cookie-reuse-test/headless-live-session-proof.json",
+        "runs/015-xhs-headless-visible-draft-verification/headless-live-session-proof.json"
+      ],
+      "sensitive_data_status": "sanitized"
+    },
+    {
+      "id": "xhs-kb-reuse-selection-gated-safety",
+      "type": "skill_wiki",
+      "title": "XHS KB Reuse With Selection-Gated Safety Rules",
+      "scenario": "xiaohongshu-creator",
+      "capabilities": [
+        "knowledge-base-writeback",
+        "promotion-gating",
+        "retrieval-update",
+        "failure-capture"
+      ],
+      "tags": [
+        "xhs",
+        "skillopt",
+        "wiki",
+        "kb-reuse",
+        "selection-gated",
+        "proof-boundary"
+      ],
+      "source_path": "skills/wiki/xhs-kb-reuse-selection-gated-safety.md",
+      "summary": "Canonical skill wiki entry for KB-first XHS workflow reuse with selection gating, proof-boundary preservation, and account-state pre-handoff rules.",
+      "reusable_for": [
+        "KB-first workflow composition",
+        "selection-gated skill reuse",
+        "XHS workflow safety"
+      ],
+      "risk_level": "high",
+      "verified_status": "wiki_promoted",
+      "evidence_refs": [
+        "runs/008-xhs-skillopt-kb-reuse-minimal/run-summary.md",
+        "runs/008-xhs-skillopt-kb-reuse-minimal/score-result.json",
+        "runs/008-xhs-skillopt-kb-reuse-minimal/best_skill.md",
+        "runs/008-xhs-skillopt-kb-reuse-minimal/rejected-candidate-publish-proof-skill.md",
+        "workflow-kb/failure-cases/xhs-content-failure-cases.md",
+        "workflow-kb/failure-cases/xhs-account-state-precheck-missing.md"
       ],
       "sensitive_data_status": "sanitized"
     },

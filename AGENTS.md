@@ -11,7 +11,7 @@ This project is an AI agent skill workflow framework. It is not a single-scenari
 
 ## Directory Boundaries
 
-- `skills/`: reusable skill assets and capability maps.
+- `skills/`: reusable skill assets, wiki pages, and capability maps.
 - `workflows/`: workflow definitions and orchestration patterns.
 - `scenarios/`: scenario-specific validation wrappers, constraints, risk rules, and scoring rubrics.
 - `workflow-kb/`: durable reusable knowledge, retrieval entries, patterns, rubrics, fallback strategies, and failure cases.
@@ -84,6 +84,7 @@ These rules adapt general LLM coding guardrails to this workflow framework. They
 - `workflow-kb/retrieval-index.json` should point to reusable knowledge assets, not temporary run notes.
 - A workflow is not verified until the run outcome and review feedback are captured in the knowledge base.
 - Research or raw discovery is evidence. It becomes reusable workflow knowledge only after validation or explicit promotion.
+- SkillOpt-style artifacts may be promoted into the skill wiki only through `docs/skill-wiki-promotion.md`; the promotion must update the wiki page, registry entry, and retrieval entry together.
 
 ## Submission And Promotion Rules
 
@@ -98,6 +99,7 @@ This project does not currently define a conventional git commit-message policy,
 - For Xiaohongshu draft validation, verified promotion requires passed human review, passed risk approval, passed account-state check, compliant draft proof, and `clicked_publish=false`.
 - Live publish promotion requires explicit `human_review_then_publish` approval before the publish command starts. A publish fact without ordering proof is failure evidence, not verified publish proof.
 - If a run is incomplete, blocked, or missing gate evidence, keep it in `runs/` and write only an `evolution/` note or failure case. Do not promote it.
+- Do not publish SkillOpt outputs into the skill wiki unless they satisfy `docs/skill-wiki-promotion.md` and have a stable registry and retrieval record.
 - When changing promotion-sensitive files, run `node scripts/validate-promotion-gates.mjs` before reporting completion.
 
 ## Git Commit Rules
@@ -150,6 +152,10 @@ what remains unverified.
 - Evolution drafts: `node scripts/validate-evolution-drafts.mjs`
 - Sensitive boundaries: `node scripts/validate-sensitive-boundaries.mjs`
 - Skill optimization: `node scripts/validate-skill-optimization.mjs`
+- Official SkillOpt probe: `node scripts/probe-official-skillopt.mjs`
+- Official SkillOpt readiness: `node scripts/validate-skillopt-official-readiness.mjs`
+- Official SkillOpt smoke dry-run: `node scripts/run-official-skillopt-smoke.mjs --dry-run`
+- Official SkillOpt smoke output: `node scripts/validate-official-skillopt-smoke-output.mjs --allow-missing`
 - Promotion gates: `node scripts/validate-promotion-gates.mjs`
 
 Run the narrowest relevant validator after changing schemas, recipes, workflow KB entries, or promotion evidence.

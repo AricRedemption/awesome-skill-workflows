@@ -136,7 +136,7 @@ See `docs/directory-architecture.md` for the placement rules and cleanup policy.
 
 Core framework:
 
-- `skills/`: reusable skill assets, raw discovery, indexes, and capability maps
+- `skills/`: reusable skill assets, wiki pages, raw discovery, indexes, and capability maps
 - `workflows/`: workflow definitions and orchestration patterns
 - `workflow-kb/`: durable reusable knowledge, retrieval entries, patterns, rubrics, fallback strategies, and failure cases
 - `schemas/`: JSON schemas for skills, workflows, scenarios, scoring, gates, recipes, and verification records
@@ -164,8 +164,11 @@ Use these files to understand the current validated state:
 | What is the system architecture? | `docs/architecture.md` |
 | What principles constrain the project? | `docs/principles.md` |
 | How should SkillOpt-style optimization fit? | `docs/skillopt-integration.md` |
+| Can this claim official SkillOpt paper reproduction? | `reports/skillopt-official-readiness.json` |
 | What is the current scenario? | `scenarios/xiaohongshu-creator/scenario.md` |
 | What workflow was validated? | `workflows/xiaohongshu/xhs-ai-tool-topic-to-post.workflow.md` |
+| How do SkillOpt artifacts promote into the skill wiki? | `docs/skill-wiki-promotion.md` |
+| What skill wiki entry was promoted? | `skills/wiki/xhs-kb-reuse-selection-gated-safety.md` |
 | What run passed draft validation? | `runs/003-xhs-ai-agent-save-one-hour-step8-draft-rerun/` |
 | What recipe is verified? | `verified-recipes/xhs-ai-agent-save-one-hour.recipe.md` |
 | What failed evidence is preserved? | `failed-recipes/xhs-ai-agent-save-one-hour.recipe.md` |
@@ -205,8 +208,9 @@ Start with:
 3. `docs/directory-architecture.md` for placement rules.
 4. `docs/sensitive-data-policy.md` before any account-bound run or promotion.
 5. `docs/workflow-knowledge-base.md` for KB writeback rules.
-6. `scenarios/<scenario>/` for scenario-specific boundaries.
-7. `workflow-kb/retrieval-index.json` before starting any new run.
+6. `docs/skill-wiki-promotion.md` for promoting SkillOpt artifacts into the skill wiki.
+7. `scenarios/<scenario>/` for scenario-specific boundaries.
+8. `workflow-kb/retrieval-index.json` before starting any new run.
 
 ### Run A New Scenario
 

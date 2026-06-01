@@ -576,6 +576,38 @@
     }
   },
   {
+    "id": "xhs-kb-reuse-selection-gated-safety",
+    "name": "xhs-kb-reuse-selection-gated-safety",
+    "source": {
+      "type": "local",
+      "repo": "awesome-skill-workflows",
+      "url": "file:///Users/aricredemption/Projects/awesome-skill-workflows/skills/wiki/xhs-kb-reuse-selection-gated-safety.md"
+    },
+    "description": "Selection-gated KB-first reuse rules promoted from SkillOpt-style XHS evidence.",
+    "capabilities": ["knowledge-base-writeback", "promotion-gating", "retrieval-update", "failure-capture"],
+    "inputs": ["workflow-kb/retrieval-index.json", "verified workflows", "failure cases", "review feedback", "prior run evidence"],
+    "outputs": ["safe reuse decision", "selection-gated workflow instructions", "reuse boundary notes"],
+    "compatible_agents": ["claude-code", "codex", "cursor"],
+    "risk_level": "high",
+    "requires_auth": false,
+    "requires_human_review": false,
+    "candidate_workflows": ["skill-wiki-promotion", "kb-first-workflow-reuse"],
+    "confidence": 0.97,
+    "discovery_priority": "P1",
+    "mocked": false,
+    "original_source_path": "skills/wiki/xhs-kb-reuse-selection-gated-safety.md",
+    "metadata": {
+      "source_group": "P1_FALLBACK",
+      "source_priority": "P1",
+      "discovery_priority": "P1",
+      "original_source_path": "skills/wiki/xhs-kb-reuse-selection-gated-safety.md",
+      "mocked": false,
+      "review_status": "approved",
+      "can_be_main_dependency": true,
+      "usage_condition": "Use as the canonical skill wiki entry for KB-first XHS reuse rules promoted from SkillOpt-style evidence."
+    }
+  },
+  {
     "id": "agora-real-time-ai-integration",
     "name": "agora-real-time-ai-integration",
     "source": {
