@@ -36,8 +36,10 @@ Not claimed: live publish MVP.
 | `evolution/xhs-ai-tool-topic-to-post-evolution-log.md` | present | Workflow improvement evidence. |
 | `runs/001-xhs-ai-agent-save-one-hour/human-review.md` | present | Historical review evidence. |
 | `runs/001-xhs-ai-agent-save-one-hour/publish-proof.md` | present | Historical publish-fact evidence that is not compliant publish proof. |
+| `runs/001-xhs-ai-agent-save-one-hour/action-verification.json` | present | Normalized Layer 1 record: `failed_with_evidence`. |
 | `runs/003-xhs-ai-agent-save-one-hour-step8-draft-rerun/draft-proof.json` | present | Draft rerun proof: `draft_saved`, `compliance_status: passed`. |
 | `runs/003-xhs-ai-agent-save-one-hour-step8-draft-rerun/gate-ledger.json` | present | Gate ordering evidence for review, risk, account state, and draft action. |
+| `runs/003-xhs-ai-agent-save-one-hour-step8-draft-rerun/action-verification.json` | present | Normalized Layer 1 record: `action_compliance_verified`. |
 | `failed-recipes/xhs-ai-agent-save-one-hour.recipe.md` | present | Failed live-publish recipe isolated from verified promotion paths. |
 | `verified-recipes/xhs-ai-agent-save-one-hour.recipe.md` | present | Draft-verified recipe. |
 | `workflow-kb/verified-workflows/xhs-ai-tool-topic-to-post.v1.md` | present | Draft-verified workflow. |
@@ -58,6 +60,8 @@ Not claimed: live publish MVP.
 | first run score | 95 | `quality-score.json` |
 | improved run score | 98 | `quality-score.v2.json` |
 | draft rerun status | draft saved / passed | `runs/003.../draft-proof.json` |
+| failed publish normalized level | `failed_with_evidence` | `runs/001.../action-verification.json` |
+| verified draft normalized level | `action_compliance_verified` | `runs/003.../action-verification.json` |
 | compliance score | 95 first / 96 improved / 92 second | scorecards |
 | XHS style score | 90 first / 93 improved / 88 second | scorecards |
 | evolution event count | 1 | `evolution/xhs-ai-tool-topic-to-post-evolution-log.md` |
@@ -74,6 +78,7 @@ Not claimed: live publish MVP.
 - Human review and risk approval can be represented as gate evidence.
 - Account state is treated as a pre-handoff gate.
 - Draft proof and publish fact are separate evidence types.
+- Layer 1 separates action fact from action compliance proof through a generic action-verification contract.
 - Failed publish evidence is preserved without being promoted as verified success.
 - Draft-verified workflow and recipe assets exist.
 - The second run can retrieve and reuse the knowledge base.
@@ -91,7 +96,7 @@ Not claimed: live publish MVP.
 - Keep failed live-publish assets outside verified namespaces.
 - Make gate ledgers more machine-checkable with input hashes, reviewer decisions, allowed actions, and timestamps.
 - Treat `human_review_then_draft` and `human_review_then_publish` as non-upgradable modes.
-- Split future recipe status into clearer levels such as `content_verified`, `draft_verified`, `publish_fact_verified`, and `compliant_publish_verified`.
+- Keep scenario-local statuses such as `draft_verified` scoped to the scenario, and map cross-scenario evidence to the generic Layer 1 action-verification levels instead of promoting scenario terms into the base architecture.
 - Revalidate the `save-worthiness-checker` across more runs before treating it as a stable workflow improvement.
 
 ## Final Verdict
@@ -100,6 +105,7 @@ Not claimed: live publish MVP.
 - Pass scope: compliant draft MVP.
 - Not claimed: live publish MVP.
 - Residual risk: human review and risk approval are manually recorded, and live publish remains unverified.
+- Layer 1 status mapping: failed live publish evidence is `failed_with_evidence`; verified draft-only handoff is `action_compliance_verified`.
 
 The v0.1 accepted loop is:
 

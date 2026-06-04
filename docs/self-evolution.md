@@ -38,6 +38,8 @@ Do not conflate these states:
 - content quality passed
 - publish threshold passed
 - human review passed
+- action fact verified
+- action compliance verified
 - workflow gap detected
 - verified recipe promotion approved
 
@@ -61,10 +63,17 @@ Each self-evolution event should answer:
 
 - what source run or review triggered it,
 - what evidence proves the gap,
+- whether the required environment was confirmed before execution,
 - which assets changed or should change,
 - whether the change is a run-specific note, reusable failure case, pattern, workflow, or recipe,
 - whether sensitive data was reviewed before writeback,
 - which validator should be run next.
+
+When writing back a successful lesson, include the environment lesson as part of
+the reusable contract: what had to be true before the run, how that was checked,
+and which environment assumptions are out of scope. Missing environment
+precheck evidence should be treated as a workflow gap, even when the visible
+output succeeded.
 
 Keep event records small. Use `evolution/` for the human-readable note and, when
 machine validation is needed, store the structured event against

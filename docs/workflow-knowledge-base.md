@@ -30,17 +30,33 @@ The knowledge base should be queried before a new run and updated after every ve
 A successful run is not reusable knowledge until it has a clear evidence chain:
 
 1. source run under `runs/<run-id>/`,
-2. gate ledger or equivalent proof,
-3. sensitive-data review,
-4. reusable conclusion in `workflow-kb/`,
-5. retrieval entry in `workflow-kb/retrieval-index.json`,
-6. recipe promotion only when the promotion gates pass.
+2. environment precheck evidence,
+3. gate ledger or equivalent proof,
+4. action-verification record when the workflow includes a high-risk or externally visible handoff,
+5. sensitive-data review,
+6. reusable conclusion in `workflow-kb/`,
+7. retrieval entry in `workflow-kb/retrieval-index.json`,
+8. recipe promotion only when the promotion gates pass.
+
+The environment precheck should confirm the narrow runtime assumptions that made
+the run executable before the success path started. Record only reusable,
+non-sensitive facts, such as required tools, runtime mode, dependency state,
+scenario fixture availability, account-state class, or secret-presence status.
+Do not copy local paths, credential values, account identifiers, cookies, or raw
+environment dumps into reusable knowledge.
+
+If the environment was not confirmed before execution, the outcome may still be
+useful evidence, but the reusable writeback must name that gap. Store it as an
+`evolution/` note or failure case until a later run proves the same pattern with
+an explicit environment precheck.
 
 Every reusable KB record should include:
 
 - `source_path`,
 - `evidence_refs`,
+- `environment_precheck`,
 - `verified_status`,
+- `action_verification_level` when a generic action-verification record exists,
 - `risk_level`,
 - `sensitive_data_status`,
 - `reusable_for`,

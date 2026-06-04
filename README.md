@@ -162,6 +162,7 @@ Use these files to understand the current validated state:
 | Question | Primary evidence |
 | --- | --- |
 | What is the system architecture? | `docs/architecture.md` |
+| How are high-risk action facts separated from compliance proof? | `docs/action-verification.md` |
 | What principles constrain the project? | `docs/principles.md` |
 | How should SkillOpt-style optimization fit? | `docs/skillopt-integration.md` |
 | Can this claim official SkillOpt paper reproduction? | `reports/skillopt-official-readiness.json` |
@@ -250,6 +251,7 @@ Do not promote a workflow or recipe because it looks useful. Promotion requires 
 - Verified assets need explicit evidence references.
 - Incomplete or blocked runs should remain as run evidence plus an evolution note or failure case.
 - Live publish verification is separate from draft verification.
+- Layer 1 uses the generic `action verification` contract; scenario terms such as `draft_verified` stay local and must map into, not replace, the Layer 1 model.
 
 For the current Xiaohongshu scenario, `draft_verified` means human review, risk approval, account-state check, compliant draft proof, and `clicked_publish=false` all passed.
 

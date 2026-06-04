@@ -15,3 +15,10 @@
 5. All successful and failed experience must be written into the workflow knowledge base.
    The system only improves if outcomes are captured and reused.
 
+6. Successful experience is reusable only when its environment was confirmed.
+   Record the minimum environment precheck that made the run executable before
+   promoting the lesson as a reusable pattern.
+
+7. Action fact and action compliance proof are different things.
+   Layer 1 must keep "the action happened" separate from "the action was
+   approved and verified" so scenario evidence does not leak into global rules.

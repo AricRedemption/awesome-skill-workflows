@@ -25,6 +25,8 @@ const firstScore = readJson('runs/001-xhs-ai-agent-save-one-hour/quality-score.j
 const secondScore = readJson('runs/002-xhs-meeting-notes-productivity/quality-score.json');
 const draftGateLedger = readJson('runs/003-xhs-ai-agent-save-one-hour-step8-draft-rerun/gate-ledger.json');
 const draftProof = readJson('runs/003-xhs-ai-agent-save-one-hour-step8-draft-rerun/draft-proof.json');
+const failedActionVerification = readJson('runs/001-xhs-ai-agent-save-one-hour/action-verification.json');
+const draftActionVerification = readJson('runs/003-xhs-ai-agent-save-one-hour-step8-draft-rerun/action-verification.json');
 const kbIndex = readJson('workflow-kb/retrieval-index.json');
 const verifiedRecipe = readText('verified-recipes/xhs-ai-agent-save-one-hour.recipe.md');
 const report = readText('reports/first-mvp-validation-report.md');
@@ -51,12 +53,22 @@ check('Draft proof is compliant', draftProof.status === 'draft_saved' && draftPr
   saved_draft: draftProof.saved_draft
 });
 check('Live publish was not clicked during draft proof', draftProof.clicked_publish === false, draftProof.clicked_publish);
+check('Failed live publish is normalized as failed_with_evidence', failedActionVerification.verification_level === 'failed_with_evidence' && failedActionVerification.fact_status === 'fact_verified' && failedActionVerification.compliance_status === 'failed', {
+  verification_level: failedActionVerification.verification_level,
+  fact_status: failedActionVerification.fact_status,
+  compliance_status: failedActionVerification.compliance_status
+});
+check('Draft rerun is normalized as action_compliance_verified', draftActionVerification.verification_level === 'action_compliance_verified' && draftActionVerification.compliance_status === 'passed', {
+  verification_level: draftActionVerification.verification_level,
+  compliance_status: draftActionVerification.compliance_status
+});
 check('Verified scenario recipe exists', verifiedRecipe.includes('Verification level: `draft_verified`'), 'verified-recipes/xhs-ai-agent-save-one-hour.recipe.md');
 check('KB contains draft-verified workflow and recipe', kbIndex.records.some((record) => record.id === 'xhs-ai-tool-topic-to-post.v1' && record.verified_status === 'draft_verified') && kbIndex.records.some((record) => record.id === 'xhs-ai-agent-save-one-hour' && record.verified_status === 'draft_verified'), 'workflow and recipe draft_verified');
 check('Second run can retrieve and reuse workflow', exists('runs/002-xhs-meeting-notes-productivity/kb-retrieval.md'), 'kb retrieval');
 check('Second run reuse >= 60%', secondScore.reuse_ratio >= 0.6, secondScore.reuse_ratio);
 check('Second run score >= 80', secondScore.total_score >= 80, secondScore.total_score);
 check('Report states scoped MVP pass', report.includes('- MVP: pass.') && report.includes('Pass scope: compliant draft MVP.'), 'reports/first-mvp-validation-report.md');
+check('Report includes generic action-verification mapping', report.includes('`failed_with_evidence`') && report.includes('`action_compliance_verified`'), 'reports/first-mvp-validation-report.md');
 
 const failed = checks.filter((item) => !item.pass);
 
