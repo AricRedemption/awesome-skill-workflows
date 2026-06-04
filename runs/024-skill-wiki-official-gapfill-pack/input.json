@@ -1,0 +1,18 @@
+{
+  "run_id": "024-skill-wiki-official-gapfill-pack",
+  "date": "2026-06-05",
+  "goal": "Close weak search coverage areas in Skill Wiki using official source-owned public skill repositories for browser automation, workspace automation, QA testing, search, and medical workflows.",
+  "sources": [
+    "https://github.com/browserbase/skills",
+    "https://github.com/googleworkspace/cli",
+    "https://github.com/LambdaTest/agent-skills",
+    "https://github.com/brave/brave-search-skills",
+    "https://github.com/FreedomIntelligence/OpenClaw-Medical-Skills"
+  ],
+  "validation_mode": "rough_official_source_validation",
+  "outputs": [
+    "docs/skill-wiki-official-gapfill-2026.md",
+    "configs/official-source-gapfill-seeds.json",
+    "skills/wiki/*.md"
+  ]
+}
