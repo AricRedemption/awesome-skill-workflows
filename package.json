@@ -4,9 +4,15 @@
   "scripts": {
     "xhs:headless-draft": "node scripts/reproduce-xhs-headless-draft.mjs",
     "xhs:visible-cookie": "node scripts/open-xhs-visible-with-cookie.mjs",
-    "validate:promotion-gates": "node scripts/validate-promotion-gates.mjs"
+    "validate:promotion-gates": "node scripts/validate-promotion-gates.mjs",
+    "validate:multi-agent-workflows": "node scripts/validate-multi-agent-workflows.mjs",
+    "validate:multi-agent-runtime": "node scripts/validate-multi-agent-runtime-integration.mjs",
+    "validate:pi-sdk-integration": "node scripts/validate-pi-sdk-integration.mjs"
   },
   "dependencies": {
+    "@earendil-works/pi-agent-core": "0.78.1",
+    "@earendil-works/pi-ai": "0.78.1",
+    "@earendil-works/pi-coding-agent": "0.78.1",
     "puppeteer": "^24.0.0"
   }
 }
