@@ -56,7 +56,7 @@ This layer may contain Xiaohongshu-specific assumptions, but those assumptions m
 3. the workflow is composed for the Xiaohongshu validation scenario
 4. a human review gate checks high-risk actions
 5. structured human feedback is captured before handoff
-6. the run outcome is recorded
+6. the action fact and compliance proof are recorded separately
 7. successes and failures are written into the workflow knowledge base
 8. the knowledge base feeds the next iteration of the core architecture
 
