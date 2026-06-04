@@ -1,0 +1,175 @@
+{
+  "id": "pi-single-problem-review-gated",
+  "workflow_type": "multi_agent_skill_workflow",
+  "goal": "Use Pi-backed specialized agents to solve one bounded problem through a planner-worker-reviewer-verifier workflow with hard-gated writeback.",
+  "scope": "single_problem",
+  "backend_hint": "pi",
+  "roles": [
+    {
+      "role_id": "planner",
+      "purpose": "Translate the task into a bounded execution plan and handoff package.",
+      "skill_refs": [
+        "workflow-composition",
+        "planning"
+      ]
+    },
+    {
+      "role_id": "worker",
+      "purpose": "Execute the task using the selected skill set and produce the primary artifacts.",
+      "skill_refs": [
+        "workflow-execution",
+        "skill-application"
+      ]
+    },
+    {
+      "role_id": "reviewer",
+      "purpose": "Review workflow coherence, handoff completeness, and artifact quality before verification.",
+      "skill_refs": [
+        "workflow-review",
+        "quality-review"
+      ]
+    },
+    {
+      "role_id": "verifier",
+      "purpose": "Confirm evidence, gate status, and final terminal state without performing implementation work.",
+      "skill_refs": [
+        "evidence-verification",
+        "gate-validation"
+      ]
+    },
+    {
+      "role_id": "oracle",
+      "purpose": "Provide an advisory second opinion only when the main workflow flags uncertainty.",
+      "skill_refs": [
+        "second-opinion"
+      ],
+      "optional": true
+    }
+  ],
+  "nodes": [
+    {
+      "node_id": "plan-work",
+      "node_type": "spawn",
+      "role_id": "planner",
+      "skill_refs": [
+        "workflow-composition",
+        "planning"
+      ],
+      "handoff_contract": "execution plan package",
+      "evidence_required": [
+        "plan summary",
+        "selected skills",
+        "handoff package"
+      ],
+      "gate_effect": "none",
+      "run_mode_effect": "none"
+    },
+    {
+      "node_id": "execute-work",
+      "node_type": "spawn",
+      "role_id": "worker",
+      "skill_refs": [
+        "workflow-execution",
+        "skill-application"
+      ],
+      "handoff_contract": "artifact package",
+      "evidence_required": [
+        "primary artifacts",
+        "execution notes",
+        "worker handoff"
+      ],
+      "gate_effect": "none",
+      "run_mode_effect": "none",
+      "max_retries": 1
+    },
+    {
+      "node_id": "review-and-rework",
+      "node_type": "loop",
+      "loop_cap": 2,
+      "continue_when": "reviewer requests revision",
+      "body": {
+        "node_id": "review-cycle",
+        "node_type": "sequence",
+        "steps": [
+          {
+            "node_id": "review-work",
+            "node_type": "spawn",
+            "role_id": "reviewer",
+            "skill_refs": [
+              "workflow-review",
+              "quality-review"
+            ],
+            "handoff_contract": "review findings package",
+            "evidence_required": [
+              "review report",
+              "revision decision"
+            ],
+            "gate_effect": "review_gate_decision",
+            "run_mode_effect": "none"
+          },
+          {
+            "node_id": "apply-revisions",
+            "node_type": "spawn",
+            "role_id": "worker",
+            "skill_refs": [
+              "workflow-execution",
+              "skill-application"
+            ],
+            "handoff_contract": "revised artifact package",
+            "evidence_required": [
+              "revised artifacts",
+              "revision notes"
+            ],
+            "gate_effect": "rework_only",
+            "run_mode_effect": "none",
+            "max_retries": 1
+          }
+        ]
+      }
+    },
+    {
+      "node_id": "verify-run",
+      "node_type": "spawn",
+      "role_id": "verifier",
+      "skill_refs": [
+        "evidence-verification",
+        "gate-validation"
+      ],
+      "handoff_contract": "final verification record",
+      "evidence_required": [
+        "verification report",
+        "terminal state",
+        "gate ledger"
+      ],
+      "gate_effect": "hard_gate",
+      "run_mode_effect": "terminal_state_decision"
+    }
+  ],
+  "review_gate": {
+    "mode": "hard",
+    "reviewer_role_id": "reviewer",
+    "verifier_role_id": "verifier"
+  },
+  "writeback": {
+    "allowed_terminal_states": [
+      "passed"
+    ],
+    "knowledge_targets": [
+      "workflow-kb/verified-workflows",
+      "skills/wiki",
+      "workflow-kb/retrieval-index.json"
+    ]
+  },
+  "terminal_states": [
+    "passed",
+    "revision_required",
+    "blocked",
+    "failed"
+  ],
+  "success_criteria": [
+    "The workflow contains planner, worker, reviewer, and verifier roles.",
+    "Review and verification remain hard gates before durable writeback.",
+    "Loop-based rework is explicitly bounded.",
+    "Only passed runs may write reusable knowledge into durable namespaces."
+  ]
+}

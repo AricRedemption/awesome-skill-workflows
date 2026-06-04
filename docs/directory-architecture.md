@@ -75,6 +75,8 @@ Placement rules:
 - Put workflow composition in `workflows/`.
 - Put validator contracts in `schemas/` and executable checks in `scripts/`.
 - Put architecture and policy in `docs/`.
+- Put generic single-workflow multi-agent orchestration assets under
+  `workflows/multi-agent/` and validate them with a Layer 1 validator.
 - Put durable tool notes in `TOOLS.md` only after an approved evolution draft.
 - Put durable project-local preferences and facts in `MEMORY.md` only after an
   approved evolution draft.

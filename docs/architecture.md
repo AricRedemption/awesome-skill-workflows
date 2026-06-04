@@ -70,6 +70,8 @@ Responsibilities:
 
 - define skill primitives, workflow composition rules, evidence contracts, and
   validation gates;
+- define generic single-workflow multi-agent orchestration contracts, including
+  role handoffs, bounded loops, and hard-gated review/verification;
 - keep schemas and validators as architecture gatekeepers;
 - describe generic promotion, sensitive-data, and retrieval boundaries.
 

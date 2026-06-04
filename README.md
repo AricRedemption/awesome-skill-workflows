@@ -175,6 +175,7 @@ Use these files to understand the current validated state:
 | Can this claim official SkillOpt paper reproduction? | `reports/skillopt-official-readiness.json` |
 | What is the current scenario? | `scenarios/xiaohongshu-creator/scenario.md` |
 | What workflow was validated? | `workflows/xiaohongshu/xhs-ai-tool-topic-to-post.workflow.md` |
+| What is the generic multi-agent workflow contract? | `docs/multi-agent-workflows.md` |
 | How do SkillOpt artifacts promote into the skill wiki? | `docs/skill-wiki-promotion.md` |
 | What skill wiki entry was promoted? | `skills/wiki/xhs-kb-reuse-selection-gated-safety.md` |
 | What run passed draft validation? | `runs/003-xhs-ai-agent-save-one-hour-step8-draft-rerun/` |
