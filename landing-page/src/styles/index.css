@@ -1,35 +1,42 @@
 @import "tailwindcss";
 
 :root {
-  --asw-display-serif: Georgia, "Times New Roman", "Songti SC", "Noto Serif SC", serif;
+  font-family: "Plus Jakarta Sans", "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: #1c1c1e;
+  background: #f7f9fc;
 }
 
-.asw-display-serif {
-  font-family: var(--asw-display-serif);
-  font-weight: 650;
-  letter-spacing: 0;
+body {
+  min-width: 320px;
+  background: linear-gradient(180deg, #eef5ff 0%, #f7f9fc 36%, #ffffff 100%);
+  color: #1c1c1e;
 }
 
-.asw-agent-marquee-track {
-  animation: asw-agent-marquee 34s linear infinite;
+button,
+input,
+select {
+  font: inherit;
 }
 
-.asw-agent-marquee-track:hover {
-  animation-play-state: paused;
+code {
+  border-radius: 999px;
+  background: rgba(0, 122, 255, 0.08);
+  padding: 0.12rem 0.45rem;
+  font-family: "JetBrains Mono", "SFMono-Regular", monospace;
+  font-size: 0.88em;
 }
 
-@keyframes asw-agent-marquee {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(-50%);
-  }
+::selection {
+  background: rgba(0, 122, 255, 0.18);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .asw-agent-marquee-track {
-    animation: none;
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
