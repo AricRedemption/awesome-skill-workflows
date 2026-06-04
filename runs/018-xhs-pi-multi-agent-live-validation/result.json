@@ -1,0 +1,45 @@
+{
+  "run_id": "018-xhs-pi-multi-agent-live-validation",
+  "status": "partial",
+  "workflow_id": "xhs-ai-tool-topic-to-post",
+  "multi_agent_workflow_id": "pi-single-problem-review-gated",
+  "final_terminal_state": "blocked",
+  "writeback_allowed": false,
+  "summary": {
+    "workflow_step_count": 22,
+    "draft_path_verified": true,
+    "publish_failure_isolated": true,
+    "visible_recheck_passed": false,
+    "result_scope": "real draft action succeeded in-session, but fresh visible-session verification is still blocked",
+    "worker_runs": 2,
+    "reviewer_passes": 2
+  },
+  "evidence": {
+    "live_draft_run": {
+      "proof_ref": "runs/017-xhs-pi-live-draft-validation-unique-title/headless-live-session-proof.json",
+      "status": "draft_save_unverified",
+      "clicked_publish": false,
+      "saved_draft_visible_in_same_browser": true,
+      "visible_recheck_passed": false,
+      "visible_browser_login_prompt": true,
+      "title_found_in_draftbox": true,
+      "first_check_title_found": true,
+      "second_check_title_found": true
+    },
+    "approved_draft_scope": {
+      "gate_ledger_ref": "runs/003-xhs-ai-agent-save-one-hour-step8-draft-rerun/gate-ledger.json",
+      "action_verification_ref": "runs/003-xhs-ai-agent-save-one-hour-step8-draft-rerun/action-verification.json",
+      "human_review_passed": true,
+      "risk_approval_passed": true,
+      "account_state_passed": true,
+      "verification_level": "action_compliance_verified",
+      "compliance_status": "passed"
+    },
+    "failed_publish_scope": {
+      "action_verification_ref": "runs/001-xhs-ai-agent-save-one-hour/action-verification.json",
+      "verification_level": "failed_with_evidence",
+      "compliance_status": "failed",
+      "promotion_status": "not_promotable"
+    }
+  }
+}
