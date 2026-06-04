@@ -576,6 +576,38 @@
     }
   },
   {
+    "id": "find-skill",
+    "name": "find-skill",
+    "source": {
+      "type": "local",
+      "repo": "awesome-skill-workflows",
+      "url": "file:///Users/aricredemption/Projects/awesome-skill-workflows/skills/find-skill/SKILL.md"
+    },
+    "description": "Find Skill constrained to this repository's final Skill Wiki.",
+    "capabilities": ["find-skill", "skill-wiki-search", "skill-wiki-lookup"],
+    "inputs": ["user query", "optional result limit"],
+    "outputs": ["ranked skill wiki matches", "matched wiki path", "summary and snippet"],
+    "compatible_agents": ["claude-code", "codex", "cursor"],
+    "risk_level": "low",
+    "requires_auth": false,
+    "requires_human_review": false,
+    "candidate_workflows": ["find-skill", "canonical-skill-lookup"],
+    "confidence": 0.96,
+    "discovery_priority": "P1",
+    "mocked": false,
+    "original_source_path": "skills/find-skill/SKILL.md",
+    "metadata": {
+      "source_group": "P1_FALLBACK",
+      "source_priority": "P1",
+      "discovery_priority": "P1",
+      "original_source_path": "skills/find-skill/SKILL.md",
+      "mocked": false,
+      "review_status": "approved",
+      "can_be_main_dependency": true,
+      "usage_condition": "Use when a task needs Find Skill behavior but must search only the repository's final Skill Wiki."
+    }
+  },
+  {
     "id": "xhs-kb-reuse-selection-gated-safety",
     "name": "xhs-kb-reuse-selection-gated-safety",
     "source": {

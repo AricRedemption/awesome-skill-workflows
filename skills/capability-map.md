@@ -2,7 +2,7 @@
 
 This map is generated from `skills/index.json`.
 
-- Total capabilities: 70
+- Total capabilities: 73
 - xhs v0.1 required semantic capability bundles: 13
 - Note: the map includes 9 semantic overlay rows so the xhs v0.1 required capability names appear exactly as required by the scenario contract.
 
@@ -34,6 +34,7 @@ This map is generated from `skills/index.json`.
 | engagement-hook-generation | Produces opening hooks and engagement prompts matched to the topic and pain point. | engagement-hook-generation | painpoint map; topic; tone constraints | hook variants; engagement prompts | medium | audience-painpoint-extraction | no |
 | evolution-recording | Captures outcomes, failures, and reusable patterns into the workflow knowledge base. | evolution-recording | run evidence; review comments; failure cases; reusable patterns | kb entries; evolution notes; retrieval updates | medium | knowledge-base-writeback | yes |
 | failure-capture | Captures outcomes, failures, and reusable patterns into the workflow knowledge base. | evolution-recording, xhs-kb-reuse-selection-gated-safety | run evidence; review comments; failure cases; reusable patterns | kb entries; evolution notes; retrieval updates | medium | evolution-recording | no |
+| find-skill | Find Skill constrained to this repository's final Skill Wiki. | find-skill | user query; optional result limit | ranked skill wiki matches; matched wiki path; summary and snippet | low | find-skill | no |
 | feed-detail-review | Xiaohongshu MCP operations for login status, QR login, publish, search, and feed inspection. | post-verification | account context; publish result; verification target | verification status; feed snapshot; follow-up notes | medium | post-verification | no |
 | handoff-reading | Reads repo docs and turns them into bounded source lists and discovery notes. | source-intake-and-discovery | README.md; docs/*; goal prompt | source whitelist; discovery notes; pending-review ledger | low | source-intake-and-discovery | no |
 | hashtag-generation | Social-copy skill patterns that package keywords and tags for discoverability. | hashtag-generation | draft text; topic; target audience | hashtag set; tag rationale | low | title-generation | no |
@@ -66,6 +67,8 @@ This map is generated from `skills/index.json`.
 | search-discovery-optimization | Social-copy skill patterns that package keywords and tags for discoverability. | hashtag-generation | draft text; topic; target audience | hashtag set; tag rationale | low | hashtag-generation | no |
 | skill-creation | Skill-ecosystem discovery patterns that surface reusable skills from a curated collection. | skill-discovery | skill collection README; skill idea; workflow target | candidate skill list; skill packaging notes | low | skill-discovery | no |
 | skill-discovery | Skill-ecosystem discovery patterns that surface reusable skills from a curated collection. | skill-discovery | skill collection README; skill idea; workflow target | candidate skill list; skill packaging notes | low | workflow-improvement | no |
+| skill-wiki-lookup | Find Skill constrained to this repository's final Skill Wiki. | find-skill | user query; optional result limit | ranked skill wiki matches; matched wiki path; summary and snippet | low | find-skill | no |
+| skill-wiki-search | Find Skill constrained to this repository's final Skill Wiki. | find-skill | user query; optional result limit | ranked skill wiki matches; matched wiki path; summary and snippet | low | find-skill | no |
 | skill-normalization | Reads repo docs and turns them into bounded source lists and discovery notes. | source-intake-and-discovery | README.md; docs/*; goal prompt | source whitelist; discovery notes; pending-review ledger | low | source-intake-and-discovery | no |
 | source-bounding | Reads repo docs and turns them into bounded source lists and discovery notes. | source-intake-and-discovery | README.md; docs/*; goal prompt | source whitelist; discovery notes; pending-review ledger | low | source-intake-and-discovery | no |
 | thumbnail-copy | Generates cover-headline copy and aligns it with the selected topic. | cover-copy-generation | topic; title candidates; cover constraints | cover copy variants; cover direction | medium | cover-copy-generation | no |
