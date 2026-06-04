@@ -16,6 +16,10 @@ This is compatible with Pi as an execution substrate, but Pi does not own the
 architecture. Pi is a backend option for running the roles and orchestration
 nodes defined here.
 
+The current PaaS-ready service shell exposes this contract over HTTP without
+moving ownership of node semantics, evidence rules, or promotion gates out of
+the repository. See `docs/paas-ready-workflow-service.md`.
+
 ## Default Topology
 
 The default workflow topology is:

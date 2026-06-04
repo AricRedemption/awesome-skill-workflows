@@ -72,6 +72,9 @@ Responsibilities:
   validation gates;
 - define generic single-workflow multi-agent orchestration contracts, including
   role handoffs, bounded loops, and hard-gated review/verification;
+- define thin service-facing execution surfaces that expose repo-owned
+  validators and readiness checks without moving architecture ownership into the
+  service layer;
 - keep schemas and validators as architecture gatekeepers;
 - describe generic promotion, sensitive-data, and retrieval boundaries.
 

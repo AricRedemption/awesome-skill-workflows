@@ -22,6 +22,7 @@
   <a href="./docs/sensitive-data-policy.md"><strong>Sensitive Data</strong></a> &bull;
   <a href="./docs/workflow-knowledge-base.md"><strong>Workflow KB</strong></a> &bull;
   <a href="./docs/skillopt-integration.md"><strong>Skill Optimization</strong></a> &bull;
+  <a href="./docs/paas-ready-workflow-service.md"><strong>PaaS Service</strong></a> &bull;
   <a href="./verified-recipes/xhs-ai-agent-save-one-hour.recipe.md"><strong>Verified Recipe</strong></a> &bull;
   <a href="./reports/first-mvp-validation-report.md"><strong>MVP Report</strong></a> &bull;
   <a href="./TOOLS.md"><strong>Tools</strong></a> &bull;
@@ -176,6 +177,8 @@ Use these files to understand the current validated state:
 | What is the current scenario? | `scenarios/xiaohongshu-creator/scenario.md` |
 | What workflow was validated? | `workflows/xiaohongshu/xhs-ai-tool-topic-to-post.workflow.md` |
 | What is the generic multi-agent workflow contract? | `docs/multi-agent-workflows.md` |
+| What is the PaaS-ready workflow service contract? | `docs/paas-ready-workflow-service.md` |
+| What is the current PaaS acceptance record? | `runs/022-xhs-pi-paas-readiness-acceptance/` |
 | How do SkillOpt artifacts promote into the skill wiki? | `docs/skill-wiki-promotion.md` |
 | What skill wiki entry was promoted? | `skills/wiki/xhs-kb-reuse-selection-gated-safety.md` |
 | What run passed draft validation? | `runs/003-xhs-ai-agent-save-one-hour-step8-draft-rerun/` |
@@ -205,6 +208,27 @@ See:
 - `reports/first-mvp-validation-report.md`
 - `verified-recipes/xhs-ai-agent-save-one-hour.recipe.md`
 - `workflow-kb/verified-workflows/xhs-ai-tool-topic-to-post.v1.md`
+
+## Current PaaS-Ready Status
+
+The repository now also exposes a **PaaS-ready multi-agent workflow service
+shell**.
+
+Current boundary:
+
+1. the generic Pi-backed multi-agent workflow contract is validated
+2. the Xiaohongshu real-run orchestration remains technically `partial`
+3. the Xiaohongshu workflow is still **accepted for PaaS progression** by
+   human-reviewed readiness logic because the real save-draft proof is positive,
+   `clicked_publish=false`, and the remaining blocker is isolated to a fresh
+   visible-session login reset
+
+See:
+
+- `docs/paas-ready-workflow-service.md`
+- `services/workflow-api/README.md`
+- `runs/018-xhs-pi-multi-agent-live-validation/`
+- `runs/022-xhs-pi-paas-readiness-acceptance/`
 
 ## How To Use This Repository
 
@@ -248,6 +272,19 @@ Before promoting a workflow or recipe:
 5. Update the retrieval index only with reusable assets.
 6. Run the promotion validator.
 7. Run the sensitive-boundary validator.
+
+### Run The PaaS-Ready Service
+
+```bash
+npm run paas:workflow-api
+```
+
+Validate the readiness path with:
+
+```bash
+npm run validate:xhs-paas-readiness
+npm run validate:workflow-api
+```
 
 ## Promotion Rules
 
