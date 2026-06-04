@@ -17,6 +17,7 @@ input:
 workflow_used: xhs-ai-tool-topic-to-post.v1
 status: failed
 verification_level: failed_publish_proof
+generic_action_verification_level: failed_with_evidence
 human_review:
   passed: false
 publish_verification:
@@ -41,6 +42,13 @@ Required evidence was missing for:
 - account-state pass before publish,
 - explicit mode escalation from draft to publish,
 - compliant publish proof.
+
+Generic action-verification mapping:
+
+- action fact: verified
+- compliance proof: failed
+- promotion status: not promotable
+- normalized record: `runs/001-xhs-ai-agent-save-one-hour/action-verification.json`
 
 ## Reusable Lessons
 

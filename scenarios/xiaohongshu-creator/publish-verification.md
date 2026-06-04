@@ -37,8 +37,11 @@ Each run must produce a publish proof that separates the platform fact from the 
 ```
 
 The canonical machine schema is `schemas/publish-verification.schema.json`.
+The generic Layer 1 action-verification schema is `schemas/action-verification.schema.json`.
 
 `status` is the compliance proof status. `publish_fact_status` is the observed platform result. A run may therefore have `publish_fact_status: published` and `status: failed` when a post exists but the pre-publish gate evidence is incomplete.
+
+In Layer 1 terms, that same case should map to `verification_level: failed_with_evidence`, not to a verified successful action.
 
 ## Human Review Gate
 

@@ -45,9 +45,11 @@ The checklist is not a new verified workflow by itself. It is a hard execution g
 
 - Draft proof: `runs/003-xhs-ai-agent-save-one-hour-step8-draft-rerun/draft-proof.json`
 - Gate ledger: `runs/003-xhs-ai-agent-save-one-hour-step8-draft-rerun/gate-ledger.json`
+- Generic action verification: `runs/003-xhs-ai-agent-save-one-hour-step8-draft-rerun/action-verification.json`
 - Proof summary: `runs/003-xhs-ai-agent-save-one-hour-step8-draft-rerun/draft-proof.md`
 - Sensitive artifact migration note: `runs/003-xhs-ai-agent-save-one-hour-step8-draft-rerun/sensitive-artifacts.md`
 
 ## Boundary
 
 The earlier live publish attempt remains a failure case because it lacked pre-publish ordering proof. Future live publish promotion still requires explicit `human_review_then_publish` approval before the publish command starts.
+In the generic action-verification model, this workflow is only `action_compliance_verified` for the approved draft-only action, not for live publish.

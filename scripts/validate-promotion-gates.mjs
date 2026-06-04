@@ -36,6 +36,19 @@ try {
   failures.push(`sensitive boundary validation failed${output ? `: ${output}` : ''}`);
 }
 
+try {
+  execFileSync('node', ['scripts/validate-action-verification.mjs'], {
+    cwd: root,
+    stdio: 'pipe'
+  });
+} catch (error) {
+  const output = [
+    error.stdout?.toString(),
+    error.stderr?.toString()
+  ].filter(Boolean).join('\n');
+  failures.push(`action verification validation failed${output ? `: ${output}` : ''}`);
+}
+
 for (const file of listMarkdownFiles('verified-recipes')) {
   const text = readText(file);
   if (/status:\s*failed\b/.test(text) || /human_review:\s*\n\s+passed:\s*false/.test(text)) {

@@ -35,6 +35,13 @@ This record is kept outside the verified workflow namespace because compliant pu
 
 The run produced good content and a public post was found, but the proof chain did not establish pre-publish human approval, risk approval, account-state pass, or mode escalation approval. Future agents must stop at draft-only when those proofs are missing.
 
+Generic action-verification mapping:
+
+- normalized record: `runs/001-xhs-ai-agent-save-one-hour/action-verification.json`
+- action fact: verified
+- compliance proof: failed
+- promotion status: not promotable
+
 ## Promotion Criteria
 
 Promote this workflow to `verified` only after a future run proves:

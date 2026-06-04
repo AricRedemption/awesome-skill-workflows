@@ -38,11 +38,13 @@ verified_run: runs/003-xhs-ai-agent-save-one-hour-step8-draft-rerun
 
 - Gate ledger: `runs/003-xhs-ai-agent-save-one-hour-step8-draft-rerun/gate-ledger.json`
 - Draft proof: `runs/003-xhs-ai-agent-save-one-hour-step8-draft-rerun/draft-proof.json`
+- Generic action verification: `runs/003-xhs-ai-agent-save-one-hour-step8-draft-rerun/action-verification.json`
 - Human review: `runs/003-xhs-ai-agent-save-one-hour-step8-draft-rerun/human-review.json`
 - Risk approval: `runs/003-xhs-ai-agent-save-one-hour-step8-draft-rerun/risk-approval.json`
 
 ## Reuse Boundary
 
 This recipe is verified for compliant draft save only. It does not prove compliant live publication.
+Under the generic Layer 1 contract, this maps to `action_compliance_verified` for the approved draft-only action.
 
-For new executions, also retrieve `workflow-kb/composition-patterns/xhs-draft-execution-checklist.md` before platform handoff. The original verified proof remains `runs/003...`; later execution lessons strengthen future one-pass behavior but do not automatically promote later runs.
+For new executions that include a browser-based platform handoff, also retrieve `workflow-kb/composition-patterns/xhs-draft-execution-checklist.md` before touching the Xiaohongshu UI. That checklist is only UI execution support; it does not validate `xhs-mcp`, publish, or post-verification skills. The original verified proof remains `runs/003...`; later execution lessons strengthen future page-operation behavior but do not automatically promote later runs or skill assets.

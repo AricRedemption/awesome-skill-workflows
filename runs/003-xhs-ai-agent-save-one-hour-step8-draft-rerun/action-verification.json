@@ -1,0 +1,81 @@
+{
+  "run_id": "003-xhs-ai-agent-save-one-hour-step8-draft-rerun",
+  "scenario_id": "xiaohongshu-creator",
+  "action_type": "content_platform_draft_handoff",
+  "requested_mode": "human_review_then_draft",
+  "approved_mode": "human_review_then_draft",
+  "allowed_action": "save_draft_only",
+  "target_artifact": "runs/003-xhs-ai-agent-save-one-hour-step8-draft-rerun/publish-package.json",
+  "verification_level": "action_compliance_verified",
+  "fact_status": "fact_verified",
+  "compliance_status": "passed",
+  "promotion_status": "promotable_for_scope",
+  "action_started_at": "2026-05-25T06:15:06.236Z",
+  "action_finished_at": "2026-05-25T06:15:47.416Z",
+  "gate_order": [
+    "human_review",
+    "risk_approval",
+    "state_precheck",
+    "mode_approval",
+    "action_handoff",
+    "action_execution",
+    "proof_verification",
+    "promotion_approval"
+  ],
+  "gates": {
+    "human_review": {
+      "status": "passed",
+      "checked_at": "2026-05-25T14:11:11+08:00",
+      "evidence_ref": "runs/003-xhs-ai-agent-save-one-hour-step8-draft-rerun/human-review.json",
+      "notes": "Human review approved draft-only handoff."
+    },
+    "risk_approval": {
+      "status": "passed",
+      "checked_at": "2026-05-25T14:11:12+08:00",
+      "evidence_ref": "runs/003-xhs-ai-agent-save-one-hour-step8-draft-rerun/risk-approval.json",
+      "notes": "Risk approval passed before the account-bound action."
+    },
+    "state_precheck": {
+      "status": "passed",
+      "checked_at": "2026-05-25T06:15:06.234Z",
+      "evidence_ref": "runs/003-xhs-ai-agent-save-one-hour-step8-draft-rerun/draft-proof.json",
+      "notes": "Account state was verified before the draft action started."
+    },
+    "mode_approval": {
+      "status": "passed",
+      "checked_at": "2026-05-25T14:11:11+08:00",
+      "evidence_ref": "runs/003-xhs-ai-agent-save-one-hour-step8-draft-rerun/gate-ledger.json",
+      "notes": "Approved mode remained draft-only and did not escalate to publish."
+    },
+    "action_handoff": {
+      "status": "passed",
+      "checked_at": "2026-05-25T06:15:06.236Z",
+      "evidence_ref": "runs/003-xhs-ai-agent-save-one-hour-step8-draft-rerun/draft-proof.json",
+      "notes": "The reviewed content was handed off into the approved draft-only path."
+    },
+    "action_execution": {
+      "status": "passed",
+      "checked_at": "2026-05-25T06:15:47.416Z",
+      "evidence_ref": "runs/003-xhs-ai-agent-save-one-hour-step8-draft-rerun/draft-proof.json",
+      "notes": "The draft save action completed and a draft fact was verified."
+    },
+    "proof_verification": {
+      "status": "passed",
+      "checked_at": "2026-05-25T06:15:47.416Z",
+      "evidence_ref": "runs/003-xhs-ai-agent-save-one-hour-step8-draft-rerun/draft-proof.json",
+      "notes": "Draft proof, ordering, and clicked_publish=false were verified."
+    },
+    "promotion_approval": {
+      "status": "passed",
+      "checked_at": "2026-05-25T06:15:47.416Z",
+      "evidence_ref": "verified-recipes/xhs-ai-agent-save-one-hour.recipe.md",
+      "notes": "The run is promotable for draft-verified scope only."
+    }
+  },
+  "evidence_refs": [
+    "runs/003-xhs-ai-agent-save-one-hour-step8-draft-rerun/gate-ledger.json",
+    "runs/003-xhs-ai-agent-save-one-hour-step8-draft-rerun/draft-proof.json",
+    "verified-recipes/xhs-ai-agent-save-one-hour.recipe.md"
+  ],
+  "notes": "This run proves compliant draft handoff only. It does not prove compliant live publish."
+}
