@@ -1,0 +1,13 @@
+{
+  "run_id": "008-xhs-skillopt-kb-reuse-minimal",
+  "optimizer_mode": "manual_skillopt_style",
+  "num_epochs": 2,
+  "batch_size": 1,
+  "workers": 2,
+  "generator_type": "deterministic_script",
+  "scorer_type": "deterministic_script",
+  "source_skill_path": "runs/008-xhs-skillopt-kb-reuse-minimal/baseline-skill.md",
+  "candidate_skill_path": "runs/008-xhs-skillopt-kb-reuse-minimal/candidate-skill.md",
+  "edit_budget": 3,
+  "promotion_target": "none"
+}

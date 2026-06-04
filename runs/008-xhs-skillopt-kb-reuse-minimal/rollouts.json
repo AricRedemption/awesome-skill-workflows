@@ -1,0 +1,67 @@
+{
+  "run_id": "008-xhs-skillopt-kb-reuse-minimal",
+  "runner": "scripts/run-skill-optimization-rollouts.mjs",
+  "workers": [
+    {
+      "worker_id": "worker_001",
+      "target": "baseline",
+      "artifact": "baseline-skill.md",
+      "results": [
+        {
+          "item_id": "selection-xhs-kb-reuse-safety",
+          "passed": false,
+          "missing_signals": [
+            "proof verification"
+          ]
+        },
+        {
+          "item_id": "selection-xhs-proof-boundary",
+          "passed": false,
+          "missing_signals": [
+            "account state",
+            "draft and publish proof separate"
+          ]
+        }
+      ]
+    },
+    {
+      "worker_id": "worker_002",
+      "target": "candidate",
+      "artifact": "candidate-skill.md",
+      "results": [
+        {
+          "item_id": "selection-xhs-kb-reuse-safety",
+          "passed": true,
+          "missing_signals": []
+        },
+        {
+          "item_id": "selection-xhs-proof-boundary",
+          "passed": true,
+          "missing_signals": []
+        }
+      ]
+    }
+  ],
+  "items": [
+    {
+      "item_id": "selection-xhs-kb-reuse-safety",
+      "split": "selection",
+      "evidence_ref": "runs/002-xhs-meeting-notes-productivity/run-summary.md",
+      "required_signals": [
+        "workflow-kb/retrieval-index\\.json",
+        "held-out evidence",
+        "proof verification"
+      ]
+    },
+    {
+      "item_id": "selection-xhs-proof-boundary",
+      "split": "selection",
+      "evidence_ref": "workflow-kb/verified-workflows/xhs-ai-tool-topic-to-post.v1.md",
+      "required_signals": [
+        "failed publish evidence",
+        "account state",
+        "draft and publish proof separate"
+      ]
+    }
+  ]
+}

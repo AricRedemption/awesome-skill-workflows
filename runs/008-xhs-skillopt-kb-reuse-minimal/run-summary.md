@@ -7,6 +7,13 @@
 - Mode: `manual_skillopt_style`
 - Result: `accepted_candidate`
 - Promotion target: `none`
+- Edit generator: `scripts/generate-skill-optimization-edits.mjs`
+- Scorer: `scripts/score-skill-optimization-run.mjs`
+- Training entrypoint: `scripts/train-skill-optimization-run.mjs`
+- Rollout runner: `scripts/run-skill-optimization-rollouts.mjs`
+- Optimizer reflection: `scripts/reflect-skill-optimization-run.mjs`
+- Rejected buffer: `rejected-001-draft-as-publish-proof`
+- Exported best skill: `best_skill.md`
 
 ## Purpose
 
@@ -40,24 +47,71 @@ Optional test evidence checked for gate compatibility:
 
 Edit budget: `3`
 
+Generated edit artifact:
+
+- `runs/008-xhs-skillopt-kb-reuse-minimal/generated-edits.json`
+- `runs/008-xhs-skillopt-kb-reuse-minimal/steps/step_0002/generate/generated-edits.json`
+
 Accepted edits:
 
 1. Add failed-proof boundary: failed publish evidence is negative evidence, not compliant publish proof.
 2. Add account-state gate: unknown account state stops before draft or publish handoff.
 3. Add selection gate: candidate workflow changes need held-out improvement and cannot weaken scenario gates.
 
+Rejected candidate:
+
+- `runs/008-xhs-skillopt-kb-reuse-minimal/rejected-candidate-publish-proof-skill.md`
+- Reason: draft proof, content quality, and human review cannot be reused as
+  live publish proof.
+- Rejection stage: `risk_gate`
+
 ## Selection Result
 
 - Metric: `xhs_kb_reuse_safety_score`
-- Baseline score: `80`
-- Candidate score: `95`
-- Improvement: `15`
+- Score artifact: `runs/008-xhs-skillopt-kb-reuse-minimal/score-result.json`
+- Baseline score: `30`
+- Candidate score: `100`
+- Improvement: `70`
 - Selection gate: `passed`
 - Risk gate: `passed`
 
 The candidate is accepted for this experimental run because it preserves the
 existing KB-first reuse behavior while making the historical safety failures
 explicit. It does not change verified recipe status.
+
+The rejected candidate is preserved because it records a realistic unsafe edit:
+collapsing draft proof into publish proof. This is negative evidence for future
+optimizer runs.
+
+## Exported Artifacts
+
+- `runs/008-xhs-skillopt-kb-reuse-minimal/best_skill.md`
+- `runs/008-xhs-skillopt-kb-reuse-minimal/history.json`
+- `runs/008-xhs-skillopt-kb-reuse-minimal/runtime_state.json`
+- `runs/008-xhs-skillopt-kb-reuse-minimal/config.json`
+- `runs/008-xhs-skillopt-kb-reuse-minimal/train-run.json`
+- `runs/008-xhs-skillopt-kb-reuse-minimal/steps/step_0001/rollout/rollouts.json`
+- `runs/008-xhs-skillopt-kb-reuse-minimal/steps/step_0002/generate/generated-edits.json`
+- `runs/008-xhs-skillopt-kb-reuse-minimal/steps/step_0003/reflect/optimizer-reflection.json`
+- `runs/008-xhs-skillopt-kb-reuse-minimal/steps/step_0004/evaluate/score-result.json`
+- `runs/008-xhs-skillopt-kb-reuse-minimal/steps/step_0005/export/best_skill.md`
+- `runs/008-xhs-skillopt-kb-reuse-minimal/steps/step_0005/export/history.json`
+- `runs/008-xhs-skillopt-kb-reuse-minimal/steps/step_0005/export/runtime_state.json`
+- `runs/008-xhs-skillopt-kb-reuse-minimal/epochs/epoch_01/batch_001/generated-edits.json`
+- `runs/008-xhs-skillopt-kb-reuse-minimal/epochs/epoch_01/batch_001/rollouts.json`
+- `runs/008-xhs-skillopt-kb-reuse-minimal/epochs/epoch_01/batch_001/optimizer-reflection.json`
+- `runs/008-xhs-skillopt-kb-reuse-minimal/epochs/epoch_01/batch_001/score-result.json`
+- `runs/008-xhs-skillopt-kb-reuse-minimal/epochs/epoch_01/batch_001/best_skill.md`
+- `runs/008-xhs-skillopt-kb-reuse-minimal/epochs/epoch_02/batch_001/convergence-check.json`
+- `runs/008-xhs-skillopt-kb-reuse-minimal/slow_update/epoch_01/summary.md`
+- `runs/008-xhs-skillopt-kb-reuse-minimal/meta_skill/epoch_01/meta-skill.md`
+
+These are local equivalents of the official SkillOpt output structure. They do
+not imply official SkillOpt code integration or external benchmark parity.
+
+The local training config records two epochs with batch size 1. Epoch 1 accepts
+the bounded candidate; epoch 2 records deterministic convergence with no
+additional update.
 
 ## Boundary
 

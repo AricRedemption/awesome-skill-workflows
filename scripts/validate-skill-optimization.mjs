@@ -72,6 +72,281 @@ function checkScore(score, file, field) {
   checkRefs(score.evidence_refs, file, `${field}.evidence_refs`);
 }
 
+function checkGeneratedEdits(file, run) {
+  const generation = run.edit_generation;
+  if (!generation || typeof generation !== 'object') {
+    failures.push(`${file} missing edit_generation`);
+    return;
+  }
+
+  if (!['deterministic_script', 'manual', 'optimizer_model', 'external_skillopt'].includes(generation.generator_type)) {
+    failures.push(`${file} has invalid edit_generation.generator_type ${generation.generator_type}`);
+  }
+
+  checkRefs(generation.input_refs, file, 'edit_generation.input_refs');
+  checkRefs(generation.output_refs, file, 'edit_generation.output_refs');
+
+  if (generation.generator_type === 'deterministic_script') {
+    const hasScriptRef = (generation.output_refs ?? []).some((ref) => ref.startsWith('scripts/'));
+    if (!hasScriptRef) {
+      failures.push(`${file} deterministic edit generation must reference the generator script`);
+    }
+  }
+
+  const generatedJsonRef = (generation.output_refs ?? []).find((ref) => ref.endsWith('generated-edits.json'));
+  if (!generatedJsonRef) {
+    failures.push(`${file} edit_generation.output_refs must include generated-edits.json`);
+    return;
+  }
+
+  if (!exists(generatedJsonRef)) return;
+  const generated = readJson(generatedJsonRef);
+  const generatedIds = new Set((generated.edits ?? []).map((edit) => edit.edit_id));
+  for (const edit of run.edits ?? []) {
+    if (!generatedIds.has(edit.edit_id)) {
+      failures.push(`${file} edit ${edit.edit_id} is missing from ${generatedJsonRef}`);
+    }
+  }
+}
+
+function checkRolloutEvaluation(file, run) {
+  const rollout = run.rollout_evaluation;
+  if (!rollout || typeof rollout !== 'object') {
+    failures.push(`${file} missing rollout_evaluation`);
+    return;
+  }
+
+  requireString(rollout, 'runner_path', file);
+  requireString(rollout, 'output_ref', file);
+
+  if (!exists(rollout.runner_path)) {
+    failures.push(`${file} rollout_evaluation.runner_path does not exist: ${rollout.runner_path}`);
+  }
+  if (!exists(rollout.output_ref)) {
+    failures.push(`${file} rollout_evaluation.output_ref does not exist: ${rollout.output_ref}`);
+    return;
+  }
+  if (!Number.isInteger(rollout.workers) || rollout.workers < 1) {
+    failures.push(`${file} rollout_evaluation.workers must be a positive integer`);
+  }
+
+  const rollouts = readJson(rollout.output_ref);
+  if (!Array.isArray(rollouts.workers) || rollouts.workers.length < 2) {
+    failures.push(`${file} rollouts must include baseline and candidate workers`);
+  }
+  const targets = new Set((rollouts.workers ?? []).map((worker) => worker.target));
+  if (!targets.has('baseline') || !targets.has('candidate')) {
+    failures.push(`${file} rollouts must include baseline and candidate targets`);
+  }
+}
+
+function checkOptimizerReflection(file, run) {
+  const reflection = run.optimizer_reflection;
+  if (!reflection || typeof reflection !== 'object') {
+    failures.push(`${file} missing optimizer_reflection`);
+    return;
+  }
+
+  requireString(reflection, 'reflector_path', file);
+  requireString(reflection, 'output_ref', file);
+  requireString(reflection, 'recommendation', file);
+
+  if (!exists(reflection.reflector_path)) {
+    failures.push(`${file} optimizer_reflection.reflector_path does not exist: ${reflection.reflector_path}`);
+  }
+  if (!exists(reflection.output_ref)) {
+    failures.push(`${file} optimizer_reflection.output_ref does not exist: ${reflection.output_ref}`);
+    return;
+  }
+
+  const artifact = readJson(reflection.output_ref);
+  if (artifact.recommendation !== reflection.recommendation) {
+    failures.push(`${file} optimizer_reflection.recommendation does not match artifact`);
+  }
+  if (run.accepted && reflection.recommendation !== 'accept_candidate') {
+    failures.push(`${file} accepted run requires optimizer reflection accept_candidate`);
+  }
+}
+
+function checkTrainingEntrypoint(file, run) {
+  const entrypoint = run.training_entrypoint;
+  if (!entrypoint || typeof entrypoint !== 'object') {
+    failures.push(`${file} missing training_entrypoint`);
+    return;
+  }
+
+  requireString(entrypoint, 'script', file);
+  requireString(entrypoint, 'output_ref', file);
+
+  if (!exists(entrypoint.script)) {
+    failures.push(`${file} training_entrypoint.script does not exist: ${entrypoint.script}`);
+  }
+  if (!exists(entrypoint.output_ref)) {
+    failures.push(`${file} training_entrypoint.output_ref does not exist: ${entrypoint.output_ref}`);
+  }
+  if (!Array.isArray(entrypoint.step_artifacts) || entrypoint.step_artifacts.length === 0) {
+    failures.push(`${file} training_entrypoint.step_artifacts must be non-empty`);
+    return;
+  }
+
+  if (!Array.isArray(entrypoint.epoch_artifacts) || entrypoint.epoch_artifacts.length === 0) {
+    failures.push(`${file} training_entrypoint.epoch_artifacts must be non-empty`);
+    return;
+  }
+
+  for (const artifact of [...entrypoint.step_artifacts, ...entrypoint.epoch_artifacts]) {
+    if (typeof artifact !== 'string' || artifact.length === 0) {
+      failures.push(`${file} has invalid training step artifact`);
+      continue;
+    }
+    if (!exists(artifact)) {
+      failures.push(`${file} training step artifact does not exist: ${artifact}`);
+    }
+  }
+
+  if (exists(entrypoint.output_ref)) {
+    const trainRun = readJson(entrypoint.output_ref);
+    if (trainRun.training_config?.epochs < 2) {
+      failures.push(`${file} training run must record at least two local epochs`);
+    }
+    if (trainRun.training_config?.batch_size < 1) {
+      failures.push(`${file} training run must record batch_size >= 1`);
+    }
+    if (trainRun.training_config?.workers < 2) {
+      failures.push(`${file} training run must record at least two rollout workers`);
+    }
+    for (const artifact of trainRun.steps ?? []) {
+      if (!exists(`runs/${run.run_id}/${artifact}`)) {
+        failures.push(`${file} train-run step artifact does not exist: ${artifact}`);
+      }
+    }
+    for (const artifact of trainRun.epoch_artifacts ?? []) {
+      if (!exists(`runs/${run.run_id}/${artifact}`)) {
+        failures.push(`${file} train-run epoch artifact does not exist: ${artifact}`);
+      }
+    }
+  }
+}
+
+function checkRejectedCandidates(file, run) {
+  if (!Array.isArray(run.rejected_candidates)) {
+    failures.push(`${file} missing rejected_candidates array`);
+    return;
+  }
+
+  for (const candidate of run.rejected_candidates) {
+    for (const field of ['candidate_id', 'candidate_skill_path', 'rejection_stage', 'reason']) {
+      requireString(candidate, field, file);
+    }
+
+    if (!['selection_gate', 'risk_gate', 'sensitive_data_gate', 'promotion_gate'].includes(candidate.rejection_stage)) {
+      failures.push(`${file} rejected candidate ${candidate.candidate_id ?? '<unknown>'} has invalid rejection_stage ${candidate.rejection_stage}`);
+    }
+
+    if (!exists(candidate.candidate_skill_path)) {
+      failures.push(`${file} rejected candidate path does not exist: ${candidate.candidate_skill_path}`);
+    }
+
+    if (typeof candidate.baseline_score !== 'number' || typeof candidate.candidate_score !== 'number') {
+      failures.push(`${file} rejected candidate ${candidate.candidate_id ?? '<unknown>'} scores must be numbers`);
+    }
+
+    if (candidate.rejection_stage === 'selection_gate' && candidate.candidate_score > candidate.baseline_score) {
+      failures.push(`${file} selection-gate rejection ${candidate.candidate_id ?? '<unknown>'} cannot improve over baseline`);
+    }
+
+    checkRefs(candidate.evidence_refs, file, `rejected candidate ${candidate.candidate_id ?? '<unknown>'}.evidence_refs`);
+  }
+}
+
+function checkScoreEvaluation(file, run) {
+  const evaluation = run.score_evaluation;
+  if (!evaluation || typeof evaluation !== 'object') {
+    failures.push(`${file} missing score_evaluation`);
+    return;
+  }
+
+  if (!['deterministic_script', 'manual', 'external_harness'].includes(evaluation.scorer_type)) {
+    failures.push(`${file} has invalid score_evaluation.scorer_type ${evaluation.scorer_type}`);
+  }
+
+  requireString(evaluation, 'scorer_path', file);
+  requireString(evaluation, 'output_ref', file);
+
+  if (!exists(evaluation.scorer_path)) {
+    failures.push(`${file} score_evaluation.scorer_path does not exist: ${evaluation.scorer_path}`);
+  }
+
+  if (!exists(evaluation.output_ref)) {
+    failures.push(`${file} score_evaluation.output_ref does not exist: ${evaluation.output_ref}`);
+    return;
+  }
+
+  const scoreResult = readJson(evaluation.output_ref);
+  if (scoreResult.baseline_score !== run.baseline_score?.value) {
+    failures.push(`${file} baseline_score.value does not match ${evaluation.output_ref}`);
+  }
+  if (scoreResult.candidate_score !== run.candidate_score?.value) {
+    failures.push(`${file} candidate_score.value does not match ${evaluation.output_ref}`);
+  }
+  if (scoreResult.baseline_score !== run.selection_gate?.baseline_score) {
+    failures.push(`${file} selection_gate.baseline_score does not match ${evaluation.output_ref}`);
+  }
+  if (scoreResult.candidate_score !== run.selection_gate?.candidate_score) {
+    failures.push(`${file} selection_gate.candidate_score does not match ${evaluation.output_ref}`);
+  }
+  if (scoreResult.improvement !== run.selection_gate?.improvement) {
+    failures.push(`${file} selection_gate.improvement does not match ${evaluation.output_ref}`);
+  }
+}
+
+function checkExportedArtifacts(file, run) {
+  const artifacts = run.exported_artifacts;
+  if (!artifacts || typeof artifacts !== 'object') {
+    failures.push(`${file} missing exported_artifacts`);
+    return;
+  }
+
+  for (const field of ['best_skill', 'history', 'runtime_state', 'config', 'slow_update', 'meta_skill']) {
+    requireString(artifacts, field, file);
+    if (typeof artifacts[field] === 'string' && !exists(artifacts[field])) {
+      failures.push(`${file} exported_artifacts.${field} does not exist: ${artifacts[field]}`);
+    }
+  }
+
+  if (exists(artifacts.best_skill) && exists(run.candidate_skill_path)) {
+    const bestSkill = fs.readFileSync(path.join(root, artifacts.best_skill), 'utf8');
+    const candidateSkill = fs.readFileSync(path.join(root, run.candidate_skill_path), 'utf8');
+    if (bestSkill !== candidateSkill) {
+      failures.push(`${file} exported best_skill must match accepted candidate_skill_path`);
+    }
+  }
+
+  if (exists(artifacts.history)) {
+    const history = readJson(artifacts.history);
+    if (!Array.isArray(history.steps) || history.steps.length === 0) {
+      failures.push(`${file} exported history must contain steps`);
+    }
+    if (!Array.isArray(history.epochs) || history.epochs.length === 0) {
+      failures.push(`${file} exported history must contain epochs`);
+    }
+    if ((history.epochs ?? []).length < 2) {
+      failures.push(`${file} exported history must contain at least two epochs`);
+    }
+    const hasConvergenceEpoch = (history.epochs ?? []).some((epoch) => epoch.status === 'converged_no_update');
+    if (!hasConvergenceEpoch) {
+      failures.push(`${file} exported history must record a convergence/no-update epoch`);
+    }
+  }
+
+  if (exists(artifacts.runtime_state)) {
+    const runtimeState = readJson(artifacts.runtime_state);
+    if (runtimeState.best_skill_path !== 'best_skill.md') {
+      failures.push(`${file} runtime_state.best_skill_path must point to best_skill.md`);
+    }
+  }
+}
+
 function checkRun(file) {
   const run = readJson(file);
 
@@ -95,6 +370,11 @@ function checkRun(file) {
   if (!['manual_skillopt_style', 'external_skillopt', 'hybrid'].includes(run.optimizer_mode)) {
     failures.push(`${file} has invalid optimizer_mode ${run.optimizer_mode}`);
   }
+
+  checkGeneratedEdits(file, run);
+  checkRolloutEvaluation(file, run);
+  checkOptimizerReflection(file, run);
+  checkTrainingEntrypoint(file, run);
 
   if (!exists(run.source_skill_path)) {
     failures.push(`${file} source_skill_path does not exist: ${run.source_skill_path}`);
@@ -125,6 +405,10 @@ function checkRun(file) {
     }
     checkRefs(edit.evidence_refs, file, `edit ${edit.edit_id ?? '<unknown>'}.evidence_refs`);
   }
+
+  checkRejectedCandidates(file, run);
+  checkScoreEvaluation(file, run);
+  checkExportedArtifacts(file, run);
 
   const split = run.evidence_split;
   if (!split || typeof split !== 'object') {
@@ -224,8 +508,16 @@ console.log(JSON.stringify({
   checks: [
     'skill optimization run records exist',
     'source and candidate skill artifacts exist',
+    'rollout workers evaluate baseline and candidate',
+    'optimizer reflection artifact matches run decision',
+    'generated edits are recorded and match accepted edits',
+    'training entrypoint and per-step artifacts exist',
+    'multi-epoch local training artifacts exist',
     'train and selection evidence refs are separate',
     'edit budget bounds candidate edits',
+    'rejected candidate buffer is validated',
+    'score evaluation artifact matches recorded scores',
+    'best skill, history, runtime state, config, slow update, and meta skill exports exist',
     'baseline and candidate scores are present',
     'selection gate improvement is consistent',
     'accepted candidates improve score and pass risk gate',

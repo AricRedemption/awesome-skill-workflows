@@ -1,0 +1,52 @@
+{
+  "run_id": "008-xhs-skillopt-kb-reuse-minimal",
+  "generator_type": "deterministic_script",
+  "source": "scripts/generate-skill-optimization-edits.mjs",
+  "strategy": "Read XHS run evidence and rejected candidate memory, then map detected proof-chain and selection-gate signals into bounded add edits for KB-first workflow reuse.",
+  "input_signal_summary": {
+    "has_publish_proof_boundary_signal": true,
+    "has_account_state_signal": true,
+    "has_selection_gate_signal": true,
+    "used_rejected_candidate_memory": true
+  },
+  "edits": [
+    {
+      "edit_id": "edit-001-add-failed-proof-boundary",
+      "operation": "add",
+      "target_section": "Instruction",
+      "rationale": "Historical XHS evidence separates publish facts, draft facts, content score, and compliant proof.",
+      "before": "Reuse matching workflow-KB entries before composing a new XHS content workflow.",
+      "after": "Reuse failed publish evidence as negative evidence only; do not treat it as compliant publish proof.",
+      "evidence_refs": [
+        "runs/001-xhs-ai-agent-save-one-hour/step-7-self-evolution-result.json",
+        "workflow-kb/failure-cases/xhs-content-failure-cases.md"
+      ],
+      "risk_impact": "reduces_risk"
+    },
+    {
+      "edit_id": "edit-002-add-account-state-gate",
+      "operation": "add",
+      "target_section": "Instruction",
+      "rationale": "Human review identified account login and authorization as a pre-handoff gate.",
+      "before": "Generate and score the content package before writeback.",
+      "after": "Keep account state as a hard pre-handoff gate; stop before draft or publish if account state is unknown.",
+      "evidence_refs": [
+        "workflow-kb/failure-cases/xhs-account-state-precheck-missing.md"
+      ],
+      "risk_impact": "reduces_risk"
+    },
+    {
+      "edit_id": "edit-003-add-selection-gate",
+      "operation": "add",
+      "target_section": "Instruction",
+      "rationale": "SkillOpt-style candidate changes need held-out selection evidence before acceptance.",
+      "before": "Write back new reusable lessons after the run.",
+      "after": "Accept candidate workflow changes only when held-out evidence improves the selected metric and required scenario gates remain intact.",
+      "evidence_refs": [
+        "runs/002-xhs-meeting-notes-productivity/run-summary.md",
+        "workflow-kb/verified-workflows/xhs-ai-tool-topic-to-post.v1.md"
+      ],
+      "risk_impact": "reduces_risk"
+    }
+  ]
+}

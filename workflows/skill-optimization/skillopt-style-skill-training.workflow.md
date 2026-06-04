@@ -21,12 +21,27 @@ unverified candidates.
   candidate.
 - `test_refs`: optional final-report evidence not used for candidate selection.
 - `baseline_score`: measured score for the baseline artifact.
+- `score_evaluator`: deterministic script or external harness used to produce
+  repeatable baseline and candidate scores.
+- `edit_generator`: deterministic script, optimizer model, external SkillOpt
+  run, or manually reviewed edit source.
 - `scenario_risk_gate`: local scenario gate, when the evidence comes from a
   scenario.
 
 ## Outputs
 
 - `candidate_skill_path`: candidate skill or workflow artifact.
+- `rollouts.json`: baseline and candidate behavior from the fixed local
+  execution harness.
+- `generated-edits.json`: generated candidate edits before acceptance.
+- `optimizer-reflection.json`: optimizer-side accept/reject reflection over
+  rollouts and generated edits.
+- `score-result.json`: repeatable baseline and candidate score evidence.
+- `best_skill.md`: exported accepted skill artifact.
+- `steps/step_XXXX/`: per-step training artifacts.
+- `train-run.json`: deterministic local training entrypoint output.
+- `history.json`, `runtime_state.json`, and `config.json`: local equivalents of
+  official SkillOpt run state.
 - `skill-optimization-run.json`: structured optimization record.
 - Accepted or rejected candidate status.
 - Rejected-edit evidence when an edit is unsafe or does not improve selection
@@ -37,25 +52,43 @@ unverified candidates.
 1. Select one baseline skill artifact.
 2. Separate evidence into train and selection references.
 3. Score the baseline on the selection references.
-4. Propose bounded candidate edits from train evidence.
-5. Apply only `add`, `delete`, or `replace` edits within the edit budget.
-6. Score the candidate on the held-out selection references.
-7. Check scenario risk gates without weakening or replacing them.
-8. Accept the candidate only when selection score improves and risk gates pass.
-9. Store rejected candidates with a concrete rejected reason.
-10. Validate the run with `node scripts/validate-skill-optimization.mjs`.
+4. Run the local training entrypoint when available.
+5. Record baseline and candidate rollout behavior under the fixed local harness.
+6. Generate bounded candidate edits from train evidence and record the generator
+   source.
+7. Apply only `add`, `delete`, or `replace` edits within the edit budget.
+8. Record optimizer-side reflection over rollout failures and generated edits.
+9. Score the baseline and candidate with a repeatable scorer or external
+   harness.
+10. Check scenario risk gates without weakening or replacing them.
+11. Accept the candidate only when selection score improves and risk gates pass.
+12. Store rejected candidates with the rejected artifact, rejection stage, score,
+   reason, and evidence references.
+13. Validate the run with `node scripts/validate-skill-optimization.mjs`.
+14. Export the accepted candidate as `best_skill.md` plus local run-state
+    artifacts.
 
 ## Required Gates
 
 - Train and selection evidence must not be the same files.
+- Training entrypoint and per-step artifacts must exist for reproducible local
+  runs.
+- Rollout artifacts must include both baseline and candidate workers.
+- Optimizer reflection must match the accepted or rejected run decision.
 - Candidate score must be greater than baseline score before `accepted=true`.
+- Recorded scores must match `score-result.json`.
 - Candidate evidence must include references to run evidence, not only model
   judgment.
+- Generated edits must be recorded before acceptance.
+- Rejected candidates must be preserved as first-class evidence when they reveal
+  unsafe or non-improving edits.
 - Scenario-specific gates remain scenario-specific. This workflow cannot turn a
   content score into account-state proof, human approval, draft proof, or
   publish proof.
 - Direct promotion to `verified-recipes/` is forbidden. Promotion requires the
   normal project-specific recipe and workflow gates.
+- `best_skill.md` is an experimental export unless separately promoted by the
+  normal workflow-KB and recipe gates.
 
 ## First Validation Scenario
 

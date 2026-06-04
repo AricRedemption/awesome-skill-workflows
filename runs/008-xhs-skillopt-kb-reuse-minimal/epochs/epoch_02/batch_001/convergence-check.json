@@ -1,0 +1,12 @@
+{
+  "run_id": "008-xhs-skillopt-kb-reuse-minimal",
+  "epoch_id": "epoch_02",
+  "batch_id": "batch_001",
+  "status": "no_update",
+  "reason": "Accepted candidate already satisfies all deterministic XHS KB reuse safety checks; no additional bounded edit was generated.",
+  "evidence_refs": [
+    "runs/008-xhs-skillopt-kb-reuse-minimal/score-result.json",
+    "runs/008-xhs-skillopt-kb-reuse-minimal/best_skill.md",
+    "runs/008-xhs-skillopt-kb-reuse-minimal/rejected-candidate-publish-proof-skill.md"
+  ]
+}

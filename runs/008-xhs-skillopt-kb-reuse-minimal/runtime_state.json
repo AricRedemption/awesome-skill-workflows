@@ -1,0 +1,9 @@
+{
+  "run_id": "008-xhs-skillopt-kb-reuse-minimal",
+  "status": "accepted_candidate",
+  "accepted": true,
+  "current_step": 5,
+  "best_skill_path": "best_skill.md",
+  "can_resume": false,
+  "resume_reason": "This project-local reproduction is deterministic and single-pass."
+}

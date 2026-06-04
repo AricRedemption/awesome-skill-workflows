@@ -1,0 +1,31 @@
+{
+  "run_id": "008-xhs-skillopt-kb-reuse-minimal",
+  "reflector": "scripts/reflect-skill-optimization-run.mjs",
+  "rollout_ref": "runs/008-xhs-skillopt-kb-reuse-minimal/rollouts.json",
+  "generated_edits_ref": "runs/008-xhs-skillopt-kb-reuse-minimal/generated-edits.json",
+  "baseline_failures": [
+    {
+      "item_id": "selection-xhs-kb-reuse-safety",
+      "passed": false,
+      "missing_signals": [
+        "proof verification"
+      ]
+    },
+    {
+      "item_id": "selection-xhs-proof-boundary",
+      "passed": false,
+      "missing_signals": [
+        "account state",
+        "draft and publish proof separate"
+      ]
+    }
+  ],
+  "candidate_failures": [],
+  "reflection_summary": [
+    "Baseline missed 3 unique required signals.",
+    "Candidate missed 0 unique required signals.",
+    "Generated 3 bounded edits from rollout and failure evidence."
+  ],
+  "recommendation": "accept_candidate",
+  "notes": "This is deterministic local optimizer-side reflection, not an LLM optimizer model call."
+}

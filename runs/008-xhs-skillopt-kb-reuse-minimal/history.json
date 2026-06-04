@@ -1,0 +1,74 @@
+{
+  "run_id": "008-xhs-skillopt-kb-reuse-minimal",
+  "training_entrypoint": "scripts/train-skill-optimization-run.mjs",
+  "epochs": [
+    {
+      "epoch_id": "epoch_01",
+      "batch_id": "batch_001",
+      "rollout_ref": "rollouts.json",
+      "reflection_ref": "optimizer-reflection.json",
+      "train_refs": [
+        "runs/001-xhs-ai-agent-save-one-hour/step-7-self-evolution-result.json",
+        "workflow-kb/failure-cases/xhs-account-state-precheck-missing.md",
+        "workflow-kb/failure-cases/xhs-content-failure-cases.md"
+      ],
+      "selection_refs": [
+        "runs/002-xhs-meeting-notes-productivity/run-summary.md",
+        "workflow-kb/verified-workflows/xhs-ai-tool-topic-to-post.v1.md"
+      ],
+      "accepted": true,
+      "exported_best_skill": "best_skill.md"
+    },
+    {
+      "epoch_id": "epoch_02",
+      "batch_id": "batch_001",
+      "train_refs": [
+        "runs/001-xhs-ai-agent-save-one-hour/step-7-self-evolution-result.json",
+        "workflow-kb/failure-cases/xhs-account-state-precheck-missing.md",
+        "workflow-kb/failure-cases/xhs-content-failure-cases.md"
+      ],
+      "selection_refs": [
+        "runs/002-xhs-meeting-notes-productivity/run-summary.md",
+        "workflow-kb/verified-workflows/xhs-ai-tool-topic-to-post.v1.md"
+      ],
+      "accepted": false,
+      "status": "converged_no_update",
+      "artifact": "epochs/epoch_02/batch_001/convergence-check.json"
+    }
+  ],
+  "steps": [
+    {
+      "step_id": "step_0001_rollout",
+      "artifact": "rollouts.json"
+    },
+    {
+      "step_id": "step_0002_generate_edits",
+      "artifact": "generated-edits.json",
+      "accepted_edit_ids": [
+        "edit-001-add-failed-proof-boundary",
+        "edit-002-add-account-state-gate",
+        "edit-003-add-selection-gate"
+      ],
+      "rejected_candidate_ids": [
+        "rejected-001-draft-as-publish-proof"
+      ]
+    },
+    {
+      "step_id": "step_0003_reflect",
+      "artifact": "optimizer-reflection.json",
+      "recommendation": "accept_candidate"
+    },
+    {
+      "step_id": "step_0004_score_candidate",
+      "artifact": "score-result.json",
+      "baseline_score": 30,
+      "candidate_score": 100,
+      "improvement": 70
+    },
+    {
+      "step_id": "step_0005_export_best_skill",
+      "artifact": "best_skill.md",
+      "status": "exported"
+    }
+  ]
+}

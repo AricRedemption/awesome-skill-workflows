@@ -1,0 +1,88 @@
+{
+  "run_id": "008-xhs-skillopt-kb-reuse-minimal",
+  "scorer": "scripts/score-skill-optimization-run.mjs",
+  "metric": "xhs_kb_reuse_safety_score",
+  "baseline_score": 30,
+  "candidate_score": 100,
+  "improvement": 70,
+  "baseline_checks": [
+    {
+      "id": "kb_first_retrieval",
+      "weight": 15,
+      "passed": true
+    },
+    {
+      "id": "failed_publish_negative_evidence",
+      "weight": 15,
+      "passed": false
+    },
+    {
+      "id": "account_state_pre_handoff_gate",
+      "weight": 15,
+      "passed": false
+    },
+    {
+      "id": "draft_publish_proof_separation",
+      "weight": 15,
+      "passed": true
+    },
+    {
+      "id": "held_out_selection_gate",
+      "weight": 15,
+      "passed": false
+    },
+    {
+      "id": "scenario_gate_preservation",
+      "weight": 15,
+      "passed": false
+    },
+    {
+      "id": "export_boundary",
+      "weight": 10,
+      "passed": false
+    }
+  ],
+  "candidate_checks": [
+    {
+      "id": "kb_first_retrieval",
+      "weight": 15,
+      "passed": true
+    },
+    {
+      "id": "failed_publish_negative_evidence",
+      "weight": 15,
+      "passed": true
+    },
+    {
+      "id": "account_state_pre_handoff_gate",
+      "weight": 15,
+      "passed": true
+    },
+    {
+      "id": "draft_publish_proof_separation",
+      "weight": 15,
+      "passed": true
+    },
+    {
+      "id": "held_out_selection_gate",
+      "weight": 15,
+      "passed": true
+    },
+    {
+      "id": "scenario_gate_preservation",
+      "weight": 15,
+      "passed": true
+    },
+    {
+      "id": "export_boundary",
+      "weight": 10,
+      "passed": true
+    }
+  ],
+  "evidence_refs": [
+    "runs/008-xhs-skillopt-kb-reuse-minimal/baseline-skill.md",
+    "runs/008-xhs-skillopt-kb-reuse-minimal/candidate-skill.md",
+    "runs/002-xhs-meeting-notes-productivity/run-summary.md",
+    "workflow-kb/verified-workflows/xhs-ai-tool-topic-to-post.v1.md"
+  ]
+}

@@ -5,6 +5,51 @@
   "source_skill_path": "runs/008-xhs-skillopt-kb-reuse-minimal/baseline-skill.md",
   "candidate_skill_path": "runs/008-xhs-skillopt-kb-reuse-minimal/candidate-skill.md",
   "optimizer_mode": "manual_skillopt_style",
+  "training_entrypoint": {
+    "script": "scripts/train-skill-optimization-run.mjs",
+    "output_ref": "runs/008-xhs-skillopt-kb-reuse-minimal/train-run.json",
+    "step_artifacts": [
+      "runs/008-xhs-skillopt-kb-reuse-minimal/steps/step_0001/rollout/rollouts.json",
+      "runs/008-xhs-skillopt-kb-reuse-minimal/steps/step_0002/generate/generated-edits.json",
+      "runs/008-xhs-skillopt-kb-reuse-minimal/steps/step_0003/reflect/optimizer-reflection.json",
+      "runs/008-xhs-skillopt-kb-reuse-minimal/steps/step_0004/evaluate/score-result.json",
+      "runs/008-xhs-skillopt-kb-reuse-minimal/steps/step_0005/export/best_skill.md",
+      "runs/008-xhs-skillopt-kb-reuse-minimal/steps/step_0005/export/history.json",
+      "runs/008-xhs-skillopt-kb-reuse-minimal/steps/step_0005/export/runtime_state.json"
+    ],
+    "epoch_artifacts": [
+      "runs/008-xhs-skillopt-kb-reuse-minimal/epochs/epoch_01/batch_001/rollouts.json",
+      "runs/008-xhs-skillopt-kb-reuse-minimal/epochs/epoch_01/batch_001/generated-edits.json",
+      "runs/008-xhs-skillopt-kb-reuse-minimal/epochs/epoch_01/batch_001/optimizer-reflection.json",
+      "runs/008-xhs-skillopt-kb-reuse-minimal/epochs/epoch_01/batch_001/score-result.json",
+      "runs/008-xhs-skillopt-kb-reuse-minimal/epochs/epoch_01/batch_001/best_skill.md",
+      "runs/008-xhs-skillopt-kb-reuse-minimal/epochs/epoch_02/batch_001/convergence-check.json"
+    ]
+  },
+  "edit_generation": {
+    "generator_type": "deterministic_script",
+    "input_refs": [
+      "runs/001-xhs-ai-agent-save-one-hour/step-7-self-evolution-result.json",
+      "workflow-kb/failure-cases/xhs-account-state-precheck-missing.md",
+      "workflow-kb/failure-cases/xhs-content-failure-cases.md",
+      "runs/008-xhs-skillopt-kb-reuse-minimal/rejected-candidate-publish-proof-skill.md"
+    ],
+    "output_refs": [
+      "scripts/generate-skill-optimization-edits.mjs",
+      "runs/008-xhs-skillopt-kb-reuse-minimal/generated-edits.json"
+    ],
+    "notes": "The local deterministic generator maps known XHS proof-chain failures into bounded add edits. It is not the official optimizer-model loop."
+  },
+  "rollout_evaluation": {
+    "runner_path": "scripts/run-skill-optimization-rollouts.mjs",
+    "output_ref": "runs/008-xhs-skillopt-kb-reuse-minimal/rollouts.json",
+    "workers": 2
+  },
+  "optimizer_reflection": {
+    "reflector_path": "scripts/reflect-skill-optimization-run.mjs",
+    "output_ref": "runs/008-xhs-skillopt-kb-reuse-minimal/optimizer-reflection.json",
+    "recommendation": "accept_candidate"
+  },
   "evidence_split": {
     "train_refs": [
       "runs/001-xhs-ai-agent-save-one-hour/step-7-self-evolution-result.json",
@@ -61,27 +106,51 @@
       "risk_impact": "reduces_risk"
     }
   ],
+  "rejected_candidates": [
+    {
+      "candidate_id": "rejected-001-draft-as-publish-proof",
+      "candidate_skill_path": "runs/008-xhs-skillopt-kb-reuse-minimal/rejected-candidate-publish-proof-skill.md",
+      "rejection_stage": "risk_gate",
+      "baseline_score": 80,
+      "candidate_score": 70,
+      "reason": "The rejected candidate collapses draft proof, content quality, and live publish proof, which violates the XHS proof-boundary failure evidence.",
+      "evidence_refs": [
+        "workflow-kb/verified-workflows/xhs-ai-tool-topic-to-post.v1.md",
+        "workflow-kb/failure-cases/xhs-content-failure-cases.md",
+        "runs/003-xhs-ai-agent-save-one-hour-step8-draft-rerun/draft-proof.json"
+      ]
+    }
+  ],
+  "score_evaluation": {
+    "scorer_type": "deterministic_script",
+    "scorer_path": "scripts/score-skill-optimization-run.mjs",
+    "output_ref": "runs/008-xhs-skillopt-kb-reuse-minimal/score-result.json",
+    "notes": "Scores are computed from baseline and candidate skill text using explicit safety and proof-boundary checks."
+  },
   "baseline_score": {
     "metric": "xhs_kb_reuse_safety_score",
-    "value": 80,
+    "value": 30,
     "evidence_refs": [
+      "runs/008-xhs-skillopt-kb-reuse-minimal/score-result.json",
       "runs/002-xhs-meeting-notes-productivity/run-summary.md"
     ]
   },
   "candidate_score": {
     "metric": "xhs_kb_reuse_safety_score",
-    "value": 95,
+    "value": 100,
     "evidence_refs": [
+      "runs/008-xhs-skillopt-kb-reuse-minimal/score-result.json",
       "runs/002-xhs-meeting-notes-productivity/run-summary.md",
       "workflow-kb/verified-workflows/xhs-ai-tool-topic-to-post.v1.md"
     ]
   },
   "selection_gate": {
     "status": "passed",
-    "baseline_score": 80,
-    "candidate_score": 95,
-    "improvement": 15,
+    "baseline_score": 30,
+    "candidate_score": 100,
+    "improvement": 70,
     "evidence_refs": [
+      "runs/008-xhs-skillopt-kb-reuse-minimal/score-result.json",
       "runs/002-xhs-meeting-notes-productivity/run-summary.md",
       "workflow-kb/verified-workflows/xhs-ai-tool-topic-to-post.v1.md"
     ]
@@ -93,6 +162,14 @@
       "workflow-kb/verified-workflows/xhs-ai-tool-topic-to-post.v1.md",
       "workflow-kb/failure-cases/xhs-account-state-precheck-missing.md"
     ]
+  },
+  "exported_artifacts": {
+    "best_skill": "runs/008-xhs-skillopt-kb-reuse-minimal/best_skill.md",
+    "history": "runs/008-xhs-skillopt-kb-reuse-minimal/history.json",
+    "runtime_state": "runs/008-xhs-skillopt-kb-reuse-minimal/runtime_state.json",
+    "config": "runs/008-xhs-skillopt-kb-reuse-minimal/config.json",
+    "slow_update": "runs/008-xhs-skillopt-kb-reuse-minimal/slow_update/epoch_01/summary.md",
+    "meta_skill": "runs/008-xhs-skillopt-kb-reuse-minimal/meta_skill/epoch_01/meta-skill.md"
   },
   "promotion_target": "none",
   "accepted": true,

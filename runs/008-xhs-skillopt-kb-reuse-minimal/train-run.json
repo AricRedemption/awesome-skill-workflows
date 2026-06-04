@@ -1,0 +1,27 @@
+{
+  "run_id": "008-xhs-skillopt-kb-reuse-minimal",
+  "trainer": "scripts/train-skill-optimization-run.mjs",
+  "training_config": {
+    "epochs": 2,
+    "batch_size": 1,
+    "workers": 2,
+    "mode": "deterministic_local"
+  },
+  "steps": [
+    "steps/step_0001/rollout/rollouts.json",
+    "steps/step_0002/generate/generated-edits.json",
+    "steps/step_0003/reflect/optimizer-reflection.json",
+    "steps/step_0004/evaluate/score-result.json",
+    "steps/step_0005/export/best_skill.md",
+    "steps/step_0005/export/history.json",
+    "steps/step_0005/export/runtime_state.json"
+  ],
+  "epoch_artifacts": [
+    "epochs/epoch_01/batch_001/rollouts.json",
+    "epochs/epoch_01/batch_001/generated-edits.json",
+    "epochs/epoch_01/batch_001/optimizer-reflection.json",
+    "epochs/epoch_01/batch_001/score-result.json",
+    "epochs/epoch_01/batch_001/best_skill.md",
+    "epochs/epoch_02/batch_001/convergence-check.json"
+  ]
+}
