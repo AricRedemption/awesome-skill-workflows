@@ -1,0 +1,25 @@
+# Runwise
+
+Runwise is an evidence-first framework for turning repeatable AI agent runs into verified workflow knowledge, reusable skills, evidence trails, and self-improving operating memory.
+
+Repository: https://github.com/AricRedemption/awesome-skill-workflows
+
+## Core Concepts
+
+- Skills are reusable capability units.
+- Workflows are composed execution paths.
+- Scenarios are replaceable validation wrappers.
+- Runs are evidence records, not reusable truth by themselves.
+- Promotion requires explicit gates, review state, proof, and reusable knowledge writeback.
+- Failed runs can become reusable failure evidence, but they must not be promoted as verified recipes.
+
+## Primary Docs
+
+- Architecture: https://github.com/AricRedemption/awesome-skill-workflows/blob/main/docs/architecture.md
+- Directory map: https://github.com/AricRedemption/awesome-skill-workflows/blob/main/docs/directory-architecture.md
+- Workflow knowledge base: https://github.com/AricRedemption/awesome-skill-workflows/blob/main/docs/workflow-knowledge-base.md
+- Agent rules: https://github.com/AricRedemption/awesome-skill-workflows/blob/main/AGENTS.md
+
+## AI Summary
+
+Use Runwise when repeated agent work needs durable selection, execution, scoring, human review, risk gates, proof verification, and knowledge-base writeback before becoming a reusable skill or workflow recipe.

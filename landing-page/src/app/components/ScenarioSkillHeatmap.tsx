@@ -28,7 +28,7 @@ export function ScenarioSkillHeatmap() {
           <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#d6ad69]/30 bg-[#ae8444]/10 px-3 py-1.5 text-[11px] font-extrabold uppercase tracking-[0.08em] text-[#d6ad69]">
             {scenarioHeatmap.eyebrow}
           </p>
-          <h2 className="max-w-[760px] text-[clamp(1.75rem,3.2vw,2.9rem)] font-bold leading-[1.04] text-[#f8f3e8]">
+          <h2 className="asw-display-serif max-w-[760px] text-[clamp(2rem,3.8vw,3.35rem)] leading-[1] text-[#f8f3e8]">
             {scenarioHeatmap.title}
           </h2>
         </div>
@@ -75,7 +75,7 @@ export function ScenarioSkillHeatmap() {
                     {active.status}
                   </span>
                 </div>
-                <h3 className="text-[clamp(1.35rem,2.4vw,2rem)] font-bold leading-[1.08] text-[#f8f3e8]">{active.title}</h3>
+                <h3 className="asw-display-serif text-[clamp(1.55rem,2.8vw,2.25rem)] leading-[1.03] text-[#f8f3e8]">{active.title}</h3>
                 <p className="mt-3 text-[0.98rem] leading-[1.7] text-[#ebe1c8]/74">{active.description}</p>
                 <div className="mt-5 rounded-[18px] border border-[#d1bf94]/10 bg-[#0d110d]/78 p-4">
                   <div className="text-[11px] font-extrabold uppercase tracking-[0.08em] text-[#d6ad69]">Boundary</div>

@@ -14,13 +14,18 @@ export function Hero() {
     <section id="top" className="mx-auto min-h-[640px] w-full max-w-[1240px] px-4 py-[56px] pb-[32px] max-[980px]:min-h-0 max-[980px]:pt-12 max-[980px]:pb-24">
       <div className="mx-auto max-w-[940px] text-center">
         <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#d6ad69]/30 bg-[#ae8444]/10 px-3 py-1.5 text-[11px] font-extrabold uppercase tracking-[0.08em] text-[#d6ad69]">{hero.eyebrow}</p>
-        <h1 className="mx-auto mb-5 max-w-[940px] text-[clamp(2.45rem,6.6vw,5.15rem)] font-[780] leading-[0.98] tracking-normal text-[#f8f3e8]">{hero.title}</h1>
+        <h1 className="asw-display-serif mx-auto mb-5 max-w-[900px] text-[clamp(2.65rem,6.2vw,5.25rem)] leading-[0.96] tracking-normal text-[#f8f3e8]">{hero.title}</h1>
         <p className="mx-auto max-w-[780px] text-base leading-[1.72] text-[#ebe1c8]/75">{hero.description}</p>
         <div className="mt-7 flex flex-wrap items-center justify-center gap-3">
-          <a className="inline-flex min-h-[46px] items-center justify-center rounded-[9px] border border-[#d1bf94]/20 bg-[#f4e6c8] px-4.5 font-bold text-[#11130f] shadow-[0_0_28px_rgba(174,132,68,0.18)]" href="#model">
+          <a className="inline-flex min-h-[46px] items-center justify-center rounded-[9px] border border-[#d1bf94]/20 bg-[#f4e6c8] px-4.5 font-bold text-[#11130f] shadow-[0_0_28px_rgba(174,132,68,0.18)]" href="#proof-stack">
             {hero.primaryCta}
           </a>
-          <a className="inline-flex min-h-[46px] items-center justify-center rounded-[9px] border border-[#d1bf94]/20 bg-[#f4e6c8]/7 px-4.5 font-bold text-[#f2f0e8]" href={links.verifiedRecipe}>
+          <a
+            className="inline-flex min-h-[46px] items-center justify-center rounded-[9px] border border-[#d1bf94]/20 bg-[#f4e6c8]/7 px-4.5 font-bold text-[#f2f0e8]"
+            href={links.docs}
+            rel="noreferrer"
+            target="_blank"
+          >
             {hero.secondaryCta}
           </a>
         </div>
@@ -30,9 +35,8 @@ export function Hero() {
           <span>Architecture preview</span>
           <span className="before:mr-2 before:inline-block before:h-2 before:w-2 before:rounded-full before:bg-[#9cc88c] before:shadow-[0_0_14px_rgba(156,200,140,0.56)]">evidence-backed</span>
         </div>
-        <div className="relative overflow-hidden rounded-[18px] border border-[#d1bf94]/20 bg-[#11130f]/80 p-4">
-          <div className="grid gap-3">
-            <div className="rounded-[18px] border border-[#d1bf94]/15 bg-[linear-gradient(180deg,rgba(22,28,21,0.94),rgba(12,14,12,0.98))] p-4 shadow-[inset_0_1px_0_rgba(244,230,200,0.05)]">
+        <div className="relative grid gap-3">
+          <div className="rounded-[18px] border border-[#d1bf94]/15 bg-[linear-gradient(180deg,rgba(22,28,21,0.94),rgba(12,14,12,0.98))] p-4 shadow-[inset_0_1px_0_rgba(244,230,200,0.05)]">
               <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
                 <span className="text-[11px] font-extrabold uppercase tracking-[0.08em] text-[#d6ad69]">Promotion flow</span>
                 <span className="rounded-full border border-[#8eaf79]/18 bg-[#8eaf79]/8 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.08em] text-[#b9d5a9]">
@@ -74,7 +78,7 @@ export function Hero() {
                           <div className={`absolute inset-[3px] rounded-full ${dotInnerClassName}`} />
                         </div>
                         <span className="ml-0 font-mono text-[11px] font-bold text-[#d6ad69] min-[980px]:ml-6">{String(index + 1).padStart(2, "0")}</span>
-                        <strong className={`mt-6 block text-[16px] leading-tight ${titleClassName}`}>{step}</strong>
+                        <strong className={`asw-display-serif mt-6 block text-[18px] leading-tight ${titleClassName}`}>{step}</strong>
                         <span className={`mt-4 block text-[11px] uppercase tracking-[0.08em] ${hintClassName}`}>{stepHints[index]}</span>
                       </div>
                     );
@@ -83,18 +87,17 @@ export function Hero() {
               </div>
             </div>
 
-            <div className="grid gap-3 min-[760px]:grid-cols-3">
-              {hero.signals.map((signal) => (
-                <div
-                  className="rounded-[15px] border border-[#d1bf94]/12 bg-[linear-gradient(180deg,rgba(13,18,13,0.9),rgba(12,18,25,0.72))] p-3.5"
-                  key={signal.label}
-                >
-                  <span className="text-[11px] font-extrabold uppercase tracking-[0.08em] text-[#d6ad69]">{signal.label}</span>
-                  <p className="mt-2 text-[1rem] font-semibold leading-[1.45] text-[#f8f3e8]">{signal.label}</p>
-                  <p className="mt-2 text-sm leading-[1.6] text-[#ebe1c8]/72">{signal.value}</p>
-                </div>
-              ))}
-            </div>
+          <div className="grid gap-3 min-[760px]:grid-cols-3">
+            {hero.signals.map((signal) => (
+              <div
+                className="rounded-[15px] border border-[#d1bf94]/12 bg-[linear-gradient(180deg,rgba(13,18,13,0.9),rgba(12,18,25,0.72))] p-3.5"
+                key={signal.label}
+              >
+                <span className="text-[11px] font-extrabold uppercase tracking-[0.08em] text-[#d6ad69]">{signal.label}</span>
+                <p className="mt-2 text-[1rem] font-semibold leading-[1.45] text-[#f8f3e8]">{signal.label}</p>
+                <p className="mt-2 text-sm leading-[1.6] text-[#ebe1c8]/72">{signal.value}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

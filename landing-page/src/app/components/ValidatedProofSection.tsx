@@ -2,13 +2,13 @@ import { validatedProof } from "../content";
 
 export function ValidatedProofSection() {
   return (
-    <section id="validated" className="mx-auto w-full max-w-[1240px] px-4 py-12">
+    <section id="proof-stack" className="mx-auto w-full max-w-[1240px] px-4 py-12">
       <div className="mb-6 grid grid-cols-[0.86fr_1fr] gap-6 max-[980px]:grid-cols-1">
         <div>
           <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#d6ad69]/30 bg-[#ae8444]/10 px-3 py-1.5 text-[11px] font-extrabold uppercase tracking-[0.08em] text-[#d6ad69]">
             {validatedProof.eyebrow}
           </p>
-          <h2 className="max-w-[760px] text-[clamp(1.75rem,3.2vw,3rem)] font-bold leading-[1.04] text-[#f8f3e8]">
+          <h2 className="asw-display-serif max-w-[760px] text-[clamp(2rem,3.8vw,3.45rem)] leading-[1] text-[#f8f3e8]">
             {validatedProof.title}
           </h2>
         </div>
@@ -22,12 +22,12 @@ export function ValidatedProofSection() {
               <span className="inline-flex rounded-full border border-[#9ac98d]/20 bg-[#8eaf79]/10 px-3 py-1 text-[11px] font-extrabold uppercase tracking-[0.08em] text-[#b9d5a9]">
                 verification board
               </span>
-              <a className="text-sm font-bold text-[#f2d18d] transition hover:text-[#f7e1af]" href={validatedProof.spotlight.href}>
-                Inspect workflow
+              <a className="text-sm font-bold text-[#f2d18d] transition hover:text-[#f7e1af]" href={validatedProof.spotlight.href} rel="noreferrer" target="_blank">
+                Open model
               </a>
             </div>
 
-            <h3 className="text-[1.5rem] font-bold leading-tight text-[#f8f3e8]">{validatedProof.spotlight.scenario}</h3>
+            <h3 className="asw-display-serif text-[1.7rem] leading-tight text-[#f8f3e8]">{validatedProof.spotlight.scenario}</h3>
             <p className="mt-4 max-w-[720px] text-[0.98rem] leading-[1.74] text-[#ebe1c8]/76">{validatedProof.spotlight.problem}</p>
 
             <div className="mt-6 grid grid-cols-2 gap-3 max-[700px]:grid-cols-1">
@@ -86,12 +86,12 @@ export function ValidatedProofSection() {
             key={card.title}
           >
             <span className="text-[11px] font-extrabold uppercase tracking-[0.08em] text-[#d6ad69]">{card.proofLabel}</span>
-            <h3 className="mt-3 text-[1.12rem] font-bold leading-tight text-[#f8f3e8]">{card.title}</h3>
+            <h3 className="asw-display-serif mt-3 text-[1.28rem] leading-tight text-[#f8f3e8]">{card.title}</h3>
             <p className="mt-2 text-[1rem] font-semibold text-[#b9d5a9]">{card.stat}</p>
             <p className="mt-4 text-[0.94rem] leading-[1.68] text-[#ebe1c8]/73">{card.body}</p>
             <div className="mt-5 flex items-center justify-between gap-3 border-t border-[#d1bf94]/10 pt-4">
               <span className="text-sm text-[#efe5c7]/66">{card.proofValue}</span>
-              <a className="text-sm font-bold text-[#f2d18d] transition hover:text-[#f7e1af]" href={card.href}>
+              <a className="text-sm font-bold text-[#f2d18d] transition hover:text-[#f7e1af]" href={card.href} rel="noreferrer" target="_blank">
                 Open proof
               </a>
             </div>
