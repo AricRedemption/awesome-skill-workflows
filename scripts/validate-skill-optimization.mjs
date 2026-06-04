@@ -347,6 +347,119 @@ function checkExportedArtifacts(file, run) {
   }
 }
 
+function checkPromotion(file, run) {
+  const promotion = run.promotion;
+  if (!promotion || typeof promotion !== 'object') {
+    warnings.push(`${file} does not define structured promotion metadata`);
+    return;
+  }
+
+  if (!['none', 'candidate', 'promoted', 'rejected', 'blocked'].includes(promotion.status)) {
+    failures.push(`${file} has invalid promotion.status ${promotion.status}`);
+  }
+  requireString(promotion, 'manifest_path', file);
+  if (!Array.isArray(promotion.targets) || promotion.targets.length === 0) {
+    failures.push(`${file} promotion.targets must be non-empty when promotion metadata exists`);
+    return;
+  }
+
+  const manifestPath = promotion.manifest_path;
+  if (!exists(manifestPath)) {
+    failures.push(`${file} promotion.manifest_path does not exist: ${manifestPath}`);
+    return;
+  }
+
+  const manifest = readJson(manifestPath);
+  for (const field of ['source_run', 'source_artifact', 'source_optimization_record', 'promotion_status', 'sensitive_data_status']) {
+    requireString(manifest, field, manifestPath);
+  }
+  requireArray(manifest, 'promoted_assets', manifestPath);
+  checkRefs(manifest.evidence_refs, manifestPath, 'evidence_refs');
+
+  if (manifest.source_run !== run.run_id) {
+    failures.push(`${manifestPath} source_run must match ${file} run_id`);
+  }
+  if (manifest.source_optimization_record !== file) {
+    failures.push(`${manifestPath} source_optimization_record must point back to ${file}`);
+  }
+  if (manifest.source_artifact !== run.exported_artifacts?.best_skill) {
+    failures.push(`${manifestPath} source_artifact must match exported_artifacts.best_skill`);
+  }
+  if (manifest.sensitive_data_status !== run.sensitive_data_status) {
+    failures.push(`${manifestPath} sensitive_data_status must match ${file}`);
+  }
+  if (promotion.status === 'promoted' && manifest.promotion_status !== 'promoted') {
+    failures.push(`${manifestPath} promotion_status must be promoted when ${file} promotion.status is promoted`);
+  }
+  if (manifest.required_gates?.selection_gate !== run.selection_gate?.status) {
+    failures.push(`${manifestPath} required_gates.selection_gate must match ${file}`);
+  }
+  if (manifest.required_gates?.risk_gate !== run.risk_gate?.status) {
+    failures.push(`${manifestPath} required_gates.risk_gate must match ${file}`);
+  }
+  if (manifest.required_gates?.sensitive_data_gate !== run.sensitive_data_status) {
+    failures.push(`${manifestPath} required_gates.sensitive_data_gate must match ${file}`);
+  }
+
+  const promotedAssetMap = new Map((manifest.promoted_assets ?? []).map((asset) => [asset.type, asset]));
+  const promotionTargetMap = new Map((promotion.targets ?? []).map((target) => [target.type, target]));
+  for (const requiredType of ['skill_wiki', 'skill_registry', 'retrieval_index']) {
+    if (!promotedAssetMap.has(requiredType)) {
+      failures.push(`${manifestPath} must include promoted asset type ${requiredType}`);
+    }
+    if (!promotionTargetMap.has(requiredType)) {
+      failures.push(`${file} promotion.targets must include ${requiredType}`);
+    }
+  }
+
+  const wikiAsset = promotedAssetMap.get('skill_wiki');
+  const registryAsset = promotedAssetMap.get('skill_registry');
+  const retrievalAsset = promotedAssetMap.get('retrieval_index');
+
+  if (wikiAsset?.path && !exists(wikiAsset.path)) {
+    failures.push(`${manifestPath} promoted skill wiki path does not exist: ${wikiAsset.path}`);
+  }
+  if (registryAsset?.path && !exists(registryAsset.path)) {
+    failures.push(`${manifestPath} promoted registry path does not exist: ${registryAsset.path}`);
+  }
+  if (retrievalAsset?.path && !exists(retrievalAsset.path)) {
+    failures.push(`${manifestPath} promoted retrieval path does not exist: ${retrievalAsset.path}`);
+  }
+
+  if (wikiAsset?.path && exists(wikiAsset.path)) {
+    const wikiText = fs.readFileSync(path.join(root, wikiAsset.path), 'utf8');
+    if (!wikiText.includes(`Source run: \`runs/${run.run_id}/\``)) {
+      failures.push(`${wikiAsset.path} must record source run runs/${run.run_id}/`);
+    }
+    if (!wikiText.includes(`Source skill path: \`${manifest.source_artifact}\``)) {
+      failures.push(`${wikiAsset.path} must record source skill path ${manifest.source_artifact}`);
+    }
+    if (!wikiText.includes(`Promotion manifest: \`${manifestPath}\``)) {
+      failures.push(`${wikiAsset.path} must record promotion manifest ${manifestPath}`);
+    }
+  }
+
+  if (registryAsset?.path && exists(registryAsset.path)) {
+    const registry = readJson(registryAsset.path);
+    const registryRecord = (registry ?? []).find((record) => record.id === registryAsset.record_id);
+    if (!registryRecord) {
+      failures.push(`${registryAsset.path} missing registry record ${registryAsset.record_id}`);
+    } else if (registryRecord.original_source_path !== wikiAsset?.path) {
+      failures.push(`${registryAsset.path} registry record ${registryAsset.record_id} must point to ${wikiAsset?.path}`);
+    }
+  }
+
+  if (retrievalAsset?.path && exists(retrievalAsset.path)) {
+    const retrieval = readJson(retrievalAsset.path);
+    const retrievalRecord = (retrieval.records ?? []).find((record) => record.id === retrievalAsset.record_id);
+    if (!retrievalRecord) {
+      failures.push(`${retrievalAsset.path} missing retrieval record ${retrievalAsset.record_id}`);
+    } else if (retrievalRecord.source_path !== wikiAsset?.path) {
+      failures.push(`${retrievalAsset.path} retrieval record ${retrievalAsset.record_id} must point to ${wikiAsset?.path}`);
+    }
+  }
+}
+
 function checkRun(file) {
   const run = readJson(file);
 
@@ -409,6 +522,7 @@ function checkRun(file) {
   checkRejectedCandidates(file, run);
   checkScoreEvaluation(file, run);
   checkExportedArtifacts(file, run);
+  checkPromotion(file, run);
 
   const split = run.evidence_split;
   if (!split || typeof split !== 'object') {
@@ -522,7 +636,8 @@ console.log(JSON.stringify({
     'selection gate improvement is consistent',
     'accepted candidates improve score and pass risk gate',
     'sensitive refs are blocked from evidence fields',
-    'direct verified-recipes promotion is blocked'
+    'direct verified-recipes promotion is blocked',
+    'promoted wiki targets require a promotion manifest and matching durable records'
   ],
   warning_count: warnings.length,
   warnings

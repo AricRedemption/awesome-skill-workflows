@@ -6,6 +6,7 @@
 - Source skill path: `runs/008-xhs-skillopt-kb-reuse-minimal/best_skill.md`
 - Promotion status: `wiki_promoted`
 - Promotion target: `skills/wiki/xhs-kb-reuse-selection-gated-safety.md`
+- Promotion manifest: `runs/008-xhs-skillopt-kb-reuse-minimal/promotion-manifest.json`
 
 ## Summary
 

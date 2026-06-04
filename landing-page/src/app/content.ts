@@ -491,10 +491,10 @@ export const coreModel = {
   visuals: [
     {
       label: "Architecture",
-      title: "Three-layer skill workflow architecture",
-      body: "Reusable skills, workflow composition, run evidence, and promotion boundaries stay separate.",
+      title: "Five-layer workflow evidence architecture",
+      body: "Raw runs, core contracts, optimization, durable knowledge, and scenario validation stay separate.",
       src: "/architecture/workflow-architecture-dark.png",
-      alt: "Dark mode three-layer skill workflow architecture diagram",
+      alt: "Dark mode workflow evidence architecture diagram",
     },
     {
       label: "Workflow Loop",
@@ -513,7 +513,7 @@ export const coreModel = {
   ],
   visual: {
     src: "/architecture/workflow-architecture-dark.png",
-    alt: "Dark mode three-layer skill workflow architecture diagram",
+    alt: "Dark mode workflow evidence architecture diagram",
   },
 } as const;
 

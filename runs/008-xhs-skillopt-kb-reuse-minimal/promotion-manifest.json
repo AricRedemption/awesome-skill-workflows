@@ -1,0 +1,34 @@
+{
+  "source_run": "008-xhs-skillopt-kb-reuse-minimal",
+  "source_artifact": "runs/008-xhs-skillopt-kb-reuse-minimal/best_skill.md",
+  "source_optimization_record": "runs/008-xhs-skillopt-kb-reuse-minimal/skill-optimization-run.json",
+  "promotion_status": "promoted",
+  "promoted_assets": [
+    {
+      "type": "skill_wiki",
+      "path": "skills/wiki/xhs-kb-reuse-selection-gated-safety.md",
+      "id": "xhs-kb-reuse-selection-gated-safety"
+    },
+    {
+      "type": "skill_registry",
+      "path": "skills/index.json",
+      "record_id": "xhs-kb-reuse-selection-gated-safety"
+    },
+    {
+      "type": "retrieval_index",
+      "path": "workflow-kb/retrieval-index.json",
+      "record_id": "xhs-kb-reuse-selection-gated-safety"
+    }
+  ],
+  "required_gates": {
+    "selection_gate": "passed",
+    "risk_gate": "passed",
+    "sensitive_data_gate": "sanitized"
+  },
+  "evidence_refs": [
+    "runs/008-xhs-skillopt-kb-reuse-minimal/skill-optimization-run.json",
+    "runs/008-xhs-skillopt-kb-reuse-minimal/score-result.json",
+    "runs/008-xhs-skillopt-kb-reuse-minimal/best_skill.md"
+  ],
+  "sensitive_data_status": "sanitized"
+}

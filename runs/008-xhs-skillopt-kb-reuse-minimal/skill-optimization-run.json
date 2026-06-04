@@ -171,7 +171,27 @@
     "slow_update": "runs/008-xhs-skillopt-kb-reuse-minimal/slow_update/epoch_01/summary.md",
     "meta_skill": "runs/008-xhs-skillopt-kb-reuse-minimal/meta_skill/epoch_01/meta-skill.md"
   },
-  "promotion_target": "none",
+  "promotion_target": "skill-wiki",
+  "promotion": {
+    "status": "promoted",
+    "manifest_path": "runs/008-xhs-skillopt-kb-reuse-minimal/promotion-manifest.json",
+    "targets": [
+      {
+        "type": "skill_wiki",
+        "path": "skills/wiki/xhs-kb-reuse-selection-gated-safety.md"
+      },
+      {
+        "type": "skill_registry",
+        "path": "skills/index.json",
+        "record_id": "xhs-kb-reuse-selection-gated-safety"
+      },
+      {
+        "type": "retrieval_index",
+        "path": "workflow-kb/retrieval-index.json",
+        "record_id": "xhs-kb-reuse-selection-gated-safety"
+      }
+    ]
+  },
   "accepted": true,
   "rejected_reason": "",
   "evidence_refs": [

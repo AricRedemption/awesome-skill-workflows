@@ -4,8 +4,11 @@ This project is an AI agent skill workflow framework. It is not a single-scenari
 
 ## Project Identity
 
-- Layer 1 is the core skill architecture: reusable skills, workflow composition, scoring, knowledge capture, and self-evolution.
-- Layer 2 is the scenario layer: each scenario is a replaceable validation wrapper around the core architecture.
+- Layer 0 is raw evidence: concrete runs, proof, scores, gates, failures, and optimizer artifacts.
+- Layer 1 is the core skill architecture: reusable skills, workflow composition, schemas, validators, scoring contracts, and generic action-verification rules.
+- Layer 2 is skill evolution and optimization: bounded candidate edits, held-out selection, and accepted/rejected candidate evidence.
+- Layer 3 is the durable knowledge surface: skill wiki pages, workflow-KB assets, registry entries, and retrieval records.
+- Layer 4 is the scenario layer: each scenario is a replaceable validation wrapper around the core architecture.
 - Do not let any scenario define the base architecture. Scenario-specific assumptions must stay under that scenario's files in `scenarios/`, scenario-specific `runs/`, or scenario-specific workflow assets.
 - Xiaohongshu is only the current v0.1 scenario, not a global rule source.
 
@@ -38,7 +41,7 @@ This project is an AI agent skill workflow framework. It is not a single-scenari
 
 ## Skill Optimization Rules
 
-This project may use SkillOpt-style optimization as a Layer 1 method for
+This project may use SkillOpt-style optimization as a Layer 2 method for
 improving reusable skill documents from scored rollout evidence. See
 `docs/skillopt-integration.md`.
 

@@ -71,20 +71,27 @@ The long-term goal is to turn repeatable workflows into reusable, measurable, an
 
 ## Core Idea
 
-![Three-layer skill workflow architecture](runs/001-xhs-ai-agent-save-one-hour/xhs-skill-workflow-media-en/02-skill-workflow-architecture-en.png)
+![Workflow evidence architecture overview](runs/001-xhs-ai-agent-save-one-hour/xhs-skill-workflow-media-en/02-skill-workflow-architecture-en.png)
 
-The repository separates reusable architecture from scenario validation:
+The repository now uses a five-layer model:
 
+- **Layer 0: Raw / evidence**
+  - concrete runs, proof, score, gates, and failed evidence
 - **Layer 1: Core skill architecture**
   - skill discovery and normalization
   - workflow composition
-  - scoring and gate evidence
-  - knowledge-base writeback
-  - self-evolution from run evidence
-- **Layer 2: Scenario validation**
+  - schemas, validators, and generic action-verification contracts
+- **Layer 2: Skill evolution / optimization**
+  - SkillOpt-style bounded edits
+  - train / selection / test evidence split
+  - accepted and rejected candidate records
+- **Layer 3: Durable knowledge surface**
+  - skill wiki
+  - workflow KB
+  - registry and retrieval index
+- **Layer 4: Scenario validation**
   - concrete scenario wrappers
   - scenario-specific risk gates
-  - run records and proof artifacts
   - human-reviewed action handoff
 
 A scenario can prove the architecture, but it must not define the architecture.
