@@ -13,23 +13,27 @@ export const credentialKeys = [
   'QWEN_CHAT_MODEL'
 ];
 
+const executableBackends = new Set(['openai_chat']);
+
 export function credentialStatus(env = process.env) {
   const vars = Object.fromEntries(credentialKeys.map((key) => [key, Boolean(env[key])]));
-  const availableBackends = [];
+  const observedBackends = [];
   if (vars.AZURE_OPENAI_ENDPOINT && (vars.AZURE_OPENAI_API_KEY || vars.AZURE_OPENAI_AUTH_MODE)) {
-    availableBackends.push('azure_openai');
+    observedBackends.push('azure_openai');
   }
   if (vars.OPENAI_API_KEY) {
-    availableBackends.push('openai_chat');
+    observedBackends.push('openai_chat');
   }
   if (vars.ANTHROPIC_API_KEY) {
-    availableBackends.push('claude_chat');
+    observedBackends.push('claude_chat');
   }
   if (vars.QWEN_CHAT_BASE_URL && vars.QWEN_CHAT_MODEL) {
-    availableBackends.push('qwen_chat');
+    observedBackends.push('qwen_chat');
   }
+  const availableBackends = observedBackends.filter((backend) => executableBackends.has(backend));
   return {
     safe_env_presence: vars,
+    observed_backends: observedBackends,
     available_backends: availableBackends,
     ready_for_training: availableBackends.length > 0
   };

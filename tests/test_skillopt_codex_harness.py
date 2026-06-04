@@ -3,13 +3,16 @@ from __future__ import annotations
 import unittest
 
 from skillopt.model.codex_harness import (
+    _openai_chat_config,
     _expected_answers_for_variant,
     _is_retryable_transport_error,
     _match_mode_for_variant,
     _normalize_openai_base_url,
     _read_sse_completion_text,
     build_searchqa_prompt,
+    credential_status,
     score_agent_answer,
+    select_backend,
 )
 
 
@@ -20,6 +23,16 @@ class CodexHarnessTests(unittest.TestCase):
 
     def test_normalize_openai_base_url_keeps_existing_v1(self) -> None:
         self.assertEqual(_normalize_openai_base_url("https://api.example.com/v1"), "https://api.example.com/v1")
+
+    def test_openai_chat_config_accepts_openai_compatible_key_formats(self) -> None:
+        config = _openai_chat_config(
+            {
+                "OPENAI_API_KEY": "miromind_live_token_123",
+                "OPENAI_BASE_URL": "https://api.example.com",
+            }
+        )
+        self.assertEqual(config["api_key"], "miromind_live_token_123")
+        self.assertEqual(config["base_url"], "https://api.example.com/v1")
 
     def test_read_sse_completion_text_joins_content_chunks(self) -> None:
         raw_text = "\n".join(
@@ -72,6 +85,36 @@ class CodexHarnessTests(unittest.TestCase):
         }
         self.assertEqual(_match_mode_for_variant(item, {"label": "baseline"}), "contains")
         self.assertEqual(_match_mode_for_variant(item, {"label": "candidate"}), "exact")
+
+    def test_credential_status_only_marks_executable_backends_as_available(self) -> None:
+        status = credential_status(
+            {
+                "OPENAI_API_KEY": "",
+                "ANTHROPIC_API_KEY": "anthropic-key",
+                "QWEN_CHAT_BASE_URL": "",
+                "QWEN_CHAT_MODEL": "",
+                "AZURE_OPENAI_ENDPOINT": "",
+                "AZURE_OPENAI_API_KEY": "",
+                "AZURE_OPENAI_AUTH_MODE": "",
+            }
+        )
+        self.assertEqual(status["observed_backends"], ["claude_chat"])
+        self.assertEqual(status["available_backends"], [])
+        self.assertFalse(status["ready_for_training"])
+
+    def test_select_backend_fast_fails_when_only_unsupported_backend_is_configured(self) -> None:
+        backend = select_backend(
+            {
+                "OPENAI_API_KEY": "",
+                "ANTHROPIC_API_KEY": "anthropic-key",
+                "QWEN_CHAT_BASE_URL": "",
+                "QWEN_CHAT_MODEL": "",
+                "AZURE_OPENAI_ENDPOINT": "",
+                "AZURE_OPENAI_API_KEY": "",
+                "AZURE_OPENAI_AUTH_MODE": "",
+            }
+        )
+        self.assertEqual(backend, "local_stub")
 
     def test_retryable_transport_error_detects_transient_ssl_eof(self) -> None:
         self.assertTrue(

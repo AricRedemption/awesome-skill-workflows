@@ -8,6 +8,8 @@ import urllib.request
 from urllib.parse import urlparse
 from typing import Any, Callable
 
+EXECUTABLE_BACKENDS = {"openai_chat"}
+
 
 def _read_value(source: Any, key: str) -> str:
     if source is None:
@@ -38,19 +40,21 @@ def credential_status(env: Any | None = None) -> dict[str, object]:
         "QWEN_CHAT_MODEL",
     ]
     presence = {key: bool(_read_value(source, key)) for key in keys}
-    available_backends: list[str] = []
+    observed_backends: list[str] = []
     if presence["AZURE_OPENAI_ENDPOINT"] and (
         presence["AZURE_OPENAI_API_KEY"] or presence["AZURE_OPENAI_AUTH_MODE"]
     ):
-        available_backends.append("azure_openai")
+        observed_backends.append("azure_openai")
     if presence["OPENAI_API_KEY"]:
-        available_backends.append("openai_chat")
+        observed_backends.append("openai_chat")
     if presence["ANTHROPIC_API_KEY"]:
-        available_backends.append("claude_chat")
+        observed_backends.append("claude_chat")
     if presence["QWEN_CHAT_BASE_URL"] and presence["QWEN_CHAT_MODEL"]:
-        available_backends.append("qwen_chat")
+        observed_backends.append("qwen_chat")
+    available_backends = [backend for backend in observed_backends if backend in EXECUTABLE_BACKENDS]
     return {
         "safe_env_presence": presence,
+        "observed_backends": observed_backends,
         "available_backends": available_backends,
         "ready_for_training": bool(available_backends),
     }
@@ -59,19 +63,6 @@ def credential_status(env: Any | None = None) -> dict[str, object]:
 def select_backend(args: Any) -> str:
     if _resolve_value(args, "openai_api_key") or _resolve_value(args, "OPENAI_API_KEY"):
         return "openai_chat"
-    if _resolve_value(args, "anthropic_api_key") or _resolve_value(args, "ANTHROPIC_API_KEY"):
-        return "claude_chat"
-    if (_resolve_value(args, "qwen_chat_base_url") or _resolve_value(args, "QWEN_CHAT_BASE_URL")) and (
-        _resolve_value(args, "qwen_chat_model") or _resolve_value(args, "QWEN_CHAT_MODEL")
-    ):
-        return "qwen_chat"
-    if (_resolve_value(args, "azure_openai_endpoint") or _resolve_value(args, "AZURE_OPENAI_ENDPOINT")) and (
-        _resolve_value(args, "azure_openai_api_key")
-        or _resolve_value(args, "AZURE_OPENAI_API_KEY")
-        or _resolve_value(args, "azure_openai_auth_mode")
-        or _resolve_value(args, "AZURE_OPENAI_AUTH_MODE")
-    ):
-        return "azure_openai"
     return "local_stub"
 
 
@@ -141,8 +132,10 @@ def _openai_chat_config(args: Any) -> dict[str, str]:
         raise ValueError("OPENAI_API_KEY and OPENAI_BASE_URL appear to be swapped")
     if base_url.startswith("sk-"):
         raise ValueError("OPENAI_BASE_URL must be a URL")
-    if not (api_key.startswith("sk-") or api_key.startswith("sess-")):
-        raise ValueError("OPENAI_API_KEY does not look like an API key")
+    if api_key.startswith("http"):
+        raise ValueError("OPENAI_API_KEY must not be a URL")
+    if any(char.isspace() for char in api_key):
+        raise ValueError("OPENAI_API_KEY must not contain whitespace")
     normalized_base_url = _normalize_openai_base_url(base_url)
     return {"api_key": api_key, "base_url": normalized_base_url, "model": model}
 
