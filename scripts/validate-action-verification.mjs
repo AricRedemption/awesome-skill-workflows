@@ -3,11 +3,7 @@ import path from 'node:path';
 
 const root = process.cwd();
 const failures = [];
-
-const records = [
-  'runs/001-xhs-ai-agent-save-one-hour/action-verification.json',
-  'runs/003-xhs-ai-agent-save-one-hour-step8-draft-rerun/action-verification.json'
-];
+const warnings = [];
 
 const requiredGateOrder = [
   'human_review',
@@ -33,6 +29,26 @@ const promotionStatuses = new Set(['not_promotable', 'promotable_for_scope', 'pr
 
 function readJson(relativePath) {
   return JSON.parse(fs.readFileSync(path.join(root, relativePath), 'utf8'));
+}
+
+function findActionVerificationRecords(currentDir) {
+  const records = [];
+  for (const entry of fs.readdirSync(currentDir, { withFileTypes: true })) {
+    const absolutePath = path.join(currentDir, entry.name);
+    if (entry.isDirectory()) {
+      records.push(...findActionVerificationRecords(absolutePath));
+      continue;
+    }
+    if (entry.isFile() && entry.name === 'action-verification.json') {
+      records.push(path.relative(root, absolutePath));
+    }
+  }
+  return records.sort();
+}
+
+const records = findActionVerificationRecords(path.join(root, 'runs'));
+if (records.length === 0) {
+  failures.push('no action-verification.json records were found under runs/');
 }
 
 for (const relativePath of records) {
@@ -77,6 +93,9 @@ for (const relativePath of records) {
   if (JSON.stringify(record.gate_order) !== JSON.stringify(requiredGateOrder)) {
     failures.push(`${relativePath} gate_order must match the generic action-verification order`);
   }
+  if (!Array.isArray(record.evidence_refs) || record.evidence_refs.length === 0) {
+    failures.push(`${relativePath} must include at least one evidence_ref`);
+  }
   for (const gateName of requiredGateOrder) {
     if (!record.gates?.[gateName]) {
       failures.push(`${relativePath} missing gate ${gateName}`);
@@ -87,6 +106,10 @@ for (const relativePath of records) {
         failures.push(`${relativePath} gate ${gateName} missing field ${field}`);
       }
     }
+  }
+
+  if (record.run_id && !relativePath.includes(record.run_id)) {
+    warnings.push(`${relativePath} run_id does not match its run directory name`);
   }
 }
 
@@ -125,7 +148,7 @@ if (draftVerified.gates.proof_verification.status !== 'passed') {
 }
 
 if (failures.length > 0) {
-  console.error(JSON.stringify({ status: 'failed', failures }, null, 2));
+  console.error(JSON.stringify({ status: 'failed', failures, warnings }, null, 2));
   process.exit(1);
 }
 
@@ -133,9 +156,11 @@ console.log(JSON.stringify({
   status: 'passed',
   records,
   checks: [
-    'generic action verification records exist for failed publish and verified draft runs',
+    'all action verification records under runs/ are discovered and validated',
     'generic verification levels separate action facts from compliance proof',
     'the failed publish run remains not promotable despite a verified action fact',
     'the verified draft run maps to action_compliance_verified for draft scope'
-  ]
+  ],
+  warning_count: warnings.length,
+  warnings
 }, null, 2));

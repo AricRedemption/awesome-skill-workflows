@@ -20,14 +20,31 @@ from skillopt.optimizer.slow_update import build_slow_update
 
 def load_simple_yaml(path: Path) -> dict[str, Any]:
     data: dict[str, Any] = {}
-    for raw_line in path.read_text(encoding="utf-8").splitlines():
-        line = raw_line.strip()
+    for line_number, raw_line in enumerate(path.read_text(encoding="utf-8").splitlines(), start=1):
+        stripped = raw_line.strip()
+        if raw_line[:1].isspace() and stripped and not stripped.startswith("#"):
+            raise ValueError(
+                f"{path}:{line_number} uses indentation, but this loader only supports flat top-level scalar YAML"
+            )
+        line = stripped
         if not line or line.startswith("#"):
             continue
+        if line.startswith("-"):
+            raise ValueError(f"{path}:{line_number} uses a YAML list, which this loader does not support")
         if ":" not in line:
-            continue
+            raise ValueError(f"{path}:{line_number} is not a supported key: value YAML line")
         key, value = line.split(":", 1)
-        data[key.strip()] = _parse_scalar(value.strip())
+        key = key.strip()
+        if not key:
+            raise ValueError(f"{path}:{line_number} has an empty YAML key")
+        if key in data:
+            raise ValueError(f"{path}:{line_number} defines duplicate YAML key {key}")
+        parsed_value = value.strip()
+        if parsed_value in {"|", ">"} or parsed_value.startswith(("[", "{")):
+            raise ValueError(
+                f"{path}:{line_number} uses nested or structured YAML, but this loader only supports flat scalar values"
+            )
+        data[key] = _parse_scalar(parsed_value)
     return data
 
 

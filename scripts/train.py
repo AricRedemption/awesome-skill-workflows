@@ -53,7 +53,13 @@ def main(argv: list[str]) -> int:
     args = parser.parse_args(argv)
 
     config_path = Path(args.config)
-    config = load_simple_yaml(config_path) if config_path.exists() else {}
+    if config_path.exists():
+        try:
+            config = load_simple_yaml(config_path)
+        except ValueError as error:
+            parser.error(str(error))
+    else:
+        config = {}
     trainer = SkillOptTrainer(
         args=args,
         config=config,

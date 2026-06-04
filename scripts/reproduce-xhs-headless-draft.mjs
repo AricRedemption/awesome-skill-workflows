@@ -35,7 +35,8 @@ const mediaDir =
   path.join(cwd, 'runs', '001-xhs-ai-agent-save-one-hour', 'media');
 const outputDir =
   process.env.XHS_OUTPUT_DIR ||
-  path.join(cwd, 'runs', '011-xhs-headless-draft-reproduction');
+  path.join(cwd, 'runs', `${stamp}-xhs-headless-draft-reproduction`);
+const allowOutputOverwrite = process.env.XHS_ALLOW_OUTPUT_OVERWRITE === '1';
 const title = process.env.XHS_DRAFT_TITLE || `草稿复现${stamp.slice(-6)}`;
 const content =
   process.env.XHS_DRAFT_CONTENT ||
@@ -86,6 +87,12 @@ if (mediaPaths.length === 0) {
 
 const cookies = JSON.parse(fs.readFileSync(cookieFile, 'utf8'));
 fs.mkdirSync(outputDir, { recursive: true });
+const proofPath = path.join(outputDir, 'headless-live-session-proof.json');
+if (fs.existsSync(proofPath) && !allowOutputOverwrite) {
+  throw new Error(
+    `Refusing to overwrite existing proof at ${proofPath}; set XHS_OUTPUT_DIR to a fresh run directory or XHS_ALLOW_OUTPUT_OVERWRITE=1`
+  );
+}
 
 const proof = {
   run_id: path.basename(outputDir),
@@ -528,7 +535,6 @@ try {
       ? 'draft_saved_verified_visible_browser'
       : 'draft_save_unverified';
 
-  const proofPath = path.join(outputDir, 'headless-live-session-proof.json');
   fs.writeFileSync(proofPath, `${JSON.stringify(proof, null, 2)}\n`);
   console.log(JSON.stringify({ proofPath, status: proof.status }, null, 2));
   await sleep(keepAliveAfterProofMs);
@@ -538,7 +544,6 @@ try {
   proof.finished_at = new Date().toISOString();
   proof.status = 'failed';
   proof.error = error instanceof Error ? error.message : String(error);
-  const proofPath = path.join(outputDir, 'headless-live-session-proof.json');
   fs.writeFileSync(proofPath, `${JSON.stringify(proof, null, 2)}\n`);
   throw error;
 } finally {

@@ -63,7 +63,8 @@ Default behavior:
 - uses the XHS MCP cookie file outside the repository,
 - uses a protected headless profile outside the repository,
 - uses existing test images from the original XHS run,
-- writes proof to `runs/011-xhs-headless-draft-reproduction/`.
+- writes proof to a fresh timestamped run directory under `runs/`, unless
+  `XHS_OUTPUT_DIR` is set explicitly.
 
 ## Required Gates Before Live Reproduction
 
