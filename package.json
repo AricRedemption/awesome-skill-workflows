@@ -7,7 +7,11 @@
     "validate:promotion-gates": "node scripts/validate-promotion-gates.mjs",
     "validate:multi-agent-workflows": "node scripts/validate-multi-agent-workflows.mjs",
     "validate:multi-agent-runtime": "node scripts/validate-multi-agent-runtime-integration.mjs",
-    "validate:pi-sdk-integration": "node scripts/validate-pi-sdk-integration.mjs"
+    "validate:pi-sdk-integration": "node scripts/validate-pi-sdk-integration.mjs",
+    "validate:xhs-pi-orchestration": "node scripts/validate-xhs-pi-orchestration.mjs",
+    "validate:xhs-paas-readiness": "node scripts/validate-xhs-paas-readiness.mjs",
+    "validate:workflow-api": "node scripts/validate-workflow-api.mjs",
+    "paas:workflow-api": "node services/workflow-api/server.mjs"
   },
   "dependencies": {
     "@earendil-works/pi-agent-core": "0.78.1",
