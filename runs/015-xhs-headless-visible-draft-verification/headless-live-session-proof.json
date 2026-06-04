@@ -1,0 +1,131 @@
+{
+  "run_id": "015-xhs-headless-visible-draft-verification",
+  "mode": "headless_browser_live_session",
+  "source": "scripts/reproduce-xhs-headless-draft.mjs",
+  "headless": true,
+  "requested_action": "save_draft_only",
+  "clicked_publish": false,
+  "live_publish_allowed": false,
+  "title": "草稿持久验证-20260528-unique-04",
+  "media_count": 4,
+  "profile_path_recorded": false,
+  "cookie_contents_recorded": false,
+  "started_at": "2026-05-28T07:51:39.995Z",
+  "page_loaded_at": "2026-05-28T07:51:43.831Z",
+  "url_after_load": "https://creator.xiaohongshu.com/publish/publish?source=official&from=menu&target=image",
+  "upload_input_found": true,
+  "account_state": "passed_upload_ui_ready",
+  "editor_ready_at": "2026-05-28T07:51:44.943Z",
+  "fields_filled_at": "2026-05-28T07:51:44.987Z",
+  "draft_button": {
+    "method": "xhs_publish_btn_composite_left_side",
+    "composite_button_left_side_rule_used": true,
+    "point_meta": {
+      "tag": "xhs-publish-btn",
+      "text_sample": "",
+      "submitText": null,
+      "method": "xhs_publish_btn_composite_left_side",
+      "x": 603,
+      "y": 955,
+      "box": {
+        "x": 338,
+        "y": 910,
+        "w": 680,
+        "h": 90
+      }
+    }
+  },
+  "draft_save_clicked_at": "2026-05-28T07:53:45.009Z",
+  "after_draft_click_page_state": {
+    "draftbox_detected": true,
+    "draftbox_count": 1,
+    "title_found_in_page": true,
+    "body_contains_content_marker": false,
+    "editor_like_page": true
+  },
+  "first_opened_draftbox": {
+    "draftBox": {
+      "text": "草稿箱(1)",
+      "x": 1309.8125,
+      "y": 89,
+      "w": 65.1875,
+      "h": 24
+    },
+    "imageTab": {
+      "text": "图文笔记(1)",
+      "x": 984.265625,
+      "y": 76,
+      "w": 81.1875,
+      "h": 24
+    }
+  },
+  "first_check": {
+    "draftbox_detected": true,
+    "draftbox_count": 1,
+    "image_draft_count": 1,
+    "title_found_in_draftbox": true,
+    "body_contains_content_marker": false,
+    "empty_draftbox_detected": false
+  },
+  "draftbox_detected": true,
+  "title_found_in_draftbox": true,
+  "body_contains_content_marker": false,
+  "second_opened_draftbox": {
+    "draftBox": {
+      "text": "草稿箱(1)",
+      "x": 1309.8125,
+      "y": 89,
+      "w": 65.1875,
+      "h": 24
+    },
+    "imageTab": {
+      "text": "图文笔记(1)",
+      "x": 984.265625,
+      "y": 76,
+      "w": 81.1875,
+      "h": 24
+    }
+  },
+  "second_check_same_browser_after_ms": 60000,
+  "second_check": {
+    "draftbox_detected": true,
+    "draftbox_count": 1,
+    "image_draft_count": 1,
+    "title_found_in_draftbox": true,
+    "body_contains_content_marker": false,
+    "empty_draftbox_detected": false
+  },
+  "saved_draft_visible_in_same_browser": true,
+  "rechecked_after_browser_restart": true,
+  "headless_browser_kept_alive_for_handoff": true,
+  "visible_browser_check": {
+    "opened_with_cookie": true,
+    "opened_draftbox": {
+      "draftBox": {
+        "text": "草稿箱(1)",
+        "x": 1309.8125,
+        "y": 89,
+        "w": 65.1875,
+        "h": 24
+      },
+      "imageTab": {
+        "text": "图文笔记(1)",
+        "x": 984.2578125,
+        "y": 76,
+        "w": 81.078125,
+        "h": 24
+      }
+    },
+    "draftbox_detected": true,
+    "draftbox_count": 1,
+    "image_draft_count": 1,
+    "title_found_in_draftbox": true,
+    "body_contains_content_marker": false,
+    "empty_draftbox_detected": false,
+    "cookie_contents_recorded": false,
+    "profile_path_recorded": false
+  },
+  "rechecked_after_visible_browser_open": true,
+  "status": "draft_saved_verified_visible_browser",
+  "finished_at": "2026-05-28T07:55:32.269Z"
+}

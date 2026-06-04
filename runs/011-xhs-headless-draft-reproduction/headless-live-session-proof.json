@@ -1,0 +1,95 @@
+{
+  "run_id": "011-xhs-headless-draft-reproduction",
+  "mode": "headless_browser_live_session",
+  "source": "scripts/reproduce-xhs-headless-draft.mjs",
+  "headless": true,
+  "requested_action": "save_draft_only",
+  "clicked_publish": false,
+  "live_publish_allowed": false,
+  "title": "草稿复现-20260528-headless",
+  "media_count": 4,
+  "profile_path_recorded": false,
+  "cookie_contents_recorded": false,
+  "started_at": "2026-05-28T06:13:16.758Z",
+  "page_loaded_at": "2026-05-28T06:13:19.572Z",
+  "url_after_load": "https://creator.xiaohongshu.com/publish/publish?source=official&from=menu&target=image",
+  "upload_input_found": true,
+  "account_state": "passed_upload_ui_ready",
+  "editor_ready_at": "2026-05-28T06:13:19.733Z",
+  "fields_filled_at": "2026-05-28T06:13:19.773Z",
+  "draft_button_candidates": [
+    {
+      "tag": "button",
+      "text_sample": "话题",
+      "isPublish": null,
+      "isPublishKebab": null,
+      "submitText": null,
+      "disabled": false,
+      "box": {
+        "x": 362,
+        "y": 525,
+        "w": 73,
+        "h": 32
+      }
+    },
+    {
+      "tag": "button",
+      "text_sample": "",
+      "isPublish": null,
+      "isPublishKebab": null,
+      "submitText": null,
+      "disabled": false,
+      "box": {
+        "x": 431,
+        "y": 531,
+        "w": 20,
+        "h": 20
+      }
+    },
+    {
+      "tag": "button",
+      "text_sample": "用户",
+      "isPublish": null,
+      "isPublishKebab": null,
+      "submitText": null,
+      "disabled": false,
+      "box": {
+        "x": 466,
+        "y": 525,
+        "w": 73,
+        "h": 32
+      }
+    },
+    {
+      "tag": "button",
+      "text_sample": "表情",
+      "isPublish": null,
+      "isPublishKebab": null,
+      "submitText": null,
+      "disabled": false,
+      "box": {
+        "x": 548,
+        "y": 525,
+        "w": 73,
+        "h": 32
+      }
+    },
+    {
+      "tag": "xhs-publish-btn",
+      "text_sample": "",
+      "isPublish": null,
+      "isPublishKebab": "true",
+      "submitText": null,
+      "disabled": false,
+      "box": {
+        "x": 338,
+        "y": 910,
+        "w": 680,
+        "h": 90
+      }
+    }
+  ],
+  "finished_at": "2026-05-28T06:15:19.776Z",
+  "status": "failed",
+  "error": "Draft-only button was not found"
+}

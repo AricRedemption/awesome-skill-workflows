@@ -1,0 +1,42 @@
+{
+  "run_id": "012-xhs-headless-live-reproduction",
+  "mode": "headless_browser_live_session",
+  "source": "scripts/reproduce-xhs-headless-draft.mjs",
+  "headless": true,
+  "requested_action": "save_draft_only",
+  "clicked_publish": false,
+  "live_publish_allowed": false,
+  "title": "草稿复现-live-20260528-unique-01",
+  "media_count": 4,
+  "profile_path_recorded": false,
+  "cookie_contents_recorded": false,
+  "started_at": "2026-05-28T06:30:47.609Z",
+  "page_loaded_at": "2026-05-28T06:30:54.780Z",
+  "url_after_load": "https://creator.xiaohongshu.com/publish/publish?source=official&from=menu&target=image",
+  "upload_input_found": true,
+  "account_state": "passed_upload_ui_ready",
+  "editor_ready_at": "2026-05-28T06:31:03.866Z",
+  "fields_filled_at": "2026-05-28T06:31:03.897Z",
+  "draft_button": {
+    "method": "xhs_publish_btn_composite_left_side",
+    "composite_button_left_side_rule_used": true,
+    "point_meta": {
+      "tag": "xhs-publish-btn",
+      "text_sample": "",
+      "submitText": null,
+      "method": "xhs_publish_btn_composite_left_side",
+      "x": 508,
+      "y": 955,
+      "box": {
+        "x": 338,
+        "y": 910,
+        "w": 680,
+        "h": 90
+      }
+    }
+  },
+  "draft_save_clicked_at": "2026-05-28T06:33:03.907Z",
+  "finished_at": "2026-05-28T06:33:03.908Z",
+  "status": "failed",
+  "error": "page.waitForTimeout is not a function"
+}

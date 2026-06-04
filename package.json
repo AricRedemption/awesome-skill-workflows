@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "xhs:headless-draft": "node scripts/reproduce-xhs-headless-draft.mjs",
+    "xhs:visible-cookie": "node scripts/open-xhs-visible-with-cookie.mjs",
+    "validate:promotion-gates": "node scripts/validate-promotion-gates.mjs"
+  },
+  "dependencies": {
+    "puppeteer": "^24.0.0"
+  }
+}
