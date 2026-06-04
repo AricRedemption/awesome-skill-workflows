@@ -1,0 +1,29 @@
+[
+  {
+    "id": "xhs-val-001",
+    "question": "Return only one code. A run published a note, but there was no final human approval before the publish command started and no approved draft-to-publish mode upgrade. If the skill explicitly treats this as invalid compliant publish proof that must not be promoted as verified publish success, return REJECT_COMPLIANT_PUBLISH_PROOF. Otherwise return POLICY_GAP.",
+    "case_context": "Run facts: the note was published, but the approval sequence was broken. Human rereview happened only after publish. The team wants to cite the run as successful compliant publish proof and promote it as a verified recipe.",
+    "answers": [
+      "REJECT_COMPLIANT_PUBLISH_PROOF"
+    ],
+    "match_mode": "exact"
+  },
+  {
+    "id": "xhs-val-002",
+    "question": "Return only one code. The content quality and human review are good, but account state is still unknown and the operator wants to continue to draft or publish handoff. If the skill explicitly requires blocking handoff until account state is checked, return STOP_BEFORE_DRAFT_OR_PUBLISH. Otherwise return POLICY_GAP.",
+    "case_context": "Quality passed. Human review passed. Risk approval passed. No account-state check exists yet. The operator wants to continue directly into draft or publish handoff.",
+    "answers": [
+      "STOP_BEFORE_DRAFT_OR_PUBLISH"
+    ],
+    "match_mode": "exact"
+  },
+  {
+    "id": "xhs-val-003",
+    "question": "Return only one code. A candidate workflow edit looks helpful on training evidence, but held-out evidence did not improve over baseline. If the skill explicitly says such a candidate must not be accepted, return REJECT_CANDIDATE_CHANGE. Otherwise return POLICY_GAP.",
+    "case_context": "Train evidence improved, but held-out evidence stayed flat. Scenario gates did not fail. The team wants to accept the workflow edit anyway.",
+    "answers": [
+      "REJECT_CANDIDATE_CHANGE"
+    ],
+    "match_mode": "exact"
+  }
+]

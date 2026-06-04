@@ -1,0 +1,20 @@
+[
+  {
+    "id": "xhs-test-001",
+    "question": "Return only one code. A workflow change proposal cites only a high quality score and says that is enough to accept the change, even though no held-out selection evidence was collected. If the skill explicitly requires held-out improvement before acceptance, return REJECT_CANDIDATE_CHANGE. Otherwise return POLICY_GAP.",
+    "case_context": "The proposal has a good score but no held-out validation batch. The team wants to accept the change immediately.",
+    "answers": [
+      "REJECT_CANDIDATE_CHANGE"
+    ],
+    "match_mode": "exact"
+  },
+  {
+    "id": "xhs-test-002",
+    "question": "Return only one code. A draft-safe run passed review, risk approval, and account-state checks, and the workflow mode is explicitly save-draft-only with clicked_publish=false. If the skill explicitly does not authorize promoting that as live publish proof, return DRAFT_ONLY_NOT_PUBLISH_PROOF. Otherwise return POLICY_GAP.",
+    "case_context": "The run saved a draft successfully and never clicked publish. The team wants to cite it as evidence that compliant live publish already succeeded.",
+    "answers": [
+      "DRAFT_ONLY_NOT_PUBLISH_PROOF"
+    ],
+    "match_mode": "exact"
+  }
+]

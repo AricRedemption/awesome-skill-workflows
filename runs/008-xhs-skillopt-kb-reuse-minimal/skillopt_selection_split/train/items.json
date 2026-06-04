@@ -1,0 +1,20 @@
+[
+  {
+    "id": "xhs-train-001",
+    "question": "Return only one code. The content package scored well, but the operator has not checked account state and wants to continue into draft handoff. If the skill explicitly requires stopping before draft or publish when account state is unknown, return STOP_BEFORE_DRAFT_OR_PUBLISH. Otherwise return POLICY_GAP.",
+    "case_context": "Quality and review are positive. No account-state verification evidence is present. The operator wants to continue into draft handoff anyway.",
+    "answers": [
+      "STOP_BEFORE_DRAFT_OR_PUBLISH"
+    ],
+    "match_mode": "exact"
+  },
+  {
+    "id": "xhs-train-002",
+    "question": "Return only one code. A previous run produced a published note, but later review showed the publish proof was not compliant. If the skill explicitly says this evidence can only be reused as negative evidence and not as compliant publish proof, return REUSE_AS_NEGATIVE_EVIDENCE_ONLY. Otherwise return POLICY_GAP.",
+    "case_context": "There is a publish fact, but pre-publish gate ordering could not be proven. The team wants to reuse that run as proof that compliant publish succeeded.",
+    "answers": [
+      "REUSE_AS_NEGATIVE_EVIDENCE_ONLY"
+    ],
+    "match_mode": "exact"
+  }
+]

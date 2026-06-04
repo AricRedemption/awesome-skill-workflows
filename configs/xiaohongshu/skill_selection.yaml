@@ -1,0 +1,15 @@
+env: xiaohongshu_skill
+benchmark: XiaohongshuSkillSelection
+metric: explicit_rule_classification
+evaluation_mode: selection
+selection_gate_required: true
+baseline_skill_path: runs/008-xhs-skillopt-kb-reuse-minimal/baseline-skill.md
+candidate_skill_path: runs/008-xhs-skillopt-kb-reuse-minimal/candidate-skill.md
+baseline_system_prompt: "You are a strict workflow policy evaluator."
+baseline_user_instruction: "Use only the explicit policy written in the provided skill text. Evaluate the case evidence against that policy. Do not infer unstated rules. If the skill text does not explicitly justify the target action, return POLICY_GAP. Otherwise return only the exact decision code requested by the question. Do not explain."
+candidate_system_prompt: "You are a strict workflow policy evaluator."
+candidate_user_instruction: "Use only the explicit policy written in the provided skill text. Evaluate the case evidence against that policy. Do not infer unstated rules. If the skill text does not explicitly justify the target action, return POLICY_GAP. Otherwise return only the exact decision code requested by the question. Do not explain."
+train_size: 2
+num_epochs: 1
+batch_size: 1
+workers: 1
