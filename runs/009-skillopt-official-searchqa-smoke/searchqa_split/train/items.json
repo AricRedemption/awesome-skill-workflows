@@ -1,0 +1,18 @@
+[
+  {
+    "id": "train-smoke-001",
+    "question": "What framework is this repository validating?",
+    "context": "[DOC] awesome-skill-workflows validates agent workflows before promoting reusable skills.",
+    "answers": [
+      "agent workflows"
+    ]
+  },
+  {
+    "id": "train-smoke-002",
+    "question": "What should a candidate SkillOpt-style edit require before acceptance?",
+    "context": "[DOC] A candidate skill edit should require held-out selection improvement and should preserve risk gates.",
+    "answers": [
+      "held-out selection improvement"
+    ]
+  }
+]

@@ -1,0 +1,9 @@
+env: searchqa
+benchmark: SearchQA
+metric: exact_match
+evaluation_mode: smoke
+selection_gate_required: false
+train_size: 2
+num_epochs: 1
+batch_size: 1
+workers: 1

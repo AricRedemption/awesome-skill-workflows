@@ -1,0 +1,10 @@
+[
+  {
+    "id": "val-smoke-001",
+    "question": "What file is exported as the best validated skill artifact?",
+    "context": "[DOC] SkillOpt exports the best validated skill as best_skill.md.",
+    "answers": [
+      "best_skill.md"
+    ]
+  }
+]

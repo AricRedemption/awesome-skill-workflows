@@ -1,0 +1,11 @@
+[
+  {
+    "id": "val-selection-001",
+    "question": "What evaluation code should be returned when smoke cannot prove skill improvement on its own?",
+    "context": "[DOC] When smoke cannot prove skill improvement because baseline and candidate may both answer trivial items correctly, return evaluation code EVAL_DESIGN_GAP.",
+    "answers": [
+      "EVAL_DESIGN_GAP"
+    ],
+    "match_mode": "exact"
+  }
+]

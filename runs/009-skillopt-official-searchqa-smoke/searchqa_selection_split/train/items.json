@@ -1,0 +1,18 @@
+[
+  {
+    "id": "train-selection-001",
+    "question": "What must improve before a candidate SkillOpt-style edit is accepted?",
+    "context": "[DOC] A candidate skill should only be accepted when it improves held-out selection performance under the same harness and does not violate risk gates.",
+    "answers": [
+      "held-out selection performance"
+    ]
+  },
+  {
+    "id": "train-selection-002",
+    "question": "What should a selection benchmark prove beyond runtime connectivity?",
+    "context": "[DOC] A selection benchmark should prove that one skill variant outperforms another, not merely that the model endpoint is reachable.",
+    "answers": [
+      "that one skill variant outperforms another"
+    ]
+  }
+]

@@ -1,0 +1,13 @@
+env: searchqa
+benchmark: SearchQA
+metric: exact_match
+evaluation_mode: selection
+selection_gate_required: true
+baseline_system_prompt: "You are a helpful QA agent."
+baseline_user_instruction: "Answer the question using only the provided context. Return one short explanatory sentence."
+candidate_system_prompt: "You are a precise QA agent."
+candidate_user_instruction: "Answer the question using only the provided context. If the context names an evaluation code, return only that exact code token. Otherwise return only the exact minimal answer span."
+train_size: 2
+num_epochs: 1
+batch_size: 1
+workers: 1

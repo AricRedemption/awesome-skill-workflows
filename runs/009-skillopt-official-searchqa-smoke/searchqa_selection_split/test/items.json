@@ -1,0 +1,10 @@
+[
+  {
+    "id": "test-selection-001",
+    "question": "What should happen if the selection set cannot distinguish baseline from candidate?",
+    "context": "[DOC] If the selection set cannot distinguish baseline from candidate, treat it as an evaluation-design issue and improve the split instead of calling the runtime broken.",
+    "answers": [
+      "treat it as an evaluation-design issue"
+    ]
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "id": "test-smoke-001",
+    "question": "What remains fixed during SkillOpt-style training?",
+    "context": "[DOC] SkillOpt-style training keeps the target model and execution harness fixed while optimizing the skill document.",
+    "answers": [
+      "the target model and execution harness"
+    ]
+  }
+]

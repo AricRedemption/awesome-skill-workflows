@@ -1,0 +1,295 @@
+{
+  "report_id": "skillopt-official-readiness-2026-06-03",
+  "status": "local_runtime_validated_not_official_reproduction_claim",
+  "checked_at": "2026-06-03",
+  "claim_boundary": "This project may claim a validated project-local SkillOpt smoke runtime over repository-owned modules and fixtures. It must not claim official SkillOpt paper reproduction until official benchmark code, datasets, task runners, and paper-level evaluation evidence are satisfied.",
+  "source_refs": [
+    "https://arxiv.org/abs/2605.23904",
+    "https://github.com/microsoft/SkillOpt"
+  ],
+  "official_repository": {
+    "url": "https://github.com/microsoft/SkillOpt",
+    "license_observed": "MIT",
+    "required_runtime": "Python 3.10+",
+    "inspection_status": "public_source_structure_recorded",
+    "inspection_note": "The upstream repository remains an external reference for architecture comparison only. The runnable smoke path in this project now uses repository-owned local modules.",
+    "observed_top_level_paths": [
+      "configs/",
+      "docs/",
+      "scripts/",
+      "skillopt-assets/",
+      "skillopt/",
+      "skillopt_webui/",
+      "pyproject.toml",
+      "requirements.txt"
+    ],
+    "observed_core_paths": [
+      "scripts/train.py",
+      "scripts/eval_only.py",
+      "skillopt/engine/trainer.py",
+      "skillopt/gradient/reflect.py",
+      "skillopt/optimizer/meta_skill.py",
+      "skillopt/optimizer/slow_update.py",
+      "skillopt/evaluation/gate.py",
+      "skillopt/model/codex_harness.py"
+    ]
+  },
+  "project_local_runtime": {
+    "module_root": "skillopt/",
+    "entrypoints": [
+      "scripts/train.py",
+      "scripts/eval_only.py"
+    ],
+    "configs": [
+      "configs/searchqa/default.yaml",
+      "configs/searchqa/selection.yaml"
+    ],
+    "smoke_runner": "scripts/run-official-skillopt-smoke.mjs",
+    "smoke_validator": "scripts/validate-official-skillopt-smoke-output.mjs",
+    "selection_runner": "scripts/run-skillopt-selection-eval.mjs",
+    "selection_validator": "scripts/validate-skillopt-selection-output.mjs"
+  },
+  "official_training_contract": {
+    "entrypoint": "scripts/train.py",
+    "required_cli_args": [
+      "--config",
+      "--split_dir",
+      "--azure_openai_endpoint",
+      "--optimizer_model",
+      "--target_model"
+    ],
+    "optional_or_tunable_cli_args": [
+      "--num_epochs",
+      "--batch_size",
+      "--workers",
+      "--out_root"
+    ],
+    "data_split_contract": [
+      "train/items.json",
+      "val/items.json",
+      "test/items.json"
+    ],
+    "dataloader_contract": "skillopt/envs/<benchmark>/dataloader.py"
+  },
+  "official_entrypoint_probe": {
+    "probe_script": "scripts/probe-official-skillopt.mjs",
+    "command": "python3 scripts/train.py --help",
+    "working_directory": "project root",
+    "status": "passed",
+    "observed_cli_groups": [
+      "config",
+      "backend",
+      "optimizer_model",
+      "target_model",
+      "split_dir",
+      "num_epochs",
+      "batch_size",
+      "workers",
+      "out_root",
+      "use_gate",
+      "use_slow_update",
+      "use_meta_skill"
+    ],
+    "meaning": "The project-local training entrypoint exists and loads from the repository-owned module tree."
+  },
+  "official_supported_benchmarks_observed": [
+    "SearchQA",
+    "ALFWorld",
+    "DocVQA",
+    "LiveMathematicianBench",
+    "SpreadsheetBench",
+    "OfficeQA"
+  ],
+  "local_reproduction_status": {
+    "mode": "project_local_runtime_validated",
+    "local_run_record": "runs/008-xhs-skillopt-kb-reuse-minimal/skill-optimization-run.json",
+    "local_training_entrypoint": "scripts/train.py",
+    "local_validator": "scripts/validate-official-skillopt-smoke-output.mjs",
+    "implemented_locally": [
+      "repository-owned scripts/train.py and scripts/eval_only.py",
+      "project-local SearchQA dataloader and trainer modules",
+      "real OpenAI-compatible model calls through codex_harness",
+      "incremental smoke progress tracking via progress.json",
+      "smoke-only runtime mode separated from selection-evaluation mode",
+      "best_skill.md and local run-state exports"
+    ],
+    "not_officially_reproduced": [
+      "official benchmark datasets",
+      "official benchmark task runner execution",
+      "paper-scale learning-rate schedules and minibatch merge/rank/clip",
+      "cross-model, cross-harness, and cross-benchmark transfer experiments",
+      "paper ablations against no-skill, human-skill, one-shot skill, Trace2Skill, TextGrad, GEPA, and EvoSkill"
+    ]
+  },
+  "official_data_split_probe": {
+    "probe_script": "scripts/probe-official-skillopt.mjs",
+    "status": "loader_check_passed",
+    "benchmark": "SearchQA",
+    "split_dir": "runs/009-skillopt-official-searchqa-smoke/searchqa_split",
+    "loader": "skillopt.envs.searchqa.dataloader.SearchQADataLoader",
+    "items": {
+      "train": 2,
+      "val": 1,
+      "test": 1
+    },
+    "run_summary": "runs/009-skillopt-official-searchqa-smoke/run-summary.md",
+    "meaning": "A tiny SearchQA-style smoke split exists and loads through the project-local SearchQA dataloader. It is a runtime fixture, not benchmark data."
+  },
+  "selection_data_split_probe": {
+    "status": "fixture_prepared",
+    "benchmark": "SearchQA",
+    "split_dir": "runs/009-skillopt-official-searchqa-smoke/searchqa_selection_split",
+    "config": "configs/searchqa/selection.yaml",
+    "meaning": "A separate selection fixture exists so held-out skill comparison can be evaluated without conflating it with runtime smoke."
+  },
+  "official_model_credential_probe": {
+    "probe_script": "scripts/probe-official-skillopt.mjs",
+    "env_file_supported": true,
+    "status": "configured_for_local_runtime",
+    "safe_env_presence": {
+      "AZURE_OPENAI_ENDPOINT": false,
+      "AZURE_OPENAI_API_KEY": false,
+      "AZURE_OPENAI_AUTH_MODE": false,
+      "OPENAI_BASE_URL": true,
+      "OPENAI_API_KEY": true,
+      "ANTHROPIC_BASE_URL": false,
+      "ANTHROPIC_API_KEY": false,
+      "QWEN_CHAT_BASE_URL": false,
+      "QWEN_CHAT_MODEL": false
+    },
+    "available_backends": [
+      "openai_chat"
+    ],
+    "meaning": "A usable local runtime backend is configured. The report records only boolean environment-variable presence, not secret values."
+  },
+  "official_smoke_train_plan": {
+    "status": "executed_and_validated_locally",
+    "runner_script": "scripts/run-official-skillopt-smoke.mjs",
+    "output_validator": "scripts/validate-official-skillopt-smoke-output.mjs",
+    "env_file_supported": true,
+    "working_directory": "project root",
+    "command": [
+      "python3",
+      "scripts/train.py",
+      "--config",
+      "configs/searchqa/default.yaml",
+      "--split_dir",
+      "$PROJECT_ROOT/runs/009-skillopt-official-searchqa-smoke/searchqa_split",
+      "--num_epochs",
+      "1",
+      "--train_size",
+      "2",
+      "--batch_size",
+      "1",
+      "--workers",
+      "1",
+      "--analyst_workers",
+      "1",
+      "--minibatch_size",
+      "1",
+      "--merge_batch_size",
+      "1",
+      "--sel_env_num",
+      "1",
+      "--test_env_num",
+      "1",
+      "--out_root",
+      "/private/tmp/skillopt-smoke-run"
+    ],
+    "expected_output_refs": [
+      "/private/tmp/skillopt-smoke-run/config.json",
+      "/private/tmp/skillopt-smoke-run/history.json",
+      "/private/tmp/skillopt-smoke-run/runtime_state.json",
+      "/private/tmp/skillopt-smoke-run/best_skill.md",
+      "/private/tmp/skillopt-smoke-run/progress.json",
+      "/private/tmp/skillopt-smoke-run/selection_eval_baseline",
+      "/private/tmp/skillopt-smoke-run/test_eval"
+    ],
+    "meaning": "This smoke command has been executed successfully against the repository-owned local modules and SearchQA smoke fixture."
+  },
+  "official_smoke_runtime_result": {
+    "status": "passed",
+    "out_root": "/private/tmp/skillopt-smoke-run",
+    "validator": "scripts/validate-official-skillopt-smoke-output.mjs",
+    "evaluation_mode": "smoke",
+    "selection_gate_status": "not_applicable",
+    "meaning": "The smoke run validates runtime wiring only. It does not claim skill improvement."
+  },
+  "selection_runtime_result": {
+    "status": "passed",
+    "out_root": "/private/tmp/skillopt-selection-run",
+    "validator": "scripts/validate-skillopt-selection-output.mjs",
+    "evaluation_mode": "selection",
+    "selection_gate_status": "passed",
+    "meaning": "The dedicated selection path is executable and structurally separate from smoke. On the current held-out selection fixture, the baseline fails while the candidate passes, so the selection gate now has real differentiation value."
+  },
+  "historical_blocked_smoke_proof": {
+    "status": "historical_pre_integration",
+    "proof_ref": "runs/009-skillopt-official-searchqa-smoke/blocked-smoke-proof.json",
+    "meaning": "This is older evidence from before local credentialed runtime execution was wired up."
+  },
+  "readiness_gates": [
+    {
+      "gate_id": "official_repo_available",
+      "status": "observed_via_public_source",
+      "evidence_refs": [
+        "https://github.com/microsoft/SkillOpt"
+      ]
+    },
+    {
+      "gate_id": "local_runtime_modules_integrated",
+      "status": "passed",
+      "evidence_refs": [
+        "scripts/train.py",
+        "scripts/eval_only.py",
+        "skillopt/engine/trainer.py",
+        "skillopt/model/codex_harness.py"
+      ]
+    },
+    {
+      "gate_id": "smoke_runtime_executed",
+      "status": "passed",
+      "evidence_refs": [
+        "scripts/run-official-skillopt-smoke.mjs",
+        "scripts/validate-official-skillopt-smoke-output.mjs"
+      ]
+    },
+    {
+      "gate_id": "smoke_vs_selection_boundary_documented",
+      "status": "passed",
+      "evidence_refs": [
+        "configs/searchqa/default.yaml",
+        "configs/searchqa/selection.yaml",
+        "runs/009-skillopt-official-searchqa-smoke/run-summary.md"
+      ]
+    },
+    {
+      "gate_id": "selection_runner_available",
+      "status": "passed",
+      "evidence_refs": [
+        "scripts/run-skillopt-selection-eval.mjs",
+        "scripts/validate-skillopt-selection-output.mjs",
+        "configs/searchqa/selection.yaml",
+        "/private/tmp/skillopt-selection-run/history.json"
+      ]
+    },
+    {
+      "gate_id": "protocol_regression_tests_covered",
+      "status": "passed",
+      "evidence_refs": [
+        "tests/test_skillopt_codex_harness.py"
+      ]
+    },
+    {
+      "gate_id": "official_paper_reproduction",
+      "status": "missing",
+      "evidence_refs": []
+    }
+  ],
+  "next_safe_actions": [
+    "Keep describing this repository state as project-local runtime validation, not official paper reproduction.",
+    "Capture future selection-run evidence separately from smoke-run evidence.",
+    "Add baseline-vs-candidate differentiation logic before treating selection output as a skill-improvement proof.",
+    "Revise the selection fixture if you want a passing held-out improvement gate rather than a structurally valid but failed comparison."
+  ]
+}

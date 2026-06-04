@@ -218,6 +218,9 @@ Acceptance:
   evidence gates required by this project.
 - Do not treat a quality score as proof of human approval, risk approval,
   account-state proof, or platform handoff proof.
+- Do not let a SkillOpt score delta override the generic Layer 1
+  action-verification contract; candidate skills may improve decision quality,
+  but they do not replace scenario proof or approval evidence.
 
 ## Current Status
 
@@ -264,21 +267,20 @@ Still not implemented:
 Official reproduction readiness report:
 
 - `reports/skillopt-official-readiness.json`
-- Current readiness status: `not_ready_for_official_reproduction_claim`
-- Official code has been inspected through an isolated external checkout, but
-  it is not vendored into this repository and no official training command has
-  been executed.
-- A no-data entrypoint probe passed after installing official core dependencies
-  in an isolated environment: `python3 scripts/train.py --help`.
-- A tiny SearchQA-style split exists for smoke validation at
-  `runs/009-skillopt-official-searchqa-smoke/searchqa_split/` and loads through
-  the official SearchQA dataloader. This is only a dataloader/entrypoint
-  fixture, not official benchmark data.
-- The current shell has no usable official optimizer or target model credential
-  backend configured. The readiness report records only boolean environment
-  presence and never stores credential values.
-- The readiness report includes an official smoke train command plan. It must
-  not be executed until model credentials are configured.
+- Current readiness status: `local_runtime_validated_not_official_reproduction_claim`
+- The runnable path in this repository now uses repository-owned modules under
+  `skillopt/` plus local entrypoints under `scripts/`.
+- A real local smoke runtime has been executed through
+  `scripts/run-official-skillopt-smoke.mjs` with a configured backend.
+- The smoke fixture remains separate from selection evaluation:
+  `configs/searchqa/default.yaml` uses `evaluation_mode: smoke` and
+  `selection_gate_required: false`.
+- A separate selection fixture and config now exist at
+  `runs/009-skillopt-official-searchqa-smoke/searchqa_selection_split/` and
+  `configs/searchqa/selection.yaml`.
+- Protocol compatibility coverage now includes repository tests for URL
+  normalization, SSE parsing, and answer scoring:
+  `tests/test_skillopt_codex_harness.py`.
 
 ## Reproduction Self-Audit
 
@@ -334,14 +336,15 @@ v0.1 SkillOpt-style workflow-validation loop. It should be described as
 `manual_skillopt_style` or deterministic local reproduction until official code,
 external harnesses, and model-driven optimizer calls are connected.
 
-Before claiming official SkillOpt paper reproduction, validate the readiness
-report:
+Before claiming anything beyond project-local runtime validation, validate the
+current readiness report:
 
 ```bash
 node scripts/probe-official-skillopt.mjs
 node scripts/validate-skillopt-official-readiness.mjs
 node scripts/run-official-skillopt-smoke.mjs --dry-run
 node scripts/validate-official-skillopt-smoke-output.mjs --allow-missing
+python3 -m unittest tests/test_skillopt_codex_harness.py
 ```
 
 If credentials are stored outside the repository, pass them explicitly without
@@ -352,13 +355,21 @@ node scripts/probe-official-skillopt.mjs --env-file /path/to/local.env
 node scripts/run-official-skillopt-smoke.mjs --env-file /path/to/local.env
 ```
 
-Without credentials, the non-dry-run smoke runner must stop before training and
-record `blocked_missing_credentials` evidence under
-`runs/009-skillopt-official-searchqa-smoke/blocked-smoke-proof.json`.
+Supported backend env pairs for the official smoke path include:
 
-Regenerate that proof with:
+- OpenAI: `OPENAI_API_KEY` and optional `OPENAI_BASE_URL`
+- Anthropic: `ANTHROPIC_API_KEY` and optional `ANTHROPIC_BASE_URL`
+- Azure OpenAI: `AZURE_OPENAI_ENDPOINT` with `AZURE_OPENAI_API_KEY` or `AZURE_OPENAI_AUTH_MODE`
+- Qwen: `QWEN_CHAT_BASE_URL` with `QWEN_CHAT_MODEL`
+
+The older blocked proof under
+`runs/009-skillopt-official-searchqa-smoke/blocked-smoke-proof.json` is now
+historical pre-integration evidence. It should not be used to describe the
+current local runtime state.
+
+Selection evaluation now has its own runner and validator:
 
 ```bash
-node scripts/run-official-skillopt-smoke.mjs \
-  --proof-out runs/009-skillopt-official-searchqa-smoke/blocked-smoke-proof.json
+node scripts/run-skillopt-selection-eval.mjs --env-file /path/to/local.env
+node scripts/validate-skillopt-selection-output.mjs --allow-missing
 ```
