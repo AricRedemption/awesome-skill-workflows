@@ -1,0 +1,14 @@
+{
+  "run_id": "018-external-skill-wiki-import-official-catalogs",
+  "scenario": "external-skill-wiki-import",
+  "gates": {
+    "public_source_gate": "passed",
+    "boundary_honesty_gate": "passed",
+    "searchability_gate": "passed",
+    "no_false_promotion_gate": "passed"
+  },
+  "validated_pages": [
+    "skills/wiki/anthropics-skills-catalog.md",
+    "skills/wiki/openai-skills-catalog-codex.md"
+  ]
+}

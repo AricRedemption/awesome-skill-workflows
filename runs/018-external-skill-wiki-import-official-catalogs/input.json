@@ -1,0 +1,8 @@
+{
+  "scenario": "external-skill-wiki-import",
+  "sources": [
+    "anthropics/skills",
+    "openai/skills"
+  ],
+  "goal": "Validate that official Anthropic and OpenAI skill catalogs can be imported into skills/wiki as searchable external references."
+}

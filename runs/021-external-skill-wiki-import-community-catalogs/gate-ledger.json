@@ -1,0 +1,14 @@
+{
+  "run_id": "021-external-skill-wiki-import-community-catalogs",
+  "scenario": "external-skill-wiki-import",
+  "gates": {
+    "public_source_gate": "passed",
+    "boundary_honesty_gate": "passed",
+    "searchability_gate": "passed",
+    "no_false_promotion_gate": "passed"
+  },
+  "validated_pages": [
+    "skills/wiki/composio-awesome-claude-skills.md",
+    "skills/wiki/heilcheng-awesome-agent-skills.md"
+  ]
+}

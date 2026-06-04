@@ -1,0 +1,8 @@
+{
+  "scenario": "external-skill-wiki-import",
+  "sources": [
+    "ComposioHQ/awesome-claude-skills",
+    "heilcheng/awesome-agent-skills"
+  ],
+  "goal": "Validate that large community and directory-style skill catalogs can be imported into skills/wiki as searchable external references."
+}

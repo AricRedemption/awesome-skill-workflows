@@ -1,0 +1,14 @@
+{
+  "run_id": "020-external-skill-wiki-import-engineering-workflows",
+  "scenario": "external-skill-wiki-import",
+  "gates": {
+    "public_source_gate": "passed",
+    "boundary_honesty_gate": "passed",
+    "searchability_gate": "passed",
+    "no_false_promotion_gate": "passed"
+  },
+  "validated_pages": [
+    "skills/wiki/mattpocock-skills-for-real-engineers.md",
+    "skills/wiki/jwynia-agent-skills-collection.md"
+  ]
+}

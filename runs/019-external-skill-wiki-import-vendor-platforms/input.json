@@ -1,0 +1,8 @@
+{
+  "scenario": "external-skill-wiki-import",
+  "sources": [
+    "NVIDIA/skills",
+    "vercel-labs/agent-skills"
+  ],
+  "goal": "Validate that official vendor platform skill catalogs can be imported into skills/wiki as searchable external references."
+}

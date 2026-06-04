@@ -1,0 +1,8 @@
+{
+  "scenario": "external-skill-wiki-import",
+  "sources": [
+    "mattpocock/skills",
+    "jwynia/agent-skills"
+  ],
+  "goal": "Validate that engineering-oriented external skill libraries can be imported into skills/wiki as searchable external references."
+}

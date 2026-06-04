@@ -1,0 +1,14 @@
+{
+  "run_id": "019-external-skill-wiki-import-vendor-platforms",
+  "scenario": "external-skill-wiki-import",
+  "gates": {
+    "public_source_gate": "passed",
+    "boundary_honesty_gate": "passed",
+    "searchability_gate": "passed",
+    "no_false_promotion_gate": "passed"
+  },
+  "validated_pages": [
+    "skills/wiki/nvidia-agent-skills-catalog.md",
+    "skills/wiki/vercel-agent-skills.md"
+  ]
+}

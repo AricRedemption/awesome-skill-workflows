@@ -1,0 +1,462 @@
+[
+  {
+    "id": "anthropic-pdf-skill",
+    "title": "Anthropic PDF Skill",
+    "source_repo": "anthropics/skills",
+    "source_url": "https://github.com/anthropics/skills",
+    "source_path": "skills/pdf",
+    "validation_run": "runs/018-external-skill-wiki-import-official-catalogs/",
+    "summary": "Imported external PDF skill seed from Anthropic's validated official catalog. The source repository explicitly exposes `pdf` as part of its document-oriented skills set.",
+    "tags": ["external", "anthropic", "pdf", "document-skill", "official", "seed"]
+  },
+  {
+    "id": "anthropic-docx-skill",
+    "title": "Anthropic DOCX Skill",
+    "source_repo": "anthropics/skills",
+    "source_url": "https://github.com/anthropics/skills",
+    "source_path": "skills/docx",
+    "validation_run": "runs/018-external-skill-wiki-import-official-catalogs/",
+    "summary": "Imported external DOCX skill seed from Anthropic's validated official catalog. The source repository explicitly exposes `docx` among production document skills.",
+    "tags": ["external", "anthropic", "docx", "document-skill", "official", "seed"]
+  },
+  {
+    "id": "anthropic-pptx-skill",
+    "title": "Anthropic PPTX Skill",
+    "source_repo": "anthropics/skills",
+    "source_url": "https://github.com/anthropics/skills",
+    "source_path": "skills/pptx",
+    "validation_run": "runs/018-external-skill-wiki-import-official-catalogs/",
+    "summary": "Imported external PPTX skill seed from Anthropic's validated official catalog. The source repository explicitly exposes `pptx` among document creation skills.",
+    "tags": ["external", "anthropic", "pptx", "presentation-skill", "official", "seed"]
+  },
+  {
+    "id": "anthropic-xlsx-skill",
+    "title": "Anthropic XLSX Skill",
+    "source_repo": "anthropics/skills",
+    "source_url": "https://github.com/anthropics/skills",
+    "source_path": "skills/xlsx",
+    "validation_run": "runs/018-external-skill-wiki-import-official-catalogs/",
+    "summary": "Imported external XLSX skill seed from Anthropic's validated official catalog. The source repository explicitly exposes `xlsx` among document and spreadsheet skills.",
+    "tags": ["external", "anthropic", "xlsx", "spreadsheet-skill", "official", "seed"]
+  },
+  {
+    "id": "anthropic-template-skill",
+    "title": "Anthropic Template Skill",
+    "source_repo": "anthropics/skills",
+    "source_url": "https://github.com/anthropics/skills",
+    "source_path": "template",
+    "validation_run": "runs/018-external-skill-wiki-import-official-catalogs/",
+    "summary": "Imported external template skill seed from Anthropic's validated official catalog. The repository exposes a template for creating new skills in the open Agent Skills format.",
+    "tags": ["external", "anthropic", "template", "skill-authoring", "official", "seed"]
+  },
+  {
+    "id": "openai-skill-installer",
+    "title": "OpenAI Skill Installer",
+    "source_repo": "openai/skills",
+    "source_url": "https://github.com/openai/skills",
+    "source_path": "skills/.system/skill-installer",
+    "validation_run": "runs/018-external-skill-wiki-import-official-catalogs/",
+    "summary": "Imported external system skill seed from OpenAI's validated official Codex catalog. The repository documents `skill-installer` as the install path for curated and experimental skills.",
+    "tags": ["external", "openai", "codex", "skill-installer", "official", "seed"]
+  },
+  {
+    "id": "openai-create-plan-skill",
+    "title": "OpenAI Create Plan Skill",
+    "source_repo": "openai/skills",
+    "source_url": "https://github.com/openai/skills",
+    "source_path": "skills/.experimental/create-plan",
+    "validation_run": "runs/018-external-skill-wiki-import-official-catalogs/",
+    "summary": "Imported external experimental skill seed from OpenAI's validated official Codex catalog. The repository explicitly references `create-plan` as an installable experimental skill.",
+    "tags": ["external", "openai", "codex", "planning", "experimental", "seed"]
+  },
+  {
+    "id": "nvidia-aiq-research-skill",
+    "title": "NVIDIA AIQ Research Skill",
+    "source_repo": "NVIDIA/skills",
+    "source_url": "https://github.com/NVIDIA/skills",
+    "source_path": "skills/aiq-research",
+    "validation_run": "runs/019-external-skill-wiki-import-vendor-platforms/",
+    "summary": "Imported external AIQ research skill seed from NVIDIA's validated vendor catalog. The README lists `aiq-research` in the skill catalog.",
+    "tags": ["external", "nvidia", "aiq", "research", "official", "seed"]
+  },
+  {
+    "id": "nvidia-aiq-deploy-skill",
+    "title": "NVIDIA AIQ Deploy Skill",
+    "source_repo": "NVIDIA/skills",
+    "source_url": "https://github.com/NVIDIA/skills",
+    "source_path": "skills/aiq-deploy",
+    "validation_run": "runs/019-external-skill-wiki-import-vendor-platforms/",
+    "summary": "Imported external AIQ deploy skill seed from NVIDIA's validated vendor catalog. The README lists `aiq-deploy` in the skill catalog.",
+    "tags": ["external", "nvidia", "aiq", "deploy", "official", "seed"]
+  },
+  {
+    "id": "nvidia-cudaq-guide-skill",
+    "title": "NVIDIA CUDA-Q Guide Skill",
+    "source_repo": "NVIDIA/skills",
+    "source_url": "https://github.com/NVIDIA/skills",
+    "source_path": "skills/cudaq-guide",
+    "validation_run": "runs/019-external-skill-wiki-import-vendor-platforms/",
+    "summary": "Imported external CUDA-Q guide skill seed from NVIDIA's validated vendor catalog. The README lists `cudaq-guide` in the skill catalog.",
+    "tags": ["external", "nvidia", "cudaq", "guide", "official", "seed"]
+  },
+  {
+    "id": "nvidia-accelerated-computing-cudf-skill",
+    "title": "NVIDIA cuDF Skill",
+    "source_repo": "NVIDIA/skills",
+    "source_url": "https://github.com/NVIDIA/skills",
+    "source_path": "skills/accelerated-computing-cudf",
+    "validation_run": "runs/019-external-skill-wiki-import-vendor-platforms/",
+    "summary": "Imported external cuDF skill seed from NVIDIA's validated vendor catalog. The README lists `accelerated-computing-cudf` in the skill catalog.",
+    "tags": ["external", "nvidia", "cudf", "gpu-dataframes", "official", "seed"]
+  },
+  {
+    "id": "nvidia-cuopt-developer-skill",
+    "title": "NVIDIA cuOpt Developer Skill",
+    "source_repo": "NVIDIA/skills",
+    "source_url": "https://github.com/NVIDIA/skills",
+    "source_path": "skills/cuopt-developer",
+    "validation_run": "runs/019-external-skill-wiki-import-vendor-platforms/",
+    "summary": "Imported external cuOpt developer skill seed from NVIDIA's validated vendor catalog. The README lists `cuopt-developer` in the skill catalog.",
+    "tags": ["external", "nvidia", "cuopt", "developer", "official", "seed"]
+  },
+  {
+    "id": "nvidia-cuopt-install-skill",
+    "title": "NVIDIA cuOpt Install Skill",
+    "source_repo": "NVIDIA/skills",
+    "source_url": "https://github.com/NVIDIA/skills",
+    "source_path": "skills/cuopt-install",
+    "validation_run": "runs/019-external-skill-wiki-import-vendor-platforms/",
+    "summary": "Imported external cuOpt install skill seed from NVIDIA's validated vendor catalog. The README lists `cuopt-install` in the skill catalog.",
+    "tags": ["external", "nvidia", "cuopt", "install", "official", "seed"]
+  },
+  {
+    "id": "nvidia-cuopt-numerical-optimization-api-python-skill",
+    "title": "NVIDIA cuOpt Numerical Optimization API Python Skill",
+    "source_repo": "NVIDIA/skills",
+    "source_url": "https://github.com/NVIDIA/skills",
+    "source_path": "skills/cuopt-numerical-optimization-api-python",
+    "validation_run": "runs/019-external-skill-wiki-import-vendor-platforms/",
+    "summary": "Imported external Python API skill seed from NVIDIA's validated vendor catalog. The README lists `cuopt-numerical-optimization-api-python` in the skill catalog.",
+    "tags": ["external", "nvidia", "cuopt", "python", "optimization", "seed"]
+  },
+  {
+    "id": "vercel-optimize-skill",
+    "title": "Vercel Optimize Skill",
+    "source_repo": "vercel-labs/agent-skills",
+    "source_url": "https://github.com/vercel-labs/agent-skills",
+    "source_path": "skills/vercel-optimize",
+    "validation_run": "runs/019-external-skill-wiki-import-vendor-platforms/",
+    "summary": "Imported external Vercel optimization skill seed from Vercel's validated vendor catalog. The README documents `vercel-optimize` as a cost and performance auditing skill.",
+    "tags": ["external", "vercel", "optimization", "deployment", "official", "seed"]
+  },
+  {
+    "id": "mattpocock-setup-matt-pocock-skills",
+    "title": "Matt Pocock Setup Matt Pocock Skills",
+    "source_repo": "mattpocock/skills",
+    "source_url": "https://github.com/mattpocock/skills",
+    "source_path": "skills/engineering/setup-matt-pocock-skills",
+    "validation_run": "runs/020-external-skill-wiki-import-engineering-workflows/",
+    "summary": "Imported external setup skill seed from Matt Pocock's validated engineering skill library. The repository documents `/setup-matt-pocock-skills` as its onboarding step.",
+    "tags": ["external", "mattpocock", "setup", "engineering", "codex", "seed"]
+  },
+  {
+    "id": "jwynia-story-sense",
+    "title": "Jwynia Story Sense",
+    "source_repo": "jwynia/agent-skills",
+    "source_url": "https://github.com/jwynia/agent-skills",
+    "source_path": "skills/creative/story-sense",
+    "validation_run": "runs/020-external-skill-wiki-import-engineering-workflows/",
+    "summary": "Imported external story-analysis skill seed from Jwynia's validated skill library. The README lists `story-sense` among its creative core skills.",
+    "tags": ["external", "jwynia", "creative", "story", "analysis", "seed"]
+  },
+  {
+    "id": "jwynia-story-coach",
+    "title": "Jwynia Story Coach",
+    "source_repo": "jwynia/agent-skills",
+    "source_url": "https://github.com/jwynia/agent-skills",
+    "source_path": "skills/creative/story-coach",
+    "validation_run": "runs/020-external-skill-wiki-import-engineering-workflows/",
+    "summary": "Imported external story-coaching skill seed from Jwynia's validated skill library. The README lists `story-coach` among its creative core skills.",
+    "tags": ["external", "jwynia", "creative", "story", "coaching", "seed"]
+  },
+  {
+    "id": "jwynia-story-collaborator",
+    "title": "Jwynia Story Collaborator",
+    "source_repo": "jwynia/agent-skills",
+    "source_url": "https://github.com/jwynia/agent-skills",
+    "source_path": "skills/creative/story-collaborator",
+    "validation_run": "runs/020-external-skill-wiki-import-engineering-workflows/",
+    "summary": "Imported external story-collaboration skill seed from Jwynia's validated skill library. The README lists `story-collaborator` among its creative core skills.",
+    "tags": ["external", "jwynia", "creative", "story", "collaboration", "seed"]
+  },
+  {
+    "id": "jwynia-story-analysis",
+    "title": "Jwynia Story Analysis",
+    "source_repo": "jwynia/agent-skills",
+    "source_url": "https://github.com/jwynia/agent-skills",
+    "source_path": "skills/creative/story-analysis",
+    "validation_run": "runs/020-external-skill-wiki-import-engineering-workflows/",
+    "summary": "Imported external story-analysis skill seed from Jwynia's validated skill library. The README lists `story-analysis` among its creative skills.",
+    "tags": ["external", "jwynia", "creative", "story", "analysis", "seed"]
+  },
+  {
+    "id": "jwynia-story-idea-generator",
+    "title": "Jwynia Story Idea Generator",
+    "source_repo": "jwynia/agent-skills",
+    "source_url": "https://github.com/jwynia/agent-skills",
+    "source_path": "skills/creative/story-idea-generator",
+    "validation_run": "runs/020-external-skill-wiki-import-engineering-workflows/",
+    "summary": "Imported external story-idea-generation skill seed from Jwynia's validated skill library. The README lists `story-idea-generator` among its creative skills.",
+    "tags": ["external", "jwynia", "creative", "story", "ideas", "seed"]
+  },
+  {
+    "id": "jwynia-prose-style",
+    "title": "Jwynia Prose Style",
+    "source_repo": "jwynia/agent-skills",
+    "source_url": "https://github.com/jwynia/agent-skills",
+    "source_path": "skills/creative/prose-style",
+    "validation_run": "runs/020-external-skill-wiki-import-engineering-workflows/",
+    "summary": "Imported external prose-style skill seed from Jwynia's validated skill library. The README lists `prose-style` among its creative skills.",
+    "tags": ["external", "jwynia", "creative", "writing-style", "prose", "seed"]
+  },
+  {
+    "id": "jwynia-revision",
+    "title": "Jwynia Revision",
+    "source_repo": "jwynia/agent-skills",
+    "source_url": "https://github.com/jwynia/agent-skills",
+    "source_path": "skills/creative/revision",
+    "validation_run": "runs/020-external-skill-wiki-import-engineering-workflows/",
+    "summary": "Imported external revision skill seed from Jwynia's validated skill library. The README lists `revision` among its creative skills.",
+    "tags": ["external", "jwynia", "creative", "revision", "editing", "seed"]
+  },
+  {
+    "id": "jwynia-knowledge-graph",
+    "title": "Jwynia Knowledge Graph",
+    "source_repo": "jwynia/agent-skills",
+    "source_url": "https://github.com/jwynia/agent-skills",
+    "source_path": "skills/general/knowledge-graph",
+    "validation_run": "runs/020-external-skill-wiki-import-engineering-workflows/",
+    "summary": "Imported external knowledge-graph skill seed from Jwynia's validated skill library. The README lists `knowledge-graph` among its reusable utility skills.",
+    "tags": ["external", "jwynia", "knowledge-graph", "memory", "utility", "seed"]
+  },
+  {
+    "id": "jwynia-self-improving-agent",
+    "title": "Jwynia Self Improving Agent",
+    "source_repo": "jwynia/agent-skills",
+    "source_url": "https://github.com/jwynia/agent-skills",
+    "source_path": "skills/general/self-improving-agent",
+    "validation_run": "runs/020-external-skill-wiki-import-engineering-workflows/",
+    "summary": "Imported external self-improving-agent skill seed from Jwynia's validated skill library. The README lists `self-improving-agent` among its reusable utility skills.",
+    "tags": ["external", "jwynia", "self-improvement", "agent", "utility", "seed"]
+  },
+  {
+    "id": "jwynia-skill-sync",
+    "title": "Jwynia Skill Sync",
+    "source_repo": "jwynia/agent-skills",
+    "source_url": "https://github.com/jwynia/agent-skills",
+    "source_path": "skills/general/skill-sync",
+    "validation_run": "runs/020-external-skill-wiki-import-engineering-workflows/",
+    "summary": "Imported external skill-sync seed from Jwynia's validated skill library. The README lists `skill-sync` among its reusable utility skills.",
+    "tags": ["external", "jwynia", "skill-sync", "sync", "utility", "seed"]
+  },
+  {
+    "id": "jwynia-todo-tracker",
+    "title": "Jwynia TODO Tracker",
+    "source_repo": "jwynia/agent-skills",
+    "source_url": "https://github.com/jwynia/agent-skills",
+    "source_path": "skills/general/todo-tracker",
+    "validation_run": "runs/020-external-skill-wiki-import-engineering-workflows/",
+    "summary": "Imported external TODO-tracker seed from Jwynia's validated skill library. The README lists `todo-tracker` among its reusable utility skills.",
+    "tags": ["external", "jwynia", "todo", "tracker", "utility", "seed"]
+  },
+  {
+    "id": "jwynia-codex",
+    "title": "Jwynia Codex Skill",
+    "source_repo": "jwynia/agent-skills",
+    "source_url": "https://github.com/jwynia/agent-skills",
+    "source_path": "codex/codex",
+    "validation_run": "runs/020-external-skill-wiki-import-engineering-workflows/",
+    "summary": "Imported external Codex-specific skill seed from Jwynia's validated skill library. The README explicitly documents a `codex` skill for Codex CLI usage.",
+    "tags": ["external", "jwynia", "codex", "cli", "engineering", "seed"]
+  },
+  {
+    "id": "jwynia-gemini",
+    "title": "Jwynia Gemini Skill",
+    "source_repo": "jwynia/agent-skills",
+    "source_url": "https://github.com/jwynia/agent-skills",
+    "source_path": "codex/gemini",
+    "validation_run": "runs/020-external-skill-wiki-import-engineering-workflows/",
+    "summary": "Imported external Gemini-specific skill seed from Jwynia's validated skill library. The README explicitly documents a `gemini` skill for big-context or plan-review usage.",
+    "tags": ["external", "jwynia", "gemini", "cli", "engineering", "seed"]
+  },
+  {
+    "id": "jwynia-command-creator",
+    "title": "Jwynia Command Creator",
+    "source_repo": "jwynia/agent-skills",
+    "source_url": "https://github.com/jwynia/agent-skills",
+    "source_path": "codex/command-creator",
+    "validation_run": "runs/020-external-skill-wiki-import-engineering-workflows/",
+    "summary": "Imported external command-creator seed from Jwynia's validated skill library. The README explicitly documents `command-creator` among Codex-compatible skills.",
+    "tags": ["external", "jwynia", "command-creator", "codex", "engineering", "seed"]
+  },
+  {
+    "id": "composio-artifacts-builder",
+    "title": "Composio Artifacts Builder",
+    "source_repo": "ComposioHQ/awesome-claude-skills",
+    "source_url": "https://github.com/ComposioHQ/awesome-claude-skills",
+    "source_path": "artifacts-builder",
+    "validation_run": "runs/021-external-skill-wiki-import-community-catalogs/",
+    "summary": "Imported external artifacts-builder skill seed from Composio's validated community catalog. The source repo lists `artifacts-builder` as a skill folder.",
+    "tags": ["external", "composio", "artifacts", "builder", "community", "seed"]
+  },
+  {
+    "id": "composio-brand-guidelines",
+    "title": "Composio Brand Guidelines",
+    "source_repo": "ComposioHQ/awesome-claude-skills",
+    "source_url": "https://github.com/ComposioHQ/awesome-claude-skills",
+    "source_path": "brand-guidelines",
+    "validation_run": "runs/021-external-skill-wiki-import-community-catalogs/",
+    "summary": "Imported external brand-guidelines skill seed from Composio's validated community catalog. The source repo lists `brand-guidelines` as a skill folder.",
+    "tags": ["external", "composio", "brand", "guidelines", "community", "seed"]
+  },
+  {
+    "id": "composio-changelog-generator",
+    "title": "Composio Changelog Generator",
+    "source_repo": "ComposioHQ/awesome-claude-skills",
+    "source_url": "https://github.com/ComposioHQ/awesome-claude-skills",
+    "source_path": "changelog-generator",
+    "validation_run": "runs/021-external-skill-wiki-import-community-catalogs/",
+    "summary": "Imported external changelog-generator skill seed from Composio's validated community catalog. The source repo lists `changelog-generator` as a skill folder.",
+    "tags": ["external", "composio", "changelog", "release-notes", "community", "seed"]
+  },
+  {
+    "id": "composio-content-research-writer",
+    "title": "Composio Content Research Writer",
+    "source_repo": "ComposioHQ/awesome-claude-skills",
+    "source_url": "https://github.com/ComposioHQ/awesome-claude-skills",
+    "source_path": "content-research-writer",
+    "validation_run": "runs/021-external-skill-wiki-import-community-catalogs/",
+    "summary": "Imported external content-research-writer skill seed from Composio's validated community catalog. The source repo lists `content-research-writer` as a skill folder.",
+    "tags": ["external", "composio", "content", "research", "writing", "seed"]
+  },
+  {
+    "id": "composio-developer-growth-analysis",
+    "title": "Composio Developer Growth Analysis",
+    "source_repo": "ComposioHQ/awesome-claude-skills",
+    "source_url": "https://github.com/ComposioHQ/awesome-claude-skills",
+    "source_path": "developer-growth-analysis",
+    "validation_run": "runs/021-external-skill-wiki-import-community-catalogs/",
+    "summary": "Imported external developer-growth-analysis skill seed from Composio's validated community catalog. The source repo lists `developer-growth-analysis` as a skill folder.",
+    "tags": ["external", "composio", "developer-growth", "analysis", "community", "seed"]
+  },
+  {
+    "id": "composio-domain-name-brainstormer",
+    "title": "Composio Domain Name Brainstormer",
+    "source_repo": "ComposioHQ/awesome-claude-skills",
+    "source_url": "https://github.com/ComposioHQ/awesome-claude-skills",
+    "source_path": "domain-name-brainstormer",
+    "validation_run": "runs/021-external-skill-wiki-import-community-catalogs/",
+    "summary": "Imported external domain-name-brainstormer skill seed from Composio's validated community catalog. The source repo lists `domain-name-brainstormer` as a skill folder.",
+    "tags": ["external", "composio", "domain-name", "brainstorming", "community", "seed"]
+  },
+  {
+    "id": "composio-file-organizer",
+    "title": "Composio File Organizer",
+    "source_repo": "ComposioHQ/awesome-claude-skills",
+    "source_url": "https://github.com/ComposioHQ/awesome-claude-skills",
+    "source_path": "file-organizer",
+    "validation_run": "runs/021-external-skill-wiki-import-community-catalogs/",
+    "summary": "Imported external file-organizer skill seed from Composio's validated community catalog. The source repo lists `file-organizer` as a skill folder.",
+    "tags": ["external", "composio", "file-organizer", "productivity", "community", "seed"]
+  },
+  {
+    "id": "composio-image-enhancer",
+    "title": "Composio Image Enhancer",
+    "source_repo": "ComposioHQ/awesome-claude-skills",
+    "source_url": "https://github.com/ComposioHQ/awesome-claude-skills",
+    "source_path": "image-enhancer",
+    "validation_run": "runs/021-external-skill-wiki-import-community-catalogs/",
+    "summary": "Imported external image-enhancer skill seed from Composio's validated community catalog. The source repo lists `image-enhancer` as a skill folder.",
+    "tags": ["external", "composio", "image", "enhancement", "community", "seed"]
+  },
+  {
+    "id": "composio-invoice-organizer",
+    "title": "Composio Invoice Organizer",
+    "source_repo": "ComposioHQ/awesome-claude-skills",
+    "source_url": "https://github.com/ComposioHQ/awesome-claude-skills",
+    "source_path": "invoice-organizer",
+    "validation_run": "runs/021-external-skill-wiki-import-community-catalogs/",
+    "summary": "Imported external invoice-organizer skill seed from Composio's validated community catalog. The source repo lists `invoice-organizer` as a skill folder.",
+    "tags": ["external", "composio", "invoice", "organizer", "community", "seed"]
+  },
+  {
+    "id": "composio-lead-research-assistant",
+    "title": "Composio Lead Research Assistant",
+    "source_repo": "ComposioHQ/awesome-claude-skills",
+    "source_url": "https://github.com/ComposioHQ/awesome-claude-skills",
+    "source_path": "lead-research-assistant",
+    "validation_run": "runs/021-external-skill-wiki-import-community-catalogs/",
+    "summary": "Imported external lead-research-assistant skill seed from Composio's validated community catalog. The source repo lists `lead-research-assistant` as a skill folder.",
+    "tags": ["external", "composio", "lead-research", "assistant", "community", "seed"]
+  },
+  {
+    "id": "composio-mcp-builder",
+    "title": "Composio MCP Builder",
+    "source_repo": "ComposioHQ/awesome-claude-skills",
+    "source_url": "https://github.com/ComposioHQ/awesome-claude-skills",
+    "source_path": "mcp-builder",
+    "validation_run": "runs/021-external-skill-wiki-import-community-catalogs/",
+    "summary": "Imported external mcp-builder skill seed from Composio's validated community catalog. The source repo lists `mcp-builder` as a skill folder.",
+    "tags": ["external", "composio", "mcp", "builder", "community", "seed"]
+  },
+  {
+    "id": "composio-meeting-insights-analyzer",
+    "title": "Composio Meeting Insights Analyzer",
+    "source_repo": "ComposioHQ/awesome-claude-skills",
+    "source_url": "https://github.com/ComposioHQ/awesome-claude-skills",
+    "source_path": "meeting-insights-analyzer",
+    "validation_run": "runs/021-external-skill-wiki-import-community-catalogs/",
+    "summary": "Imported external meeting-insights-analyzer skill seed from Composio's validated community catalog. The source repo lists `meeting-insights-analyzer` as a skill folder.",
+    "tags": ["external", "composio", "meeting", "insights", "community", "seed"]
+  },
+  {
+    "id": "composio-skill-creator",
+    "title": "Composio Skill Creator",
+    "source_repo": "ComposioHQ/awesome-claude-skills",
+    "source_url": "https://github.com/ComposioHQ/awesome-claude-skills",
+    "source_path": "skill-creator",
+    "validation_run": "runs/021-external-skill-wiki-import-community-catalogs/",
+    "summary": "Imported external skill-creator seed from Composio's validated community catalog. The source repo lists `skill-creator` as a skill folder.",
+    "tags": ["external", "composio", "skill-creator", "authoring", "community", "seed"]
+  },
+  {
+    "id": "composio-skill-share",
+    "title": "Composio Skill Share",
+    "source_repo": "ComposioHQ/awesome-claude-skills",
+    "source_url": "https://github.com/ComposioHQ/awesome-claude-skills",
+    "source_path": "skill-share",
+    "validation_run": "runs/021-external-skill-wiki-import-community-catalogs/",
+    "summary": "Imported external skill-share seed from Composio's validated community catalog. The source repo lists `skill-share` as a skill folder.",
+    "tags": ["external", "composio", "skill-share", "sharing", "community", "seed"]
+  },
+  {
+    "id": "composio-tailored-resume-generator",
+    "title": "Composio Tailored Resume Generator",
+    "source_repo": "ComposioHQ/awesome-claude-skills",
+    "source_url": "https://github.com/ComposioHQ/awesome-claude-skills",
+    "source_path": "tailored-resume-generator",
+    "validation_run": "runs/021-external-skill-wiki-import-community-catalogs/",
+    "summary": "Imported external tailored-resume-generator skill seed from Composio's validated community catalog. The source repo lists `tailored-resume-generator` as a skill folder.",
+    "tags": ["external", "composio", "resume", "generator", "community", "seed"]
+  },
+  {
+    "id": "composio-twitter-algorithm-optimizer",
+    "title": "Composio Twitter Algorithm Optimizer",
+    "source_repo": "ComposioHQ/awesome-claude-skills",
+    "source_url": "https://github.com/ComposioHQ/awesome-claude-skills",
+    "source_path": "twitter-algorithm-optimizer",
+    "validation_run": "runs/021-external-skill-wiki-import-community-catalogs/",
+    "summary": "Imported external twitter-algorithm-optimizer skill seed from Composio's validated community catalog. The source repo lists `twitter-algorithm-optimizer` as a skill folder.",
+    "tags": ["external", "composio", "twitter", "optimizer", "community", "seed"]
+  }
+]
