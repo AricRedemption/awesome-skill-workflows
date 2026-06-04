@@ -1,0 +1,74 @@
+[
+  {
+    "id": "open-agent-skills-ui-ux-pro-max",
+    "title": "Open Agent Skills UI UX Pro Max",
+    "source_name": "openagentskills.dev",
+    "source_url": "https://openagentskills.dev/",
+    "source_path_hint": "homepage / Featured Skills",
+    "evidence_type": "featured_skill_visible",
+    "market_signal": "featured on homepage",
+    "category": "Creative and Media",
+    "validation_run": "runs/023-skill-wiki-category-and-featured-expansion/",
+    "summary": "Featured design-system skill captured from the Open Agent Skills homepage. The site presents `ui-ux-pro-max` as a high-signal creative-media skill focused on avoiding generic AI design defaults and enforcing stronger industry UI patterns."
+  },
+  {
+    "id": "open-agent-skills-guizang-social-card",
+    "title": "Open Agent Skills Guizang Social Card",
+    "source_name": "openagentskills.dev",
+    "source_url": "https://openagentskills.dev/",
+    "source_path_hint": "homepage / Featured Skills",
+    "evidence_type": "featured_skill_visible",
+    "market_signal": "featured on homepage",
+    "category": "Creative and Media",
+    "validation_run": "runs/023-skill-wiki-category-and-featured-expansion/",
+    "summary": "Featured social-card skill captured from the Open Agent Skills homepage. The site highlights `Guizang Social Card Skill` as a constrained design workflow that uses preset visual systems instead of unconstrained prompt-only styling."
+  },
+  {
+    "id": "open-agent-skills-drawio-skill",
+    "title": "Open Agent Skills Drawio Skill",
+    "source_name": "openagentskills.dev",
+    "source_url": "https://openagentskills.dev/",
+    "source_path_hint": "homepage / Featured Skills",
+    "evidence_type": "featured_skill_visible",
+    "market_signal": "featured on homepage",
+    "category": "Creative and Media",
+    "validation_run": "runs/023-skill-wiki-category-and-featured-expansion/",
+    "summary": "Featured diagram-generation skill captured from the Open Agent Skills homepage. The site highlights `drawio-skill` as a workflow that renders and self-checks diagrams to catch overlaps and clipped labels before returning the result."
+  },
+  {
+    "id": "open-agent-skills-superpowers-review",
+    "title": "Open Agent Skills Superpowers Review",
+    "source_name": "openagentskills.dev",
+    "source_url": "https://openagentskills.dev/",
+    "source_path_hint": "homepage / Featured Skills",
+    "evidence_type": "featured_skill_visible",
+    "market_signal": "featured on homepage with 205.3k popularity signal",
+    "category": "Development",
+    "validation_run": "runs/023-skill-wiki-category-and-featured-expansion/",
+    "summary": "Featured methodology review captured from the Open Agent Skills homepage. The site presents `Superpowers` as an agentic software-development framework centered on planning, TDD, review, and verification workflows."
+  },
+  {
+    "id": "open-agent-skills-codebase-to-course",
+    "title": "Open Agent Skills Codebase To Course",
+    "source_name": "openagentskills.dev",
+    "source_url": "https://openagentskills.dev/",
+    "source_path_hint": "homepage / Featured Skills",
+    "evidence_type": "featured_skill_visible",
+    "market_signal": "featured on homepage",
+    "category": "Development",
+    "validation_run": "runs/023-skill-wiki-category-and-featured-expansion/",
+    "summary": "Featured code-learning skill captured from the Open Agent Skills homepage. The site presents `Codebase to Course` as a workflow that turns codebases into educational material and guided learning artifacts."
+  },
+  {
+    "id": "open-agent-skills-guizang-ppt-skill",
+    "title": "Open Agent Skills Guizang PPT Skill",
+    "source_name": "openagentskills.dev",
+    "source_url": "https://openagentskills.dev/",
+    "source_path_hint": "homepage / Featured Skills",
+    "evidence_type": "featured_skill_visible",
+    "market_signal": "featured on homepage",
+    "category": "Creative and Media",
+    "validation_run": "runs/023-skill-wiki-category-and-featured-expansion/",
+    "summary": "Featured presentation-generation skill captured from the Open Agent Skills homepage. The site presents `guizang-ppt-skill` as an agent skill for polished HTML slide decks using magazine and Swiss design systems."
+  }
+]

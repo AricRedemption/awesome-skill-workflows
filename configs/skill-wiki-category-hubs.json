@@ -1,0 +1,92 @@
+[
+  {
+    "id": "category-hub-development",
+    "title": "Category Hub: Development",
+    "source_name": "openagentskills.dev",
+    "source_url": "https://openagentskills.dev/",
+    "category_count": 639,
+    "category_label": "Development",
+    "summary": "Development is the largest visible category on Open Agent Skills, with 639 indexed skills covering code tools, testing, and development workflows.",
+    "representative_skills": ["skillshub-code-review", "skillshub-unit-test", "open-agent-skills-superpowers-review", "jwynia-codex"]
+  },
+  {
+    "id": "category-hub-document-processing",
+    "title": "Category Hub: Document Processing",
+    "source_name": "openagentskills.dev",
+    "source_url": "https://openagentskills.dev/",
+    "category_count": 181,
+    "category_label": "Document Processing",
+    "summary": "Document Processing is a major visible category on Open Agent Skills, with 181 indexed skills for creating, editing, and analyzing documents.",
+    "representative_skills": ["skillshub-markitdown", "anthropic-pdf-skill", "anthropic-docx-skill", "anthropic-pptx-skill"]
+  },
+  {
+    "id": "category-hub-productivity",
+    "title": "Category Hub: Productivity",
+    "source_name": "openagentskills.dev",
+    "source_url": "https://openagentskills.dev/",
+    "category_count": 72,
+    "category_label": "Productivity",
+    "summary": "Productivity is a visible category on Open Agent Skills, with 72 indexed skills for organization, automation, and recurring office workflows.",
+    "representative_skills": ["skillshub-automation-builder", "skillshub-daily-standup", "jwynia-todo-tracker", "composio-file-organizer"]
+  },
+  {
+    "id": "category-hub-creative-media",
+    "title": "Category Hub: Creative And Media",
+    "source_name": "openagentskills.dev",
+    "source_url": "https://openagentskills.dev/",
+    "category_count": 219,
+    "category_label": "Creative & Media",
+    "summary": "Creative and Media is a large visible category on Open Agent Skills, with 219 indexed skills spanning design, images, video, presentation, and polished artifact production.",
+    "representative_skills": ["skillshub-frontend-design", "skillshub-ui-design-system", "open-agent-skills-guizang-ppt-skill", "open-agent-skills-drawio-skill"]
+  },
+  {
+    "id": "category-hub-communication",
+    "title": "Category Hub: Communication",
+    "source_name": "openagentskills.dev",
+    "source_url": "https://openagentskills.dev/",
+    "category_count": 45,
+    "category_label": "Communication",
+    "summary": "Communication is a visible category on Open Agent Skills, with 45 indexed skills focused on writing, research, and content creation.",
+    "representative_skills": ["skillshub-content-creator", "composio-content-research-writer", "skillshub-prompt-engineering", "jwynia-prose-style"]
+  },
+  {
+    "id": "category-hub-business",
+    "title": "Category Hub: Business",
+    "source_name": "openagentskills.dev",
+    "source_url": "https://openagentskills.dev/",
+    "category_count": 156,
+    "category_label": "Business",
+    "summary": "Business is a major visible category on Open Agent Skills, with 156 indexed skills for marketing, branding, finance, legal, HR, compliance, and operations.",
+    "representative_skills": ["skillshub-data-analyst", "composio-invoice-organizer", "composio-brand-guidelines", "top-scenario-business-finance-and-backoffice"]
+  },
+  {
+    "id": "category-hub-data-analysis",
+    "title": "Category Hub: Data And Analysis",
+    "source_name": "openagentskills.dev",
+    "source_url": "https://openagentskills.dev/",
+    "category_count": 195,
+    "category_label": "Data & Analysis",
+    "summary": "Data and Analysis is a large visible category on Open Agent Skills, with 195 indexed skills for data processing, analytics, visualization, and insight workflows.",
+    "representative_skills": ["skillshub-research", "skillshub-data-analyst", "jwynia-knowledge-graph", "nvidia-accelerated-computing-cudf-skill"]
+  },
+  {
+    "id": "category-hub-collaboration",
+    "title": "Category Hub: Collaboration",
+    "source_name": "openagentskills.dev",
+    "source_url": "https://openagentskills.dev/",
+    "category_count": 373,
+    "category_label": "Collaboration",
+    "summary": "Collaboration is one of the largest visible categories on Open Agent Skills, with 373 indexed skills for team collaboration, coordination, and project-management routines.",
+    "representative_skills": ["skillshub-daily-standup", "skillshub-course-builder", "skillshub-workshop-generator", "composio-meeting-insights-analyzer"]
+  },
+  {
+    "id": "category-hub-security",
+    "title": "Category Hub: Security",
+    "source_name": "openagentskills.dev",
+    "source_url": "https://openagentskills.dev/",
+    "category_count": 408,
+    "category_label": "Security",
+    "summary": "Security is one of the largest visible categories on Open Agent Skills, with 408 indexed skills for security, forensics, and system-hardening workflows.",
+    "representative_skills": ["skillshub-security-review", "skillshub-preflight", "skillshub-code-review", "top-scenario-security-and-risk-review"]
+  }
+]

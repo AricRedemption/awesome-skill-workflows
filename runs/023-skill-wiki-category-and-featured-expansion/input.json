@@ -1,0 +1,17 @@
+{
+  "run_id": "023-skill-wiki-category-and-featured-expansion",
+  "date": "2026-06-05",
+  "goal": "Expand Skill Wiki coverage with category hubs, industry hubs, and featured marketplace skill pages so broader discovery queries return useful final wiki entries.",
+  "sources": [
+    "https://openagentskills.dev/",
+    "https://skills-hub.ai/"
+  ],
+  "validation_mode": "rough_public_taxonomy_validation",
+  "outputs": [
+    "docs/skill-wiki-hot-coverage-2026.md",
+    "configs/open-agent-skills-featured-seeds.json",
+    "configs/skill-wiki-category-hubs.json",
+    "configs/skill-wiki-industry-hubs.json",
+    "skills/wiki/*.md"
+  ]
+}

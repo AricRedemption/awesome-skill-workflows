@@ -1,0 +1,16 @@
+{
+  "run_id": "022-skill-wiki-marketplace-taxonomy-scan",
+  "date": "2026-06-05",
+  "goal": "Use live public marketplace taxonomy and visible popular-skill signals to enrich Skill Wiki with Top 10 scenario bundles and representative popular skills.",
+  "sources": [
+    "https://skills-hub.ai/",
+    "https://openagentskills.dev/"
+  ],
+  "validation_mode": "rough_public_taxonomy_validation",
+  "outputs": [
+    "docs/skill-wiki-top-scenarios-2026.md",
+    "configs/marketplace-popular-skill-seeds.json",
+    "configs/skill-wiki-top-scenarios.json",
+    "skills/wiki/*.md"
+  ]
+}

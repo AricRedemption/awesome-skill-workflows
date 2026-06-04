@@ -1,0 +1,47 @@
+[
+  {
+    "id": "industry-hub-healthcare",
+    "title": "Industry Hub: Healthcare",
+    "source_name": "skills-hub.ai",
+    "source_url": "https://skills-hub.ai/",
+    "industry_label": "Healthcare",
+    "summary": "Healthcare is explicitly called out by Skills Hub as a distinct domain, alongside engineering, marketing, healthcare, research, and more. The homepage also lists clinical documentation, medical coding, and patient education under its healthcare category.",
+    "representative_skills": ["skillshub-markitdown", "skillshub-data-analyst", "category-hub-document-processing"]
+  },
+  {
+    "id": "industry-hub-research",
+    "title": "Industry Hub: Research",
+    "source_name": "skills-hub.ai",
+    "source_url": "https://skills-hub.ai/",
+    "industry_label": "Research",
+    "summary": "Research is explicitly called out by Skills Hub as a distinct domain. The homepage includes literature review, paper writing, grants, peer review, and research-analysis bundles as part of its visible market surface.",
+    "representative_skills": ["skillshub-research", "nvidia-aiq-research-skill", "composio-lead-research-assistant", "category-hub-data-analysis"]
+  },
+  {
+    "id": "industry-hub-education",
+    "title": "Industry Hub: Education",
+    "source_name": "skills-hub.ai",
+    "source_url": "https://skills-hub.ai/",
+    "industry_label": "Education",
+    "summary": "Education is explicitly called out by Skills Hub as a distinct domain. The homepage includes tutorials, onboarding, workshops, courses, and skill-building as a visible category cluster.",
+    "representative_skills": ["skillshub-course-builder", "skillshub-workshop-generator", "open-agent-skills-codebase-to-course", "hot-scenario-education-and-team-enablement"]
+  },
+  {
+    "id": "industry-hub-game-dev",
+    "title": "Industry Hub: Game Dev",
+    "source_name": "skills-hub.ai",
+    "source_url": "https://skills-hub.ai/",
+    "industry_label": "Game Dev",
+    "summary": "Game Dev is explicitly listed by Skills Hub as a distinct domain cluster, including Unity, Godot, Unreal, game design, shaders, and level-design workflows.",
+    "representative_skills": ["skillshub-app-builder", "skillshub-frontend-design", "category-hub-creative-media"]
+  },
+  {
+    "id": "industry-hub-marketing",
+    "title": "Industry Hub: Marketing",
+    "source_name": "skills-hub.ai",
+    "source_url": "https://skills-hub.ai/",
+    "industry_label": "Marketing",
+    "summary": "Marketing is explicitly surfaced by Skills Hub as a major domain cluster, including SEO, copywriting, growth, social media, and campaign workflows.",
+    "representative_skills": ["skillshub-content-creator", "composio-content-research-writer", "composio-twitter-algorithm-optimizer", "top-scenario-marketing-and-content-operations"]
+  }
+]

@@ -1,0 +1,274 @@
+[
+  {
+    "id": "top-scenario-development-engineering-delivery",
+    "title": "Top Scenario: Development And Engineering Delivery",
+    "summary": "Development is the highest-signal workflow cluster across current public skill catalogs. Open Agent Skills shows `639` skills in Development, while Skills Hub foregrounds Build, Test, QA, Review, Deploy, Docs, Ops, Combo, and Meta categories for engineering teams.",
+    "market_evidence": [
+      "Open Agent Skills category count: Development 639",
+      "Skills Hub category coverage: Build, Test, QA, Review, Deploy, Docs, Ops, Combo, Meta",
+      "Skills Hub popular skills: code-review, workflow-builder, design-to-code"
+    ],
+    "scenario_tags": ["development", "engineering", "delivery", "code-quality", "build"],
+    "representative_skills": [
+      "skillshub-code-review",
+      "skillshub-workflow-builder",
+      "openai-create-plan-skill",
+      "mattpocock-setup-matt-pocock-skills",
+      "jwynia-codex"
+    ]
+  },
+  {
+    "id": "top-scenario-office-document-automation",
+    "title": "Top Scenario: Office Document Automation",
+    "summary": "Office and document workflows are one of the clearest marketplace categories. Open Agent Skills shows `181` skills in Document Processing, and Skills Hub prominently surfaces MarkItDown plus docs and accessibility workflows.",
+    "market_evidence": [
+      "Open Agent Skills category count: Document Processing 181",
+      "Skills Hub category coverage: Docs, Accessibility, Productivity",
+      "Skills Hub popular skills: markitdown"
+    ],
+    "scenario_tags": ["office", "documents", "automation", "docx", "pdf", "xlsx"],
+    "representative_skills": [
+      "skillshub-markitdown",
+      "anthropic-pdf-skill",
+      "anthropic-docx-skill",
+      "anthropic-pptx-skill",
+      "anthropic-xlsx-skill"
+    ]
+  },
+  {
+    "id": "top-scenario-ai-agent-workflow-builder",
+    "title": "Top Scenario: AI Agent Workflow Builder",
+    "summary": "Workflow composition and skill orchestration are a distinct marketplace need. Skills Hub highlights workflow-builder, Skill Finder, and cross-tool installation, while this repo itself centers on reusable workflow assets.",
+    "market_evidence": [
+      "Skills Hub engineer workflow: workflow-builder",
+      "Skills Hub popular orchestrator: Skill Finder",
+      "Skills Hub claims cross-tool skill install and composition on homepage"
+    ],
+    "scenario_tags": ["ai", "agent", "workflow", "orchestration", "skill-composition"],
+    "representative_skills": [
+      "skillshub-workflow-builder",
+      "skillshub-skill-finder",
+      "openai-skill-installer",
+      "composio-mcp-builder",
+      "anthropic-template-skill"
+    ]
+  },
+  {
+    "id": "top-scenario-product-management-and-team-collaboration",
+    "title": "Top Scenario: Product Management And Team Collaboration",
+    "summary": "Product and collaboration workflows are a strong secondary cluster. Open Agent Skills shows `373` Collaboration skills, while Skills Hub exposes Product, Productivity, and Team Lead flows like daily standups and team training.",
+    "market_evidence": [
+      "Open Agent Skills category count: Collaboration 373",
+      "Skills Hub category coverage: Product, Productivity, Education",
+      "Skills Hub featured role skill: daily-standup"
+    ],
+    "scenario_tags": ["product-management", "collaboration", "team-ops", "pm", "coordination"],
+    "representative_skills": [
+      "skillshub-daily-standup",
+      "jwynia-todo-tracker",
+      "composio-meeting-insights-analyzer",
+      "composio-changelog-generator"
+    ]
+  },
+  {
+    "id": "top-scenario-research-and-investment-analysis",
+    "title": "Top Scenario: Research And Investment Analysis",
+    "summary": "Research, analysis, and investment-style workflows have clear demand in public catalogs. Open Agent Skills shows `195` skills in Data and Analysis, and Skills Hub highlights Research, Analysis, and Business-oriented categories suitable for market and investment work.",
+    "market_evidence": [
+      "Open Agent Skills category count: Data and Analysis 195",
+      "Skills Hub category coverage: Analysis, Data, Research, Business",
+      "Skills Hub featured stack skill: research"
+    ],
+    "scenario_tags": ["research", "investment", "analysis", "market-research", "intelligence"],
+    "representative_skills": [
+      "skillshub-research",
+      "nvidia-aiq-research-skill",
+      "jwynia-knowledge-graph",
+      "composio-lead-research-assistant"
+    ]
+  },
+  {
+    "id": "top-scenario-security-and-risk-review",
+    "title": "Top Scenario: Security And Risk Review",
+    "summary": "Security is one of the largest public skill categories. Open Agent Skills shows `408` Security skills, and Skills Hub ships a dedicated Security Hardening Kit centered on review and scanning workflows.",
+    "market_evidence": [
+      "Open Agent Skills category count: Security 408",
+      "Skills Hub category coverage: Security",
+      "Skills Hub featured stack skill: security-review"
+    ],
+    "scenario_tags": ["security", "risk", "compliance", "review", "hardening"],
+    "representative_skills": [
+      "skillshub-security-review",
+      "skillshub-code-review",
+      "openai-create-plan-skill"
+    ]
+  },
+  {
+    "id": "top-scenario-cloud-deployment-and-ops",
+    "title": "Top Scenario: Cloud Deployment And Ops",
+    "summary": "Deployment and operations remain a core engineering scenario. Skills Hub explicitly surfaces Deploy and Ops categories, and the imported vendor catalogs include optimization and deploy-oriented skills from Vercel and NVIDIA.",
+    "market_evidence": [
+      "Skills Hub category coverage: Deploy, Ops",
+      "Skills Hub developer pipelines combine build, deploy, and review",
+      "Existing imported vendor skills: vercel-optimize, aiq-deploy"
+    ],
+    "scenario_tags": ["cloud", "deployment", "ops", "infra", "optimization"],
+    "representative_skills": [
+      "vercel-optimize-skill",
+      "nvidia-aiq-deploy-skill",
+      "nvidia-cuopt-install-skill"
+    ]
+  },
+  {
+    "id": "top-scenario-marketing-and-content-operations",
+    "title": "Top Scenario: Marketing And Content Operations",
+    "summary": "Marketing and content work is a visible marketplace scenario. Skills Hub surfaces Marketing, Creative, and Content Creator workflows, while community catalogs expose brand, writing, growth, and social-optimization skills.",
+    "market_evidence": [
+      "Skills Hub category coverage: Marketing, Creative",
+      "Skills Hub featured role skill: content-creator",
+      "Existing imported community skills: content-research-writer, brand-guidelines, twitter-algorithm-optimizer"
+    ],
+    "scenario_tags": ["marketing", "content", "growth", "brand", "social-media"],
+    "representative_skills": [
+      "skillshub-content-creator",
+      "composio-content-research-writer",
+      "composio-brand-guidelines",
+      "composio-twitter-algorithm-optimizer"
+    ]
+  },
+  {
+    "id": "top-scenario-business-finance-and-backoffice",
+    "title": "Top Scenario: Business Finance And Backoffice",
+    "summary": "Business, finance, and backoffice workflows are explicitly represented in public marketplaces. Open Agent Skills shows `156` Business skills, and Skills Hub groups finance, legal, HR, compliance, and operations under Business.",
+    "market_evidence": [
+      "Open Agent Skills category count: Business 156",
+      "Skills Hub category coverage: Business includes finance, legal, HR, compliance, operations",
+      "Skills Hub featured role skill: data-analyst"
+    ],
+    "scenario_tags": ["business", "finance", "backoffice", "ops", "reporting"],
+    "representative_skills": [
+      "skillshub-data-analyst",
+      "composio-invoice-organizer",
+      "anthropic-xlsx-skill",
+      "nvidia-accelerated-computing-cudf-skill"
+    ]
+  },
+  {
+    "id": "top-scenario-design-presentation-and-ui-production",
+    "title": "Top Scenario: Design Presentation And UI Production",
+    "summary": "Design and presentation production are large creative workflow clusters. Open Agent Skills shows `219` Creative and Media skills, while Skills Hub highlights frontend design, UI systems, design-to-code, and presentation-oriented creation paths.",
+    "market_evidence": [
+      "Open Agent Skills category count: Creative and Media 219",
+      "Skills Hub category coverage: Creative, UX",
+      "Skills Hub popular skills: frontend-design, ui-design-system, design-to-code"
+    ],
+    "scenario_tags": ["design", "presentation", "ui", "frontend", "creative"],
+    "representative_skills": [
+      "skillshub-frontend-design",
+      "skillshub-ui-design-system",
+      "skillshub-design-to-code",
+      "anthropic-pptx-skill"
+    ]
+  },
+  {
+    "id": "hot-scenario-productivity-and-office-assistant",
+    "title": "Hot Scenario: Productivity And Office Assistant",
+    "summary": "Beyond formal document workflows, productivity and office-assistant automation appear as a distinct hot scenario. Open Agent Skills shows `72` Productivity skills, and Skills Hub highlights automation, standups, task tracking, and file organization as recurring workflows.",
+    "market_evidence": [
+      "Open Agent Skills category count: Productivity 72",
+      "Skills Hub category coverage: Productivity",
+      "Skills Hub featured role skills: automation-builder, daily-standup"
+    ],
+    "scenario_tags": ["productivity", "office-assistant", "task-management", "automation", "coordination"],
+    "representative_skills": [
+      "skillshub-automation-builder",
+      "skillshub-daily-standup",
+      "jwynia-todo-tracker",
+      "composio-file-organizer",
+      "composio-meeting-insights-analyzer"
+    ]
+  },
+  {
+    "id": "hot-scenario-testing-qa-and-release-readiness",
+    "title": "Hot Scenario: Testing QA And Release Readiness",
+    "summary": "Testing and QA deserve their own scenario instead of being hidden inside generic development. Skills Hub explicitly breaks out Test and QA categories and includes unit-test and preflight in its starter bundles.",
+    "market_evidence": [
+      "Skills Hub category coverage: Test, QA",
+      "Skills Hub featured stack skills: unit-test, preflight",
+      "Skills Hub engineering starter bundles combine test, review, security, deploy"
+    ],
+    "scenario_tags": ["testing", "qa", "release-readiness", "preflight", "quality"],
+    "representative_skills": [
+      "skillshub-unit-test",
+      "skillshub-preflight",
+      "skillshub-code-review"
+    ]
+  },
+  {
+    "id": "hot-scenario-documentation-and-knowledge-management",
+    "title": "Hot Scenario: Documentation And Knowledge Management",
+    "summary": "Documentation and knowledge capture are hot support scenarios across marketplaces. Skills Hub has a dedicated Docs category, while imported community and engineering catalogs expose knowledge graph, skill sync, and document conversion workflows.",
+    "market_evidence": [
+      "Skills Hub category coverage: Docs",
+      "Open Agent Skills capability model highlights repeatable workflows and domain expertise",
+      "Existing imported skills: markitdown, knowledge-graph, skill-sync"
+    ],
+    "scenario_tags": ["documentation", "knowledge-management", "docs", "knowledge-graph", "sync"],
+    "representative_skills": [
+      "skillshub-markitdown",
+      "jwynia-knowledge-graph",
+      "jwynia-skill-sync",
+      "skillshub-workflow-builder"
+    ]
+  },
+  {
+    "id": "hot-scenario-founder-prototyping-and-no-code-build",
+    "title": "Hot Scenario: Founder Prototyping And No Code Build",
+    "summary": "Founder and no-code building workflows are prominent in the public market. Skills Hub explicitly calls out founder and builder roles, with app-builder, automation-builder, and content-creator as high-signal starter workflows.",
+    "market_evidence": [
+      "Skills Hub featured role section: Founders and Builders",
+      "Skills Hub featured role skills: app-builder, automation-builder, content-creator",
+      "Skills Hub homepage claims most skills require no coding"
+    ],
+    "scenario_tags": ["founder", "prototype", "no-code", "builder", "mvp"],
+    "representative_skills": [
+      "skillshub-app-builder",
+      "skillshub-automation-builder",
+      "skillshub-content-creator",
+      "skillshub-workflow-builder"
+    ]
+  },
+  {
+    "id": "hot-scenario-integration-and-mcp-tooling",
+    "title": "Hot Scenario: Integration And MCP Tooling",
+    "summary": "Integration and connector workflows are a visible hot scenario in skill marketplaces. Skills Hub includes an Integration category, while imported catalogs expose MCP builder and command-creation skills that map directly to toolchain extension work.",
+    "market_evidence": [
+      "Skills Hub category coverage: Integration",
+      "Open Agent Skills popular filters include MCP",
+      "Existing imported skills: mcp-builder, command-creator, skill-installer"
+    ],
+    "scenario_tags": ["integration", "mcp", "tooling", "connectors", "extension"],
+    "representative_skills": [
+      "composio-mcp-builder",
+      "jwynia-command-creator",
+      "openai-skill-installer",
+      "skillshub-skill-finder"
+    ]
+  },
+  {
+    "id": "hot-scenario-education-and-team-enablement",
+    "title": "Hot Scenario: Education And Team Enablement",
+    "summary": "Training and enablement are their own hot scenario, not just an afterthought of productivity. Skills Hub includes Education and team-training flows with workshop and course generation, which map well to repeatable internal enablement workflows.",
+    "market_evidence": [
+      "Skills Hub category coverage: Education",
+      "Skills Hub featured role skills: workshop-generator, course-builder",
+      "Skills Hub team lead section emphasizes training and progress tracking"
+    ],
+    "scenario_tags": ["education", "enablement", "training", "workshop", "course"],
+    "representative_skills": [
+      "skillshub-workshop-generator",
+      "skillshub-course-builder",
+      "skillshub-daily-standup"
+    ]
+  }
+]
