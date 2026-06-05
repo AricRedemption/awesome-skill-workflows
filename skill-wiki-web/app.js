@@ -1,5 +1,6 @@
 import { skillWikiPayload } from "./data/skills.generated.js";
 
+const isEmbedded = new URLSearchParams(window.location.search).get("embed") === "1";
 const app = document.getElementById("app");
 const SITE_URL = "https://runwiser-wiki.vercel.app/";
 const SITE_NAME = "Runwiser";
@@ -1193,12 +1194,12 @@ function renderApp() {
   }
 
   app.innerHTML = `
-    <div class="shell">
-      ${renderHeader(route)}
+    <div class="shell${isEmbedded ? " shell-embed" : ""}">
+      ${isEmbedded ? "" : renderHeader(route)}
       <main class="main">
         <div class="container">${content}</div>
       </main>
-      ${renderFooter()}
+      ${isEmbedded ? "" : renderFooter()}
     </div>
   `;
 

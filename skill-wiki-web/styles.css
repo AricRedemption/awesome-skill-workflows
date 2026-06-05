@@ -1568,3 +1568,12 @@ a[href]:hover,
     justify-content: center;
   }
 }
+
+.shell-embed .main {
+  padding-top: 0;
+}
+
+.shell-embed .container {
+  max-width: none;
+  padding-inline: 16px;
+}
