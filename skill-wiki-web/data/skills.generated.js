@@ -1,11 +1,62 @@
 export const skillWikiPayload = {
-  "generatedAt": "2026-06-05T03:45:07.175Z",
+  "generatedAt": "2026-06-05T04:27:57.202Z",
   "sourceDirectory": "skills/wiki",
+  "repoGitHubBase": "https://github.com/AricRedemption/awesome-skill-workflows",
   "stats": {
     "skillCount": 145,
     "tagCount": 204,
     "evidenceRefCount": 312
   },
+  "categories": [
+    {
+      "slug": "claude",
+      "label": "Claude",
+      "description": "Claude Code, Anthropic-specific skills, and Claude-oriented execution patterns.",
+      "count": 12
+    },
+    {
+      "slug": "codex",
+      "label": "Codex",
+      "description": "Codex, OpenAI skills, prompt operators, and code-generation workflows.",
+      "count": 6
+    },
+    {
+      "slug": "office",
+      "label": "Office & Productivity",
+      "description": "Documents, spreadsheets, workspace automation, and productivity workflows.",
+      "count": 24
+    },
+    {
+      "slug": "media",
+      "label": "Media & Creative",
+      "description": "Design, image, video, writing, content, social media, and brand skills.",
+      "count": 25
+    },
+    {
+      "slug": "devops",
+      "label": "DevOps & Security",
+      "description": "Deployment, testing, QA, security, compliance, and infrastructure skills.",
+      "count": 19
+    },
+    {
+      "slug": "automation",
+      "label": "Automation & MCP",
+      "description": "MCP, browser automation, workflow orchestration, integration, and tooling.",
+      "count": 16
+    },
+    {
+      "slug": "research",
+      "label": "Research & Data",
+      "description": "Search, research, analysis, data science, GPU computing, and evidence-gathering.",
+      "count": 33
+    },
+    {
+      "slug": "collections",
+      "label": "Collections & Catalogs",
+      "description": "Skill catalogs, hubs, repositories, and ecosystem-level collections.",
+      "count": 10
+    }
+  ],
   "skills": [
     {
       "slug": "anthropic-docx-skill",
@@ -167,6 +218,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_github_skill_seed`\n- Source repo: `anthropics/skills`\n- Source URL: `https://github.com/anthropics/skills`\n- Source path hint: `skills/docx`\n- Import status: `validated_external_import`\n- Validation basis: `listed_in_validated_source_catalog`\n- Validation run: `runs/018-external-skill-wiki-import-official-catalogs/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": "anthropics/skills",
+      "upstreamSourceUrl": "https://github.com/anthropics/skills",
+      "upstreamSourcePathHint": "skills/docx",
       "sections": [
         {
           "title": "Provenance",
@@ -336,6 +390,104 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/anthropic-docx-skill.md",
+      "category": {
+        "slug": "claude",
+        "label": "Claude",
+        "description": "Claude Code, Anthropic-specific skills, and Claude-oriented execution patterns."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/018-external-skill-wiki-import-official-catalogs/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/018-external-skill-wiki-import-official-catalogs/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/018-external-skill-wiki-import-official-catalogs/"
+        },
+        {
+          "label": "https://github.com/anthropics/skills",
+          "href": "https://github.com/anthropics/skills",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_github_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source repo: `anthropics/skills`",
+          "href": "https://github.com/anthropics/skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source URL: `https://github.com/anthropics/skills`",
+          "href": "https://github.com/anthropics/skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `skills/docx`",
+          "href": "https://github.com/anthropics/skills/tree/main/skills/docx",
+          "kind": "upstream-path",
+          "repoPath": "skills/docx"
+        },
+        {
+          "label": "Import status: `validated_external_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `listed_in_validated_source_catalog`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/018-external-skill-wiki-import-official-catalogs/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/018-external-skill-wiki-import-official-catalogs/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/018-external-skill-wiki-import-official-catalogs/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "external skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "source-provenance capture",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime verification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "workflow promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -498,6 +650,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_github_skill_seed`\n- Source repo: `anthropics/skills`\n- Source URL: `https://github.com/anthropics/skills`\n- Source path hint: `skills/pdf`\n- Import status: `validated_external_import`\n- Validation basis: `listed_in_validated_source_catalog`\n- Validation run: `runs/018-external-skill-wiki-import-official-catalogs/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": "anthropics/skills",
+      "upstreamSourceUrl": "https://github.com/anthropics/skills",
+      "upstreamSourcePathHint": "skills/pdf",
       "sections": [
         {
           "title": "Provenance",
@@ -667,6 +822,104 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/anthropic-pdf-skill.md",
+      "category": {
+        "slug": "claude",
+        "label": "Claude",
+        "description": "Claude Code, Anthropic-specific skills, and Claude-oriented execution patterns."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/018-external-skill-wiki-import-official-catalogs/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/018-external-skill-wiki-import-official-catalogs/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/018-external-skill-wiki-import-official-catalogs/"
+        },
+        {
+          "label": "https://github.com/anthropics/skills",
+          "href": "https://github.com/anthropics/skills",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_github_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source repo: `anthropics/skills`",
+          "href": "https://github.com/anthropics/skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source URL: `https://github.com/anthropics/skills`",
+          "href": "https://github.com/anthropics/skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `skills/pdf`",
+          "href": "https://github.com/anthropics/skills/tree/main/skills/pdf",
+          "kind": "upstream-path",
+          "repoPath": "skills/pdf"
+        },
+        {
+          "label": "Import status: `validated_external_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `listed_in_validated_source_catalog`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/018-external-skill-wiki-import-official-catalogs/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/018-external-skill-wiki-import-official-catalogs/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/018-external-skill-wiki-import-official-catalogs/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "external skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "source-provenance capture",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime verification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "workflow promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -829,6 +1082,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_github_skill_seed`\n- Source repo: `anthropics/skills`\n- Source URL: `https://github.com/anthropics/skills`\n- Source path hint: `skills/pptx`\n- Import status: `validated_external_import`\n- Validation basis: `listed_in_validated_source_catalog`\n- Validation run: `runs/018-external-skill-wiki-import-official-catalogs/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": "anthropics/skills",
+      "upstreamSourceUrl": "https://github.com/anthropics/skills",
+      "upstreamSourcePathHint": "skills/pptx",
       "sections": [
         {
           "title": "Provenance",
@@ -998,6 +1254,104 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/anthropic-pptx-skill.md",
+      "category": {
+        "slug": "claude",
+        "label": "Claude",
+        "description": "Claude Code, Anthropic-specific skills, and Claude-oriented execution patterns."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/018-external-skill-wiki-import-official-catalogs/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/018-external-skill-wiki-import-official-catalogs/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/018-external-skill-wiki-import-official-catalogs/"
+        },
+        {
+          "label": "https://github.com/anthropics/skills",
+          "href": "https://github.com/anthropics/skills",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_github_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source repo: `anthropics/skills`",
+          "href": "https://github.com/anthropics/skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source URL: `https://github.com/anthropics/skills`",
+          "href": "https://github.com/anthropics/skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `skills/pptx`",
+          "href": "https://github.com/anthropics/skills/tree/main/skills/pptx",
+          "kind": "upstream-path",
+          "repoPath": "skills/pptx"
+        },
+        {
+          "label": "Import status: `validated_external_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `listed_in_validated_source_catalog`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/018-external-skill-wiki-import-official-catalogs/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/018-external-skill-wiki-import-official-catalogs/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/018-external-skill-wiki-import-official-catalogs/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "external skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "source-provenance capture",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime verification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "workflow promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -1160,6 +1514,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_github_skill_seed`\n- Source repo: `anthropics/skills`\n- Source URL: `https://github.com/anthropics/skills`\n- Source path hint: `template`\n- Import status: `validated_external_import`\n- Validation basis: `listed_in_validated_source_catalog`\n- Validation run: `runs/018-external-skill-wiki-import-official-catalogs/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": "anthropics/skills",
+      "upstreamSourceUrl": "https://github.com/anthropics/skills",
+      "upstreamSourcePathHint": "template",
       "sections": [
         {
           "title": "Provenance",
@@ -1329,6 +1686,103 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/anthropic-template-skill.md",
+      "category": {
+        "slug": "claude",
+        "label": "Claude",
+        "description": "Claude Code, Anthropic-specific skills, and Claude-oriented execution patterns."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/018-external-skill-wiki-import-official-catalogs/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/018-external-skill-wiki-import-official-catalogs/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/018-external-skill-wiki-import-official-catalogs/"
+        },
+        {
+          "label": "https://github.com/anthropics/skills",
+          "href": "https://github.com/anthropics/skills",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_github_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source repo: `anthropics/skills`",
+          "href": "https://github.com/anthropics/skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source URL: `https://github.com/anthropics/skills`",
+          "href": "https://github.com/anthropics/skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `template`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Import status: `validated_external_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `listed_in_validated_source_catalog`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/018-external-skill-wiki-import-official-catalogs/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/018-external-skill-wiki-import-official-catalogs/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/018-external-skill-wiki-import-official-catalogs/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "external skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "source-provenance capture",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime verification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "workflow promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -1491,6 +1945,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_github_skill_seed`\n- Source repo: `anthropics/skills`\n- Source URL: `https://github.com/anthropics/skills`\n- Source path hint: `skills/xlsx`\n- Import status: `validated_external_import`\n- Validation basis: `listed_in_validated_source_catalog`\n- Validation run: `runs/018-external-skill-wiki-import-official-catalogs/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": "anthropics/skills",
+      "upstreamSourceUrl": "https://github.com/anthropics/skills",
+      "upstreamSourcePathHint": "skills/xlsx",
       "sections": [
         {
           "title": "Provenance",
@@ -1660,6 +2117,104 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/anthropic-xlsx-skill.md",
+      "category": {
+        "slug": "claude",
+        "label": "Claude",
+        "description": "Claude Code, Anthropic-specific skills, and Claude-oriented execution patterns."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/018-external-skill-wiki-import-official-catalogs/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/018-external-skill-wiki-import-official-catalogs/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/018-external-skill-wiki-import-official-catalogs/"
+        },
+        {
+          "label": "https://github.com/anthropics/skills",
+          "href": "https://github.com/anthropics/skills",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_github_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source repo: `anthropics/skills`",
+          "href": "https://github.com/anthropics/skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source URL: `https://github.com/anthropics/skills`",
+          "href": "https://github.com/anthropics/skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `skills/xlsx`",
+          "href": "https://github.com/anthropics/skills/tree/main/skills/xlsx",
+          "kind": "upstream-path",
+          "repoPath": "skills/xlsx"
+        },
+        {
+          "label": "Import status: `validated_external_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `listed_in_validated_source_catalog`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/018-external-skill-wiki-import-official-catalogs/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/018-external-skill-wiki-import-official-catalogs/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/018-external-skill-wiki-import-official-catalogs/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "external skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "source-provenance capture",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime verification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "workflow promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -1820,6 +2375,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_github_import`\n- Source repo: `anthropics/skills`\n- Source URL: `https://github.com/anthropics/skills`\n- Import status: `imported_external_unverified`\n- Imported via: `manual_market_sync`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": "anthropics/skills",
+      "upstreamSourceUrl": "https://github.com/anthropics/skills",
+      "upstreamSourcePathHint": null,
       "sections": [
         {
           "title": "Provenance",
@@ -2003,6 +2561,96 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/anthropics-skills-catalog.md",
+      "category": {
+        "slug": "claude",
+        "label": "Claude",
+        "description": "Claude Code, Anthropic-specific skills, and Claude-oriented execution patterns."
+      },
+      "evidenceLinks": [
+        {
+          "label": "https://github.com/anthropics/skills",
+          "href": "https://github.com/anthropics/skills",
+          "kind": "external"
+        },
+        {
+          "label": "https://github.com/anthropics/skills/tree/main/skills",
+          "href": "https://github.com/anthropics/skills/tree/main/skills",
+          "kind": "external"
+        },
+        {
+          "label": "https://github.com/anthropics/skills/tree/main/template",
+          "href": "https://github.com/anthropics/skills/tree/main/template",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_github_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source repo: `anthropics/skills`",
+          "href": "https://github.com/anthropics/skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source URL: `https://github.com/anthropics/skills`",
+          "href": "https://github.com/anthropics/skills",
+          "kind": "external"
+        },
+        {
+          "label": "Import status: `imported_external_unverified`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Imported via: `manual_market_sync`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "external skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "official skill reference",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "imported wiki search surface",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local validation",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "promotion gating",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -2165,6 +2813,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_official_source_skill_seed`\n- Source name: `brave/brave-search-skills`\n- Source URL: `https://github.com/brave/brave-search-skills/tree/main/skills/answers`\n- Source path hint: `skills/answers`\n- Import status: `validated_official_source_import`\n- Validation basis: `official_repo_skill_entry`\n- Market signal: `official skill directory visible in repo`\n- Validation run: `runs/024-skill-wiki-official-gapfill-pack/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://github.com/brave/brave-search-skills/tree/main/skills/answers",
+      "upstreamSourcePathHint": "skills/answers",
       "sections": [
         {
           "title": "Provenance",
@@ -2334,6 +2985,109 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/brave-search-answers.md",
+      "category": {
+        "slug": "research",
+        "label": "Research & Data",
+        "description": "Search, research, analysis, data science, GPU computing, and evidence-gathering."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/024-skill-wiki-official-gapfill-pack/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/024-skill-wiki-official-gapfill-pack/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/024-skill-wiki-official-gapfill-pack/"
+        },
+        {
+          "label": "https://github.com/brave/brave-search-skills/tree/main/skills/answers",
+          "href": "https://github.com/brave/brave-search-skills/tree/main/skills/answers",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_official_source_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `brave/brave-search-skills`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source URL: `https://github.com/brave/brave-search-skills/tree/main/skills/answers`",
+          "href": "https://github.com/brave/brave-search-skills/tree/main/skills/answers",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `skills/answers`",
+          "href": "https://github.com/brave/brave-search-skills/tree/main/skills/answers/tree/main/skills/answers",
+          "kind": "upstream-path",
+          "repoPath": "skills/answers"
+        },
+        {
+          "label": "Import status: `validated_official_source_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `official_repo_skill_entry`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Market signal: `official skill directory visible in repo`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/024-skill-wiki-official-gapfill-pack/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/024-skill-wiki-official-gapfill-pack/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/024-skill-wiki-official-gapfill-pack/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "official-source skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "final searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "query coverage expansion",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime certification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "verified recipe promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -2496,6 +3250,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_official_source_skill_seed`\n- Source name: `brave/brave-search-skills`\n- Source URL: `https://github.com/brave/brave-search-skills/tree/main/skills/images-search`\n- Source path hint: `skills/images-search`\n- Import status: `validated_official_source_import`\n- Validation basis: `official_repo_skill_entry`\n- Market signal: `official skill directory visible in repo`\n- Validation run: `runs/024-skill-wiki-official-gapfill-pack/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://github.com/brave/brave-search-skills/tree/main/skills/images-search",
+      "upstreamSourcePathHint": "skills/images-search",
       "sections": [
         {
           "title": "Provenance",
@@ -2665,6 +3422,109 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/brave-search-images-search.md",
+      "category": {
+        "slug": "research",
+        "label": "Research & Data",
+        "description": "Search, research, analysis, data science, GPU computing, and evidence-gathering."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/024-skill-wiki-official-gapfill-pack/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/024-skill-wiki-official-gapfill-pack/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/024-skill-wiki-official-gapfill-pack/"
+        },
+        {
+          "label": "https://github.com/brave/brave-search-skills/tree/main/skills/images-search",
+          "href": "https://github.com/brave/brave-search-skills/tree/main/skills/images-search",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_official_source_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `brave/brave-search-skills`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source URL: `https://github.com/brave/brave-search-skills/tree/main/skills/images-search`",
+          "href": "https://github.com/brave/brave-search-skills/tree/main/skills/images-search",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `skills/images-search`",
+          "href": "https://github.com/brave/brave-search-skills/tree/main/skills/images-search/tree/main/skills/images-search",
+          "kind": "upstream-path",
+          "repoPath": "skills/images-search"
+        },
+        {
+          "label": "Import status: `validated_official_source_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `official_repo_skill_entry`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Market signal: `official skill directory visible in repo`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/024-skill-wiki-official-gapfill-pack/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/024-skill-wiki-official-gapfill-pack/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/024-skill-wiki-official-gapfill-pack/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "official-source skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "final searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "query coverage expansion",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime certification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "verified recipe promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -2827,6 +3687,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_official_source_skill_seed`\n- Source name: `brave/brave-search-skills`\n- Source URL: `https://github.com/brave/brave-search-skills/tree/main/skills/llm-context`\n- Source path hint: `skills/llm-context`\n- Import status: `validated_official_source_import`\n- Validation basis: `official_repo_skill_entry`\n- Market signal: `official skill directory visible in repo`\n- Validation run: `runs/024-skill-wiki-official-gapfill-pack/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://github.com/brave/brave-search-skills/tree/main/skills/llm-context",
+      "upstreamSourcePathHint": "skills/llm-context",
       "sections": [
         {
           "title": "Provenance",
@@ -2996,6 +3859,109 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/brave-search-llm-context.md",
+      "category": {
+        "slug": "research",
+        "label": "Research & Data",
+        "description": "Search, research, analysis, data science, GPU computing, and evidence-gathering."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/024-skill-wiki-official-gapfill-pack/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/024-skill-wiki-official-gapfill-pack/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/024-skill-wiki-official-gapfill-pack/"
+        },
+        {
+          "label": "https://github.com/brave/brave-search-skills/tree/main/skills/llm-context",
+          "href": "https://github.com/brave/brave-search-skills/tree/main/skills/llm-context",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_official_source_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `brave/brave-search-skills`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source URL: `https://github.com/brave/brave-search-skills/tree/main/skills/llm-context`",
+          "href": "https://github.com/brave/brave-search-skills/tree/main/skills/llm-context",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `skills/llm-context`",
+          "href": "https://github.com/brave/brave-search-skills/tree/main/skills/llm-context/tree/main/skills/llm-context",
+          "kind": "upstream-path",
+          "repoPath": "skills/llm-context"
+        },
+        {
+          "label": "Import status: `validated_official_source_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `official_repo_skill_entry`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Market signal: `official skill directory visible in repo`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/024-skill-wiki-official-gapfill-pack/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/024-skill-wiki-official-gapfill-pack/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/024-skill-wiki-official-gapfill-pack/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "official-source skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "final searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "query coverage expansion",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime certification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "verified recipe promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -3158,6 +4124,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_official_source_skill_seed`\n- Source name: `brave/brave-search-skills`\n- Source URL: `https://github.com/brave/brave-search-skills/tree/main/skills/news-search`\n- Source path hint: `skills/news-search`\n- Import status: `validated_official_source_import`\n- Validation basis: `official_repo_skill_entry`\n- Market signal: `official skill directory visible in repo`\n- Validation run: `runs/024-skill-wiki-official-gapfill-pack/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://github.com/brave/brave-search-skills/tree/main/skills/news-search",
+      "upstreamSourcePathHint": "skills/news-search",
       "sections": [
         {
           "title": "Provenance",
@@ -3327,6 +4296,109 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/brave-search-news-search.md",
+      "category": {
+        "slug": "research",
+        "label": "Research & Data",
+        "description": "Search, research, analysis, data science, GPU computing, and evidence-gathering."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/024-skill-wiki-official-gapfill-pack/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/024-skill-wiki-official-gapfill-pack/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/024-skill-wiki-official-gapfill-pack/"
+        },
+        {
+          "label": "https://github.com/brave/brave-search-skills/tree/main/skills/news-search",
+          "href": "https://github.com/brave/brave-search-skills/tree/main/skills/news-search",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_official_source_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `brave/brave-search-skills`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source URL: `https://github.com/brave/brave-search-skills/tree/main/skills/news-search`",
+          "href": "https://github.com/brave/brave-search-skills/tree/main/skills/news-search",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `skills/news-search`",
+          "href": "https://github.com/brave/brave-search-skills/tree/main/skills/news-search/tree/main/skills/news-search",
+          "kind": "upstream-path",
+          "repoPath": "skills/news-search"
+        },
+        {
+          "label": "Import status: `validated_official_source_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `official_repo_skill_entry`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Market signal: `official skill directory visible in repo`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/024-skill-wiki-official-gapfill-pack/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/024-skill-wiki-official-gapfill-pack/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/024-skill-wiki-official-gapfill-pack/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "official-source skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "final searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "query coverage expansion",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime certification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "verified recipe promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -3489,6 +4561,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_official_source_skill_seed`\n- Source name: `brave/brave-search-skills`\n- Source URL: `https://github.com/brave/brave-search-skills`\n- Source path hint: `README / official Brave Search skills`\n- Import status: `validated_official_source_import`\n- Validation basis: `official_repo_catalog`\n- Market signal: `official source-owned GitHub repo`\n- Validation run: `runs/024-skill-wiki-official-gapfill-pack/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://github.com/brave/brave-search-skills",
+      "upstreamSourcePathHint": "README / official Brave Search skills",
       "sections": [
         {
           "title": "Provenance",
@@ -3658,6 +4733,108 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/brave-search-skills-catalog.md",
+      "category": {
+        "slug": "research",
+        "label": "Research & Data",
+        "description": "Search, research, analysis, data science, GPU computing, and evidence-gathering."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/024-skill-wiki-official-gapfill-pack/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/024-skill-wiki-official-gapfill-pack/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/024-skill-wiki-official-gapfill-pack/"
+        },
+        {
+          "label": "https://github.com/brave/brave-search-skills",
+          "href": "https://github.com/brave/brave-search-skills",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_official_source_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `brave/brave-search-skills`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source URL: `https://github.com/brave/brave-search-skills`",
+          "href": "https://github.com/brave/brave-search-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `README / official Brave Search skills`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Import status: `validated_official_source_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `official_repo_catalog`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Market signal: `official source-owned GitHub repo`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/024-skill-wiki-official-gapfill-pack/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/024-skill-wiki-official-gapfill-pack/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/024-skill-wiki-official-gapfill-pack/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "official-source skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "final searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "query coverage expansion",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime certification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "verified recipe promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -3820,6 +4997,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_official_source_skill_seed`\n- Source name: `brave/brave-search-skills`\n- Source URL: `https://github.com/brave/brave-search-skills/tree/main/skills/web-search`\n- Source path hint: `skills/web-search`\n- Import status: `validated_official_source_import`\n- Validation basis: `official_repo_skill_entry`\n- Market signal: `official skill directory visible in repo`\n- Validation run: `runs/024-skill-wiki-official-gapfill-pack/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://github.com/brave/brave-search-skills/tree/main/skills/web-search",
+      "upstreamSourcePathHint": "skills/web-search",
       "sections": [
         {
           "title": "Provenance",
@@ -3989,6 +5169,109 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/brave-search-web-search.md",
+      "category": {
+        "slug": "research",
+        "label": "Research & Data",
+        "description": "Search, research, analysis, data science, GPU computing, and evidence-gathering."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/024-skill-wiki-official-gapfill-pack/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/024-skill-wiki-official-gapfill-pack/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/024-skill-wiki-official-gapfill-pack/"
+        },
+        {
+          "label": "https://github.com/brave/brave-search-skills/tree/main/skills/web-search",
+          "href": "https://github.com/brave/brave-search-skills/tree/main/skills/web-search",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_official_source_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `brave/brave-search-skills`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source URL: `https://github.com/brave/brave-search-skills/tree/main/skills/web-search`",
+          "href": "https://github.com/brave/brave-search-skills/tree/main/skills/web-search",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `skills/web-search`",
+          "href": "https://github.com/brave/brave-search-skills/tree/main/skills/web-search/tree/main/skills/web-search",
+          "kind": "upstream-path",
+          "repoPath": "skills/web-search"
+        },
+        {
+          "label": "Import status: `validated_official_source_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `official_repo_skill_entry`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Market signal: `official skill directory visible in repo`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/024-skill-wiki-official-gapfill-pack/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/024-skill-wiki-official-gapfill-pack/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/024-skill-wiki-official-gapfill-pack/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "official-source skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "final searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "query coverage expansion",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime certification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "verified recipe promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -4151,6 +5434,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_official_source_skill_seed`\n- Source name: `browserbase/skills`\n- Source URL: `https://github.com/browserbase/skills/tree/main/browser-trace`\n- Source path hint: `browser-trace`\n- Import status: `validated_official_source_import`\n- Validation basis: `official_repo_skill_entry`\n- Market signal: `official skill folder visible in repo`\n- Validation run: `runs/024-skill-wiki-official-gapfill-pack/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://github.com/browserbase/skills/tree/main/browser-trace",
+      "upstreamSourcePathHint": "browser-trace",
       "sections": [
         {
           "title": "Provenance",
@@ -4320,6 +5606,108 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/browserbase-browser-trace.md",
+      "category": {
+        "slug": "automation",
+        "label": "Automation & MCP",
+        "description": "MCP, browser automation, workflow orchestration, integration, and tooling."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/024-skill-wiki-official-gapfill-pack/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/024-skill-wiki-official-gapfill-pack/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/024-skill-wiki-official-gapfill-pack/"
+        },
+        {
+          "label": "https://github.com/browserbase/skills/tree/main/browser-trace",
+          "href": "https://github.com/browserbase/skills/tree/main/browser-trace",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_official_source_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `browserbase/skills`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source URL: `https://github.com/browserbase/skills/tree/main/browser-trace`",
+          "href": "https://github.com/browserbase/skills/tree/main/browser-trace",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `browser-trace`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Import status: `validated_official_source_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `official_repo_skill_entry`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Market signal: `official skill folder visible in repo`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/024-skill-wiki-official-gapfill-pack/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/024-skill-wiki-official-gapfill-pack/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/024-skill-wiki-official-gapfill-pack/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "official-source skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "final searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "query coverage expansion",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime certification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "verified recipe promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -4482,6 +5870,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_official_source_skill_seed`\n- Source name: `browserbase/skills`\n- Source URL: `https://github.com/browserbase/skills/tree/main/prompt-engineering`\n- Source path hint: `prompt-engineering`\n- Import status: `validated_official_source_import`\n- Validation basis: `official_repo_skill_entry`\n- Market signal: `official skill folder visible in repo`\n- Validation run: `runs/024-skill-wiki-official-gapfill-pack/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://github.com/browserbase/skills/tree/main/prompt-engineering",
+      "upstreamSourcePathHint": "prompt-engineering",
       "sections": [
         {
           "title": "Provenance",
@@ -4651,6 +6042,108 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/browserbase-prompt-engineering.md",
+      "category": {
+        "slug": "automation",
+        "label": "Automation & MCP",
+        "description": "MCP, browser automation, workflow orchestration, integration, and tooling."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/024-skill-wiki-official-gapfill-pack/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/024-skill-wiki-official-gapfill-pack/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/024-skill-wiki-official-gapfill-pack/"
+        },
+        {
+          "label": "https://github.com/browserbase/skills/tree/main/prompt-engineering",
+          "href": "https://github.com/browserbase/skills/tree/main/prompt-engineering",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_official_source_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `browserbase/skills`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source URL: `https://github.com/browserbase/skills/tree/main/prompt-engineering`",
+          "href": "https://github.com/browserbase/skills/tree/main/prompt-engineering",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `prompt-engineering`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Import status: `validated_official_source_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `official_repo_skill_entry`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Market signal: `official skill folder visible in repo`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/024-skill-wiki-official-gapfill-pack/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/024-skill-wiki-official-gapfill-pack/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/024-skill-wiki-official-gapfill-pack/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "official-source skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "final searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "query coverage expansion",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime certification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "verified recipe promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -4813,6 +6306,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_official_source_skill_seed`\n- Source name: `browserbase/skills`\n- Source URL: `https://github.com/browserbase/skills/tree/main/search`\n- Source path hint: `search`\n- Import status: `validated_official_source_import`\n- Validation basis: `official_repo_skill_entry`\n- Market signal: `official skill folder visible in repo`\n- Validation run: `runs/024-skill-wiki-official-gapfill-pack/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://github.com/browserbase/skills/tree/main/search",
+      "upstreamSourcePathHint": "search",
       "sections": [
         {
           "title": "Provenance",
@@ -4982,6 +6478,108 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/browserbase-search.md",
+      "category": {
+        "slug": "automation",
+        "label": "Automation & MCP",
+        "description": "MCP, browser automation, workflow orchestration, integration, and tooling."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/024-skill-wiki-official-gapfill-pack/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/024-skill-wiki-official-gapfill-pack/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/024-skill-wiki-official-gapfill-pack/"
+        },
+        {
+          "label": "https://github.com/browserbase/skills/tree/main/search",
+          "href": "https://github.com/browserbase/skills/tree/main/search",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_official_source_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `browserbase/skills`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source URL: `https://github.com/browserbase/skills/tree/main/search`",
+          "href": "https://github.com/browserbase/skills/tree/main/search",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `search`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Import status: `validated_official_source_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `official_repo_skill_entry`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Market signal: `official skill folder visible in repo`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/024-skill-wiki-official-gapfill-pack/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/024-skill-wiki-official-gapfill-pack/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/024-skill-wiki-official-gapfill-pack/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "official-source skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "final searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "query coverage expansion",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime certification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "verified recipe promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -5144,6 +6742,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_official_source_skill_seed`\n- Source name: `browserbase/skills`\n- Source URL: `https://github.com/browserbase/skills`\n- Source path hint: `README / official browser automation skills repo`\n- Import status: `validated_official_source_import`\n- Validation basis: `official_repo_catalog`\n- Market signal: `official source-owned GitHub repo`\n- Validation run: `runs/024-skill-wiki-official-gapfill-pack/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://github.com/browserbase/skills",
+      "upstreamSourcePathHint": "README / official browser automation skills repo",
       "sections": [
         {
           "title": "Provenance",
@@ -5313,6 +6914,108 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/browserbase-skills-catalog.md",
+      "category": {
+        "slug": "automation",
+        "label": "Automation & MCP",
+        "description": "MCP, browser automation, workflow orchestration, integration, and tooling."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/024-skill-wiki-official-gapfill-pack/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/024-skill-wiki-official-gapfill-pack/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/024-skill-wiki-official-gapfill-pack/"
+        },
+        {
+          "label": "https://github.com/browserbase/skills",
+          "href": "https://github.com/browserbase/skills",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_official_source_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `browserbase/skills`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source URL: `https://github.com/browserbase/skills`",
+          "href": "https://github.com/browserbase/skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `README / official browser automation skills repo`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Import status: `validated_official_source_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `official_repo_catalog`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Market signal: `official source-owned GitHub repo`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/024-skill-wiki-official-gapfill-pack/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/024-skill-wiki-official-gapfill-pack/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/024-skill-wiki-official-gapfill-pack/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "official-source skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "final searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "query coverage expansion",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime certification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "verified recipe promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -5455,6 +7158,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `market_category_hub`\n- Source name: `openagentskills.dev`\n- Source URL: `https://openagentskills.dev/`\n- Import status: `validated_category_hub_import`\n- Validation basis: `visible public category count and representative mapping`\n- Category label: `Business`\n- Category count: `156`\n- Validation run: `runs/023-skill-wiki-category-and-featured-expansion/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://openagentskills.dev/",
+      "upstreamSourcePathHint": null,
       "sections": [
         {
           "title": "Provenance",
@@ -5596,6 +7302,103 @@ export const skillWikiPayload = {
             "- 2026-06-05"
           ],
           "raw": "- 2026-06-05"
+        }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/category-hub-business.md",
+      "category": {
+        "slug": "collections",
+        "label": "Collections & Catalogs",
+        "description": "Skill catalogs, hubs, repositories, and ecosystem-level collections."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/023-skill-wiki-category-and-featured-expansion/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/023-skill-wiki-category-and-featured-expansion/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/023-skill-wiki-category-and-featured-expansion/"
+        },
+        {
+          "label": "https://openagentskills.dev/",
+          "href": "https://openagentskills.dev/",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `market_category_hub`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `openagentskills.dev`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source URL: `https://openagentskills.dev/`",
+          "href": "https://openagentskills.dev/",
+          "kind": "external"
+        },
+        {
+          "label": "Import status: `validated_category_hub_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `visible public category count and representative mapping`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Category label: `Business`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Category count: `156`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/023-skill-wiki-category-and-featured-expansion/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/023-skill-wiki-category-and-featured-expansion/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/023-skill-wiki-category-and-featured-expansion/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "category discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "marketplace coverage",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "final searchable wiki entry",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "per-skill runtime validation",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "workflow promotion",
+          "href": null,
+          "kind": "plain-text"
         }
       ]
     },
@@ -5739,6 +7542,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `market_category_hub`\n- Source name: `openagentskills.dev`\n- Source URL: `https://openagentskills.dev/`\n- Import status: `validated_category_hub_import`\n- Validation basis: `visible public category count and representative mapping`\n- Category label: `Collaboration`\n- Category count: `373`\n- Validation run: `runs/023-skill-wiki-category-and-featured-expansion/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://openagentskills.dev/",
+      "upstreamSourcePathHint": null,
       "sections": [
         {
           "title": "Provenance",
@@ -5880,6 +7686,103 @@ export const skillWikiPayload = {
             "- 2026-06-05"
           ],
           "raw": "- 2026-06-05"
+        }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/category-hub-collaboration.md",
+      "category": {
+        "slug": "office",
+        "label": "Office & Productivity",
+        "description": "Documents, spreadsheets, workspace automation, and productivity workflows."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/023-skill-wiki-category-and-featured-expansion/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/023-skill-wiki-category-and-featured-expansion/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/023-skill-wiki-category-and-featured-expansion/"
+        },
+        {
+          "label": "https://openagentskills.dev/",
+          "href": "https://openagentskills.dev/",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `market_category_hub`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `openagentskills.dev`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source URL: `https://openagentskills.dev/`",
+          "href": "https://openagentskills.dev/",
+          "kind": "external"
+        },
+        {
+          "label": "Import status: `validated_category_hub_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `visible public category count and representative mapping`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Category label: `Collaboration`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Category count: `373`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/023-skill-wiki-category-and-featured-expansion/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/023-skill-wiki-category-and-featured-expansion/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/023-skill-wiki-category-and-featured-expansion/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "category discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "marketplace coverage",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "final searchable wiki entry",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "per-skill runtime validation",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "workflow promotion",
+          "href": null,
+          "kind": "plain-text"
         }
       ]
     },
@@ -6023,6 +7926,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `market_category_hub`\n- Source name: `openagentskills.dev`\n- Source URL: `https://openagentskills.dev/`\n- Import status: `validated_category_hub_import`\n- Validation basis: `visible public category count and representative mapping`\n- Category label: `Communication`\n- Category count: `45`\n- Validation run: `runs/023-skill-wiki-category-and-featured-expansion/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://openagentskills.dev/",
+      "upstreamSourcePathHint": null,
       "sections": [
         {
           "title": "Provenance",
@@ -6164,6 +8070,103 @@ export const skillWikiPayload = {
             "- 2026-06-05"
           ],
           "raw": "- 2026-06-05"
+        }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/category-hub-communication.md",
+      "category": {
+        "slug": "collections",
+        "label": "Collections & Catalogs",
+        "description": "Skill catalogs, hubs, repositories, and ecosystem-level collections."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/023-skill-wiki-category-and-featured-expansion/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/023-skill-wiki-category-and-featured-expansion/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/023-skill-wiki-category-and-featured-expansion/"
+        },
+        {
+          "label": "https://openagentskills.dev/",
+          "href": "https://openagentskills.dev/",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `market_category_hub`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `openagentskills.dev`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source URL: `https://openagentskills.dev/`",
+          "href": "https://openagentskills.dev/",
+          "kind": "external"
+        },
+        {
+          "label": "Import status: `validated_category_hub_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `visible public category count and representative mapping`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Category label: `Communication`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Category count: `45`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/023-skill-wiki-category-and-featured-expansion/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/023-skill-wiki-category-and-featured-expansion/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/023-skill-wiki-category-and-featured-expansion/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "category discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "marketplace coverage",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "final searchable wiki entry",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "per-skill runtime validation",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "workflow promotion",
+          "href": null,
+          "kind": "plain-text"
         }
       ]
     },
@@ -6307,6 +8310,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `market_category_hub`\n- Source name: `openagentskills.dev`\n- Source URL: `https://openagentskills.dev/`\n- Import status: `validated_category_hub_import`\n- Validation basis: `visible public category count and representative mapping`\n- Category label: `Creative & Media`\n- Category count: `219`\n- Validation run: `runs/023-skill-wiki-category-and-featured-expansion/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://openagentskills.dev/",
+      "upstreamSourcePathHint": null,
       "sections": [
         {
           "title": "Provenance",
@@ -6448,6 +8454,103 @@ export const skillWikiPayload = {
             "- 2026-06-05"
           ],
           "raw": "- 2026-06-05"
+        }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/category-hub-creative-media.md",
+      "category": {
+        "slug": "media",
+        "label": "Media & Creative",
+        "description": "Design, image, video, writing, content, social media, and brand skills."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/023-skill-wiki-category-and-featured-expansion/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/023-skill-wiki-category-and-featured-expansion/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/023-skill-wiki-category-and-featured-expansion/"
+        },
+        {
+          "label": "https://openagentskills.dev/",
+          "href": "https://openagentskills.dev/",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `market_category_hub`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `openagentskills.dev`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source URL: `https://openagentskills.dev/`",
+          "href": "https://openagentskills.dev/",
+          "kind": "external"
+        },
+        {
+          "label": "Import status: `validated_category_hub_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `visible public category count and representative mapping`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Category label: `Creative & Media`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Category count: `219`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/023-skill-wiki-category-and-featured-expansion/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/023-skill-wiki-category-and-featured-expansion/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/023-skill-wiki-category-and-featured-expansion/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "category discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "marketplace coverage",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "final searchable wiki entry",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "per-skill runtime validation",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "workflow promotion",
+          "href": null,
+          "kind": "plain-text"
         }
       ]
     },
@@ -6591,6 +8694,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `market_category_hub`\n- Source name: `openagentskills.dev`\n- Source URL: `https://openagentskills.dev/`\n- Import status: `validated_category_hub_import`\n- Validation basis: `visible public category count and representative mapping`\n- Category label: `Data & Analysis`\n- Category count: `195`\n- Validation run: `runs/023-skill-wiki-category-and-featured-expansion/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://openagentskills.dev/",
+      "upstreamSourcePathHint": null,
       "sections": [
         {
           "title": "Provenance",
@@ -6732,6 +8838,103 @@ export const skillWikiPayload = {
             "- 2026-06-05"
           ],
           "raw": "- 2026-06-05"
+        }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/category-hub-data-analysis.md",
+      "category": {
+        "slug": "research",
+        "label": "Research & Data",
+        "description": "Search, research, analysis, data science, GPU computing, and evidence-gathering."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/023-skill-wiki-category-and-featured-expansion/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/023-skill-wiki-category-and-featured-expansion/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/023-skill-wiki-category-and-featured-expansion/"
+        },
+        {
+          "label": "https://openagentskills.dev/",
+          "href": "https://openagentskills.dev/",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `market_category_hub`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `openagentskills.dev`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source URL: `https://openagentskills.dev/`",
+          "href": "https://openagentskills.dev/",
+          "kind": "external"
+        },
+        {
+          "label": "Import status: `validated_category_hub_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `visible public category count and representative mapping`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Category label: `Data & Analysis`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Category count: `195`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/023-skill-wiki-category-and-featured-expansion/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/023-skill-wiki-category-and-featured-expansion/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/023-skill-wiki-category-and-featured-expansion/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "category discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "marketplace coverage",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "final searchable wiki entry",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "per-skill runtime validation",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "workflow promotion",
+          "href": null,
+          "kind": "plain-text"
         }
       ]
     },
@@ -6875,6 +9078,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `market_category_hub`\n- Source name: `openagentskills.dev`\n- Source URL: `https://openagentskills.dev/`\n- Import status: `validated_category_hub_import`\n- Validation basis: `visible public category count and representative mapping`\n- Category label: `Development`\n- Category count: `639`\n- Validation run: `runs/023-skill-wiki-category-and-featured-expansion/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://openagentskills.dev/",
+      "upstreamSourcePathHint": null,
       "sections": [
         {
           "title": "Provenance",
@@ -7016,6 +9222,103 @@ export const skillWikiPayload = {
             "- 2026-06-05"
           ],
           "raw": "- 2026-06-05"
+        }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/category-hub-development.md",
+      "category": {
+        "slug": "collections",
+        "label": "Collections & Catalogs",
+        "description": "Skill catalogs, hubs, repositories, and ecosystem-level collections."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/023-skill-wiki-category-and-featured-expansion/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/023-skill-wiki-category-and-featured-expansion/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/023-skill-wiki-category-and-featured-expansion/"
+        },
+        {
+          "label": "https://openagentskills.dev/",
+          "href": "https://openagentskills.dev/",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `market_category_hub`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `openagentskills.dev`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source URL: `https://openagentskills.dev/`",
+          "href": "https://openagentskills.dev/",
+          "kind": "external"
+        },
+        {
+          "label": "Import status: `validated_category_hub_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `visible public category count and representative mapping`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Category label: `Development`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Category count: `639`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/023-skill-wiki-category-and-featured-expansion/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/023-skill-wiki-category-and-featured-expansion/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/023-skill-wiki-category-and-featured-expansion/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "category discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "marketplace coverage",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "final searchable wiki entry",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "per-skill runtime validation",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "workflow promotion",
+          "href": null,
+          "kind": "plain-text"
         }
       ]
     },
@@ -7159,6 +9462,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `market_category_hub`\n- Source name: `openagentskills.dev`\n- Source URL: `https://openagentskills.dev/`\n- Import status: `validated_category_hub_import`\n- Validation basis: `visible public category count and representative mapping`\n- Category label: `Document Processing`\n- Category count: `181`\n- Validation run: `runs/023-skill-wiki-category-and-featured-expansion/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://openagentskills.dev/",
+      "upstreamSourcePathHint": null,
       "sections": [
         {
           "title": "Provenance",
@@ -7300,6 +9606,103 @@ export const skillWikiPayload = {
             "- 2026-06-05"
           ],
           "raw": "- 2026-06-05"
+        }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/category-hub-document-processing.md",
+      "category": {
+        "slug": "claude",
+        "label": "Claude",
+        "description": "Claude Code, Anthropic-specific skills, and Claude-oriented execution patterns."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/023-skill-wiki-category-and-featured-expansion/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/023-skill-wiki-category-and-featured-expansion/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/023-skill-wiki-category-and-featured-expansion/"
+        },
+        {
+          "label": "https://openagentskills.dev/",
+          "href": "https://openagentskills.dev/",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `market_category_hub`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `openagentskills.dev`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source URL: `https://openagentskills.dev/`",
+          "href": "https://openagentskills.dev/",
+          "kind": "external"
+        },
+        {
+          "label": "Import status: `validated_category_hub_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `visible public category count and representative mapping`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Category label: `Document Processing`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Category count: `181`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/023-skill-wiki-category-and-featured-expansion/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/023-skill-wiki-category-and-featured-expansion/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/023-skill-wiki-category-and-featured-expansion/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "category discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "marketplace coverage",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "final searchable wiki entry",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "per-skill runtime validation",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "workflow promotion",
+          "href": null,
+          "kind": "plain-text"
         }
       ]
     },
@@ -7443,6 +9846,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `market_category_hub`\n- Source name: `openagentskills.dev`\n- Source URL: `https://openagentskills.dev/`\n- Import status: `validated_category_hub_import`\n- Validation basis: `visible public category count and representative mapping`\n- Category label: `Productivity`\n- Category count: `72`\n- Validation run: `runs/023-skill-wiki-category-and-featured-expansion/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://openagentskills.dev/",
+      "upstreamSourcePathHint": null,
       "sections": [
         {
           "title": "Provenance",
@@ -7584,6 +9990,103 @@ export const skillWikiPayload = {
             "- 2026-06-05"
           ],
           "raw": "- 2026-06-05"
+        }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/category-hub-productivity.md",
+      "category": {
+        "slug": "office",
+        "label": "Office & Productivity",
+        "description": "Documents, spreadsheets, workspace automation, and productivity workflows."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/023-skill-wiki-category-and-featured-expansion/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/023-skill-wiki-category-and-featured-expansion/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/023-skill-wiki-category-and-featured-expansion/"
+        },
+        {
+          "label": "https://openagentskills.dev/",
+          "href": "https://openagentskills.dev/",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `market_category_hub`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `openagentskills.dev`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source URL: `https://openagentskills.dev/`",
+          "href": "https://openagentskills.dev/",
+          "kind": "external"
+        },
+        {
+          "label": "Import status: `validated_category_hub_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `visible public category count and representative mapping`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Category label: `Productivity`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Category count: `72`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/023-skill-wiki-category-and-featured-expansion/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/023-skill-wiki-category-and-featured-expansion/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/023-skill-wiki-category-and-featured-expansion/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "category discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "marketplace coverage",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "final searchable wiki entry",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "per-skill runtime validation",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "workflow promotion",
+          "href": null,
+          "kind": "plain-text"
         }
       ]
     },
@@ -7727,6 +10230,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `market_category_hub`\n- Source name: `openagentskills.dev`\n- Source URL: `https://openagentskills.dev/`\n- Import status: `validated_category_hub_import`\n- Validation basis: `visible public category count and representative mapping`\n- Category label: `Security`\n- Category count: `408`\n- Validation run: `runs/023-skill-wiki-category-and-featured-expansion/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://openagentskills.dev/",
+      "upstreamSourcePathHint": null,
       "sections": [
         {
           "title": "Provenance",
@@ -7868,6 +10374,103 @@ export const skillWikiPayload = {
             "- 2026-06-05"
           ],
           "raw": "- 2026-06-05"
+        }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/category-hub-security.md",
+      "category": {
+        "slug": "devops",
+        "label": "DevOps & Security",
+        "description": "Deployment, testing, QA, security, compliance, and infrastructure skills."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/023-skill-wiki-category-and-featured-expansion/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/023-skill-wiki-category-and-featured-expansion/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/023-skill-wiki-category-and-featured-expansion/"
+        },
+        {
+          "label": "https://openagentskills.dev/",
+          "href": "https://openagentskills.dev/",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `market_category_hub`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `openagentskills.dev`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source URL: `https://openagentskills.dev/`",
+          "href": "https://openagentskills.dev/",
+          "kind": "external"
+        },
+        {
+          "label": "Import status: `validated_category_hub_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `visible public category count and representative mapping`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Category label: `Security`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Category count: `408`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/023-skill-wiki-category-and-featured-expansion/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/023-skill-wiki-category-and-featured-expansion/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/023-skill-wiki-category-and-featured-expansion/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "category discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "marketplace coverage",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "final searchable wiki entry",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "per-skill runtime validation",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "workflow promotion",
+          "href": null,
+          "kind": "plain-text"
         }
       ]
     },
@@ -8031,6 +10634,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_github_skill_seed`\n- Source repo: `ComposioHQ/awesome-claude-skills`\n- Source URL: `https://github.com/ComposioHQ/awesome-claude-skills`\n- Source path hint: `artifacts-builder`\n- Import status: `validated_external_import`\n- Validation basis: `listed_in_validated_source_catalog`\n- Validation run: `runs/021-external-skill-wiki-import-community-catalogs/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": "ComposioHQ/awesome-claude-skills",
+      "upstreamSourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills",
+      "upstreamSourcePathHint": "artifacts-builder",
       "sections": [
         {
           "title": "Provenance",
@@ -8200,6 +10806,103 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/composio-artifacts-builder.md",
+      "category": {
+        "slug": "media",
+        "label": "Media & Creative",
+        "description": "Design, image, video, writing, content, social media, and brand skills."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/021-external-skill-wiki-import-community-catalogs/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/021-external-skill-wiki-import-community-catalogs/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/021-external-skill-wiki-import-community-catalogs/"
+        },
+        {
+          "label": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "href": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_github_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source repo: `ComposioHQ/awesome-claude-skills`",
+          "href": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source URL: `https://github.com/ComposioHQ/awesome-claude-skills`",
+          "href": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `artifacts-builder`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Import status: `validated_external_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `listed_in_validated_source_catalog`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/021-external-skill-wiki-import-community-catalogs/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/021-external-skill-wiki-import-community-catalogs/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/021-external-skill-wiki-import-community-catalogs/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "external skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "source-provenance capture",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime verification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "workflow promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -8359,6 +11062,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_github_import`\n- Source repo: `ComposioHQ/awesome-claude-skills`\n- Source URL: `https://github.com/ComposioHQ/awesome-claude-skills`\n- Import status: `imported_external_unverified`\n- Imported via: `manual_market_sync`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": "ComposioHQ/awesome-claude-skills",
+      "upstreamSourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills",
+      "upstreamSourcePathHint": null,
       "sections": [
         {
           "title": "Provenance",
@@ -8543,6 +11249,91 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/composio-awesome-claude-skills.md",
+      "category": {
+        "slug": "claude",
+        "label": "Claude",
+        "description": "Claude Code, Anthropic-specific skills, and Claude-oriented execution patterns."
+      },
+      "evidenceLinks": [
+        {
+          "label": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "href": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "kind": "external"
+        },
+        {
+          "label": "https://claudemarketplaces.com/skills/composiohq/awesome-claude-skills",
+          "href": "https://claudemarketplaces.com/skills/composiohq/awesome-claude-skills",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_github_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source repo: `ComposioHQ/awesome-claude-skills`",
+          "href": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source URL: `https://github.com/ComposioHQ/awesome-claude-skills`",
+          "href": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Import status: `imported_external_unverified`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Imported via: `manual_market_sync`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "external skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "community catalog reference",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "imported wiki search surface",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local validation",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "promotion gating",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "third-party auth approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -8705,6 +11496,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_github_skill_seed`\n- Source repo: `ComposioHQ/awesome-claude-skills`\n- Source URL: `https://github.com/ComposioHQ/awesome-claude-skills`\n- Source path hint: `brand-guidelines`\n- Import status: `validated_external_import`\n- Validation basis: `listed_in_validated_source_catalog`\n- Validation run: `runs/021-external-skill-wiki-import-community-catalogs/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": "ComposioHQ/awesome-claude-skills",
+      "upstreamSourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills",
+      "upstreamSourcePathHint": "brand-guidelines",
       "sections": [
         {
           "title": "Provenance",
@@ -8874,6 +11668,103 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/composio-brand-guidelines.md",
+      "category": {
+        "slug": "media",
+        "label": "Media & Creative",
+        "description": "Design, image, video, writing, content, social media, and brand skills."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/021-external-skill-wiki-import-community-catalogs/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/021-external-skill-wiki-import-community-catalogs/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/021-external-skill-wiki-import-community-catalogs/"
+        },
+        {
+          "label": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "href": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_github_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source repo: `ComposioHQ/awesome-claude-skills`",
+          "href": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source URL: `https://github.com/ComposioHQ/awesome-claude-skills`",
+          "href": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `brand-guidelines`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Import status: `validated_external_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `listed_in_validated_source_catalog`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/021-external-skill-wiki-import-community-catalogs/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/021-external-skill-wiki-import-community-catalogs/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/021-external-skill-wiki-import-community-catalogs/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "external skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "source-provenance capture",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime verification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "workflow promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -9036,6 +11927,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_github_skill_seed`\n- Source repo: `ComposioHQ/awesome-claude-skills`\n- Source URL: `https://github.com/ComposioHQ/awesome-claude-skills`\n- Source path hint: `changelog-generator`\n- Import status: `validated_external_import`\n- Validation basis: `listed_in_validated_source_catalog`\n- Validation run: `runs/021-external-skill-wiki-import-community-catalogs/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": "ComposioHQ/awesome-claude-skills",
+      "upstreamSourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills",
+      "upstreamSourcePathHint": "changelog-generator",
       "sections": [
         {
           "title": "Provenance",
@@ -9205,6 +12099,103 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/composio-changelog-generator.md",
+      "category": {
+        "slug": "devops",
+        "label": "DevOps & Security",
+        "description": "Deployment, testing, QA, security, compliance, and infrastructure skills."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/021-external-skill-wiki-import-community-catalogs/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/021-external-skill-wiki-import-community-catalogs/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/021-external-skill-wiki-import-community-catalogs/"
+        },
+        {
+          "label": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "href": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_github_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source repo: `ComposioHQ/awesome-claude-skills`",
+          "href": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source URL: `https://github.com/ComposioHQ/awesome-claude-skills`",
+          "href": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `changelog-generator`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Import status: `validated_external_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `listed_in_validated_source_catalog`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/021-external-skill-wiki-import-community-catalogs/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/021-external-skill-wiki-import-community-catalogs/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/021-external-skill-wiki-import-community-catalogs/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "external skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "source-provenance capture",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime verification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "workflow promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -9367,6 +12358,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_github_skill_seed`\n- Source repo: `ComposioHQ/awesome-claude-skills`\n- Source URL: `https://github.com/ComposioHQ/awesome-claude-skills`\n- Source path hint: `content-research-writer`\n- Import status: `validated_external_import`\n- Validation basis: `listed_in_validated_source_catalog`\n- Validation run: `runs/021-external-skill-wiki-import-community-catalogs/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": "ComposioHQ/awesome-claude-skills",
+      "upstreamSourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills",
+      "upstreamSourcePathHint": "content-research-writer",
       "sections": [
         {
           "title": "Provenance",
@@ -9536,6 +12530,103 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/composio-content-research-writer.md",
+      "category": {
+        "slug": "media",
+        "label": "Media & Creative",
+        "description": "Design, image, video, writing, content, social media, and brand skills."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/021-external-skill-wiki-import-community-catalogs/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/021-external-skill-wiki-import-community-catalogs/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/021-external-skill-wiki-import-community-catalogs/"
+        },
+        {
+          "label": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "href": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_github_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source repo: `ComposioHQ/awesome-claude-skills`",
+          "href": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source URL: `https://github.com/ComposioHQ/awesome-claude-skills`",
+          "href": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `content-research-writer`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Import status: `validated_external_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `listed_in_validated_source_catalog`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/021-external-skill-wiki-import-community-catalogs/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/021-external-skill-wiki-import-community-catalogs/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/021-external-skill-wiki-import-community-catalogs/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "external skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "source-provenance capture",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime verification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "workflow promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -9698,6 +12789,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_github_skill_seed`\n- Source repo: `ComposioHQ/awesome-claude-skills`\n- Source URL: `https://github.com/ComposioHQ/awesome-claude-skills`\n- Source path hint: `developer-growth-analysis`\n- Import status: `validated_external_import`\n- Validation basis: `listed_in_validated_source_catalog`\n- Validation run: `runs/021-external-skill-wiki-import-community-catalogs/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": "ComposioHQ/awesome-claude-skills",
+      "upstreamSourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills",
+      "upstreamSourcePathHint": "developer-growth-analysis",
       "sections": [
         {
           "title": "Provenance",
@@ -9867,6 +12961,103 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/composio-developer-growth-analysis.md",
+      "category": {
+        "slug": "research",
+        "label": "Research & Data",
+        "description": "Search, research, analysis, data science, GPU computing, and evidence-gathering."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/021-external-skill-wiki-import-community-catalogs/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/021-external-skill-wiki-import-community-catalogs/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/021-external-skill-wiki-import-community-catalogs/"
+        },
+        {
+          "label": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "href": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_github_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source repo: `ComposioHQ/awesome-claude-skills`",
+          "href": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source URL: `https://github.com/ComposioHQ/awesome-claude-skills`",
+          "href": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `developer-growth-analysis`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Import status: `validated_external_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `listed_in_validated_source_catalog`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/021-external-skill-wiki-import-community-catalogs/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/021-external-skill-wiki-import-community-catalogs/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/021-external-skill-wiki-import-community-catalogs/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "external skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "source-provenance capture",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime verification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "workflow promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -10029,6 +13220,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_github_skill_seed`\n- Source repo: `ComposioHQ/awesome-claude-skills`\n- Source URL: `https://github.com/ComposioHQ/awesome-claude-skills`\n- Source path hint: `domain-name-brainstormer`\n- Import status: `validated_external_import`\n- Validation basis: `listed_in_validated_source_catalog`\n- Validation run: `runs/021-external-skill-wiki-import-community-catalogs/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": "ComposioHQ/awesome-claude-skills",
+      "upstreamSourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills",
+      "upstreamSourcePathHint": "domain-name-brainstormer",
       "sections": [
         {
           "title": "Provenance",
@@ -10198,6 +13392,103 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/composio-domain-name-brainstormer.md",
+      "category": {
+        "slug": "media",
+        "label": "Media & Creative",
+        "description": "Design, image, video, writing, content, social media, and brand skills."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/021-external-skill-wiki-import-community-catalogs/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/021-external-skill-wiki-import-community-catalogs/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/021-external-skill-wiki-import-community-catalogs/"
+        },
+        {
+          "label": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "href": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_github_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source repo: `ComposioHQ/awesome-claude-skills`",
+          "href": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source URL: `https://github.com/ComposioHQ/awesome-claude-skills`",
+          "href": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `domain-name-brainstormer`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Import status: `validated_external_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `listed_in_validated_source_catalog`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/021-external-skill-wiki-import-community-catalogs/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/021-external-skill-wiki-import-community-catalogs/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/021-external-skill-wiki-import-community-catalogs/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "external skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "source-provenance capture",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime verification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "workflow promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -10360,6 +13651,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_github_skill_seed`\n- Source repo: `ComposioHQ/awesome-claude-skills`\n- Source URL: `https://github.com/ComposioHQ/awesome-claude-skills`\n- Source path hint: `file-organizer`\n- Import status: `validated_external_import`\n- Validation basis: `listed_in_validated_source_catalog`\n- Validation run: `runs/021-external-skill-wiki-import-community-catalogs/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": "ComposioHQ/awesome-claude-skills",
+      "upstreamSourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills",
+      "upstreamSourcePathHint": "file-organizer",
       "sections": [
         {
           "title": "Provenance",
@@ -10529,6 +13823,103 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/composio-file-organizer.md",
+      "category": {
+        "slug": "office",
+        "label": "Office & Productivity",
+        "description": "Documents, spreadsheets, workspace automation, and productivity workflows."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/021-external-skill-wiki-import-community-catalogs/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/021-external-skill-wiki-import-community-catalogs/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/021-external-skill-wiki-import-community-catalogs/"
+        },
+        {
+          "label": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "href": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_github_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source repo: `ComposioHQ/awesome-claude-skills`",
+          "href": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source URL: `https://github.com/ComposioHQ/awesome-claude-skills`",
+          "href": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `file-organizer`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Import status: `validated_external_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `listed_in_validated_source_catalog`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/021-external-skill-wiki-import-community-catalogs/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/021-external-skill-wiki-import-community-catalogs/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/021-external-skill-wiki-import-community-catalogs/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "external skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "source-provenance capture",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime verification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "workflow promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -10691,6 +14082,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_github_skill_seed`\n- Source repo: `ComposioHQ/awesome-claude-skills`\n- Source URL: `https://github.com/ComposioHQ/awesome-claude-skills`\n- Source path hint: `image-enhancer`\n- Import status: `validated_external_import`\n- Validation basis: `listed_in_validated_source_catalog`\n- Validation run: `runs/021-external-skill-wiki-import-community-catalogs/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": "ComposioHQ/awesome-claude-skills",
+      "upstreamSourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills",
+      "upstreamSourcePathHint": "image-enhancer",
       "sections": [
         {
           "title": "Provenance",
@@ -10860,6 +14254,103 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/composio-image-enhancer.md",
+      "category": {
+        "slug": "media",
+        "label": "Media & Creative",
+        "description": "Design, image, video, writing, content, social media, and brand skills."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/021-external-skill-wiki-import-community-catalogs/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/021-external-skill-wiki-import-community-catalogs/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/021-external-skill-wiki-import-community-catalogs/"
+        },
+        {
+          "label": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "href": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_github_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source repo: `ComposioHQ/awesome-claude-skills`",
+          "href": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source URL: `https://github.com/ComposioHQ/awesome-claude-skills`",
+          "href": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `image-enhancer`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Import status: `validated_external_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `listed_in_validated_source_catalog`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/021-external-skill-wiki-import-community-catalogs/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/021-external-skill-wiki-import-community-catalogs/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/021-external-skill-wiki-import-community-catalogs/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "external skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "source-provenance capture",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime verification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "workflow promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -11022,6 +14513,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_github_skill_seed`\n- Source repo: `ComposioHQ/awesome-claude-skills`\n- Source URL: `https://github.com/ComposioHQ/awesome-claude-skills`\n- Source path hint: `invoice-organizer`\n- Import status: `validated_external_import`\n- Validation basis: `listed_in_validated_source_catalog`\n- Validation run: `runs/021-external-skill-wiki-import-community-catalogs/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": "ComposioHQ/awesome-claude-skills",
+      "upstreamSourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills",
+      "upstreamSourcePathHint": "invoice-organizer",
       "sections": [
         {
           "title": "Provenance",
@@ -11191,6 +14685,103 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/composio-invoice-organizer.md",
+      "category": {
+        "slug": "office",
+        "label": "Office & Productivity",
+        "description": "Documents, spreadsheets, workspace automation, and productivity workflows."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/021-external-skill-wiki-import-community-catalogs/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/021-external-skill-wiki-import-community-catalogs/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/021-external-skill-wiki-import-community-catalogs/"
+        },
+        {
+          "label": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "href": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_github_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source repo: `ComposioHQ/awesome-claude-skills`",
+          "href": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source URL: `https://github.com/ComposioHQ/awesome-claude-skills`",
+          "href": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `invoice-organizer`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Import status: `validated_external_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `listed_in_validated_source_catalog`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/021-external-skill-wiki-import-community-catalogs/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/021-external-skill-wiki-import-community-catalogs/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/021-external-skill-wiki-import-community-catalogs/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "external skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "source-provenance capture",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime verification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "workflow promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -11353,6 +14944,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_github_skill_seed`\n- Source repo: `ComposioHQ/awesome-claude-skills`\n- Source URL: `https://github.com/ComposioHQ/awesome-claude-skills`\n- Source path hint: `lead-research-assistant`\n- Import status: `validated_external_import`\n- Validation basis: `listed_in_validated_source_catalog`\n- Validation run: `runs/021-external-skill-wiki-import-community-catalogs/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": "ComposioHQ/awesome-claude-skills",
+      "upstreamSourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills",
+      "upstreamSourcePathHint": "lead-research-assistant",
       "sections": [
         {
           "title": "Provenance",
@@ -11522,6 +15116,103 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/composio-lead-research-assistant.md",
+      "category": {
+        "slug": "research",
+        "label": "Research & Data",
+        "description": "Search, research, analysis, data science, GPU computing, and evidence-gathering."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/021-external-skill-wiki-import-community-catalogs/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/021-external-skill-wiki-import-community-catalogs/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/021-external-skill-wiki-import-community-catalogs/"
+        },
+        {
+          "label": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "href": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_github_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source repo: `ComposioHQ/awesome-claude-skills`",
+          "href": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source URL: `https://github.com/ComposioHQ/awesome-claude-skills`",
+          "href": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `lead-research-assistant`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Import status: `validated_external_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `listed_in_validated_source_catalog`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/021-external-skill-wiki-import-community-catalogs/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/021-external-skill-wiki-import-community-catalogs/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/021-external-skill-wiki-import-community-catalogs/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "external skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "source-provenance capture",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime verification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "workflow promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -11684,6 +15375,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_github_skill_seed`\n- Source repo: `ComposioHQ/awesome-claude-skills`\n- Source URL: `https://github.com/ComposioHQ/awesome-claude-skills`\n- Source path hint: `mcp-builder`\n- Import status: `validated_external_import`\n- Validation basis: `listed_in_validated_source_catalog`\n- Validation run: `runs/021-external-skill-wiki-import-community-catalogs/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": "ComposioHQ/awesome-claude-skills",
+      "upstreamSourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills",
+      "upstreamSourcePathHint": "mcp-builder",
       "sections": [
         {
           "title": "Provenance",
@@ -11853,6 +15547,103 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/composio-mcp-builder.md",
+      "category": {
+        "slug": "automation",
+        "label": "Automation & MCP",
+        "description": "MCP, browser automation, workflow orchestration, integration, and tooling."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/021-external-skill-wiki-import-community-catalogs/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/021-external-skill-wiki-import-community-catalogs/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/021-external-skill-wiki-import-community-catalogs/"
+        },
+        {
+          "label": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "href": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_github_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source repo: `ComposioHQ/awesome-claude-skills`",
+          "href": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source URL: `https://github.com/ComposioHQ/awesome-claude-skills`",
+          "href": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `mcp-builder`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Import status: `validated_external_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `listed_in_validated_source_catalog`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/021-external-skill-wiki-import-community-catalogs/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/021-external-skill-wiki-import-community-catalogs/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/021-external-skill-wiki-import-community-catalogs/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "external skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "source-provenance capture",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime verification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "workflow promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -12015,6 +15806,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_github_skill_seed`\n- Source repo: `ComposioHQ/awesome-claude-skills`\n- Source URL: `https://github.com/ComposioHQ/awesome-claude-skills`\n- Source path hint: `meeting-insights-analyzer`\n- Import status: `validated_external_import`\n- Validation basis: `listed_in_validated_source_catalog`\n- Validation run: `runs/021-external-skill-wiki-import-community-catalogs/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": "ComposioHQ/awesome-claude-skills",
+      "upstreamSourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills",
+      "upstreamSourcePathHint": "meeting-insights-analyzer",
       "sections": [
         {
           "title": "Provenance",
@@ -12184,6 +15978,103 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/composio-meeting-insights-analyzer.md",
+      "category": {
+        "slug": "office",
+        "label": "Office & Productivity",
+        "description": "Documents, spreadsheets, workspace automation, and productivity workflows."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/021-external-skill-wiki-import-community-catalogs/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/021-external-skill-wiki-import-community-catalogs/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/021-external-skill-wiki-import-community-catalogs/"
+        },
+        {
+          "label": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "href": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_github_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source repo: `ComposioHQ/awesome-claude-skills`",
+          "href": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source URL: `https://github.com/ComposioHQ/awesome-claude-skills`",
+          "href": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `meeting-insights-analyzer`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Import status: `validated_external_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `listed_in_validated_source_catalog`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/021-external-skill-wiki-import-community-catalogs/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/021-external-skill-wiki-import-community-catalogs/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/021-external-skill-wiki-import-community-catalogs/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "external skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "source-provenance capture",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime verification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "workflow promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -12346,6 +16237,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_github_skill_seed`\n- Source repo: `ComposioHQ/awesome-claude-skills`\n- Source URL: `https://github.com/ComposioHQ/awesome-claude-skills`\n- Source path hint: `skill-creator`\n- Import status: `validated_external_import`\n- Validation basis: `listed_in_validated_source_catalog`\n- Validation run: `runs/021-external-skill-wiki-import-community-catalogs/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": "ComposioHQ/awesome-claude-skills",
+      "upstreamSourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills",
+      "upstreamSourcePathHint": "skill-creator",
       "sections": [
         {
           "title": "Provenance",
@@ -12515,6 +16409,103 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/composio-skill-creator.md",
+      "category": {
+        "slug": "automation",
+        "label": "Automation & MCP",
+        "description": "MCP, browser automation, workflow orchestration, integration, and tooling."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/021-external-skill-wiki-import-community-catalogs/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/021-external-skill-wiki-import-community-catalogs/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/021-external-skill-wiki-import-community-catalogs/"
+        },
+        {
+          "label": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "href": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_github_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source repo: `ComposioHQ/awesome-claude-skills`",
+          "href": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source URL: `https://github.com/ComposioHQ/awesome-claude-skills`",
+          "href": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `skill-creator`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Import status: `validated_external_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `listed_in_validated_source_catalog`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/021-external-skill-wiki-import-community-catalogs/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/021-external-skill-wiki-import-community-catalogs/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/021-external-skill-wiki-import-community-catalogs/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "external skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "source-provenance capture",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime verification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "workflow promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -12677,6 +16668,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_github_skill_seed`\n- Source repo: `ComposioHQ/awesome-claude-skills`\n- Source URL: `https://github.com/ComposioHQ/awesome-claude-skills`\n- Source path hint: `skill-share`\n- Import status: `validated_external_import`\n- Validation basis: `listed_in_validated_source_catalog`\n- Validation run: `runs/021-external-skill-wiki-import-community-catalogs/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": "ComposioHQ/awesome-claude-skills",
+      "upstreamSourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills",
+      "upstreamSourcePathHint": "skill-share",
       "sections": [
         {
           "title": "Provenance",
@@ -12846,6 +16840,103 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/composio-skill-share.md",
+      "category": {
+        "slug": "office",
+        "label": "Office & Productivity",
+        "description": "Documents, spreadsheets, workspace automation, and productivity workflows."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/021-external-skill-wiki-import-community-catalogs/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/021-external-skill-wiki-import-community-catalogs/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/021-external-skill-wiki-import-community-catalogs/"
+        },
+        {
+          "label": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "href": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_github_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source repo: `ComposioHQ/awesome-claude-skills`",
+          "href": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source URL: `https://github.com/ComposioHQ/awesome-claude-skills`",
+          "href": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `skill-share`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Import status: `validated_external_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `listed_in_validated_source_catalog`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/021-external-skill-wiki-import-community-catalogs/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/021-external-skill-wiki-import-community-catalogs/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/021-external-skill-wiki-import-community-catalogs/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "external skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "source-provenance capture",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime verification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "workflow promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -13008,6 +17099,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_github_skill_seed`\n- Source repo: `ComposioHQ/awesome-claude-skills`\n- Source URL: `https://github.com/ComposioHQ/awesome-claude-skills`\n- Source path hint: `tailored-resume-generator`\n- Import status: `validated_external_import`\n- Validation basis: `listed_in_validated_source_catalog`\n- Validation run: `runs/021-external-skill-wiki-import-community-catalogs/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": "ComposioHQ/awesome-claude-skills",
+      "upstreamSourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills",
+      "upstreamSourcePathHint": "tailored-resume-generator",
       "sections": [
         {
           "title": "Provenance",
@@ -13177,6 +17271,103 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/composio-tailored-resume-generator.md",
+      "category": {
+        "slug": "office",
+        "label": "Office & Productivity",
+        "description": "Documents, spreadsheets, workspace automation, and productivity workflows."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/021-external-skill-wiki-import-community-catalogs/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/021-external-skill-wiki-import-community-catalogs/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/021-external-skill-wiki-import-community-catalogs/"
+        },
+        {
+          "label": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "href": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_github_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source repo: `ComposioHQ/awesome-claude-skills`",
+          "href": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source URL: `https://github.com/ComposioHQ/awesome-claude-skills`",
+          "href": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `tailored-resume-generator`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Import status: `validated_external_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `listed_in_validated_source_catalog`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/021-external-skill-wiki-import-community-catalogs/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/021-external-skill-wiki-import-community-catalogs/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/021-external-skill-wiki-import-community-catalogs/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "external skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "source-provenance capture",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime verification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "workflow promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -13339,6 +17530,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_github_skill_seed`\n- Source repo: `ComposioHQ/awesome-claude-skills`\n- Source URL: `https://github.com/ComposioHQ/awesome-claude-skills`\n- Source path hint: `twitter-algorithm-optimizer`\n- Import status: `validated_external_import`\n- Validation basis: `listed_in_validated_source_catalog`\n- Validation run: `runs/021-external-skill-wiki-import-community-catalogs/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": "ComposioHQ/awesome-claude-skills",
+      "upstreamSourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills",
+      "upstreamSourcePathHint": "twitter-algorithm-optimizer",
       "sections": [
         {
           "title": "Provenance",
@@ -13508,6 +17702,103 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/composio-twitter-algorithm-optimizer.md",
+      "category": {
+        "slug": "media",
+        "label": "Media & Creative",
+        "description": "Design, image, video, writing, content, social media, and brand skills."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/021-external-skill-wiki-import-community-catalogs/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/021-external-skill-wiki-import-community-catalogs/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/021-external-skill-wiki-import-community-catalogs/"
+        },
+        {
+          "label": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "href": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_github_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source repo: `ComposioHQ/awesome-claude-skills`",
+          "href": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source URL: `https://github.com/ComposioHQ/awesome-claude-skills`",
+          "href": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `twitter-algorithm-optimizer`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Import status: `validated_external_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `listed_in_validated_source_catalog`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/021-external-skill-wiki-import-community-catalogs/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/021-external-skill-wiki-import-community-catalogs/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/021-external-skill-wiki-import-community-catalogs/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "external skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "source-provenance capture",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime verification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "workflow promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -13670,6 +17961,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_official_source_skill_seed`\n- Source name: `googleworkspace/cli`\n- Source URL: `https://github.com/googleworkspace/cli/tree/main/gwcli/skills/calendar`\n- Source path hint: `gwcli/skills/calendar`\n- Import status: `validated_official_source_import`\n- Validation basis: `official_repo_skill_entry`\n- Market signal: `official skill directory visible in repo`\n- Validation run: `runs/024-skill-wiki-official-gapfill-pack/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://github.com/googleworkspace/cli/tree/main/gwcli/skills/calendar",
+      "upstreamSourcePathHint": "gwcli/skills/calendar",
       "sections": [
         {
           "title": "Provenance",
@@ -13839,6 +18133,109 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/google-workspace-calendar.md",
+      "category": {
+        "slug": "office",
+        "label": "Office & Productivity",
+        "description": "Documents, spreadsheets, workspace automation, and productivity workflows."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/024-skill-wiki-official-gapfill-pack/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/024-skill-wiki-official-gapfill-pack/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/024-skill-wiki-official-gapfill-pack/"
+        },
+        {
+          "label": "https://github.com/googleworkspace/cli/tree/main/gwcli/skills/calendar",
+          "href": "https://github.com/googleworkspace/cli/tree/main/gwcli/skills/calendar",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_official_source_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `googleworkspace/cli`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source URL: `https://github.com/googleworkspace/cli/tree/main/gwcli/skills/calendar`",
+          "href": "https://github.com/googleworkspace/cli/tree/main/gwcli/skills/calendar",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `gwcli/skills/calendar`",
+          "href": "https://github.com/googleworkspace/cli/tree/main/gwcli/skills/calendar/tree/main/skills/calendar`",
+          "kind": "upstream-path",
+          "repoPath": "skills/calendar`"
+        },
+        {
+          "label": "Import status: `validated_official_source_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `official_repo_skill_entry`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Market signal: `official skill directory visible in repo`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/024-skill-wiki-official-gapfill-pack/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/024-skill-wiki-official-gapfill-pack/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/024-skill-wiki-official-gapfill-pack/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "official-source skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "final searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "query coverage expansion",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime certification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "verified recipe promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -14001,6 +18398,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_official_source_skill_seed`\n- Source name: `googleworkspace/cli`\n- Source URL: `https://github.com/googleworkspace/cli`\n- Source path hint: `README / official Google Workspace CLI agent skills`\n- Import status: `validated_official_source_import`\n- Validation basis: `official_repo_catalog`\n- Market signal: `official source-owned GitHub repo`\n- Validation run: `runs/024-skill-wiki-official-gapfill-pack/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://github.com/googleworkspace/cli",
+      "upstreamSourcePathHint": "README / official Google Workspace CLI agent skills",
       "sections": [
         {
           "title": "Provenance",
@@ -14170,6 +18570,108 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/google-workspace-cli-catalog.md",
+      "category": {
+        "slug": "office",
+        "label": "Office & Productivity",
+        "description": "Documents, spreadsheets, workspace automation, and productivity workflows."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/024-skill-wiki-official-gapfill-pack/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/024-skill-wiki-official-gapfill-pack/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/024-skill-wiki-official-gapfill-pack/"
+        },
+        {
+          "label": "https://github.com/googleworkspace/cli",
+          "href": "https://github.com/googleworkspace/cli",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_official_source_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `googleworkspace/cli`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source URL: `https://github.com/googleworkspace/cli`",
+          "href": "https://github.com/googleworkspace/cli",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `README / official Google Workspace CLI agent skills`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Import status: `validated_official_source_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `official_repo_catalog`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Market signal: `official source-owned GitHub repo`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/024-skill-wiki-official-gapfill-pack/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/024-skill-wiki-official-gapfill-pack/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/024-skill-wiki-official-gapfill-pack/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "official-source skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "final searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "query coverage expansion",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime certification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "verified recipe promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -14332,6 +18834,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_official_source_skill_seed`\n- Source name: `googleworkspace/cli`\n- Source URL: `https://github.com/googleworkspace/cli/tree/main/gwcli/skills/recipes/create-events-from-sheet`\n- Source path hint: `gwcli/skills/recipes/create-events-from-sheet`\n- Import status: `validated_official_source_import`\n- Validation basis: `official_repo_recipe_entry`\n- Market signal: `official recipe directory visible in repo`\n- Validation run: `runs/024-skill-wiki-official-gapfill-pack/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://github.com/googleworkspace/cli/tree/main/gwcli/skills/recipes/create-events-from-sheet",
+      "upstreamSourcePathHint": "gwcli/skills/recipes/create-events-from-sheet",
       "sections": [
         {
           "title": "Provenance",
@@ -14501,6 +19006,109 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/google-workspace-create-events-from-sheet.md",
+      "category": {
+        "slug": "office",
+        "label": "Office & Productivity",
+        "description": "Documents, spreadsheets, workspace automation, and productivity workflows."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/024-skill-wiki-official-gapfill-pack/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/024-skill-wiki-official-gapfill-pack/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/024-skill-wiki-official-gapfill-pack/"
+        },
+        {
+          "label": "https://github.com/googleworkspace/cli/tree/main/gwcli/skills/recipes/create-events-from-sheet",
+          "href": "https://github.com/googleworkspace/cli/tree/main/gwcli/skills/recipes/create-events-from-sheet",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_official_source_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `googleworkspace/cli`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source URL: `https://github.com/googleworkspace/cli/tree/main/gwcli/skills/recipes/create-events-from-sheet`",
+          "href": "https://github.com/googleworkspace/cli/tree/main/gwcli/skills/recipes/create-events-from-sheet",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `gwcli/skills/recipes/create-events-from-sheet`",
+          "href": "https://github.com/googleworkspace/cli/tree/main/gwcli/skills/recipes/create-events-from-sheet/tree/main/skills/recipes/create-events-from-sheet`",
+          "kind": "upstream-path",
+          "repoPath": "skills/recipes/create-events-from-sheet`"
+        },
+        {
+          "label": "Import status: `validated_official_source_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `official_repo_recipe_entry`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Market signal: `official recipe directory visible in repo`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/024-skill-wiki-official-gapfill-pack/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/024-skill-wiki-official-gapfill-pack/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/024-skill-wiki-official-gapfill-pack/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "official-source skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "final searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "query coverage expansion",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime certification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "verified recipe promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -14663,6 +19271,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_official_source_skill_seed`\n- Source name: `googleworkspace/cli`\n- Source URL: `https://github.com/googleworkspace/cli/tree/main/gwcli/skills/docs`\n- Source path hint: `gwcli/skills/docs`\n- Import status: `validated_official_source_import`\n- Validation basis: `official_repo_skill_entry`\n- Market signal: `official skill directory visible in repo`\n- Validation run: `runs/024-skill-wiki-official-gapfill-pack/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://github.com/googleworkspace/cli/tree/main/gwcli/skills/docs",
+      "upstreamSourcePathHint": "gwcli/skills/docs",
       "sections": [
         {
           "title": "Provenance",
@@ -14832,6 +19443,109 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/google-workspace-docs.md",
+      "category": {
+        "slug": "office",
+        "label": "Office & Productivity",
+        "description": "Documents, spreadsheets, workspace automation, and productivity workflows."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/024-skill-wiki-official-gapfill-pack/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/024-skill-wiki-official-gapfill-pack/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/024-skill-wiki-official-gapfill-pack/"
+        },
+        {
+          "label": "https://github.com/googleworkspace/cli/tree/main/gwcli/skills/docs",
+          "href": "https://github.com/googleworkspace/cli/tree/main/gwcli/skills/docs",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_official_source_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `googleworkspace/cli`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source URL: `https://github.com/googleworkspace/cli/tree/main/gwcli/skills/docs`",
+          "href": "https://github.com/googleworkspace/cli/tree/main/gwcli/skills/docs",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `gwcli/skills/docs`",
+          "href": "https://github.com/googleworkspace/cli/tree/main/gwcli/skills/docs/tree/main/skills/docs`",
+          "kind": "upstream-path",
+          "repoPath": "skills/docs`"
+        },
+        {
+          "label": "Import status: `validated_official_source_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `official_repo_skill_entry`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Market signal: `official skill directory visible in repo`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/024-skill-wiki-official-gapfill-pack/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/024-skill-wiki-official-gapfill-pack/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/024-skill-wiki-official-gapfill-pack/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "official-source skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "final searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "query coverage expansion",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime certification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "verified recipe promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -14994,6 +19708,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_official_source_skill_seed`\n- Source name: `googleworkspace/cli`\n- Source URL: `https://github.com/googleworkspace/cli/tree/main/gwcli/skills/drive`\n- Source path hint: `gwcli/skills/drive`\n- Import status: `validated_official_source_import`\n- Validation basis: `official_repo_skill_entry`\n- Market signal: `official skill directory visible in repo`\n- Validation run: `runs/024-skill-wiki-official-gapfill-pack/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://github.com/googleworkspace/cli/tree/main/gwcli/skills/drive",
+      "upstreamSourcePathHint": "gwcli/skills/drive",
       "sections": [
         {
           "title": "Provenance",
@@ -15163,6 +19880,109 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/google-workspace-drive.md",
+      "category": {
+        "slug": "office",
+        "label": "Office & Productivity",
+        "description": "Documents, spreadsheets, workspace automation, and productivity workflows."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/024-skill-wiki-official-gapfill-pack/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/024-skill-wiki-official-gapfill-pack/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/024-skill-wiki-official-gapfill-pack/"
+        },
+        {
+          "label": "https://github.com/googleworkspace/cli/tree/main/gwcli/skills/drive",
+          "href": "https://github.com/googleworkspace/cli/tree/main/gwcli/skills/drive",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_official_source_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `googleworkspace/cli`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source URL: `https://github.com/googleworkspace/cli/tree/main/gwcli/skills/drive`",
+          "href": "https://github.com/googleworkspace/cli/tree/main/gwcli/skills/drive",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `gwcli/skills/drive`",
+          "href": "https://github.com/googleworkspace/cli/tree/main/gwcli/skills/drive/tree/main/skills/drive`",
+          "kind": "upstream-path",
+          "repoPath": "skills/drive`"
+        },
+        {
+          "label": "Import status: `validated_official_source_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `official_repo_skill_entry`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Market signal: `official skill directory visible in repo`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/024-skill-wiki-official-gapfill-pack/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/024-skill-wiki-official-gapfill-pack/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/024-skill-wiki-official-gapfill-pack/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "official-source skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "final searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "query coverage expansion",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime certification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "verified recipe promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -15325,6 +20145,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_official_source_skill_seed`\n- Source name: `googleworkspace/cli`\n- Source URL: `https://github.com/googleworkspace/cli/tree/main/gwcli/skills/gmail`\n- Source path hint: `gwcli/skills/gmail`\n- Import status: `validated_official_source_import`\n- Validation basis: `official_repo_skill_entry`\n- Market signal: `official skill directory visible in repo`\n- Validation run: `runs/024-skill-wiki-official-gapfill-pack/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://github.com/googleworkspace/cli/tree/main/gwcli/skills/gmail",
+      "upstreamSourcePathHint": "gwcli/skills/gmail",
       "sections": [
         {
           "title": "Provenance",
@@ -15494,6 +20317,109 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/google-workspace-gmail.md",
+      "category": {
+        "slug": "office",
+        "label": "Office & Productivity",
+        "description": "Documents, spreadsheets, workspace automation, and productivity workflows."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/024-skill-wiki-official-gapfill-pack/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/024-skill-wiki-official-gapfill-pack/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/024-skill-wiki-official-gapfill-pack/"
+        },
+        {
+          "label": "https://github.com/googleworkspace/cli/tree/main/gwcli/skills/gmail",
+          "href": "https://github.com/googleworkspace/cli/tree/main/gwcli/skills/gmail",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_official_source_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `googleworkspace/cli`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source URL: `https://github.com/googleworkspace/cli/tree/main/gwcli/skills/gmail`",
+          "href": "https://github.com/googleworkspace/cli/tree/main/gwcli/skills/gmail",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `gwcli/skills/gmail`",
+          "href": "https://github.com/googleworkspace/cli/tree/main/gwcli/skills/gmail/tree/main/skills/gmail`",
+          "kind": "upstream-path",
+          "repoPath": "skills/gmail`"
+        },
+        {
+          "label": "Import status: `validated_official_source_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `official_repo_skill_entry`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Market signal: `official skill directory visible in repo`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/024-skill-wiki-official-gapfill-pack/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/024-skill-wiki-official-gapfill-pack/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/024-skill-wiki-official-gapfill-pack/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "official-source skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "final searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "query coverage expansion",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime certification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "verified recipe promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -15656,6 +20582,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_official_source_skill_seed`\n- Source name: `googleworkspace/cli`\n- Source URL: `https://github.com/googleworkspace/cli/tree/main/gwcli/skills/recipes/save-email-attachments-to-drive`\n- Source path hint: `gwcli/skills/recipes/save-email-attachments-to-drive`\n- Import status: `validated_official_source_import`\n- Validation basis: `official_repo_recipe_entry`\n- Market signal: `official recipe directory visible in repo`\n- Validation run: `runs/024-skill-wiki-official-gapfill-pack/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://github.com/googleworkspace/cli/tree/main/gwcli/skills/recipes/save-email-attachments-to-drive",
+      "upstreamSourcePathHint": "gwcli/skills/recipes/save-email-attachments-to-drive",
       "sections": [
         {
           "title": "Provenance",
@@ -15825,6 +20754,109 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/google-workspace-save-email-attachments.md",
+      "category": {
+        "slug": "office",
+        "label": "Office & Productivity",
+        "description": "Documents, spreadsheets, workspace automation, and productivity workflows."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/024-skill-wiki-official-gapfill-pack/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/024-skill-wiki-official-gapfill-pack/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/024-skill-wiki-official-gapfill-pack/"
+        },
+        {
+          "label": "https://github.com/googleworkspace/cli/tree/main/gwcli/skills/recipes/save-email-attachments-to-drive",
+          "href": "https://github.com/googleworkspace/cli/tree/main/gwcli/skills/recipes/save-email-attachments-to-drive",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_official_source_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `googleworkspace/cli`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source URL: `https://github.com/googleworkspace/cli/tree/main/gwcli/skills/recipes/save-email-attachments-to-drive`",
+          "href": "https://github.com/googleworkspace/cli/tree/main/gwcli/skills/recipes/save-email-attachments-to-drive",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `gwcli/skills/recipes/save-email-attachments-to-drive`",
+          "href": "https://github.com/googleworkspace/cli/tree/main/gwcli/skills/recipes/save-email-attachments-to-drive/tree/main/skills/recipes/save-email-attachments-to-drive`",
+          "kind": "upstream-path",
+          "repoPath": "skills/recipes/save-email-attachments-to-drive`"
+        },
+        {
+          "label": "Import status: `validated_official_source_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `official_repo_recipe_entry`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Market signal: `official recipe directory visible in repo`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/024-skill-wiki-official-gapfill-pack/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/024-skill-wiki-official-gapfill-pack/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/024-skill-wiki-official-gapfill-pack/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "official-source skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "final searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "query coverage expansion",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime certification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "verified recipe promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -15987,6 +21019,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_official_source_skill_seed`\n- Source name: `googleworkspace/cli`\n- Source URL: `https://github.com/googleworkspace/cli/tree/main/gwcli/skills/recipes/share-doc-and-notify`\n- Source path hint: `gwcli/skills/recipes/share-doc-and-notify`\n- Import status: `validated_official_source_import`\n- Validation basis: `official_repo_recipe_entry`\n- Market signal: `official recipe directory visible in repo`\n- Validation run: `runs/024-skill-wiki-official-gapfill-pack/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://github.com/googleworkspace/cli/tree/main/gwcli/skills/recipes/share-doc-and-notify",
+      "upstreamSourcePathHint": "gwcli/skills/recipes/share-doc-and-notify",
       "sections": [
         {
           "title": "Provenance",
@@ -16156,6 +21191,109 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/google-workspace-share-doc-and-notify.md",
+      "category": {
+        "slug": "office",
+        "label": "Office & Productivity",
+        "description": "Documents, spreadsheets, workspace automation, and productivity workflows."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/024-skill-wiki-official-gapfill-pack/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/024-skill-wiki-official-gapfill-pack/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/024-skill-wiki-official-gapfill-pack/"
+        },
+        {
+          "label": "https://github.com/googleworkspace/cli/tree/main/gwcli/skills/recipes/share-doc-and-notify",
+          "href": "https://github.com/googleworkspace/cli/tree/main/gwcli/skills/recipes/share-doc-and-notify",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_official_source_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `googleworkspace/cli`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source URL: `https://github.com/googleworkspace/cli/tree/main/gwcli/skills/recipes/share-doc-and-notify`",
+          "href": "https://github.com/googleworkspace/cli/tree/main/gwcli/skills/recipes/share-doc-and-notify",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `gwcli/skills/recipes/share-doc-and-notify`",
+          "href": "https://github.com/googleworkspace/cli/tree/main/gwcli/skills/recipes/share-doc-and-notify/tree/main/skills/recipes/share-doc-and-notify`",
+          "kind": "upstream-path",
+          "repoPath": "skills/recipes/share-doc-and-notify`"
+        },
+        {
+          "label": "Import status: `validated_official_source_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `official_repo_recipe_entry`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Market signal: `official recipe directory visible in repo`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/024-skill-wiki-official-gapfill-pack/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/024-skill-wiki-official-gapfill-pack/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/024-skill-wiki-official-gapfill-pack/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "official-source skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "final searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "query coverage expansion",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime certification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "verified recipe promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -16318,6 +21456,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_official_source_skill_seed`\n- Source name: `googleworkspace/cli`\n- Source URL: `https://github.com/googleworkspace/cli/tree/main/gwcli/skills/sheets`\n- Source path hint: `gwcli/skills/sheets`\n- Import status: `validated_official_source_import`\n- Validation basis: `official_repo_skill_entry`\n- Market signal: `official skill directory visible in repo`\n- Validation run: `runs/024-skill-wiki-official-gapfill-pack/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://github.com/googleworkspace/cli/tree/main/gwcli/skills/sheets",
+      "upstreamSourcePathHint": "gwcli/skills/sheets",
       "sections": [
         {
           "title": "Provenance",
@@ -16487,6 +21628,109 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/google-workspace-sheets.md",
+      "category": {
+        "slug": "office",
+        "label": "Office & Productivity",
+        "description": "Documents, spreadsheets, workspace automation, and productivity workflows."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/024-skill-wiki-official-gapfill-pack/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/024-skill-wiki-official-gapfill-pack/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/024-skill-wiki-official-gapfill-pack/"
+        },
+        {
+          "label": "https://github.com/googleworkspace/cli/tree/main/gwcli/skills/sheets",
+          "href": "https://github.com/googleworkspace/cli/tree/main/gwcli/skills/sheets",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_official_source_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `googleworkspace/cli`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source URL: `https://github.com/googleworkspace/cli/tree/main/gwcli/skills/sheets`",
+          "href": "https://github.com/googleworkspace/cli/tree/main/gwcli/skills/sheets",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `gwcli/skills/sheets`",
+          "href": "https://github.com/googleworkspace/cli/tree/main/gwcli/skills/sheets/tree/main/skills/sheets`",
+          "kind": "upstream-path",
+          "repoPath": "skills/sheets`"
+        },
+        {
+          "label": "Import status: `validated_official_source_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `official_repo_skill_entry`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Market signal: `official skill directory visible in repo`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/024-skill-wiki-official-gapfill-pack/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/024-skill-wiki-official-gapfill-pack/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/024-skill-wiki-official-gapfill-pack/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "official-source skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "final searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "query coverage expansion",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime certification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "verified recipe promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -16647,6 +21891,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_github_import`\n- Source repo: `heilcheng/awesome-agent-skills`\n- Source URL: `https://github.com/heilcheng/awesome-agent-skills`\n- Import status: `imported_external_unverified`\n- Imported via: `manual_market_sync`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": "heilcheng/awesome-agent-skills",
+      "upstreamSourceUrl": "https://github.com/heilcheng/awesome-agent-skills",
+      "upstreamSourcePathHint": null,
       "sections": [
         {
           "title": "Provenance",
@@ -16828,6 +22075,96 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/heilcheng-awesome-agent-skills.md",
+      "category": {
+        "slug": "research",
+        "label": "Research & Data",
+        "description": "Search, research, analysis, data science, GPU computing, and evidence-gathering."
+      },
+      "evidenceLinks": [
+        {
+          "label": "https://github.com/heilcheng/awesome-agent-skills",
+          "href": "https://github.com/heilcheng/awesome-agent-skills",
+          "kind": "external"
+        },
+        {
+          "label": "https://skillsmp.com",
+          "href": "https://skillsmp.com",
+          "kind": "external"
+        },
+        {
+          "label": "https://skills.sh",
+          "href": "https://skills.sh",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_github_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source repo: `heilcheng/awesome-agent-skills`",
+          "href": "https://github.com/heilcheng/awesome-agent-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source URL: `https://github.com/heilcheng/awesome-agent-skills`",
+          "href": "https://github.com/heilcheng/awesome-agent-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Import status: `imported_external_unverified`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Imported via: `manual_market_sync`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "external skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "ecosystem directory reference",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "imported wiki search surface",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local validation",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "promotion gating",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "direct skill execution",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -16987,6 +22324,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_github_import`\n- Source repo: `hesreallyhim/awesome-claude-code`\n- Source URL: `https://github.com/hesreallyhim/awesome-claude-code`\n- Import status: `imported_external_unverified`\n- Imported via: `manual_market_sync`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": "hesreallyhim/awesome-claude-code",
+      "upstreamSourceUrl": "https://github.com/hesreallyhim/awesome-claude-code",
+      "upstreamSourcePathHint": null,
       "sections": [
         {
           "title": "Provenance",
@@ -17169,6 +22509,91 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/hesreallyhim-awesome-claude-code.md",
+      "category": {
+        "slug": "claude",
+        "label": "Claude",
+        "description": "Claude Code, Anthropic-specific skills, and Claude-oriented execution patterns."
+      },
+      "evidenceLinks": [
+        {
+          "label": "https://github.com/hesreallyhim/awesome-claude-code",
+          "href": "https://github.com/hesreallyhim/awesome-claude-code",
+          "kind": "external"
+        },
+        {
+          "label": "https://github.com/hesreallyhim/awesome-claude-code/blob/main/README.md",
+          "href": "https://github.com/hesreallyhim/awesome-claude-code/blob/main/README.md",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_github_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source repo: `hesreallyhim/awesome-claude-code`",
+          "href": "https://github.com/hesreallyhim/awesome-claude-code",
+          "kind": "external"
+        },
+        {
+          "label": "Source URL: `https://github.com/hesreallyhim/awesome-claude-code`",
+          "href": "https://github.com/hesreallyhim/awesome-claude-code",
+          "kind": "external"
+        },
+        {
+          "label": "Import status: `imported_external_unverified`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Imported via: `manual_market_sync`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "external skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Claude Code ecosystem reference",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "imported wiki search surface",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local validation",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "promotion gating",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "submission audit",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -17311,6 +22736,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `market_taxonomy_cluster`\n- Primary sources: `https://skills-hub.ai/`, `https://openagentskills.dev/`\n- Import status: `validated_scenario_bundle_import`\n- Validation basis: `public taxonomy plus representative skill mapping`\n- Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": null,
+      "upstreamSourcePathHint": null,
       "sections": [
         {
           "title": "Provenance",
@@ -17479,6 +22907,98 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/hot-scenario-documentation-and-knowledge-management.md",
+      "category": {
+        "slug": "research",
+        "label": "Research & Data",
+        "description": "Search, research, analysis, data science, GPU computing, and evidence-gathering."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "https://skills-hub.ai/",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        },
+        {
+          "label": "https://openagentskills.dev/",
+          "href": "https://openagentskills.dev/",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `market_taxonomy_cluster`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Primary sources: `https://skills-hub.ai/`, `https://openagentskills.dev/`",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        },
+        {
+          "label": "Import status: `validated_scenario_bundle_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `public taxonomy plus representative skill mapping`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "scenario discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "public taxonomy clustering",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "representative workflow bundles",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "per-skill runtime certification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "promotion as a verified recipe",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -17621,6 +23141,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `market_taxonomy_cluster`\n- Primary sources: `https://skills-hub.ai/`, `https://openagentskills.dev/`\n- Import status: `validated_scenario_bundle_import`\n- Validation basis: `public taxonomy plus representative skill mapping`\n- Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": null,
+      "upstreamSourcePathHint": null,
       "sections": [
         {
           "title": "Provenance",
@@ -17788,6 +23311,98 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/hot-scenario-education-and-team-enablement.md",
+      "category": {
+        "slug": "research",
+        "label": "Research & Data",
+        "description": "Search, research, analysis, data science, GPU computing, and evidence-gathering."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "https://skills-hub.ai/",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        },
+        {
+          "label": "https://openagentskills.dev/",
+          "href": "https://openagentskills.dev/",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `market_taxonomy_cluster`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Primary sources: `https://skills-hub.ai/`, `https://openagentskills.dev/`",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        },
+        {
+          "label": "Import status: `validated_scenario_bundle_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `public taxonomy plus representative skill mapping`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "scenario discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "public taxonomy clustering",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "representative workflow bundles",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "per-skill runtime certification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "promotion as a verified recipe",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -17930,6 +23545,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `market_taxonomy_cluster`\n- Primary sources: `https://skills-hub.ai/`, `https://openagentskills.dev/`\n- Import status: `validated_scenario_bundle_import`\n- Validation basis: `public taxonomy plus representative skill mapping`\n- Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": null,
+      "upstreamSourcePathHint": null,
       "sections": [
         {
           "title": "Provenance",
@@ -18098,6 +23716,98 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/hot-scenario-founder-prototyping-and-no-code-build.md",
+      "category": {
+        "slug": "automation",
+        "label": "Automation & MCP",
+        "description": "MCP, browser automation, workflow orchestration, integration, and tooling."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "https://skills-hub.ai/",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        },
+        {
+          "label": "https://openagentskills.dev/",
+          "href": "https://openagentskills.dev/",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `market_taxonomy_cluster`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Primary sources: `https://skills-hub.ai/`, `https://openagentskills.dev/`",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        },
+        {
+          "label": "Import status: `validated_scenario_bundle_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `public taxonomy plus representative skill mapping`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "scenario discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "public taxonomy clustering",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "representative workflow bundles",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "per-skill runtime certification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "promotion as a verified recipe",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -18240,6 +23950,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `market_taxonomy_cluster`\n- Primary sources: `https://skills-hub.ai/`, `https://openagentskills.dev/`\n- Import status: `validated_scenario_bundle_import`\n- Validation basis: `public taxonomy plus representative skill mapping`\n- Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": null,
+      "upstreamSourcePathHint": null,
       "sections": [
         {
           "title": "Provenance",
@@ -18408,6 +24121,98 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/hot-scenario-integration-and-mcp-tooling.md",
+      "category": {
+        "slug": "automation",
+        "label": "Automation & MCP",
+        "description": "MCP, browser automation, workflow orchestration, integration, and tooling."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "https://skills-hub.ai/",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        },
+        {
+          "label": "https://openagentskills.dev/",
+          "href": "https://openagentskills.dev/",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `market_taxonomy_cluster`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Primary sources: `https://skills-hub.ai/`, `https://openagentskills.dev/`",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        },
+        {
+          "label": "Import status: `validated_scenario_bundle_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `public taxonomy plus representative skill mapping`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "scenario discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "public taxonomy clustering",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "representative workflow bundles",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "per-skill runtime certification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "promotion as a verified recipe",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -18550,6 +24355,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `market_taxonomy_cluster`\n- Primary sources: `https://skills-hub.ai/`, `https://openagentskills.dev/`\n- Import status: `validated_scenario_bundle_import`\n- Validation basis: `public taxonomy plus representative skill mapping`\n- Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": null,
+      "upstreamSourcePathHint": null,
       "sections": [
         {
           "title": "Provenance",
@@ -18719,6 +24527,98 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/hot-scenario-productivity-and-office-assistant.md",
+      "category": {
+        "slug": "office",
+        "label": "Office & Productivity",
+        "description": "Documents, spreadsheets, workspace automation, and productivity workflows."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "https://skills-hub.ai/",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        },
+        {
+          "label": "https://openagentskills.dev/",
+          "href": "https://openagentskills.dev/",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `market_taxonomy_cluster`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Primary sources: `https://skills-hub.ai/`, `https://openagentskills.dev/`",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        },
+        {
+          "label": "Import status: `validated_scenario_bundle_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `public taxonomy plus representative skill mapping`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "scenario discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "public taxonomy clustering",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "representative workflow bundles",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "per-skill runtime certification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "promotion as a verified recipe",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -18861,6 +24761,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `market_taxonomy_cluster`\n- Primary sources: `https://skills-hub.ai/`, `https://openagentskills.dev/`\n- Import status: `validated_scenario_bundle_import`\n- Validation basis: `public taxonomy plus representative skill mapping`\n- Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": null,
+      "upstreamSourcePathHint": null,
       "sections": [
         {
           "title": "Provenance",
@@ -19028,6 +24931,98 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/hot-scenario-testing-qa-and-release-readiness.md",
+      "category": {
+        "slug": "devops",
+        "label": "DevOps & Security",
+        "description": "Deployment, testing, QA, security, compliance, and infrastructure skills."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "https://skills-hub.ai/",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        },
+        {
+          "label": "https://openagentskills.dev/",
+          "href": "https://openagentskills.dev/",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `market_taxonomy_cluster`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Primary sources: `https://skills-hub.ai/`, `https://openagentskills.dev/`",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        },
+        {
+          "label": "Import status: `validated_scenario_bundle_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `public taxonomy plus representative skill mapping`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "scenario discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "public taxonomy clustering",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "representative workflow bundles",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "per-skill runtime certification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "promotion as a verified recipe",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -19169,6 +25164,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `market_industry_hub`\n- Source name: `skills-hub.ai`\n- Source URL: `https://skills-hub.ai/`\n- Import status: `validated_industry_hub_import`\n- Validation basis: `visible public industry category and representative mapping`\n- Industry label: `Education`\n- Validation run: `runs/023-skill-wiki-category-and-featured-expansion/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://skills-hub.ai/",
+      "upstreamSourcePathHint": null,
       "sections": [
         {
           "title": "Provenance",
@@ -19309,6 +25307,99 @@ export const skillWikiPayload = {
             "- 2026-06-05"
           ],
           "raw": "- 2026-06-05"
+        }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/industry-hub-education.md",
+      "category": {
+        "slug": "research",
+        "label": "Research & Data",
+        "description": "Search, research, analysis, data science, GPU computing, and evidence-gathering."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/023-skill-wiki-category-and-featured-expansion/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/023-skill-wiki-category-and-featured-expansion/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/023-skill-wiki-category-and-featured-expansion/"
+        },
+        {
+          "label": "https://skills-hub.ai/",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `market_industry_hub`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `skills-hub.ai`",
+          "href": "https://skills-hub.ai/tree/main/skills-hub.ai",
+          "kind": "upstream-path",
+          "repoPath": "skills-hub.ai"
+        },
+        {
+          "label": "Source URL: `https://skills-hub.ai/`",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        },
+        {
+          "label": "Import status: `validated_industry_hub_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `visible public industry category and representative mapping`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Industry label: `Education`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/023-skill-wiki-category-and-featured-expansion/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/023-skill-wiki-category-and-featured-expansion/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/023-skill-wiki-category-and-featured-expansion/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "industry discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "vertical landing pages",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "final searchable wiki entry",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "per-skill runtime validation",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "verified recipe promotion",
+          "href": null,
+          "kind": "plain-text"
         }
       ]
     },
@@ -19451,6 +25542,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `market_industry_hub`\n- Source name: `skills-hub.ai`\n- Source URL: `https://skills-hub.ai/`\n- Import status: `validated_industry_hub_import`\n- Validation basis: `visible public industry category and representative mapping`\n- Industry label: `Game Dev`\n- Validation run: `runs/023-skill-wiki-category-and-featured-expansion/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://skills-hub.ai/",
+      "upstreamSourcePathHint": null,
       "sections": [
         {
           "title": "Provenance",
@@ -19590,6 +25684,99 @@ export const skillWikiPayload = {
             "- 2026-06-05"
           ],
           "raw": "- 2026-06-05"
+        }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/industry-hub-game-dev.md",
+      "category": {
+        "slug": "media",
+        "label": "Media & Creative",
+        "description": "Design, image, video, writing, content, social media, and brand skills."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/023-skill-wiki-category-and-featured-expansion/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/023-skill-wiki-category-and-featured-expansion/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/023-skill-wiki-category-and-featured-expansion/"
+        },
+        {
+          "label": "https://skills-hub.ai/",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `market_industry_hub`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `skills-hub.ai`",
+          "href": "https://skills-hub.ai/tree/main/skills-hub.ai",
+          "kind": "upstream-path",
+          "repoPath": "skills-hub.ai"
+        },
+        {
+          "label": "Source URL: `https://skills-hub.ai/`",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        },
+        {
+          "label": "Import status: `validated_industry_hub_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `visible public industry category and representative mapping`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Industry label: `Game Dev`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/023-skill-wiki-category-and-featured-expansion/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/023-skill-wiki-category-and-featured-expansion/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/023-skill-wiki-category-and-featured-expansion/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "industry discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "vertical landing pages",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "final searchable wiki entry",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "per-skill runtime validation",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "verified recipe promotion",
+          "href": null,
+          "kind": "plain-text"
         }
       ]
     },
@@ -19732,6 +25919,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `market_industry_hub`\n- Source name: `skills-hub.ai`\n- Source URL: `https://skills-hub.ai/`\n- Import status: `validated_industry_hub_import`\n- Validation basis: `visible public industry category and representative mapping`\n- Industry label: `Healthcare`\n- Validation run: `runs/023-skill-wiki-category-and-featured-expansion/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://skills-hub.ai/",
+      "upstreamSourcePathHint": null,
       "sections": [
         {
           "title": "Provenance",
@@ -19871,6 +26061,99 @@ export const skillWikiPayload = {
             "- 2026-06-05"
           ],
           "raw": "- 2026-06-05"
+        }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/industry-hub-healthcare.md",
+      "category": {
+        "slug": "collections",
+        "label": "Collections & Catalogs",
+        "description": "Skill catalogs, hubs, repositories, and ecosystem-level collections."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/023-skill-wiki-category-and-featured-expansion/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/023-skill-wiki-category-and-featured-expansion/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/023-skill-wiki-category-and-featured-expansion/"
+        },
+        {
+          "label": "https://skills-hub.ai/",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `market_industry_hub`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `skills-hub.ai`",
+          "href": "https://skills-hub.ai/tree/main/skills-hub.ai",
+          "kind": "upstream-path",
+          "repoPath": "skills-hub.ai"
+        },
+        {
+          "label": "Source URL: `https://skills-hub.ai/`",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        },
+        {
+          "label": "Import status: `validated_industry_hub_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `visible public industry category and representative mapping`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Industry label: `Healthcare`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/023-skill-wiki-category-and-featured-expansion/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/023-skill-wiki-category-and-featured-expansion/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/023-skill-wiki-category-and-featured-expansion/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "industry discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "vertical landing pages",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "final searchable wiki entry",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "per-skill runtime validation",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "verified recipe promotion",
+          "href": null,
+          "kind": "plain-text"
         }
       ]
     },
@@ -20013,6 +26296,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `market_industry_hub`\n- Source name: `skills-hub.ai`\n- Source URL: `https://skills-hub.ai/`\n- Import status: `validated_industry_hub_import`\n- Validation basis: `visible public industry category and representative mapping`\n- Industry label: `Marketing`\n- Validation run: `runs/023-skill-wiki-category-and-featured-expansion/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://skills-hub.ai/",
+      "upstreamSourcePathHint": null,
       "sections": [
         {
           "title": "Provenance",
@@ -20153,6 +26439,99 @@ export const skillWikiPayload = {
             "- 2026-06-05"
           ],
           "raw": "- 2026-06-05"
+        }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/industry-hub-marketing.md",
+      "category": {
+        "slug": "media",
+        "label": "Media & Creative",
+        "description": "Design, image, video, writing, content, social media, and brand skills."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/023-skill-wiki-category-and-featured-expansion/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/023-skill-wiki-category-and-featured-expansion/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/023-skill-wiki-category-and-featured-expansion/"
+        },
+        {
+          "label": "https://skills-hub.ai/",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `market_industry_hub`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `skills-hub.ai`",
+          "href": "https://skills-hub.ai/tree/main/skills-hub.ai",
+          "kind": "upstream-path",
+          "repoPath": "skills-hub.ai"
+        },
+        {
+          "label": "Source URL: `https://skills-hub.ai/`",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        },
+        {
+          "label": "Import status: `validated_industry_hub_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `visible public industry category and representative mapping`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Industry label: `Marketing`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/023-skill-wiki-category-and-featured-expansion/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/023-skill-wiki-category-and-featured-expansion/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/023-skill-wiki-category-and-featured-expansion/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "industry discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "vertical landing pages",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "final searchable wiki entry",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "per-skill runtime validation",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "verified recipe promotion",
+          "href": null,
+          "kind": "plain-text"
         }
       ]
     },
@@ -20295,6 +26674,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `market_industry_hub`\n- Source name: `skills-hub.ai`\n- Source URL: `https://skills-hub.ai/`\n- Import status: `validated_industry_hub_import`\n- Validation basis: `visible public industry category and representative mapping`\n- Industry label: `Research`\n- Validation run: `runs/023-skill-wiki-category-and-featured-expansion/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://skills-hub.ai/",
+      "upstreamSourcePathHint": null,
       "sections": [
         {
           "title": "Provenance",
@@ -20435,6 +26817,99 @@ export const skillWikiPayload = {
             "- 2026-06-05"
           ],
           "raw": "- 2026-06-05"
+        }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/industry-hub-research.md",
+      "category": {
+        "slug": "research",
+        "label": "Research & Data",
+        "description": "Search, research, analysis, data science, GPU computing, and evidence-gathering."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/023-skill-wiki-category-and-featured-expansion/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/023-skill-wiki-category-and-featured-expansion/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/023-skill-wiki-category-and-featured-expansion/"
+        },
+        {
+          "label": "https://skills-hub.ai/",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `market_industry_hub`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `skills-hub.ai`",
+          "href": "https://skills-hub.ai/tree/main/skills-hub.ai",
+          "kind": "upstream-path",
+          "repoPath": "skills-hub.ai"
+        },
+        {
+          "label": "Source URL: `https://skills-hub.ai/`",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        },
+        {
+          "label": "Import status: `validated_industry_hub_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `visible public industry category and representative mapping`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Industry label: `Research`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/023-skill-wiki-category-and-featured-expansion/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/023-skill-wiki-category-and-featured-expansion/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/023-skill-wiki-category-and-featured-expansion/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "industry discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "vertical landing pages",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "final searchable wiki entry",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "per-skill runtime validation",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "verified recipe promotion",
+          "href": null,
+          "kind": "plain-text"
         }
       ]
     },
@@ -20594,6 +27069,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_github_import`\n- Source repo: `junminhong/awesome-agent-skills`\n- Source URL: `https://github.com/junminhong/awesome-agent-skills`\n- Import status: `imported_external_unverified`\n- Imported via: `manual_market_sync`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": "junminhong/awesome-agent-skills",
+      "upstreamSourceUrl": "https://github.com/junminhong/awesome-agent-skills",
+      "upstreamSourcePathHint": null,
       "sections": [
         {
           "title": "Provenance",
@@ -20775,6 +27253,86 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/junminhong-awesome-agent-skills.md",
+      "category": {
+        "slug": "claude",
+        "label": "Claude",
+        "description": "Claude Code, Anthropic-specific skills, and Claude-oriented execution patterns."
+      },
+      "evidenceLinks": [
+        {
+          "label": "https://github.com/junminhong/awesome-agent-skills",
+          "href": "https://github.com/junminhong/awesome-agent-skills",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_github_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source repo: `junminhong/awesome-agent-skills`",
+          "href": "https://github.com/junminhong/awesome-agent-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source URL: `https://github.com/junminhong/awesome-agent-skills`",
+          "href": "https://github.com/junminhong/awesome-agent-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Import status: `imported_external_unverified`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Imported via: `manual_market_sync`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "external skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "small curated catalog reference",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "imported wiki search surface",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local validation",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "promotion gating",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -20934,6 +27492,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_github_import`\n- Source repo: `jwynia/agent-skills`\n- Source URL: `https://github.com/jwynia/agent-skills`\n- Import status: `imported_external_unverified`\n- Imported via: `manual_market_sync`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": "jwynia/agent-skills",
+      "upstreamSourceUrl": "https://github.com/jwynia/agent-skills",
+      "upstreamSourcePathHint": null,
       "sections": [
         {
           "title": "Provenance",
@@ -21116,6 +27677,91 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/jwynia-agent-skills-collection.md",
+      "category": {
+        "slug": "claude",
+        "label": "Claude",
+        "description": "Claude Code, Anthropic-specific skills, and Claude-oriented execution patterns."
+      },
+      "evidenceLinks": [
+        {
+          "label": "https://github.com/jwynia/agent-skills",
+          "href": "https://github.com/jwynia/agent-skills",
+          "kind": "external"
+        },
+        {
+          "label": "https://github.com/jwynia/agent-skills/tree/main/skills",
+          "href": "https://github.com/jwynia/agent-skills/tree/main/skills",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_github_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source repo: `jwynia/agent-skills`",
+          "href": "https://github.com/jwynia/agent-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source URL: `https://github.com/jwynia/agent-skills`",
+          "href": "https://github.com/jwynia/agent-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Import status: `imported_external_unverified`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Imported via: `manual_market_sync`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "external skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "community skill library reference",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "imported wiki search surface",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local validation",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "promotion gating",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -21278,6 +27924,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_github_skill_seed`\n- Source repo: `jwynia/agent-skills`\n- Source URL: `https://github.com/jwynia/agent-skills`\n- Source path hint: `codex/codex`\n- Import status: `validated_external_import`\n- Validation basis: `listed_in_validated_source_catalog`\n- Validation run: `runs/020-external-skill-wiki-import-engineering-workflows/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": "jwynia/agent-skills",
+      "upstreamSourceUrl": "https://github.com/jwynia/agent-skills",
+      "upstreamSourcePathHint": "codex/codex",
       "sections": [
         {
           "title": "Provenance",
@@ -21447,6 +28096,103 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/jwynia-codex.md",
+      "category": {
+        "slug": "codex",
+        "label": "Codex",
+        "description": "Codex, OpenAI skills, prompt operators, and code-generation workflows."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/020-external-skill-wiki-import-engineering-workflows/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/020-external-skill-wiki-import-engineering-workflows/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/020-external-skill-wiki-import-engineering-workflows/"
+        },
+        {
+          "label": "https://github.com/jwynia/agent-skills",
+          "href": "https://github.com/jwynia/agent-skills",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_github_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source repo: `jwynia/agent-skills`",
+          "href": "https://github.com/jwynia/agent-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source URL: `https://github.com/jwynia/agent-skills`",
+          "href": "https://github.com/jwynia/agent-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `codex/codex`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Import status: `validated_external_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `listed_in_validated_source_catalog`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/020-external-skill-wiki-import-engineering-workflows/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/020-external-skill-wiki-import-engineering-workflows/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/020-external-skill-wiki-import-engineering-workflows/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "external skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "source-provenance capture",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime verification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "workflow promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -21609,6 +28355,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_github_skill_seed`\n- Source repo: `jwynia/agent-skills`\n- Source URL: `https://github.com/jwynia/agent-skills`\n- Source path hint: `codex/command-creator`\n- Import status: `validated_external_import`\n- Validation basis: `listed_in_validated_source_catalog`\n- Validation run: `runs/020-external-skill-wiki-import-engineering-workflows/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": "jwynia/agent-skills",
+      "upstreamSourceUrl": "https://github.com/jwynia/agent-skills",
+      "upstreamSourcePathHint": "codex/command-creator",
       "sections": [
         {
           "title": "Provenance",
@@ -21778,6 +28527,103 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/jwynia-command-creator.md",
+      "category": {
+        "slug": "codex",
+        "label": "Codex",
+        "description": "Codex, OpenAI skills, prompt operators, and code-generation workflows."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/020-external-skill-wiki-import-engineering-workflows/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/020-external-skill-wiki-import-engineering-workflows/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/020-external-skill-wiki-import-engineering-workflows/"
+        },
+        {
+          "label": "https://github.com/jwynia/agent-skills",
+          "href": "https://github.com/jwynia/agent-skills",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_github_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source repo: `jwynia/agent-skills`",
+          "href": "https://github.com/jwynia/agent-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source URL: `https://github.com/jwynia/agent-skills`",
+          "href": "https://github.com/jwynia/agent-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `codex/command-creator`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Import status: `validated_external_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `listed_in_validated_source_catalog`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/020-external-skill-wiki-import-engineering-workflows/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/020-external-skill-wiki-import-engineering-workflows/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/020-external-skill-wiki-import-engineering-workflows/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "external skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "source-provenance capture",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime verification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "workflow promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -21940,6 +28786,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_github_skill_seed`\n- Source repo: `jwynia/agent-skills`\n- Source URL: `https://github.com/jwynia/agent-skills`\n- Source path hint: `codex/gemini`\n- Import status: `validated_external_import`\n- Validation basis: `listed_in_validated_source_catalog`\n- Validation run: `runs/020-external-skill-wiki-import-engineering-workflows/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": "jwynia/agent-skills",
+      "upstreamSourceUrl": "https://github.com/jwynia/agent-skills",
+      "upstreamSourcePathHint": "codex/gemini",
       "sections": [
         {
           "title": "Provenance",
@@ -22109,6 +28958,103 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/jwynia-gemini.md",
+      "category": {
+        "slug": "collections",
+        "label": "Collections & Catalogs",
+        "description": "Skill catalogs, hubs, repositories, and ecosystem-level collections."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/020-external-skill-wiki-import-engineering-workflows/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/020-external-skill-wiki-import-engineering-workflows/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/020-external-skill-wiki-import-engineering-workflows/"
+        },
+        {
+          "label": "https://github.com/jwynia/agent-skills",
+          "href": "https://github.com/jwynia/agent-skills",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_github_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source repo: `jwynia/agent-skills`",
+          "href": "https://github.com/jwynia/agent-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source URL: `https://github.com/jwynia/agent-skills`",
+          "href": "https://github.com/jwynia/agent-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `codex/gemini`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Import status: `validated_external_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `listed_in_validated_source_catalog`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/020-external-skill-wiki-import-engineering-workflows/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/020-external-skill-wiki-import-engineering-workflows/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/020-external-skill-wiki-import-engineering-workflows/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "external skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "source-provenance capture",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime verification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "workflow promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -22271,6 +29217,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_github_skill_seed`\n- Source repo: `jwynia/agent-skills`\n- Source URL: `https://github.com/jwynia/agent-skills`\n- Source path hint: `skills/general/knowledge-graph`\n- Import status: `validated_external_import`\n- Validation basis: `listed_in_validated_source_catalog`\n- Validation run: `runs/020-external-skill-wiki-import-engineering-workflows/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": "jwynia/agent-skills",
+      "upstreamSourceUrl": "https://github.com/jwynia/agent-skills",
+      "upstreamSourcePathHint": "skills/general/knowledge-graph",
       "sections": [
         {
           "title": "Provenance",
@@ -22440,6 +29389,104 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/jwynia-knowledge-graph.md",
+      "category": {
+        "slug": "automation",
+        "label": "Automation & MCP",
+        "description": "MCP, browser automation, workflow orchestration, integration, and tooling."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/020-external-skill-wiki-import-engineering-workflows/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/020-external-skill-wiki-import-engineering-workflows/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/020-external-skill-wiki-import-engineering-workflows/"
+        },
+        {
+          "label": "https://github.com/jwynia/agent-skills",
+          "href": "https://github.com/jwynia/agent-skills",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_github_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source repo: `jwynia/agent-skills`",
+          "href": "https://github.com/jwynia/agent-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source URL: `https://github.com/jwynia/agent-skills`",
+          "href": "https://github.com/jwynia/agent-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `skills/general/knowledge-graph`",
+          "href": "https://github.com/jwynia/agent-skills/tree/main/skills/general/knowledge-graph",
+          "kind": "upstream-path",
+          "repoPath": "skills/general/knowledge-graph"
+        },
+        {
+          "label": "Import status: `validated_external_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `listed_in_validated_source_catalog`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/020-external-skill-wiki-import-engineering-workflows/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/020-external-skill-wiki-import-engineering-workflows/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/020-external-skill-wiki-import-engineering-workflows/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "external skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "source-provenance capture",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime verification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "workflow promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -22602,6 +29649,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_github_skill_seed`\n- Source repo: `jwynia/agent-skills`\n- Source URL: `https://github.com/jwynia/agent-skills`\n- Source path hint: `skills/creative/prose-style`\n- Import status: `validated_external_import`\n- Validation basis: `listed_in_validated_source_catalog`\n- Validation run: `runs/020-external-skill-wiki-import-engineering-workflows/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": "jwynia/agent-skills",
+      "upstreamSourceUrl": "https://github.com/jwynia/agent-skills",
+      "upstreamSourcePathHint": "skills/creative/prose-style",
       "sections": [
         {
           "title": "Provenance",
@@ -22771,6 +29821,104 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/jwynia-prose-style.md",
+      "category": {
+        "slug": "media",
+        "label": "Media & Creative",
+        "description": "Design, image, video, writing, content, social media, and brand skills."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/020-external-skill-wiki-import-engineering-workflows/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/020-external-skill-wiki-import-engineering-workflows/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/020-external-skill-wiki-import-engineering-workflows/"
+        },
+        {
+          "label": "https://github.com/jwynia/agent-skills",
+          "href": "https://github.com/jwynia/agent-skills",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_github_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source repo: `jwynia/agent-skills`",
+          "href": "https://github.com/jwynia/agent-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source URL: `https://github.com/jwynia/agent-skills`",
+          "href": "https://github.com/jwynia/agent-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `skills/creative/prose-style`",
+          "href": "https://github.com/jwynia/agent-skills/tree/main/skills/creative/prose-style",
+          "kind": "upstream-path",
+          "repoPath": "skills/creative/prose-style"
+        },
+        {
+          "label": "Import status: `validated_external_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `listed_in_validated_source_catalog`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/020-external-skill-wiki-import-engineering-workflows/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/020-external-skill-wiki-import-engineering-workflows/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/020-external-skill-wiki-import-engineering-workflows/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "external skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "source-provenance capture",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime verification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "workflow promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -22933,6 +30081,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_github_skill_seed`\n- Source repo: `jwynia/agent-skills`\n- Source URL: `https://github.com/jwynia/agent-skills`\n- Source path hint: `skills/creative/revision`\n- Import status: `validated_external_import`\n- Validation basis: `listed_in_validated_source_catalog`\n- Validation run: `runs/020-external-skill-wiki-import-engineering-workflows/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": "jwynia/agent-skills",
+      "upstreamSourceUrl": "https://github.com/jwynia/agent-skills",
+      "upstreamSourcePathHint": "skills/creative/revision",
       "sections": [
         {
           "title": "Provenance",
@@ -23102,6 +30253,104 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/jwynia-revision.md",
+      "category": {
+        "slug": "media",
+        "label": "Media & Creative",
+        "description": "Design, image, video, writing, content, social media, and brand skills."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/020-external-skill-wiki-import-engineering-workflows/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/020-external-skill-wiki-import-engineering-workflows/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/020-external-skill-wiki-import-engineering-workflows/"
+        },
+        {
+          "label": "https://github.com/jwynia/agent-skills",
+          "href": "https://github.com/jwynia/agent-skills",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_github_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source repo: `jwynia/agent-skills`",
+          "href": "https://github.com/jwynia/agent-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source URL: `https://github.com/jwynia/agent-skills`",
+          "href": "https://github.com/jwynia/agent-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `skills/creative/revision`",
+          "href": "https://github.com/jwynia/agent-skills/tree/main/skills/creative/revision",
+          "kind": "upstream-path",
+          "repoPath": "skills/creative/revision"
+        },
+        {
+          "label": "Import status: `validated_external_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `listed_in_validated_source_catalog`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/020-external-skill-wiki-import-engineering-workflows/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/020-external-skill-wiki-import-engineering-workflows/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/020-external-skill-wiki-import-engineering-workflows/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "external skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "source-provenance capture",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime verification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "workflow promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -23264,6 +30513,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_github_skill_seed`\n- Source repo: `jwynia/agent-skills`\n- Source URL: `https://github.com/jwynia/agent-skills`\n- Source path hint: `skills/general/self-improving-agent`\n- Import status: `validated_external_import`\n- Validation basis: `listed_in_validated_source_catalog`\n- Validation run: `runs/020-external-skill-wiki-import-engineering-workflows/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": "jwynia/agent-skills",
+      "upstreamSourceUrl": "https://github.com/jwynia/agent-skills",
+      "upstreamSourcePathHint": "skills/general/self-improving-agent",
       "sections": [
         {
           "title": "Provenance",
@@ -23433,6 +30685,104 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/jwynia-self-improving-agent.md",
+      "category": {
+        "slug": "automation",
+        "label": "Automation & MCP",
+        "description": "MCP, browser automation, workflow orchestration, integration, and tooling."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/020-external-skill-wiki-import-engineering-workflows/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/020-external-skill-wiki-import-engineering-workflows/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/020-external-skill-wiki-import-engineering-workflows/"
+        },
+        {
+          "label": "https://github.com/jwynia/agent-skills",
+          "href": "https://github.com/jwynia/agent-skills",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_github_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source repo: `jwynia/agent-skills`",
+          "href": "https://github.com/jwynia/agent-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source URL: `https://github.com/jwynia/agent-skills`",
+          "href": "https://github.com/jwynia/agent-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `skills/general/self-improving-agent`",
+          "href": "https://github.com/jwynia/agent-skills/tree/main/skills/general/self-improving-agent",
+          "kind": "upstream-path",
+          "repoPath": "skills/general/self-improving-agent"
+        },
+        {
+          "label": "Import status: `validated_external_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `listed_in_validated_source_catalog`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/020-external-skill-wiki-import-engineering-workflows/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/020-external-skill-wiki-import-engineering-workflows/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/020-external-skill-wiki-import-engineering-workflows/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "external skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "source-provenance capture",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime verification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "workflow promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -23595,6 +30945,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_github_skill_seed`\n- Source repo: `jwynia/agent-skills`\n- Source URL: `https://github.com/jwynia/agent-skills`\n- Source path hint: `skills/general/skill-sync`\n- Import status: `validated_external_import`\n- Validation basis: `listed_in_validated_source_catalog`\n- Validation run: `runs/020-external-skill-wiki-import-engineering-workflows/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": "jwynia/agent-skills",
+      "upstreamSourceUrl": "https://github.com/jwynia/agent-skills",
+      "upstreamSourcePathHint": "skills/general/skill-sync",
       "sections": [
         {
           "title": "Provenance",
@@ -23764,6 +31117,104 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/jwynia-skill-sync.md",
+      "category": {
+        "slug": "automation",
+        "label": "Automation & MCP",
+        "description": "MCP, browser automation, workflow orchestration, integration, and tooling."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/020-external-skill-wiki-import-engineering-workflows/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/020-external-skill-wiki-import-engineering-workflows/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/020-external-skill-wiki-import-engineering-workflows/"
+        },
+        {
+          "label": "https://github.com/jwynia/agent-skills",
+          "href": "https://github.com/jwynia/agent-skills",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_github_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source repo: `jwynia/agent-skills`",
+          "href": "https://github.com/jwynia/agent-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source URL: `https://github.com/jwynia/agent-skills`",
+          "href": "https://github.com/jwynia/agent-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `skills/general/skill-sync`",
+          "href": "https://github.com/jwynia/agent-skills/tree/main/skills/general/skill-sync",
+          "kind": "upstream-path",
+          "repoPath": "skills/general/skill-sync"
+        },
+        {
+          "label": "Import status: `validated_external_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `listed_in_validated_source_catalog`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/020-external-skill-wiki-import-engineering-workflows/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/020-external-skill-wiki-import-engineering-workflows/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/020-external-skill-wiki-import-engineering-workflows/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "external skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "source-provenance capture",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime verification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "workflow promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -23926,6 +31377,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_github_skill_seed`\n- Source repo: `jwynia/agent-skills`\n- Source URL: `https://github.com/jwynia/agent-skills`\n- Source path hint: `skills/creative/story-analysis`\n- Import status: `validated_external_import`\n- Validation basis: `listed_in_validated_source_catalog`\n- Validation run: `runs/020-external-skill-wiki-import-engineering-workflows/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": "jwynia/agent-skills",
+      "upstreamSourceUrl": "https://github.com/jwynia/agent-skills",
+      "upstreamSourcePathHint": "skills/creative/story-analysis",
       "sections": [
         {
           "title": "Provenance",
@@ -24095,6 +31549,104 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/jwynia-story-analysis.md",
+      "category": {
+        "slug": "media",
+        "label": "Media & Creative",
+        "description": "Design, image, video, writing, content, social media, and brand skills."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/020-external-skill-wiki-import-engineering-workflows/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/020-external-skill-wiki-import-engineering-workflows/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/020-external-skill-wiki-import-engineering-workflows/"
+        },
+        {
+          "label": "https://github.com/jwynia/agent-skills",
+          "href": "https://github.com/jwynia/agent-skills",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_github_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source repo: `jwynia/agent-skills`",
+          "href": "https://github.com/jwynia/agent-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source URL: `https://github.com/jwynia/agent-skills`",
+          "href": "https://github.com/jwynia/agent-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `skills/creative/story-analysis`",
+          "href": "https://github.com/jwynia/agent-skills/tree/main/skills/creative/story-analysis",
+          "kind": "upstream-path",
+          "repoPath": "skills/creative/story-analysis"
+        },
+        {
+          "label": "Import status: `validated_external_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `listed_in_validated_source_catalog`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/020-external-skill-wiki-import-engineering-workflows/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/020-external-skill-wiki-import-engineering-workflows/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/020-external-skill-wiki-import-engineering-workflows/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "external skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "source-provenance capture",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime verification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "workflow promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -24257,6 +31809,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_github_skill_seed`\n- Source repo: `jwynia/agent-skills`\n- Source URL: `https://github.com/jwynia/agent-skills`\n- Source path hint: `skills/creative/story-coach`\n- Import status: `validated_external_import`\n- Validation basis: `listed_in_validated_source_catalog`\n- Validation run: `runs/020-external-skill-wiki-import-engineering-workflows/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": "jwynia/agent-skills",
+      "upstreamSourceUrl": "https://github.com/jwynia/agent-skills",
+      "upstreamSourcePathHint": "skills/creative/story-coach",
       "sections": [
         {
           "title": "Provenance",
@@ -24426,6 +31981,104 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/jwynia-story-coach.md",
+      "category": {
+        "slug": "media",
+        "label": "Media & Creative",
+        "description": "Design, image, video, writing, content, social media, and brand skills."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/020-external-skill-wiki-import-engineering-workflows/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/020-external-skill-wiki-import-engineering-workflows/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/020-external-skill-wiki-import-engineering-workflows/"
+        },
+        {
+          "label": "https://github.com/jwynia/agent-skills",
+          "href": "https://github.com/jwynia/agent-skills",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_github_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source repo: `jwynia/agent-skills`",
+          "href": "https://github.com/jwynia/agent-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source URL: `https://github.com/jwynia/agent-skills`",
+          "href": "https://github.com/jwynia/agent-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `skills/creative/story-coach`",
+          "href": "https://github.com/jwynia/agent-skills/tree/main/skills/creative/story-coach",
+          "kind": "upstream-path",
+          "repoPath": "skills/creative/story-coach"
+        },
+        {
+          "label": "Import status: `validated_external_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `listed_in_validated_source_catalog`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/020-external-skill-wiki-import-engineering-workflows/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/020-external-skill-wiki-import-engineering-workflows/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/020-external-skill-wiki-import-engineering-workflows/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "external skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "source-provenance capture",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime verification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "workflow promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -24588,6 +32241,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_github_skill_seed`\n- Source repo: `jwynia/agent-skills`\n- Source URL: `https://github.com/jwynia/agent-skills`\n- Source path hint: `skills/creative/story-collaborator`\n- Import status: `validated_external_import`\n- Validation basis: `listed_in_validated_source_catalog`\n- Validation run: `runs/020-external-skill-wiki-import-engineering-workflows/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": "jwynia/agent-skills",
+      "upstreamSourceUrl": "https://github.com/jwynia/agent-skills",
+      "upstreamSourcePathHint": "skills/creative/story-collaborator",
       "sections": [
         {
           "title": "Provenance",
@@ -24757,6 +32413,104 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/jwynia-story-collaborator.md",
+      "category": {
+        "slug": "office",
+        "label": "Office & Productivity",
+        "description": "Documents, spreadsheets, workspace automation, and productivity workflows."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/020-external-skill-wiki-import-engineering-workflows/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/020-external-skill-wiki-import-engineering-workflows/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/020-external-skill-wiki-import-engineering-workflows/"
+        },
+        {
+          "label": "https://github.com/jwynia/agent-skills",
+          "href": "https://github.com/jwynia/agent-skills",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_github_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source repo: `jwynia/agent-skills`",
+          "href": "https://github.com/jwynia/agent-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source URL: `https://github.com/jwynia/agent-skills`",
+          "href": "https://github.com/jwynia/agent-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `skills/creative/story-collaborator`",
+          "href": "https://github.com/jwynia/agent-skills/tree/main/skills/creative/story-collaborator",
+          "kind": "upstream-path",
+          "repoPath": "skills/creative/story-collaborator"
+        },
+        {
+          "label": "Import status: `validated_external_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `listed_in_validated_source_catalog`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/020-external-skill-wiki-import-engineering-workflows/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/020-external-skill-wiki-import-engineering-workflows/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/020-external-skill-wiki-import-engineering-workflows/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "external skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "source-provenance capture",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime verification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "workflow promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -24919,6 +32673,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_github_skill_seed`\n- Source repo: `jwynia/agent-skills`\n- Source URL: `https://github.com/jwynia/agent-skills`\n- Source path hint: `skills/creative/story-idea-generator`\n- Import status: `validated_external_import`\n- Validation basis: `listed_in_validated_source_catalog`\n- Validation run: `runs/020-external-skill-wiki-import-engineering-workflows/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": "jwynia/agent-skills",
+      "upstreamSourceUrl": "https://github.com/jwynia/agent-skills",
+      "upstreamSourcePathHint": "skills/creative/story-idea-generator",
       "sections": [
         {
           "title": "Provenance",
@@ -25088,6 +32845,104 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/jwynia-story-idea-generator.md",
+      "category": {
+        "slug": "media",
+        "label": "Media & Creative",
+        "description": "Design, image, video, writing, content, social media, and brand skills."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/020-external-skill-wiki-import-engineering-workflows/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/020-external-skill-wiki-import-engineering-workflows/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/020-external-skill-wiki-import-engineering-workflows/"
+        },
+        {
+          "label": "https://github.com/jwynia/agent-skills",
+          "href": "https://github.com/jwynia/agent-skills",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_github_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source repo: `jwynia/agent-skills`",
+          "href": "https://github.com/jwynia/agent-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source URL: `https://github.com/jwynia/agent-skills`",
+          "href": "https://github.com/jwynia/agent-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `skills/creative/story-idea-generator`",
+          "href": "https://github.com/jwynia/agent-skills/tree/main/skills/creative/story-idea-generator",
+          "kind": "upstream-path",
+          "repoPath": "skills/creative/story-idea-generator"
+        },
+        {
+          "label": "Import status: `validated_external_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `listed_in_validated_source_catalog`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/020-external-skill-wiki-import-engineering-workflows/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/020-external-skill-wiki-import-engineering-workflows/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/020-external-skill-wiki-import-engineering-workflows/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "external skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "source-provenance capture",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime verification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "workflow promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -25250,6 +33105,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_github_skill_seed`\n- Source repo: `jwynia/agent-skills`\n- Source URL: `https://github.com/jwynia/agent-skills`\n- Source path hint: `skills/creative/story-sense`\n- Import status: `validated_external_import`\n- Validation basis: `listed_in_validated_source_catalog`\n- Validation run: `runs/020-external-skill-wiki-import-engineering-workflows/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": "jwynia/agent-skills",
+      "upstreamSourceUrl": "https://github.com/jwynia/agent-skills",
+      "upstreamSourcePathHint": "skills/creative/story-sense",
       "sections": [
         {
           "title": "Provenance",
@@ -25419,6 +33277,104 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/jwynia-story-sense.md",
+      "category": {
+        "slug": "media",
+        "label": "Media & Creative",
+        "description": "Design, image, video, writing, content, social media, and brand skills."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/020-external-skill-wiki-import-engineering-workflows/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/020-external-skill-wiki-import-engineering-workflows/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/020-external-skill-wiki-import-engineering-workflows/"
+        },
+        {
+          "label": "https://github.com/jwynia/agent-skills",
+          "href": "https://github.com/jwynia/agent-skills",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_github_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source repo: `jwynia/agent-skills`",
+          "href": "https://github.com/jwynia/agent-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source URL: `https://github.com/jwynia/agent-skills`",
+          "href": "https://github.com/jwynia/agent-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `skills/creative/story-sense`",
+          "href": "https://github.com/jwynia/agent-skills/tree/main/skills/creative/story-sense",
+          "kind": "upstream-path",
+          "repoPath": "skills/creative/story-sense"
+        },
+        {
+          "label": "Import status: `validated_external_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `listed_in_validated_source_catalog`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/020-external-skill-wiki-import-engineering-workflows/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/020-external-skill-wiki-import-engineering-workflows/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/020-external-skill-wiki-import-engineering-workflows/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "external skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "source-provenance capture",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime verification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "workflow promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -25581,6 +33537,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_github_skill_seed`\n- Source repo: `jwynia/agent-skills`\n- Source URL: `https://github.com/jwynia/agent-skills`\n- Source path hint: `skills/general/todo-tracker`\n- Import status: `validated_external_import`\n- Validation basis: `listed_in_validated_source_catalog`\n- Validation run: `runs/020-external-skill-wiki-import-engineering-workflows/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": "jwynia/agent-skills",
+      "upstreamSourceUrl": "https://github.com/jwynia/agent-skills",
+      "upstreamSourcePathHint": "skills/general/todo-tracker",
       "sections": [
         {
           "title": "Provenance",
@@ -25750,6 +33709,104 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/jwynia-todo-tracker.md",
+      "category": {
+        "slug": "office",
+        "label": "Office & Productivity",
+        "description": "Documents, spreadsheets, workspace automation, and productivity workflows."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/020-external-skill-wiki-import-engineering-workflows/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/020-external-skill-wiki-import-engineering-workflows/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/020-external-skill-wiki-import-engineering-workflows/"
+        },
+        {
+          "label": "https://github.com/jwynia/agent-skills",
+          "href": "https://github.com/jwynia/agent-skills",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_github_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source repo: `jwynia/agent-skills`",
+          "href": "https://github.com/jwynia/agent-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source URL: `https://github.com/jwynia/agent-skills`",
+          "href": "https://github.com/jwynia/agent-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `skills/general/todo-tracker`",
+          "href": "https://github.com/jwynia/agent-skills/tree/main/skills/general/todo-tracker",
+          "kind": "upstream-path",
+          "repoPath": "skills/general/todo-tracker"
+        },
+        {
+          "label": "Import status: `validated_external_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `listed_in_validated_source_catalog`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/020-external-skill-wiki-import-engineering-workflows/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/020-external-skill-wiki-import-engineering-workflows/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/020-external-skill-wiki-import-engineering-workflows/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "external skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "source-provenance capture",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime verification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "workflow promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -25912,6 +33969,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_official_source_skill_seed`\n- Source name: `LambdaTest/agent-skills`\n- Source URL: `https://github.com/LambdaTest/agent-skills`\n- Source path hint: `README / official testing skill collection`\n- Import status: `validated_official_source_import`\n- Validation basis: `official_repo_catalog`\n- Market signal: `official source-owned GitHub repo`\n- Validation run: `runs/024-skill-wiki-official-gapfill-pack/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://github.com/LambdaTest/agent-skills",
+      "upstreamSourcePathHint": "README / official testing skill collection",
       "sections": [
         {
           "title": "Provenance",
@@ -26081,6 +34141,108 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/lambdatest-agent-skills-catalog.md",
+      "category": {
+        "slug": "devops",
+        "label": "DevOps & Security",
+        "description": "Deployment, testing, QA, security, compliance, and infrastructure skills."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/024-skill-wiki-official-gapfill-pack/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/024-skill-wiki-official-gapfill-pack/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/024-skill-wiki-official-gapfill-pack/"
+        },
+        {
+          "label": "https://github.com/LambdaTest/agent-skills",
+          "href": "https://github.com/LambdaTest/agent-skills",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_official_source_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `LambdaTest/agent-skills`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source URL: `https://github.com/LambdaTest/agent-skills`",
+          "href": "https://github.com/LambdaTest/agent-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `README / official testing skill collection`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Import status: `validated_official_source_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `official_repo_catalog`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Market signal: `official source-owned GitHub repo`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/024-skill-wiki-official-gapfill-pack/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/024-skill-wiki-official-gapfill-pack/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/024-skill-wiki-official-gapfill-pack/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "official-source skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "final searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "query coverage expansion",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime certification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "verified recipe promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -26243,6 +34405,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_official_source_skill_seed`\n- Source name: `LambdaTest/agent-skills`\n- Source URL: `https://github.com/LambdaTest/agent-skills/tree/main/skills/appium-skill`\n- Source path hint: `skills/appium-skill`\n- Import status: `validated_official_source_import`\n- Validation basis: `official_repo_skill_entry`\n- Market signal: `official skill directory visible in repo`\n- Validation run: `runs/024-skill-wiki-official-gapfill-pack/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://github.com/LambdaTest/agent-skills/tree/main/skills/appium-skill",
+      "upstreamSourcePathHint": "skills/appium-skill",
       "sections": [
         {
           "title": "Provenance",
@@ -26412,6 +34577,109 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/lambdatest-appium.md",
+      "category": {
+        "slug": "devops",
+        "label": "DevOps & Security",
+        "description": "Deployment, testing, QA, security, compliance, and infrastructure skills."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/024-skill-wiki-official-gapfill-pack/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/024-skill-wiki-official-gapfill-pack/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/024-skill-wiki-official-gapfill-pack/"
+        },
+        {
+          "label": "https://github.com/LambdaTest/agent-skills/tree/main/skills/appium-skill",
+          "href": "https://github.com/LambdaTest/agent-skills/tree/main/skills/appium-skill",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_official_source_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `LambdaTest/agent-skills`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source URL: `https://github.com/LambdaTest/agent-skills/tree/main/skills/appium-skill`",
+          "href": "https://github.com/LambdaTest/agent-skills/tree/main/skills/appium-skill",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `skills/appium-skill`",
+          "href": "https://github.com/LambdaTest/agent-skills/tree/main/skills/appium-skill/tree/main/skills/appium-skill",
+          "kind": "upstream-path",
+          "repoPath": "skills/appium-skill"
+        },
+        {
+          "label": "Import status: `validated_official_source_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `official_repo_skill_entry`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Market signal: `official skill directory visible in repo`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/024-skill-wiki-official-gapfill-pack/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/024-skill-wiki-official-gapfill-pack/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/024-skill-wiki-official-gapfill-pack/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "official-source skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "final searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "query coverage expansion",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime certification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "verified recipe promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -26574,6 +34842,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_official_source_skill_seed`\n- Source name: `LambdaTest/agent-skills`\n- Source URL: `https://github.com/LambdaTest/agent-skills/tree/main/skills/cypress-skill`\n- Source path hint: `skills/cypress-skill`\n- Import status: `validated_official_source_import`\n- Validation basis: `official_repo_skill_entry`\n- Market signal: `official skill directory visible in repo`\n- Validation run: `runs/024-skill-wiki-official-gapfill-pack/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://github.com/LambdaTest/agent-skills/tree/main/skills/cypress-skill",
+      "upstreamSourcePathHint": "skills/cypress-skill",
       "sections": [
         {
           "title": "Provenance",
@@ -26743,6 +35014,109 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/lambdatest-cypress.md",
+      "category": {
+        "slug": "devops",
+        "label": "DevOps & Security",
+        "description": "Deployment, testing, QA, security, compliance, and infrastructure skills."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/024-skill-wiki-official-gapfill-pack/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/024-skill-wiki-official-gapfill-pack/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/024-skill-wiki-official-gapfill-pack/"
+        },
+        {
+          "label": "https://github.com/LambdaTest/agent-skills/tree/main/skills/cypress-skill",
+          "href": "https://github.com/LambdaTest/agent-skills/tree/main/skills/cypress-skill",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_official_source_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `LambdaTest/agent-skills`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source URL: `https://github.com/LambdaTest/agent-skills/tree/main/skills/cypress-skill`",
+          "href": "https://github.com/LambdaTest/agent-skills/tree/main/skills/cypress-skill",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `skills/cypress-skill`",
+          "href": "https://github.com/LambdaTest/agent-skills/tree/main/skills/cypress-skill/tree/main/skills/cypress-skill",
+          "kind": "upstream-path",
+          "repoPath": "skills/cypress-skill"
+        },
+        {
+          "label": "Import status: `validated_official_source_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `official_repo_skill_entry`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Market signal: `official skill directory visible in repo`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/024-skill-wiki-official-gapfill-pack/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/024-skill-wiki-official-gapfill-pack/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/024-skill-wiki-official-gapfill-pack/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "official-source skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "final searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "query coverage expansion",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime certification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "verified recipe promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -26905,6 +35279,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_official_source_skill_seed`\n- Source name: `LambdaTest/agent-skills`\n- Source URL: `https://github.com/LambdaTest/agent-skills/tree/main/skills/playwright-skill`\n- Source path hint: `skills/playwright-skill`\n- Import status: `validated_official_source_import`\n- Validation basis: `official_repo_skill_entry`\n- Market signal: `official skill directory visible in repo`\n- Validation run: `runs/024-skill-wiki-official-gapfill-pack/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://github.com/LambdaTest/agent-skills/tree/main/skills/playwright-skill",
+      "upstreamSourcePathHint": "skills/playwright-skill",
       "sections": [
         {
           "title": "Provenance",
@@ -27074,6 +35451,109 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/lambdatest-playwright.md",
+      "category": {
+        "slug": "devops",
+        "label": "DevOps & Security",
+        "description": "Deployment, testing, QA, security, compliance, and infrastructure skills."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/024-skill-wiki-official-gapfill-pack/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/024-skill-wiki-official-gapfill-pack/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/024-skill-wiki-official-gapfill-pack/"
+        },
+        {
+          "label": "https://github.com/LambdaTest/agent-skills/tree/main/skills/playwright-skill",
+          "href": "https://github.com/LambdaTest/agent-skills/tree/main/skills/playwright-skill",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_official_source_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `LambdaTest/agent-skills`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source URL: `https://github.com/LambdaTest/agent-skills/tree/main/skills/playwright-skill`",
+          "href": "https://github.com/LambdaTest/agent-skills/tree/main/skills/playwright-skill",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `skills/playwright-skill`",
+          "href": "https://github.com/LambdaTest/agent-skills/tree/main/skills/playwright-skill/tree/main/skills/playwright-skill",
+          "kind": "upstream-path",
+          "repoPath": "skills/playwright-skill"
+        },
+        {
+          "label": "Import status: `validated_official_source_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `official_repo_skill_entry`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Market signal: `official skill directory visible in repo`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/024-skill-wiki-official-gapfill-pack/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/024-skill-wiki-official-gapfill-pack/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/024-skill-wiki-official-gapfill-pack/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "official-source skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "final searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "query coverage expansion",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime certification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "verified recipe promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -27236,6 +35716,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_official_source_skill_seed`\n- Source name: `LambdaTest/agent-skills`\n- Source URL: `https://github.com/LambdaTest/agent-skills/tree/main/skills/selenium-skill`\n- Source path hint: `skills/selenium-skill`\n- Import status: `validated_official_source_import`\n- Validation basis: `official_repo_skill_entry`\n- Market signal: `official skill directory visible in repo`\n- Validation run: `runs/024-skill-wiki-official-gapfill-pack/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://github.com/LambdaTest/agent-skills/tree/main/skills/selenium-skill",
+      "upstreamSourcePathHint": "skills/selenium-skill",
       "sections": [
         {
           "title": "Provenance",
@@ -27405,6 +35888,109 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/lambdatest-selenium.md",
+      "category": {
+        "slug": "devops",
+        "label": "DevOps & Security",
+        "description": "Deployment, testing, QA, security, compliance, and infrastructure skills."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/024-skill-wiki-official-gapfill-pack/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/024-skill-wiki-official-gapfill-pack/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/024-skill-wiki-official-gapfill-pack/"
+        },
+        {
+          "label": "https://github.com/LambdaTest/agent-skills/tree/main/skills/selenium-skill",
+          "href": "https://github.com/LambdaTest/agent-skills/tree/main/skills/selenium-skill",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_official_source_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `LambdaTest/agent-skills`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source URL: `https://github.com/LambdaTest/agent-skills/tree/main/skills/selenium-skill`",
+          "href": "https://github.com/LambdaTest/agent-skills/tree/main/skills/selenium-skill",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `skills/selenium-skill`",
+          "href": "https://github.com/LambdaTest/agent-skills/tree/main/skills/selenium-skill/tree/main/skills/selenium-skill",
+          "kind": "upstream-path",
+          "repoPath": "skills/selenium-skill"
+        },
+        {
+          "label": "Import status: `validated_official_source_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `official_repo_skill_entry`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Market signal: `official skill directory visible in repo`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/024-skill-wiki-official-gapfill-pack/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/024-skill-wiki-official-gapfill-pack/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/024-skill-wiki-official-gapfill-pack/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "official-source skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "final searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "query coverage expansion",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime certification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "verified recipe promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -27567,6 +36153,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_github_skill_seed`\n- Source repo: `mattpocock/skills`\n- Source URL: `https://github.com/mattpocock/skills`\n- Source path hint: `skills/engineering/setup-matt-pocock-skills`\n- Import status: `validated_external_import`\n- Validation basis: `listed_in_validated_source_catalog`\n- Validation run: `runs/020-external-skill-wiki-import-engineering-workflows/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": "mattpocock/skills",
+      "upstreamSourceUrl": "https://github.com/mattpocock/skills",
+      "upstreamSourcePathHint": "skills/engineering/setup-matt-pocock-skills",
       "sections": [
         {
           "title": "Provenance",
@@ -27736,6 +36325,104 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/mattpocock-setup-matt-pocock-skills.md",
+      "category": {
+        "slug": "codex",
+        "label": "Codex",
+        "description": "Codex, OpenAI skills, prompt operators, and code-generation workflows."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/020-external-skill-wiki-import-engineering-workflows/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/020-external-skill-wiki-import-engineering-workflows/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/020-external-skill-wiki-import-engineering-workflows/"
+        },
+        {
+          "label": "https://github.com/mattpocock/skills",
+          "href": "https://github.com/mattpocock/skills",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_github_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source repo: `mattpocock/skills`",
+          "href": "https://github.com/mattpocock/skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source URL: `https://github.com/mattpocock/skills`",
+          "href": "https://github.com/mattpocock/skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `skills/engineering/setup-matt-pocock-skills`",
+          "href": "https://github.com/mattpocock/skills/tree/main/skills/engineering/setup-matt-pocock-skills",
+          "kind": "upstream-path",
+          "repoPath": "skills/engineering/setup-matt-pocock-skills"
+        },
+        {
+          "label": "Import status: `validated_external_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `listed_in_validated_source_catalog`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/020-external-skill-wiki-import-engineering-workflows/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/020-external-skill-wiki-import-engineering-workflows/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/020-external-skill-wiki-import-engineering-workflows/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "external skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "source-provenance capture",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime verification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "workflow promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -27895,6 +36582,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_github_import`\n- Source repo: `mattpocock/skills`\n- Source URL: `https://github.com/mattpocock/skills`\n- Import status: `imported_external_unverified`\n- Imported via: `manual_market_sync`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": "mattpocock/skills",
+      "upstreamSourceUrl": "https://github.com/mattpocock/skills",
+      "upstreamSourcePathHint": null,
       "sections": [
         {
           "title": "Provenance",
@@ -28075,6 +36765,91 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/mattpocock-skills-for-real-engineers.md",
+      "category": {
+        "slug": "claude",
+        "label": "Claude",
+        "description": "Claude Code, Anthropic-specific skills, and Claude-oriented execution patterns."
+      },
+      "evidenceLinks": [
+        {
+          "label": "https://github.com/mattpocock/skills",
+          "href": "https://github.com/mattpocock/skills",
+          "kind": "external"
+        },
+        {
+          "label": "https://github.com/mattpocock/skills/tree/main/skills",
+          "href": "https://github.com/mattpocock/skills/tree/main/skills",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_github_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source repo: `mattpocock/skills`",
+          "href": "https://github.com/mattpocock/skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source URL: `https://github.com/mattpocock/skills`",
+          "href": "https://github.com/mattpocock/skills",
+          "kind": "external"
+        },
+        {
+          "label": "Import status: `imported_external_unverified`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Imported via: `manual_market_sync`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "external skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "engineering workflow reference",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "imported wiki search surface",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local validation",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "promotion gating",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "team convention approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -28237,6 +37012,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_github_skill_seed`\n- Source repo: `NVIDIA/skills`\n- Source URL: `https://github.com/NVIDIA/skills`\n- Source path hint: `skills/accelerated-computing-cudf`\n- Import status: `validated_external_import`\n- Validation basis: `listed_in_validated_source_catalog`\n- Validation run: `runs/019-external-skill-wiki-import-vendor-platforms/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": "NVIDIA/skills",
+      "upstreamSourceUrl": "https://github.com/NVIDIA/skills",
+      "upstreamSourcePathHint": "skills/accelerated-computing-cudf",
       "sections": [
         {
           "title": "Provenance",
@@ -28406,6 +37184,104 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/nvidia-accelerated-computing-cudf-skill.md",
+      "category": {
+        "slug": "research",
+        "label": "Research & Data",
+        "description": "Search, research, analysis, data science, GPU computing, and evidence-gathering."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/019-external-skill-wiki-import-vendor-platforms/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/019-external-skill-wiki-import-vendor-platforms/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/019-external-skill-wiki-import-vendor-platforms/"
+        },
+        {
+          "label": "https://github.com/NVIDIA/skills",
+          "href": "https://github.com/NVIDIA/skills",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_github_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source repo: `NVIDIA/skills`",
+          "href": "https://github.com/NVIDIA/skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source URL: `https://github.com/NVIDIA/skills`",
+          "href": "https://github.com/NVIDIA/skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `skills/accelerated-computing-cudf`",
+          "href": "https://github.com/NVIDIA/skills/tree/main/skills/accelerated-computing-cudf",
+          "kind": "upstream-path",
+          "repoPath": "skills/accelerated-computing-cudf"
+        },
+        {
+          "label": "Import status: `validated_external_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `listed_in_validated_source_catalog`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/019-external-skill-wiki-import-vendor-platforms/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/019-external-skill-wiki-import-vendor-platforms/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/019-external-skill-wiki-import-vendor-platforms/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "external skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "source-provenance capture",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime verification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "workflow promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -28565,6 +37441,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_github_import`\n- Source repo: `NVIDIA/skills`\n- Source URL: `https://github.com/NVIDIA/skills`\n- Import status: `imported_external_unverified`\n- Imported via: `manual_market_sync`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": "NVIDIA/skills",
+      "upstreamSourceUrl": "https://github.com/NVIDIA/skills",
+      "upstreamSourcePathHint": null,
       "sections": [
         {
           "title": "Provenance",
@@ -28747,6 +37626,91 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/nvidia-agent-skills-catalog.md",
+      "category": {
+        "slug": "research",
+        "label": "Research & Data",
+        "description": "Search, research, analysis, data science, GPU computing, and evidence-gathering."
+      },
+      "evidenceLinks": [
+        {
+          "label": "https://github.com/NVIDIA/skills",
+          "href": "https://github.com/NVIDIA/skills",
+          "kind": "external"
+        },
+        {
+          "label": "https://docs.nvidia.com/holoscan/sdk-user-guide/ai_skills.html",
+          "href": "https://docs.nvidia.com/holoscan/sdk-user-guide/ai_skills.html",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_github_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source repo: `NVIDIA/skills`",
+          "href": "https://github.com/NVIDIA/skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source URL: `https://github.com/NVIDIA/skills`",
+          "href": "https://github.com/NVIDIA/skills",
+          "kind": "external"
+        },
+        {
+          "label": "Import status: `imported_external_unverified`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Imported via: `manual_market_sync`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "external skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "NVIDIA platform skill reference",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "imported wiki search surface",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local validation",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "promotion gating",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "hardware availability proof",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -28909,6 +37873,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_github_skill_seed`\n- Source repo: `NVIDIA/skills`\n- Source URL: `https://github.com/NVIDIA/skills`\n- Source path hint: `skills/aiq-deploy`\n- Import status: `validated_external_import`\n- Validation basis: `listed_in_validated_source_catalog`\n- Validation run: `runs/019-external-skill-wiki-import-vendor-platforms/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": "NVIDIA/skills",
+      "upstreamSourceUrl": "https://github.com/NVIDIA/skills",
+      "upstreamSourcePathHint": "skills/aiq-deploy",
       "sections": [
         {
           "title": "Provenance",
@@ -29078,6 +38045,104 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/nvidia-aiq-deploy-skill.md",
+      "category": {
+        "slug": "devops",
+        "label": "DevOps & Security",
+        "description": "Deployment, testing, QA, security, compliance, and infrastructure skills."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/019-external-skill-wiki-import-vendor-platforms/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/019-external-skill-wiki-import-vendor-platforms/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/019-external-skill-wiki-import-vendor-platforms/"
+        },
+        {
+          "label": "https://github.com/NVIDIA/skills",
+          "href": "https://github.com/NVIDIA/skills",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_github_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source repo: `NVIDIA/skills`",
+          "href": "https://github.com/NVIDIA/skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source URL: `https://github.com/NVIDIA/skills`",
+          "href": "https://github.com/NVIDIA/skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `skills/aiq-deploy`",
+          "href": "https://github.com/NVIDIA/skills/tree/main/skills/aiq-deploy",
+          "kind": "upstream-path",
+          "repoPath": "skills/aiq-deploy"
+        },
+        {
+          "label": "Import status: `validated_external_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `listed_in_validated_source_catalog`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/019-external-skill-wiki-import-vendor-platforms/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/019-external-skill-wiki-import-vendor-platforms/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/019-external-skill-wiki-import-vendor-platforms/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "external skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "source-provenance capture",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime verification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "workflow promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -29240,6 +38305,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_github_skill_seed`\n- Source repo: `NVIDIA/skills`\n- Source URL: `https://github.com/NVIDIA/skills`\n- Source path hint: `skills/aiq-research`\n- Import status: `validated_external_import`\n- Validation basis: `listed_in_validated_source_catalog`\n- Validation run: `runs/019-external-skill-wiki-import-vendor-platforms/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": "NVIDIA/skills",
+      "upstreamSourceUrl": "https://github.com/NVIDIA/skills",
+      "upstreamSourcePathHint": "skills/aiq-research",
       "sections": [
         {
           "title": "Provenance",
@@ -29409,6 +38477,104 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/nvidia-aiq-research-skill.md",
+      "category": {
+        "slug": "research",
+        "label": "Research & Data",
+        "description": "Search, research, analysis, data science, GPU computing, and evidence-gathering."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/019-external-skill-wiki-import-vendor-platforms/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/019-external-skill-wiki-import-vendor-platforms/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/019-external-skill-wiki-import-vendor-platforms/"
+        },
+        {
+          "label": "https://github.com/NVIDIA/skills",
+          "href": "https://github.com/NVIDIA/skills",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_github_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source repo: `NVIDIA/skills`",
+          "href": "https://github.com/NVIDIA/skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source URL: `https://github.com/NVIDIA/skills`",
+          "href": "https://github.com/NVIDIA/skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `skills/aiq-research`",
+          "href": "https://github.com/NVIDIA/skills/tree/main/skills/aiq-research",
+          "kind": "upstream-path",
+          "repoPath": "skills/aiq-research"
+        },
+        {
+          "label": "Import status: `validated_external_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `listed_in_validated_source_catalog`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/019-external-skill-wiki-import-vendor-platforms/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/019-external-skill-wiki-import-vendor-platforms/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/019-external-skill-wiki-import-vendor-platforms/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "external skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "source-provenance capture",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime verification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "workflow promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -29571,6 +38737,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_github_skill_seed`\n- Source repo: `NVIDIA/skills`\n- Source URL: `https://github.com/NVIDIA/skills`\n- Source path hint: `skills/cudaq-guide`\n- Import status: `validated_external_import`\n- Validation basis: `listed_in_validated_source_catalog`\n- Validation run: `runs/019-external-skill-wiki-import-vendor-platforms/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": "NVIDIA/skills",
+      "upstreamSourceUrl": "https://github.com/NVIDIA/skills",
+      "upstreamSourcePathHint": "skills/cudaq-guide",
       "sections": [
         {
           "title": "Provenance",
@@ -29740,6 +38909,104 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/nvidia-cudaq-guide-skill.md",
+      "category": {
+        "slug": "research",
+        "label": "Research & Data",
+        "description": "Search, research, analysis, data science, GPU computing, and evidence-gathering."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/019-external-skill-wiki-import-vendor-platforms/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/019-external-skill-wiki-import-vendor-platforms/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/019-external-skill-wiki-import-vendor-platforms/"
+        },
+        {
+          "label": "https://github.com/NVIDIA/skills",
+          "href": "https://github.com/NVIDIA/skills",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_github_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source repo: `NVIDIA/skills`",
+          "href": "https://github.com/NVIDIA/skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source URL: `https://github.com/NVIDIA/skills`",
+          "href": "https://github.com/NVIDIA/skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `skills/cudaq-guide`",
+          "href": "https://github.com/NVIDIA/skills/tree/main/skills/cudaq-guide",
+          "kind": "upstream-path",
+          "repoPath": "skills/cudaq-guide"
+        },
+        {
+          "label": "Import status: `validated_external_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `listed_in_validated_source_catalog`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/019-external-skill-wiki-import-vendor-platforms/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/019-external-skill-wiki-import-vendor-platforms/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/019-external-skill-wiki-import-vendor-platforms/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "external skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "source-provenance capture",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime verification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "workflow promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -29902,6 +39169,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_github_skill_seed`\n- Source repo: `NVIDIA/skills`\n- Source URL: `https://github.com/NVIDIA/skills`\n- Source path hint: `skills/cuopt-developer`\n- Import status: `validated_external_import`\n- Validation basis: `listed_in_validated_source_catalog`\n- Validation run: `runs/019-external-skill-wiki-import-vendor-platforms/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": "NVIDIA/skills",
+      "upstreamSourceUrl": "https://github.com/NVIDIA/skills",
+      "upstreamSourcePathHint": "skills/cuopt-developer",
       "sections": [
         {
           "title": "Provenance",
@@ -30071,6 +39341,104 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/nvidia-cuopt-developer-skill.md",
+      "category": {
+        "slug": "research",
+        "label": "Research & Data",
+        "description": "Search, research, analysis, data science, GPU computing, and evidence-gathering."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/019-external-skill-wiki-import-vendor-platforms/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/019-external-skill-wiki-import-vendor-platforms/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/019-external-skill-wiki-import-vendor-platforms/"
+        },
+        {
+          "label": "https://github.com/NVIDIA/skills",
+          "href": "https://github.com/NVIDIA/skills",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_github_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source repo: `NVIDIA/skills`",
+          "href": "https://github.com/NVIDIA/skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source URL: `https://github.com/NVIDIA/skills`",
+          "href": "https://github.com/NVIDIA/skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `skills/cuopt-developer`",
+          "href": "https://github.com/NVIDIA/skills/tree/main/skills/cuopt-developer",
+          "kind": "upstream-path",
+          "repoPath": "skills/cuopt-developer"
+        },
+        {
+          "label": "Import status: `validated_external_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `listed_in_validated_source_catalog`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/019-external-skill-wiki-import-vendor-platforms/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/019-external-skill-wiki-import-vendor-platforms/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/019-external-skill-wiki-import-vendor-platforms/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "external skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "source-provenance capture",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime verification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "workflow promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -30233,6 +39601,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_github_skill_seed`\n- Source repo: `NVIDIA/skills`\n- Source URL: `https://github.com/NVIDIA/skills`\n- Source path hint: `skills/cuopt-install`\n- Import status: `validated_external_import`\n- Validation basis: `listed_in_validated_source_catalog`\n- Validation run: `runs/019-external-skill-wiki-import-vendor-platforms/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": "NVIDIA/skills",
+      "upstreamSourceUrl": "https://github.com/NVIDIA/skills",
+      "upstreamSourcePathHint": "skills/cuopt-install",
       "sections": [
         {
           "title": "Provenance",
@@ -30402,6 +39773,104 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/nvidia-cuopt-install-skill.md",
+      "category": {
+        "slug": "automation",
+        "label": "Automation & MCP",
+        "description": "MCP, browser automation, workflow orchestration, integration, and tooling."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/019-external-skill-wiki-import-vendor-platforms/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/019-external-skill-wiki-import-vendor-platforms/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/019-external-skill-wiki-import-vendor-platforms/"
+        },
+        {
+          "label": "https://github.com/NVIDIA/skills",
+          "href": "https://github.com/NVIDIA/skills",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_github_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source repo: `NVIDIA/skills`",
+          "href": "https://github.com/NVIDIA/skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source URL: `https://github.com/NVIDIA/skills`",
+          "href": "https://github.com/NVIDIA/skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `skills/cuopt-install`",
+          "href": "https://github.com/NVIDIA/skills/tree/main/skills/cuopt-install",
+          "kind": "upstream-path",
+          "repoPath": "skills/cuopt-install"
+        },
+        {
+          "label": "Import status: `validated_external_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `listed_in_validated_source_catalog`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/019-external-skill-wiki-import-vendor-platforms/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/019-external-skill-wiki-import-vendor-platforms/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/019-external-skill-wiki-import-vendor-platforms/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "external skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "source-provenance capture",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime verification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "workflow promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -30564,6 +40033,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_github_skill_seed`\n- Source repo: `NVIDIA/skills`\n- Source URL: `https://github.com/NVIDIA/skills`\n- Source path hint: `skills/cuopt-numerical-optimization-api-python`\n- Import status: `validated_external_import`\n- Validation basis: `listed_in_validated_source_catalog`\n- Validation run: `runs/019-external-skill-wiki-import-vendor-platforms/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": "NVIDIA/skills",
+      "upstreamSourceUrl": "https://github.com/NVIDIA/skills",
+      "upstreamSourcePathHint": "skills/cuopt-numerical-optimization-api-python",
       "sections": [
         {
           "title": "Provenance",
@@ -30733,6 +40205,104 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/nvidia-cuopt-numerical-optimization-api-python-skill.md",
+      "category": {
+        "slug": "research",
+        "label": "Research & Data",
+        "description": "Search, research, analysis, data science, GPU computing, and evidence-gathering."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/019-external-skill-wiki-import-vendor-platforms/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/019-external-skill-wiki-import-vendor-platforms/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/019-external-skill-wiki-import-vendor-platforms/"
+        },
+        {
+          "label": "https://github.com/NVIDIA/skills",
+          "href": "https://github.com/NVIDIA/skills",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_github_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source repo: `NVIDIA/skills`",
+          "href": "https://github.com/NVIDIA/skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source URL: `https://github.com/NVIDIA/skills`",
+          "href": "https://github.com/NVIDIA/skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `skills/cuopt-numerical-optimization-api-python`",
+          "href": "https://github.com/NVIDIA/skills/tree/main/skills/cuopt-numerical-optimization-api-python",
+          "kind": "upstream-path",
+          "repoPath": "skills/cuopt-numerical-optimization-api-python"
+        },
+        {
+          "label": "Import status: `validated_external_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `listed_in_validated_source_catalog`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/019-external-skill-wiki-import-vendor-platforms/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/019-external-skill-wiki-import-vendor-platforms/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/019-external-skill-wiki-import-vendor-platforms/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "external skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "source-provenance capture",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime verification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "workflow promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -30896,6 +40466,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_marketplace_featured_skill_seed`\n- Source name: `openagentskills.dev`\n- Source URL: `https://openagentskills.dev/`\n- Source path hint: `homepage / Featured Skills`\n- Import status: `validated_marketplace_import`\n- Validation basis: `featured_skill_visible`\n- Market signal: `featured on homepage`\n- Validation run: `runs/023-skill-wiki-category-and-featured-expansion/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://openagentskills.dev/",
+      "upstreamSourcePathHint": "homepage / Featured Skills",
       "sections": [
         {
           "title": "Provenance",
@@ -31066,6 +40639,108 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/open-agent-skills-codebase-to-course.md",
+      "category": {
+        "slug": "collections",
+        "label": "Collections & Catalogs",
+        "description": "Skill catalogs, hubs, repositories, and ecosystem-level collections."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/023-skill-wiki-category-and-featured-expansion/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/023-skill-wiki-category-and-featured-expansion/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/023-skill-wiki-category-and-featured-expansion/"
+        },
+        {
+          "label": "https://openagentskills.dev/",
+          "href": "https://openagentskills.dev/",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_marketplace_featured_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `openagentskills.dev`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source URL: `https://openagentskills.dev/`",
+          "href": "https://openagentskills.dev/",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `homepage / Featured Skills`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Import status: `validated_marketplace_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `featured_skill_visible`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Market signal: `featured on homepage`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/023-skill-wiki-category-and-featured-expansion/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/023-skill-wiki-category-and-featured-expansion/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/023-skill-wiki-category-and-featured-expansion/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "featured-skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "category enrichment",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "local execution proof",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "compliance certification",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -31229,6 +40904,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_marketplace_featured_skill_seed`\n- Source name: `openagentskills.dev`\n- Source URL: `https://openagentskills.dev/`\n- Source path hint: `homepage / Featured Skills`\n- Import status: `validated_marketplace_import`\n- Validation basis: `featured_skill_visible`\n- Market signal: `featured on homepage`\n- Validation run: `runs/023-skill-wiki-category-and-featured-expansion/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://openagentskills.dev/",
+      "upstreamSourcePathHint": "homepage / Featured Skills",
       "sections": [
         {
           "title": "Provenance",
@@ -31399,6 +41077,108 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/open-agent-skills-drawio-skill.md",
+      "category": {
+        "slug": "media",
+        "label": "Media & Creative",
+        "description": "Design, image, video, writing, content, social media, and brand skills."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/023-skill-wiki-category-and-featured-expansion/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/023-skill-wiki-category-and-featured-expansion/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/023-skill-wiki-category-and-featured-expansion/"
+        },
+        {
+          "label": "https://openagentskills.dev/",
+          "href": "https://openagentskills.dev/",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_marketplace_featured_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `openagentskills.dev`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source URL: `https://openagentskills.dev/`",
+          "href": "https://openagentskills.dev/",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `homepage / Featured Skills`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Import status: `validated_marketplace_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `featured_skill_visible`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Market signal: `featured on homepage`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/023-skill-wiki-category-and-featured-expansion/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/023-skill-wiki-category-and-featured-expansion/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/023-skill-wiki-category-and-featured-expansion/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "featured-skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "category enrichment",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "local execution proof",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "compliance certification",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -31562,6 +41342,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_marketplace_featured_skill_seed`\n- Source name: `openagentskills.dev`\n- Source URL: `https://openagentskills.dev/`\n- Source path hint: `homepage / Featured Skills`\n- Import status: `validated_marketplace_import`\n- Validation basis: `featured_skill_visible`\n- Market signal: `featured on homepage`\n- Validation run: `runs/023-skill-wiki-category-and-featured-expansion/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://openagentskills.dev/",
+      "upstreamSourcePathHint": "homepage / Featured Skills",
       "sections": [
         {
           "title": "Provenance",
@@ -31732,6 +41515,108 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/open-agent-skills-guizang-ppt-skill.md",
+      "category": {
+        "slug": "media",
+        "label": "Media & Creative",
+        "description": "Design, image, video, writing, content, social media, and brand skills."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/023-skill-wiki-category-and-featured-expansion/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/023-skill-wiki-category-and-featured-expansion/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/023-skill-wiki-category-and-featured-expansion/"
+        },
+        {
+          "label": "https://openagentskills.dev/",
+          "href": "https://openagentskills.dev/",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_marketplace_featured_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `openagentskills.dev`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source URL: `https://openagentskills.dev/`",
+          "href": "https://openagentskills.dev/",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `homepage / Featured Skills`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Import status: `validated_marketplace_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `featured_skill_visible`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Market signal: `featured on homepage`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/023-skill-wiki-category-and-featured-expansion/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/023-skill-wiki-category-and-featured-expansion/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/023-skill-wiki-category-and-featured-expansion/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "featured-skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "category enrichment",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "local execution proof",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "compliance certification",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -31895,6 +41780,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_marketplace_featured_skill_seed`\n- Source name: `openagentskills.dev`\n- Source URL: `https://openagentskills.dev/`\n- Source path hint: `homepage / Featured Skills`\n- Import status: `validated_marketplace_import`\n- Validation basis: `featured_skill_visible`\n- Market signal: `featured on homepage`\n- Validation run: `runs/023-skill-wiki-category-and-featured-expansion/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://openagentskills.dev/",
+      "upstreamSourcePathHint": "homepage / Featured Skills",
       "sections": [
         {
           "title": "Provenance",
@@ -32065,6 +41953,108 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/open-agent-skills-guizang-social-card.md",
+      "category": {
+        "slug": "media",
+        "label": "Media & Creative",
+        "description": "Design, image, video, writing, content, social media, and brand skills."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/023-skill-wiki-category-and-featured-expansion/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/023-skill-wiki-category-and-featured-expansion/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/023-skill-wiki-category-and-featured-expansion/"
+        },
+        {
+          "label": "https://openagentskills.dev/",
+          "href": "https://openagentskills.dev/",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_marketplace_featured_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `openagentskills.dev`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source URL: `https://openagentskills.dev/`",
+          "href": "https://openagentskills.dev/",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `homepage / Featured Skills`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Import status: `validated_marketplace_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `featured_skill_visible`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Market signal: `featured on homepage`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/023-skill-wiki-category-and-featured-expansion/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/023-skill-wiki-category-and-featured-expansion/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/023-skill-wiki-category-and-featured-expansion/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "featured-skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "category enrichment",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "local execution proof",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "compliance certification",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -32228,6 +42218,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_marketplace_featured_skill_seed`\n- Source name: `openagentskills.dev`\n- Source URL: `https://openagentskills.dev/`\n- Source path hint: `homepage / Featured Skills`\n- Import status: `validated_marketplace_import`\n- Validation basis: `featured_skill_visible`\n- Market signal: `featured on homepage with 205.3k popularity signal`\n- Validation run: `runs/023-skill-wiki-category-and-featured-expansion/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://openagentskills.dev/",
+      "upstreamSourcePathHint": "homepage / Featured Skills",
       "sections": [
         {
           "title": "Provenance",
@@ -32398,6 +42391,108 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/open-agent-skills-superpowers-review.md",
+      "category": {
+        "slug": "collections",
+        "label": "Collections & Catalogs",
+        "description": "Skill catalogs, hubs, repositories, and ecosystem-level collections."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/023-skill-wiki-category-and-featured-expansion/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/023-skill-wiki-category-and-featured-expansion/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/023-skill-wiki-category-and-featured-expansion/"
+        },
+        {
+          "label": "https://openagentskills.dev/",
+          "href": "https://openagentskills.dev/",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_marketplace_featured_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `openagentskills.dev`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source URL: `https://openagentskills.dev/`",
+          "href": "https://openagentskills.dev/",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `homepage / Featured Skills`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Import status: `validated_marketplace_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `featured_skill_visible`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Market signal: `featured on homepage with 205.3k popularity signal`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/023-skill-wiki-category-and-featured-expansion/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/023-skill-wiki-category-and-featured-expansion/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/023-skill-wiki-category-and-featured-expansion/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "featured-skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "category enrichment",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "local execution proof",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "compliance certification",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -32561,6 +42656,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_marketplace_featured_skill_seed`\n- Source name: `openagentskills.dev`\n- Source URL: `https://openagentskills.dev/`\n- Source path hint: `homepage / Featured Skills`\n- Import status: `validated_marketplace_import`\n- Validation basis: `featured_skill_visible`\n- Market signal: `featured on homepage`\n- Validation run: `runs/023-skill-wiki-category-and-featured-expansion/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://openagentskills.dev/",
+      "upstreamSourcePathHint": "homepage / Featured Skills",
       "sections": [
         {
           "title": "Provenance",
@@ -32731,6 +42829,108 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/open-agent-skills-ui-ux-pro-max.md",
+      "category": {
+        "slug": "media",
+        "label": "Media & Creative",
+        "description": "Design, image, video, writing, content, social media, and brand skills."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/023-skill-wiki-category-and-featured-expansion/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/023-skill-wiki-category-and-featured-expansion/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/023-skill-wiki-category-and-featured-expansion/"
+        },
+        {
+          "label": "https://openagentskills.dev/",
+          "href": "https://openagentskills.dev/",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_marketplace_featured_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `openagentskills.dev`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source URL: `https://openagentskills.dev/`",
+          "href": "https://openagentskills.dev/",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `homepage / Featured Skills`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Import status: `validated_marketplace_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `featured_skill_visible`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Market signal: `featured on homepage`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/023-skill-wiki-category-and-featured-expansion/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/023-skill-wiki-category-and-featured-expansion/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/023-skill-wiki-category-and-featured-expansion/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "featured-skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "category enrichment",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "local execution proof",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "compliance certification",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -32893,6 +43093,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_github_skill_seed`\n- Source repo: `openai/skills`\n- Source URL: `https://github.com/openai/skills`\n- Source path hint: `skills/.experimental/create-plan`\n- Import status: `validated_external_import`\n- Validation basis: `listed_in_validated_source_catalog`\n- Validation run: `runs/018-external-skill-wiki-import-official-catalogs/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": "openai/skills",
+      "upstreamSourceUrl": "https://github.com/openai/skills",
+      "upstreamSourcePathHint": "skills/.experimental/create-plan",
       "sections": [
         {
           "title": "Provenance",
@@ -33062,6 +43265,104 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/openai-create-plan-skill.md",
+      "category": {
+        "slug": "codex",
+        "label": "Codex",
+        "description": "Codex, OpenAI skills, prompt operators, and code-generation workflows."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/018-external-skill-wiki-import-official-catalogs/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/018-external-skill-wiki-import-official-catalogs/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/018-external-skill-wiki-import-official-catalogs/"
+        },
+        {
+          "label": "https://github.com/openai/skills",
+          "href": "https://github.com/openai/skills",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_github_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source repo: `openai/skills`",
+          "href": "https://github.com/openai/skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source URL: `https://github.com/openai/skills`",
+          "href": "https://github.com/openai/skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `skills/.experimental/create-plan`",
+          "href": "https://github.com/openai/skills/tree/main/skills/.experimental/create-plan",
+          "kind": "upstream-path",
+          "repoPath": "skills/.experimental/create-plan"
+        },
+        {
+          "label": "Import status: `validated_external_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `listed_in_validated_source_catalog`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/018-external-skill-wiki-import-official-catalogs/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/018-external-skill-wiki-import-official-catalogs/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/018-external-skill-wiki-import-official-catalogs/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "external skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "source-provenance capture",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime verification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "workflow promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -33224,6 +43525,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_github_skill_seed`\n- Source repo: `openai/skills`\n- Source URL: `https://github.com/openai/skills`\n- Source path hint: `skills/.system/skill-installer`\n- Import status: `validated_external_import`\n- Validation basis: `listed_in_validated_source_catalog`\n- Validation run: `runs/018-external-skill-wiki-import-official-catalogs/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": "openai/skills",
+      "upstreamSourceUrl": "https://github.com/openai/skills",
+      "upstreamSourcePathHint": "skills/.system/skill-installer",
       "sections": [
         {
           "title": "Provenance",
@@ -33393,6 +43697,104 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/openai-skill-installer.md",
+      "category": {
+        "slug": "codex",
+        "label": "Codex",
+        "description": "Codex, OpenAI skills, prompt operators, and code-generation workflows."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/018-external-skill-wiki-import-official-catalogs/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/018-external-skill-wiki-import-official-catalogs/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/018-external-skill-wiki-import-official-catalogs/"
+        },
+        {
+          "label": "https://github.com/openai/skills",
+          "href": "https://github.com/openai/skills",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_github_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source repo: `openai/skills`",
+          "href": "https://github.com/openai/skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source URL: `https://github.com/openai/skills`",
+          "href": "https://github.com/openai/skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `skills/.system/skill-installer`",
+          "href": "https://github.com/openai/skills/tree/main/skills/.system/skill-installer",
+          "kind": "upstream-path",
+          "repoPath": "skills/.system/skill-installer"
+        },
+        {
+          "label": "Import status: `validated_external_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `listed_in_validated_source_catalog`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/018-external-skill-wiki-import-official-catalogs/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/018-external-skill-wiki-import-official-catalogs/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/018-external-skill-wiki-import-official-catalogs/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "external skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "source-provenance capture",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime verification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "workflow promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -33553,6 +43955,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_github_import`\n- Source repo: `openai/skills`\n- Source URL: `https://github.com/openai/skills`\n- Import status: `imported_external_unverified`\n- Imported via: `manual_market_sync`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": "openai/skills",
+      "upstreamSourceUrl": "https://github.com/openai/skills",
+      "upstreamSourcePathHint": null,
       "sections": [
         {
           "title": "Provenance",
@@ -33734,6 +44139,96 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/openai-skills-catalog-codex.md",
+      "category": {
+        "slug": "codex",
+        "label": "Codex",
+        "description": "Codex, OpenAI skills, prompt operators, and code-generation workflows."
+      },
+      "evidenceLinks": [
+        {
+          "label": "https://github.com/openai/skills",
+          "href": "https://github.com/openai/skills",
+          "kind": "external"
+        },
+        {
+          "label": "https://github.com/openai/skills/tree/main/skills/.curated",
+          "href": "https://github.com/openai/skills/tree/main/skills/.curated",
+          "kind": "external"
+        },
+        {
+          "label": "https://github.com/openai/skills/tree/main/skills/.experimental",
+          "href": "https://github.com/openai/skills/tree/main/skills/.experimental",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_github_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source repo: `openai/skills`",
+          "href": "https://github.com/openai/skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source URL: `https://github.com/openai/skills`",
+          "href": "https://github.com/openai/skills",
+          "kind": "external"
+        },
+        {
+          "label": "Import status: `imported_external_unverified`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Imported via: `manual_market_sync`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "external skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "official Codex skill reference",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "imported wiki search surface",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local validation",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "promotion gating",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -33896,6 +44391,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_official_source_skill_seed`\n- Source name: `FreedomIntelligence/OpenClaw-Medical-Skills`\n- Source URL: `https://github.com/FreedomIntelligence/OpenClaw-Medical-Skills`\n- Source path hint: `README / Selected Skill - biomedical-search`\n- Import status: `validated_official_source_import`\n- Validation basis: `official_repo_selected_skill`\n- Market signal: `selected skill shown in official README`\n- Validation run: `runs/024-skill-wiki-official-gapfill-pack/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://github.com/FreedomIntelligence/OpenClaw-Medical-Skills",
+      "upstreamSourcePathHint": "README / Selected Skill - biomedical-search",
       "sections": [
         {
           "title": "Provenance",
@@ -34065,6 +44563,108 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/openclaw-medical-biomedical-search.md",
+      "category": {
+        "slug": "research",
+        "label": "Research & Data",
+        "description": "Search, research, analysis, data science, GPU computing, and evidence-gathering."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/024-skill-wiki-official-gapfill-pack/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/024-skill-wiki-official-gapfill-pack/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/024-skill-wiki-official-gapfill-pack/"
+        },
+        {
+          "label": "https://github.com/FreedomIntelligence/OpenClaw-Medical-Skills",
+          "href": "https://github.com/FreedomIntelligence/OpenClaw-Medical-Skills",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_official_source_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `FreedomIntelligence/OpenClaw-Medical-Skills`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source URL: `https://github.com/FreedomIntelligence/OpenClaw-Medical-Skills`",
+          "href": "https://github.com/FreedomIntelligence/OpenClaw-Medical-Skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `README / Selected Skill - biomedical-search`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Import status: `validated_official_source_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `official_repo_selected_skill`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Market signal: `selected skill shown in official README`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/024-skill-wiki-official-gapfill-pack/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/024-skill-wiki-official-gapfill-pack/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/024-skill-wiki-official-gapfill-pack/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "official-source skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "final searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "query coverage expansion",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime certification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "verified recipe promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -34227,6 +44827,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_official_source_skill_seed`\n- Source name: `FreedomIntelligence/OpenClaw-Medical-Skills`\n- Source URL: `https://github.com/FreedomIntelligence/OpenClaw-Medical-Skills`\n- Source path hint: `README / Selected Skill - clinical-reports`\n- Import status: `validated_official_source_import`\n- Validation basis: `official_repo_selected_skill`\n- Market signal: `selected skill shown in official README`\n- Validation run: `runs/024-skill-wiki-official-gapfill-pack/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://github.com/FreedomIntelligence/OpenClaw-Medical-Skills",
+      "upstreamSourcePathHint": "README / Selected Skill - clinical-reports",
       "sections": [
         {
           "title": "Provenance",
@@ -34396,6 +44999,108 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/openclaw-medical-clinical-reports.md",
+      "category": {
+        "slug": "research",
+        "label": "Research & Data",
+        "description": "Search, research, analysis, data science, GPU computing, and evidence-gathering."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/024-skill-wiki-official-gapfill-pack/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/024-skill-wiki-official-gapfill-pack/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/024-skill-wiki-official-gapfill-pack/"
+        },
+        {
+          "label": "https://github.com/FreedomIntelligence/OpenClaw-Medical-Skills",
+          "href": "https://github.com/FreedomIntelligence/OpenClaw-Medical-Skills",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_official_source_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `FreedomIntelligence/OpenClaw-Medical-Skills`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source URL: `https://github.com/FreedomIntelligence/OpenClaw-Medical-Skills`",
+          "href": "https://github.com/FreedomIntelligence/OpenClaw-Medical-Skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `README / Selected Skill - clinical-reports`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Import status: `validated_official_source_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `official_repo_selected_skill`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Market signal: `selected skill shown in official README`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/024-skill-wiki-official-gapfill-pack/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/024-skill-wiki-official-gapfill-pack/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/024-skill-wiki-official-gapfill-pack/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "official-source skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "final searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "query coverage expansion",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime certification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "verified recipe promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -34558,6 +45263,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_official_source_skill_seed`\n- Source name: `FreedomIntelligence/OpenClaw-Medical-Skills`\n- Source URL: `https://github.com/FreedomIntelligence/OpenClaw-Medical-Skills`\n- Source path hint: `README / Selected Skill - clinicaltrials-database`\n- Import status: `validated_official_source_import`\n- Validation basis: `official_repo_selected_skill`\n- Market signal: `selected skill shown in official README`\n- Validation run: `runs/024-skill-wiki-official-gapfill-pack/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://github.com/FreedomIntelligence/OpenClaw-Medical-Skills",
+      "upstreamSourcePathHint": "README / Selected Skill - clinicaltrials-database",
       "sections": [
         {
           "title": "Provenance",
@@ -34727,6 +45435,108 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/openclaw-medical-clinicaltrials-database.md",
+      "category": {
+        "slug": "research",
+        "label": "Research & Data",
+        "description": "Search, research, analysis, data science, GPU computing, and evidence-gathering."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/024-skill-wiki-official-gapfill-pack/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/024-skill-wiki-official-gapfill-pack/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/024-skill-wiki-official-gapfill-pack/"
+        },
+        {
+          "label": "https://github.com/FreedomIntelligence/OpenClaw-Medical-Skills",
+          "href": "https://github.com/FreedomIntelligence/OpenClaw-Medical-Skills",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_official_source_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `FreedomIntelligence/OpenClaw-Medical-Skills`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source URL: `https://github.com/FreedomIntelligence/OpenClaw-Medical-Skills`",
+          "href": "https://github.com/FreedomIntelligence/OpenClaw-Medical-Skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `README / Selected Skill - clinicaltrials-database`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Import status: `validated_official_source_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `official_repo_selected_skill`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Market signal: `selected skill shown in official README`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/024-skill-wiki-official-gapfill-pack/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/024-skill-wiki-official-gapfill-pack/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/024-skill-wiki-official-gapfill-pack/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "official-source skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "final searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "query coverage expansion",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime certification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "verified recipe promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -34889,6 +45699,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_official_source_skill_seed`\n- Source name: `FreedomIntelligence/OpenClaw-Medical-Skills`\n- Source URL: `https://github.com/FreedomIntelligence/OpenClaw-Medical-Skills`\n- Source path hint: `README / Selected Skill - tooluniverse-drug-research`\n- Import status: `validated_official_source_import`\n- Validation basis: `official_repo_selected_skill`\n- Market signal: `selected skill shown in official README`\n- Validation run: `runs/024-skill-wiki-official-gapfill-pack/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://github.com/FreedomIntelligence/OpenClaw-Medical-Skills",
+      "upstreamSourcePathHint": "README / Selected Skill - tooluniverse-drug-research",
       "sections": [
         {
           "title": "Provenance",
@@ -35058,6 +45871,108 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/openclaw-medical-drug-research.md",
+      "category": {
+        "slug": "research",
+        "label": "Research & Data",
+        "description": "Search, research, analysis, data science, GPU computing, and evidence-gathering."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/024-skill-wiki-official-gapfill-pack/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/024-skill-wiki-official-gapfill-pack/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/024-skill-wiki-official-gapfill-pack/"
+        },
+        {
+          "label": "https://github.com/FreedomIntelligence/OpenClaw-Medical-Skills",
+          "href": "https://github.com/FreedomIntelligence/OpenClaw-Medical-Skills",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_official_source_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `FreedomIntelligence/OpenClaw-Medical-Skills`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source URL: `https://github.com/FreedomIntelligence/OpenClaw-Medical-Skills`",
+          "href": "https://github.com/FreedomIntelligence/OpenClaw-Medical-Skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `README / Selected Skill - tooluniverse-drug-research`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Import status: `validated_official_source_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `official_repo_selected_skill`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Market signal: `selected skill shown in official README`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/024-skill-wiki-official-gapfill-pack/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/024-skill-wiki-official-gapfill-pack/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/024-skill-wiki-official-gapfill-pack/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "official-source skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "final searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "query coverage expansion",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime certification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "verified recipe promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -35220,6 +46135,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_official_source_skill_seed`\n- Source name: `FreedomIntelligence/OpenClaw-Medical-Skills`\n- Source URL: `https://github.com/FreedomIntelligence/OpenClaw-Medical-Skills`\n- Source path hint: `README / Selected Skill - tooluniverse-pharmacovigilance`\n- Import status: `validated_official_source_import`\n- Validation basis: `official_repo_selected_skill`\n- Market signal: `selected skill shown in official README`\n- Validation run: `runs/024-skill-wiki-official-gapfill-pack/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://github.com/FreedomIntelligence/OpenClaw-Medical-Skills",
+      "upstreamSourcePathHint": "README / Selected Skill - tooluniverse-pharmacovigilance",
       "sections": [
         {
           "title": "Provenance",
@@ -35389,6 +46307,108 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/openclaw-medical-pharmacovigilance.md",
+      "category": {
+        "slug": "research",
+        "label": "Research & Data",
+        "description": "Search, research, analysis, data science, GPU computing, and evidence-gathering."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/024-skill-wiki-official-gapfill-pack/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/024-skill-wiki-official-gapfill-pack/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/024-skill-wiki-official-gapfill-pack/"
+        },
+        {
+          "label": "https://github.com/FreedomIntelligence/OpenClaw-Medical-Skills",
+          "href": "https://github.com/FreedomIntelligence/OpenClaw-Medical-Skills",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_official_source_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `FreedomIntelligence/OpenClaw-Medical-Skills`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source URL: `https://github.com/FreedomIntelligence/OpenClaw-Medical-Skills`",
+          "href": "https://github.com/FreedomIntelligence/OpenClaw-Medical-Skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `README / Selected Skill - tooluniverse-pharmacovigilance`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Import status: `validated_official_source_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `official_repo_selected_skill`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Market signal: `selected skill shown in official README`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/024-skill-wiki-official-gapfill-pack/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/024-skill-wiki-official-gapfill-pack/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/024-skill-wiki-official-gapfill-pack/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "official-source skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "final searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "query coverage expansion",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime certification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "verified recipe promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -35551,6 +46571,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_official_source_skill_seed`\n- Source name: `FreedomIntelligence/OpenClaw-Medical-Skills`\n- Source URL: `https://github.com/FreedomIntelligence/OpenClaw-Medical-Skills`\n- Source path hint: `README / official open-source medical skills library`\n- Import status: `validated_official_source_import`\n- Validation basis: `official_repo_catalog`\n- Market signal: `official source-owned GitHub repo with 869 medical skills`\n- Validation run: `runs/024-skill-wiki-official-gapfill-pack/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://github.com/FreedomIntelligence/OpenClaw-Medical-Skills",
+      "upstreamSourcePathHint": "README / official open-source medical skills library",
       "sections": [
         {
           "title": "Provenance",
@@ -35720,6 +46743,108 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/openclaw-medical-skills-catalog.md",
+      "category": {
+        "slug": "research",
+        "label": "Research & Data",
+        "description": "Search, research, analysis, data science, GPU computing, and evidence-gathering."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/024-skill-wiki-official-gapfill-pack/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/024-skill-wiki-official-gapfill-pack/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/024-skill-wiki-official-gapfill-pack/"
+        },
+        {
+          "label": "https://github.com/FreedomIntelligence/OpenClaw-Medical-Skills",
+          "href": "https://github.com/FreedomIntelligence/OpenClaw-Medical-Skills",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_official_source_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `FreedomIntelligence/OpenClaw-Medical-Skills`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source URL: `https://github.com/FreedomIntelligence/OpenClaw-Medical-Skills`",
+          "href": "https://github.com/FreedomIntelligence/OpenClaw-Medical-Skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `README / official open-source medical skills library`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Import status: `validated_official_source_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `official_repo_catalog`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Market signal: `official source-owned GitHub repo with 869 medical skills`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/024-skill-wiki-official-gapfill-pack/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/024-skill-wiki-official-gapfill-pack/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/024-skill-wiki-official-gapfill-pack/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "official-source skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "final searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "query coverage expansion",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime certification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "verified recipe promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -35878,6 +47003,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_github_import`\n- Source repo: `seb1n/awesome-ai-agent-skills`\n- Source URL: `https://github.com/seb1n/awesome-ai-agent-skills`\n- Import status: `imported_external_unverified`\n- Imported via: `manual_market_sync`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": "seb1n/awesome-ai-agent-skills",
+      "upstreamSourceUrl": "https://github.com/seb1n/awesome-ai-agent-skills",
+      "upstreamSourcePathHint": null,
       "sections": [
         {
           "title": "Provenance",
@@ -36060,6 +47188,86 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/seb1n-awesome-ai-agent-skills.md",
+      "category": {
+        "slug": "collections",
+        "label": "Collections & Catalogs",
+        "description": "Skill catalogs, hubs, repositories, and ecosystem-level collections."
+      },
+      "evidenceLinks": [
+        {
+          "label": "https://github.com/seb1n/awesome-ai-agent-skills",
+          "href": "https://github.com/seb1n/awesome-ai-agent-skills",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_github_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source repo: `seb1n/awesome-ai-agent-skills`",
+          "href": "https://github.com/seb1n/awesome-ai-agent-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source URL: `https://github.com/seb1n/awesome-ai-agent-skills`",
+          "href": "https://github.com/seb1n/awesome-ai-agent-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Import status: `imported_external_unverified`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Imported via: `manual_market_sync`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "external skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "complete-skill library reference",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "imported wiki search surface",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local validation",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "promotion gating",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -36219,6 +47427,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_github_import`\n- Source repo: `skillmatic-ai/awesome-agent-skills`\n- Source URL: `https://github.com/skillmatic-ai/awesome-agent-skills`\n- Import status: `imported_external_unverified`\n- Imported via: `manual_market_sync`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": "skillmatic-ai/awesome-agent-skills",
+      "upstreamSourceUrl": "https://github.com/skillmatic-ai/awesome-agent-skills",
+      "upstreamSourcePathHint": null,
       "sections": [
         {
           "title": "Provenance",
@@ -36402,6 +47613,91 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/skillmatic-awesome-agent-skills.md",
+      "category": {
+        "slug": "research",
+        "label": "Research & Data",
+        "description": "Search, research, analysis, data science, GPU computing, and evidence-gathering."
+      },
+      "evidenceLinks": [
+        {
+          "label": "https://github.com/skillmatic-ai/awesome-agent-skills",
+          "href": "https://github.com/skillmatic-ai/awesome-agent-skills",
+          "kind": "external"
+        },
+        {
+          "label": "https://skills.sh",
+          "href": "https://skills.sh",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_github_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source repo: `skillmatic-ai/awesome-agent-skills`",
+          "href": "https://github.com/skillmatic-ai/awesome-agent-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source URL: `https://github.com/skillmatic-ai/awesome-agent-skills`",
+          "href": "https://github.com/skillmatic-ai/awesome-agent-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Import status: `imported_external_unverified`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Imported via: `manual_market_sync`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "external skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "ecosystem survey reference",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "imported wiki search surface",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local validation",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "promotion gating",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "direct skill execution",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -36565,6 +47861,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_marketplace_skill_seed`\n- Source name: `skills-hub.ai`\n- Source URL: `https://skills-hub.ai/`\n- Source path hint: `homepage / Skills for every role / Founders and Builders`\n- Import status: `validated_marketplace_import`\n- Validation basis: `featured_role_skill`\n- Market signal: `featured role skill for founders and builders`\n- Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://skills-hub.ai/",
+      "upstreamSourcePathHint": "homepage / Skills for every role / Founders and Builders",
       "sections": [
         {
           "title": "Provenance",
@@ -36735,6 +48034,109 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/skillshub-app-builder.md",
+      "category": {
+        "slug": "collections",
+        "label": "Collections & Catalogs",
+        "description": "Skill catalogs, hubs, repositories, and ecosystem-level collections."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "https://skills-hub.ai/",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_marketplace_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `skills-hub.ai`",
+          "href": "https://skills-hub.ai/tree/main/skills-hub.ai",
+          "kind": "upstream-path",
+          "repoPath": "skills-hub.ai"
+        },
+        {
+          "label": "Source URL: `https://skills-hub.ai/`",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `homepage / Skills for every role / Founders and Builders`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Import status: `validated_marketplace_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `featured_role_skill`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Market signal: `featured role skill for founders and builders`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "marketplace-driven skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario enrichment",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local execution proof",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -36898,6 +48300,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_marketplace_skill_seed`\n- Source name: `skills-hub.ai`\n- Source URL: `https://skills-hub.ai/`\n- Source path hint: `homepage / Skills for every role / Founders and Builders`\n- Import status: `validated_marketplace_import`\n- Validation basis: `featured_role_skill`\n- Market signal: `featured role skill for founders and builders`\n- Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://skills-hub.ai/",
+      "upstreamSourcePathHint": "homepage / Skills for every role / Founders and Builders",
       "sections": [
         {
           "title": "Provenance",
@@ -37068,6 +48473,109 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/skillshub-automation-builder.md",
+      "category": {
+        "slug": "office",
+        "label": "Office & Productivity",
+        "description": "Documents, spreadsheets, workspace automation, and productivity workflows."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "https://skills-hub.ai/",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_marketplace_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `skills-hub.ai`",
+          "href": "https://skills-hub.ai/tree/main/skills-hub.ai",
+          "kind": "upstream-path",
+          "repoPath": "skills-hub.ai"
+        },
+        {
+          "label": "Source URL: `https://skills-hub.ai/`",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `homepage / Skills for every role / Founders and Builders`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Import status: `validated_marketplace_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `featured_role_skill`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Market signal: `featured role skill for founders and builders`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "marketplace-driven skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario enrichment",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local execution proof",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -37231,6 +48739,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_marketplace_skill_seed`\n- Source name: `skills-hub.ai`\n- Source URL: `https://skills-hub.ai/`\n- Source path hint: `homepage / What developers are installing right now`\n- Import status: `validated_marketplace_import`\n- Validation basis: `top_installed_visible`\n- Market signal: `44 visible installs on homepage snapshot`\n- Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://skills-hub.ai/",
+      "upstreamSourcePathHint": "homepage / What developers are installing right now",
       "sections": [
         {
           "title": "Provenance",
@@ -37401,6 +48912,109 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/skillshub-code-review.md",
+      "category": {
+        "slug": "devops",
+        "label": "DevOps & Security",
+        "description": "Deployment, testing, QA, security, compliance, and infrastructure skills."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "https://skills-hub.ai/",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_marketplace_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `skills-hub.ai`",
+          "href": "https://skills-hub.ai/tree/main/skills-hub.ai",
+          "kind": "upstream-path",
+          "repoPath": "skills-hub.ai"
+        },
+        {
+          "label": "Source URL: `https://skills-hub.ai/`",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `homepage / What developers are installing right now`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Import status: `validated_marketplace_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `top_installed_visible`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Market signal: `44 visible installs on homepage snapshot`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "marketplace-driven skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario enrichment",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local execution proof",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -37564,6 +49178,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_marketplace_skill_seed`\n- Source name: `skills-hub.ai`\n- Source URL: `https://skills-hub.ai/`\n- Source path hint: `homepage / Skills for every role / Founders, Builders, Marketers and Creators`\n- Import status: `validated_marketplace_import`\n- Validation basis: `featured_role_skill`\n- Market signal: `featured role skill across builder and marketing sections`\n- Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://skills-hub.ai/",
+      "upstreamSourcePathHint": "homepage / Skills for every role / Founders, Builders, Marketers and Creators",
       "sections": [
         {
           "title": "Provenance",
@@ -37734,6 +49351,109 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/skillshub-content-creator.md",
+      "category": {
+        "slug": "media",
+        "label": "Media & Creative",
+        "description": "Design, image, video, writing, content, social media, and brand skills."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "https://skills-hub.ai/",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_marketplace_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `skills-hub.ai`",
+          "href": "https://skills-hub.ai/tree/main/skills-hub.ai",
+          "kind": "upstream-path",
+          "repoPath": "skills-hub.ai"
+        },
+        {
+          "label": "Source URL: `https://skills-hub.ai/`",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `homepage / Skills for every role / Founders, Builders, Marketers and Creators`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Import status: `validated_marketplace_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `featured_role_skill`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Market signal: `featured role skill across builder and marketing sections`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "marketplace-driven skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario enrichment",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local execution proof",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -37897,6 +49617,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_marketplace_skill_seed`\n- Source name: `skills-hub.ai`\n- Source URL: `https://skills-hub.ai/`\n- Source path hint: `homepage / Skills for every role / Team Leads`\n- Import status: `validated_marketplace_import`\n- Validation basis: `featured_role_skill`\n- Market signal: `featured role skill for team leads`\n- Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://skills-hub.ai/",
+      "upstreamSourcePathHint": "homepage / Skills for every role / Team Leads",
       "sections": [
         {
           "title": "Provenance",
@@ -38067,6 +49790,109 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/skillshub-course-builder.md",
+      "category": {
+        "slug": "research",
+        "label": "Research & Data",
+        "description": "Search, research, analysis, data science, GPU computing, and evidence-gathering."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "https://skills-hub.ai/",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_marketplace_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `skills-hub.ai`",
+          "href": "https://skills-hub.ai/tree/main/skills-hub.ai",
+          "kind": "upstream-path",
+          "repoPath": "skills-hub.ai"
+        },
+        {
+          "label": "Source URL: `https://skills-hub.ai/`",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `homepage / Skills for every role / Team Leads`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Import status: `validated_marketplace_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `featured_role_skill`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Market signal: `featured role skill for team leads`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "marketplace-driven skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario enrichment",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local execution proof",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -38230,6 +50056,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_marketplace_skill_seed`\n- Source name: `skills-hub.ai`\n- Source URL: `https://skills-hub.ai/`\n- Source path hint: `homepage / Skills for every role / Team Leads`\n- Import status: `validated_marketplace_import`\n- Validation basis: `featured_role_skill`\n- Market signal: `featured role skill for team leads`\n- Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://skills-hub.ai/",
+      "upstreamSourcePathHint": "homepage / Skills for every role / Team Leads",
       "sections": [
         {
           "title": "Provenance",
@@ -38400,6 +50229,109 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/skillshub-daily-standup.md",
+      "category": {
+        "slug": "office",
+        "label": "Office & Productivity",
+        "description": "Documents, spreadsheets, workspace automation, and productivity workflows."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "https://skills-hub.ai/",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_marketplace_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `skills-hub.ai`",
+          "href": "https://skills-hub.ai/tree/main/skills-hub.ai",
+          "kind": "upstream-path",
+          "repoPath": "skills-hub.ai"
+        },
+        {
+          "label": "Source URL: `https://skills-hub.ai/`",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `homepage / Skills for every role / Team Leads`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Import status: `validated_marketplace_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `featured_role_skill`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Market signal: `featured role skill for team leads`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "marketplace-driven skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario enrichment",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local execution proof",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -38563,6 +50495,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_marketplace_skill_seed`\n- Source name: `skills-hub.ai`\n- Source URL: `https://skills-hub.ai/`\n- Source path hint: `homepage / Skills for every role / Marketers and Creators`\n- Import status: `validated_marketplace_import`\n- Validation basis: `featured_role_skill`\n- Market signal: `featured role skill for marketers and creators`\n- Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://skills-hub.ai/",
+      "upstreamSourcePathHint": "homepage / Skills for every role / Marketers and Creators",
       "sections": [
         {
           "title": "Provenance",
@@ -38733,6 +50668,109 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/skillshub-data-analyst.md",
+      "category": {
+        "slug": "research",
+        "label": "Research & Data",
+        "description": "Search, research, analysis, data science, GPU computing, and evidence-gathering."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "https://skills-hub.ai/",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_marketplace_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `skills-hub.ai`",
+          "href": "https://skills-hub.ai/tree/main/skills-hub.ai",
+          "kind": "upstream-path",
+          "repoPath": "skills-hub.ai"
+        },
+        {
+          "label": "Source URL: `https://skills-hub.ai/`",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `homepage / Skills for every role / Marketers and Creators`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Import status: `validated_marketplace_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `featured_role_skill`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Market signal: `featured role skill for marketers and creators`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "marketplace-driven skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario enrichment",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local execution proof",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -38896,6 +50934,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_marketplace_skill_seed`\n- Source name: `skills-hub.ai`\n- Source URL: `https://skills-hub.ai/`\n- Source path hint: `homepage / Skill stacks / Full-Stack Starter`\n- Import status: `validated_marketplace_import`\n- Validation basis: `featured_stack_skill`\n- Market signal: `featured in Full-Stack Starter stack`\n- Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://skills-hub.ai/",
+      "upstreamSourcePathHint": "homepage / Skill stacks / Full-Stack Starter",
       "sections": [
         {
           "title": "Provenance",
@@ -39066,6 +51107,109 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/skillshub-deploy.md",
+      "category": {
+        "slug": "devops",
+        "label": "DevOps & Security",
+        "description": "Deployment, testing, QA, security, compliance, and infrastructure skills."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "https://skills-hub.ai/",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_marketplace_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `skills-hub.ai`",
+          "href": "https://skills-hub.ai/tree/main/skills-hub.ai",
+          "kind": "upstream-path",
+          "repoPath": "skills-hub.ai"
+        },
+        {
+          "label": "Source URL: `https://skills-hub.ai/`",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `homepage / Skill stacks / Full-Stack Starter`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Import status: `validated_marketplace_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `featured_stack_skill`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Market signal: `featured in Full-Stack Starter stack`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "marketplace-driven skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario enrichment",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local execution proof",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -39229,6 +51373,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_marketplace_skill_seed`\n- Source name: `skills-hub.ai`\n- Source URL: `https://skills-hub.ai/`\n- Source path hint: `homepage / What developers are installing right now`\n- Import status: `validated_marketplace_import`\n- Validation basis: `top_installed_visible`\n- Market signal: `12 visible installs on homepage snapshot`\n- Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://skills-hub.ai/",
+      "upstreamSourcePathHint": "homepage / What developers are installing right now",
       "sections": [
         {
           "title": "Provenance",
@@ -39399,6 +51546,109 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/skillshub-design-to-code.md",
+      "category": {
+        "slug": "media",
+        "label": "Media & Creative",
+        "description": "Design, image, video, writing, content, social media, and brand skills."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "https://skills-hub.ai/",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_marketplace_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `skills-hub.ai`",
+          "href": "https://skills-hub.ai/tree/main/skills-hub.ai",
+          "kind": "upstream-path",
+          "repoPath": "skills-hub.ai"
+        },
+        {
+          "label": "Source URL: `https://skills-hub.ai/`",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `homepage / What developers are installing right now`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Import status: `validated_marketplace_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `top_installed_visible`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Market signal: `12 visible installs on homepage snapshot`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "marketplace-driven skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario enrichment",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local execution proof",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -39562,6 +51812,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_marketplace_skill_seed`\n- Source name: `skills-hub.ai`\n- Source URL: `https://skills-hub.ai/`\n- Source path hint: `homepage / What developers are installing right now`\n- Import status: `validated_marketplace_import`\n- Validation basis: `top_installed_visible`\n- Market signal: `12 visible installs on homepage snapshot`\n- Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://skills-hub.ai/",
+      "upstreamSourcePathHint": "homepage / What developers are installing right now",
       "sections": [
         {
           "title": "Provenance",
@@ -39732,6 +51985,109 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/skillshub-frontend-design.md",
+      "category": {
+        "slug": "media",
+        "label": "Media & Creative",
+        "description": "Design, image, video, writing, content, social media, and brand skills."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "https://skills-hub.ai/",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_marketplace_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `skills-hub.ai`",
+          "href": "https://skills-hub.ai/tree/main/skills-hub.ai",
+          "kind": "upstream-path",
+          "repoPath": "skills-hub.ai"
+        },
+        {
+          "label": "Source URL: `https://skills-hub.ai/`",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `homepage / What developers are installing right now`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Import status: `validated_marketplace_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `top_installed_visible`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Market signal: `12 visible installs on homepage snapshot`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "marketplace-driven skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario enrichment",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local execution proof",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -39895,6 +52251,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_marketplace_skill_seed`\n- Source name: `skills-hub.ai`\n- Source URL: `https://skills-hub.ai/`\n- Source path hint: `homepage / What developers are installing right now`\n- Import status: `validated_marketplace_import`\n- Validation basis: `top_installed_visible`\n- Market signal: `14 visible installs on homepage snapshot`\n- Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://skills-hub.ai/",
+      "upstreamSourcePathHint": "homepage / What developers are installing right now",
       "sections": [
         {
           "title": "Provenance",
@@ -40065,6 +52424,109 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/skillshub-markitdown.md",
+      "category": {
+        "slug": "research",
+        "label": "Research & Data",
+        "description": "Search, research, analysis, data science, GPU computing, and evidence-gathering."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "https://skills-hub.ai/",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_marketplace_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `skills-hub.ai`",
+          "href": "https://skills-hub.ai/tree/main/skills-hub.ai",
+          "kind": "upstream-path",
+          "repoPath": "skills-hub.ai"
+        },
+        {
+          "label": "Source URL: `https://skills-hub.ai/`",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `homepage / What developers are installing right now`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Import status: `validated_marketplace_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `top_installed_visible`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Market signal: `14 visible installs on homepage snapshot`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "marketplace-driven skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario enrichment",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local execution proof",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -40228,6 +52690,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_marketplace_skill_seed`\n- Source name: `skills-hub.ai`\n- Source URL: `https://skills-hub.ai/`\n- Source path hint: `homepage / Skill stacks / Full-Stack Starter and Ship Fast Toolkit`\n- Import status: `validated_marketplace_import`\n- Validation basis: `featured_stack_skill`\n- Market signal: `featured in multiple starter stacks`\n- Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://skills-hub.ai/",
+      "upstreamSourcePathHint": "homepage / Skill stacks / Full-Stack Starter and Ship Fast Toolkit",
       "sections": [
         {
           "title": "Provenance",
@@ -40398,6 +52863,109 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/skillshub-preflight.md",
+      "category": {
+        "slug": "devops",
+        "label": "DevOps & Security",
+        "description": "Deployment, testing, QA, security, compliance, and infrastructure skills."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "https://skills-hub.ai/",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_marketplace_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `skills-hub.ai`",
+          "href": "https://skills-hub.ai/tree/main/skills-hub.ai",
+          "kind": "upstream-path",
+          "repoPath": "skills-hub.ai"
+        },
+        {
+          "label": "Source URL: `https://skills-hub.ai/`",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `homepage / Skill stacks / Full-Stack Starter and Ship Fast Toolkit`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Import status: `validated_marketplace_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `featured_stack_skill`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Market signal: `featured in multiple starter stacks`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "marketplace-driven skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario enrichment",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local execution proof",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -40561,6 +53129,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_marketplace_skill_seed`\n- Source name: `skills-hub.ai`\n- Source URL: `https://skills-hub.ai/`\n- Source path hint: `homepage / Skills for every role / Marketers and Creators`\n- Import status: `validated_marketplace_import`\n- Validation basis: `featured_role_skill`\n- Market signal: `featured role skill for marketers and creators`\n- Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://skills-hub.ai/",
+      "upstreamSourcePathHint": "homepage / Skills for every role / Marketers and Creators",
       "sections": [
         {
           "title": "Provenance",
@@ -40731,6 +53302,109 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/skillshub-prompt-engineering.md",
+      "category": {
+        "slug": "automation",
+        "label": "Automation & MCP",
+        "description": "MCP, browser automation, workflow orchestration, integration, and tooling."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "https://skills-hub.ai/",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_marketplace_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `skills-hub.ai`",
+          "href": "https://skills-hub.ai/tree/main/skills-hub.ai",
+          "kind": "upstream-path",
+          "repoPath": "skills-hub.ai"
+        },
+        {
+          "label": "Source URL: `https://skills-hub.ai/`",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `homepage / Skills for every role / Marketers and Creators`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Import status: `validated_marketplace_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `featured_role_skill`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Market signal: `featured role skill for marketers and creators`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "marketplace-driven skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario enrichment",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local execution proof",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -40894,6 +53568,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_marketplace_skill_seed`\n- Source name: `skills-hub.ai`\n- Source URL: `https://skills-hub.ai/`\n- Source path hint: `homepage / Skill stacks / Research and Analysis`\n- Import status: `validated_marketplace_import`\n- Validation basis: `featured_stack_skill`\n- Market signal: `featured in Research and Analysis stack`\n- Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://skills-hub.ai/",
+      "upstreamSourcePathHint": "homepage / Skill stacks / Research and Analysis",
       "sections": [
         {
           "title": "Provenance",
@@ -41064,6 +53741,109 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/skillshub-research.md",
+      "category": {
+        "slug": "research",
+        "label": "Research & Data",
+        "description": "Search, research, analysis, data science, GPU computing, and evidence-gathering."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "https://skills-hub.ai/",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_marketplace_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `skills-hub.ai`",
+          "href": "https://skills-hub.ai/tree/main/skills-hub.ai",
+          "kind": "upstream-path",
+          "repoPath": "skills-hub.ai"
+        },
+        {
+          "label": "Source URL: `https://skills-hub.ai/`",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `homepage / Skill stacks / Research and Analysis`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Import status: `validated_marketplace_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `featured_stack_skill`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Market signal: `featured in Research and Analysis stack`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "marketplace-driven skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario enrichment",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local execution proof",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -41227,6 +54007,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_marketplace_skill_seed`\n- Source name: `skills-hub.ai`\n- Source URL: `https://skills-hub.ai/`\n- Source path hint: `homepage / Skill stacks / Security Hardening Kit`\n- Import status: `validated_marketplace_import`\n- Validation basis: `featured_stack_skill`\n- Market signal: `featured in Security Hardening Kit`\n- Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://skills-hub.ai/",
+      "upstreamSourcePathHint": "homepage / Skill stacks / Security Hardening Kit",
       "sections": [
         {
           "title": "Provenance",
@@ -41397,6 +54180,109 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/skillshub-security-review.md",
+      "category": {
+        "slug": "devops",
+        "label": "DevOps & Security",
+        "description": "Deployment, testing, QA, security, compliance, and infrastructure skills."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "https://skills-hub.ai/",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_marketplace_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `skills-hub.ai`",
+          "href": "https://skills-hub.ai/tree/main/skills-hub.ai",
+          "kind": "upstream-path",
+          "repoPath": "skills-hub.ai"
+        },
+        {
+          "label": "Source URL: `https://skills-hub.ai/`",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `homepage / Skill stacks / Security Hardening Kit`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Import status: `validated_marketplace_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `featured_stack_skill`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Market signal: `featured in Security Hardening Kit`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "marketplace-driven skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario enrichment",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local execution proof",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -41560,6 +54446,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_marketplace_skill_seed`\n- Source name: `skills-hub.ai`\n- Source URL: `https://skills-hub.ai/`\n- Source path hint: `homepage / What developers are installing right now`\n- Import status: `validated_marketplace_import`\n- Validation basis: `top_installed_visible`\n- Market signal: `16 visible installs on homepage snapshot`\n- Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://skills-hub.ai/",
+      "upstreamSourcePathHint": "homepage / What developers are installing right now",
       "sections": [
         {
           "title": "Provenance",
@@ -41730,6 +54619,109 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/skillshub-skill-finder.md",
+      "category": {
+        "slug": "collections",
+        "label": "Collections & Catalogs",
+        "description": "Skill catalogs, hubs, repositories, and ecosystem-level collections."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "https://skills-hub.ai/",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_marketplace_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `skills-hub.ai`",
+          "href": "https://skills-hub.ai/tree/main/skills-hub.ai",
+          "kind": "upstream-path",
+          "repoPath": "skills-hub.ai"
+        },
+        {
+          "label": "Source URL: `https://skills-hub.ai/`",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `homepage / What developers are installing right now`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Import status: `validated_marketplace_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `top_installed_visible`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Market signal: `16 visible installs on homepage snapshot`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "marketplace-driven skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario enrichment",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local execution proof",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -41893,6 +54885,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_marketplace_skill_seed`\n- Source name: `skills-hub.ai`\n- Source URL: `https://skills-hub.ai/`\n- Source path hint: `homepage / What developers are installing right now`\n- Import status: `validated_marketplace_import`\n- Validation basis: `top_installed_visible`\n- Market signal: `22 visible installs on homepage snapshot`\n- Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://skills-hub.ai/",
+      "upstreamSourcePathHint": "homepage / What developers are installing right now",
       "sections": [
         {
           "title": "Provenance",
@@ -42063,6 +55058,109 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/skillshub-ui-design-system.md",
+      "category": {
+        "slug": "media",
+        "label": "Media & Creative",
+        "description": "Design, image, video, writing, content, social media, and brand skills."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "https://skills-hub.ai/",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_marketplace_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `skills-hub.ai`",
+          "href": "https://skills-hub.ai/tree/main/skills-hub.ai",
+          "kind": "upstream-path",
+          "repoPath": "skills-hub.ai"
+        },
+        {
+          "label": "Source URL: `https://skills-hub.ai/`",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `homepage / What developers are installing right now`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Import status: `validated_marketplace_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `top_installed_visible`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Market signal: `22 visible installs on homepage snapshot`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "marketplace-driven skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario enrichment",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local execution proof",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -42226,6 +55324,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_marketplace_skill_seed`\n- Source name: `skills-hub.ai`\n- Source URL: `https://skills-hub.ai/`\n- Source path hint: `homepage / Skill stacks / Full-Stack Starter`\n- Import status: `validated_marketplace_import`\n- Validation basis: `featured_stack_skill`\n- Market signal: `featured in Full-Stack Starter stack`\n- Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://skills-hub.ai/",
+      "upstreamSourcePathHint": "homepage / Skill stacks / Full-Stack Starter",
       "sections": [
         {
           "title": "Provenance",
@@ -42396,6 +55497,109 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/skillshub-unit-test.md",
+      "category": {
+        "slug": "devops",
+        "label": "DevOps & Security",
+        "description": "Deployment, testing, QA, security, compliance, and infrastructure skills."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "https://skills-hub.ai/",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_marketplace_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `skills-hub.ai`",
+          "href": "https://skills-hub.ai/tree/main/skills-hub.ai",
+          "kind": "upstream-path",
+          "repoPath": "skills-hub.ai"
+        },
+        {
+          "label": "Source URL: `https://skills-hub.ai/`",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `homepage / Skill stacks / Full-Stack Starter`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Import status: `validated_marketplace_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `featured_stack_skill`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Market signal: `featured in Full-Stack Starter stack`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "marketplace-driven skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario enrichment",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local execution proof",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -42559,6 +55763,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_marketplace_skill_seed`\n- Source name: `skills-hub.ai`\n- Source URL: `https://skills-hub.ai/`\n- Source path hint: `homepage / Skills for every role / Engineers`\n- Import status: `validated_marketplace_import`\n- Validation basis: `featured_role_skill`\n- Market signal: `featured role skill for engineers`\n- Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://skills-hub.ai/",
+      "upstreamSourcePathHint": "homepage / Skills for every role / Engineers",
       "sections": [
         {
           "title": "Provenance",
@@ -42729,6 +55936,109 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/skillshub-workflow-builder.md",
+      "category": {
+        "slug": "automation",
+        "label": "Automation & MCP",
+        "description": "MCP, browser automation, workflow orchestration, integration, and tooling."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "https://skills-hub.ai/",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_marketplace_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `skills-hub.ai`",
+          "href": "https://skills-hub.ai/tree/main/skills-hub.ai",
+          "kind": "upstream-path",
+          "repoPath": "skills-hub.ai"
+        },
+        {
+          "label": "Source URL: `https://skills-hub.ai/`",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `homepage / Skills for every role / Engineers`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Import status: `validated_marketplace_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `featured_role_skill`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Market signal: `featured role skill for engineers`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "marketplace-driven skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario enrichment",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local execution proof",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -42892,6 +56202,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_marketplace_skill_seed`\n- Source name: `skills-hub.ai`\n- Source URL: `https://skills-hub.ai/`\n- Source path hint: `homepage / Skills for every role / Team Leads`\n- Import status: `validated_marketplace_import`\n- Validation basis: `featured_role_skill`\n- Market signal: `featured role skill for team leads`\n- Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": "https://skills-hub.ai/",
+      "upstreamSourcePathHint": "homepage / Skills for every role / Team Leads",
       "sections": [
         {
           "title": "Provenance",
@@ -43062,6 +56375,109 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/skillshub-workshop-generator.md",
+      "category": {
+        "slug": "research",
+        "label": "Research & Data",
+        "description": "Search, research, analysis, data science, GPU computing, and evidence-gathering."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "https://skills-hub.ai/",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_marketplace_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source name: `skills-hub.ai`",
+          "href": "https://skills-hub.ai/tree/main/skills-hub.ai",
+          "kind": "upstream-path",
+          "repoPath": "skills-hub.ai"
+        },
+        {
+          "label": "Source URL: `https://skills-hub.ai/`",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `homepage / Skills for every role / Team Leads`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Import status: `validated_marketplace_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `featured_role_skill`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Market signal: `featured role skill for team leads`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "marketplace-driven skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario enrichment",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local execution proof",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -43204,6 +56620,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `market_taxonomy_cluster`\n- Primary sources: `https://skills-hub.ai/`, `https://openagentskills.dev/`\n- Import status: `validated_scenario_bundle_import`\n- Validation basis: `public taxonomy plus representative skill mapping`\n- Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": null,
+      "upstreamSourcePathHint": null,
       "sections": [
         {
           "title": "Provenance",
@@ -43373,6 +56792,98 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/top-scenario-ai-agent-workflow-builder.md",
+      "category": {
+        "slug": "automation",
+        "label": "Automation & MCP",
+        "description": "MCP, browser automation, workflow orchestration, integration, and tooling."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "https://skills-hub.ai/",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        },
+        {
+          "label": "https://openagentskills.dev/",
+          "href": "https://openagentskills.dev/",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `market_taxonomy_cluster`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Primary sources: `https://skills-hub.ai/`, `https://openagentskills.dev/`",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        },
+        {
+          "label": "Import status: `validated_scenario_bundle_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `public taxonomy plus representative skill mapping`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "scenario discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "public taxonomy clustering",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "representative workflow bundles",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "per-skill runtime certification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "promotion as a verified recipe",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -43515,6 +57026,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `market_taxonomy_cluster`\n- Primary sources: `https://skills-hub.ai/`, `https://openagentskills.dev/`\n- Import status: `validated_scenario_bundle_import`\n- Validation basis: `public taxonomy plus representative skill mapping`\n- Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": null,
+      "upstreamSourcePathHint": null,
       "sections": [
         {
           "title": "Provenance",
@@ -43683,6 +57197,98 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/top-scenario-business-finance-and-backoffice.md",
+      "category": {
+        "slug": "office",
+        "label": "Office & Productivity",
+        "description": "Documents, spreadsheets, workspace automation, and productivity workflows."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "https://skills-hub.ai/",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        },
+        {
+          "label": "https://openagentskills.dev/",
+          "href": "https://openagentskills.dev/",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `market_taxonomy_cluster`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Primary sources: `https://skills-hub.ai/`, `https://openagentskills.dev/`",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        },
+        {
+          "label": "Import status: `validated_scenario_bundle_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `public taxonomy plus representative skill mapping`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "scenario discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "public taxonomy clustering",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "representative workflow bundles",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "per-skill runtime certification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "promotion as a verified recipe",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -43825,6 +57431,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `market_taxonomy_cluster`\n- Primary sources: `https://skills-hub.ai/`, `https://openagentskills.dev/`\n- Import status: `validated_scenario_bundle_import`\n- Validation basis: `public taxonomy plus representative skill mapping`\n- Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": null,
+      "upstreamSourcePathHint": null,
       "sections": [
         {
           "title": "Provenance",
@@ -43992,6 +57601,98 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/top-scenario-cloud-deployment-and-ops.md",
+      "category": {
+        "slug": "devops",
+        "label": "DevOps & Security",
+        "description": "Deployment, testing, QA, security, compliance, and infrastructure skills."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "https://skills-hub.ai/",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        },
+        {
+          "label": "https://openagentskills.dev/",
+          "href": "https://openagentskills.dev/",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `market_taxonomy_cluster`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Primary sources: `https://skills-hub.ai/`, `https://openagentskills.dev/`",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        },
+        {
+          "label": "Import status: `validated_scenario_bundle_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `public taxonomy plus representative skill mapping`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "scenario discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "public taxonomy clustering",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "representative workflow bundles",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "per-skill runtime certification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "promotion as a verified recipe",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -44134,6 +57835,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `market_taxonomy_cluster`\n- Primary sources: `https://skills-hub.ai/`, `https://openagentskills.dev/`\n- Import status: `validated_scenario_bundle_import`\n- Validation basis: `public taxonomy plus representative skill mapping`\n- Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": null,
+      "upstreamSourcePathHint": null,
       "sections": [
         {
           "title": "Provenance",
@@ -44302,6 +58006,98 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/top-scenario-design-presentation-and-ui-production.md",
+      "category": {
+        "slug": "media",
+        "label": "Media & Creative",
+        "description": "Design, image, video, writing, content, social media, and brand skills."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "https://skills-hub.ai/",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        },
+        {
+          "label": "https://openagentskills.dev/",
+          "href": "https://openagentskills.dev/",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `market_taxonomy_cluster`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Primary sources: `https://skills-hub.ai/`, `https://openagentskills.dev/`",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        },
+        {
+          "label": "Import status: `validated_scenario_bundle_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `public taxonomy plus representative skill mapping`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "scenario discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "public taxonomy clustering",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "representative workflow bundles",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "per-skill runtime certification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "promotion as a verified recipe",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -44444,6 +58240,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `market_taxonomy_cluster`\n- Primary sources: `https://skills-hub.ai/`, `https://openagentskills.dev/`\n- Import status: `validated_scenario_bundle_import`\n- Validation basis: `public taxonomy plus representative skill mapping`\n- Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": null,
+      "upstreamSourcePathHint": null,
       "sections": [
         {
           "title": "Provenance",
@@ -44613,6 +58412,98 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/top-scenario-development-engineering-delivery.md",
+      "category": {
+        "slug": "devops",
+        "label": "DevOps & Security",
+        "description": "Deployment, testing, QA, security, compliance, and infrastructure skills."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "https://skills-hub.ai/",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        },
+        {
+          "label": "https://openagentskills.dev/",
+          "href": "https://openagentskills.dev/",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `market_taxonomy_cluster`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Primary sources: `https://skills-hub.ai/`, `https://openagentskills.dev/`",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        },
+        {
+          "label": "Import status: `validated_scenario_bundle_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `public taxonomy plus representative skill mapping`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "scenario discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "public taxonomy clustering",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "representative workflow bundles",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "per-skill runtime certification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "promotion as a verified recipe",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -44755,6 +58646,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `market_taxonomy_cluster`\n- Primary sources: `https://skills-hub.ai/`, `https://openagentskills.dev/`\n- Import status: `validated_scenario_bundle_import`\n- Validation basis: `public taxonomy plus representative skill mapping`\n- Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": null,
+      "upstreamSourcePathHint": null,
       "sections": [
         {
           "title": "Provenance",
@@ -44923,6 +58817,98 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/top-scenario-marketing-and-content-operations.md",
+      "category": {
+        "slug": "media",
+        "label": "Media & Creative",
+        "description": "Design, image, video, writing, content, social media, and brand skills."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "https://skills-hub.ai/",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        },
+        {
+          "label": "https://openagentskills.dev/",
+          "href": "https://openagentskills.dev/",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `market_taxonomy_cluster`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Primary sources: `https://skills-hub.ai/`, `https://openagentskills.dev/`",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        },
+        {
+          "label": "Import status: `validated_scenario_bundle_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `public taxonomy plus representative skill mapping`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "scenario discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "public taxonomy clustering",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "representative workflow bundles",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "per-skill runtime certification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "promotion as a verified recipe",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -45066,6 +59052,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `market_taxonomy_cluster`\n- Primary sources: `https://skills-hub.ai/`, `https://openagentskills.dev/`\n- Import status: `validated_scenario_bundle_import`\n- Validation basis: `public taxonomy plus representative skill mapping`\n- Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": null,
+      "upstreamSourcePathHint": null,
       "sections": [
         {
           "title": "Provenance",
@@ -45236,6 +59225,98 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/top-scenario-office-document-automation.md",
+      "category": {
+        "slug": "office",
+        "label": "Office & Productivity",
+        "description": "Documents, spreadsheets, workspace automation, and productivity workflows."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "https://skills-hub.ai/",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        },
+        {
+          "label": "https://openagentskills.dev/",
+          "href": "https://openagentskills.dev/",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `market_taxonomy_cluster`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Primary sources: `https://skills-hub.ai/`, `https://openagentskills.dev/`",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        },
+        {
+          "label": "Import status: `validated_scenario_bundle_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `public taxonomy plus representative skill mapping`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "scenario discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "public taxonomy clustering",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "representative workflow bundles",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "per-skill runtime certification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "promotion as a verified recipe",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -45378,6 +59459,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `market_taxonomy_cluster`\n- Primary sources: `https://skills-hub.ai/`, `https://openagentskills.dev/`\n- Import status: `validated_scenario_bundle_import`\n- Validation basis: `public taxonomy plus representative skill mapping`\n- Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": null,
+      "upstreamSourcePathHint": null,
       "sections": [
         {
           "title": "Provenance",
@@ -45546,6 +59630,98 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/top-scenario-product-management-and-team-collaboration.md",
+      "category": {
+        "slug": "office",
+        "label": "Office & Productivity",
+        "description": "Documents, spreadsheets, workspace automation, and productivity workflows."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "https://skills-hub.ai/",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        },
+        {
+          "label": "https://openagentskills.dev/",
+          "href": "https://openagentskills.dev/",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `market_taxonomy_cluster`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Primary sources: `https://skills-hub.ai/`, `https://openagentskills.dev/`",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        },
+        {
+          "label": "Import status: `validated_scenario_bundle_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `public taxonomy plus representative skill mapping`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "scenario discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "public taxonomy clustering",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "representative workflow bundles",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "per-skill runtime certification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "promotion as a verified recipe",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -45688,6 +59864,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `market_taxonomy_cluster`\n- Primary sources: `https://skills-hub.ai/`, `https://openagentskills.dev/`\n- Import status: `validated_scenario_bundle_import`\n- Validation basis: `public taxonomy plus representative skill mapping`\n- Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": null,
+      "upstreamSourcePathHint": null,
       "sections": [
         {
           "title": "Provenance",
@@ -45856,6 +60035,98 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/top-scenario-research-and-investment-analysis.md",
+      "category": {
+        "slug": "research",
+        "label": "Research & Data",
+        "description": "Search, research, analysis, data science, GPU computing, and evidence-gathering."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "https://skills-hub.ai/",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        },
+        {
+          "label": "https://openagentskills.dev/",
+          "href": "https://openagentskills.dev/",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `market_taxonomy_cluster`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Primary sources: `https://skills-hub.ai/`, `https://openagentskills.dev/`",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        },
+        {
+          "label": "Import status: `validated_scenario_bundle_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `public taxonomy plus representative skill mapping`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "scenario discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "public taxonomy clustering",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "representative workflow bundles",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "per-skill runtime certification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "promotion as a verified recipe",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -45998,6 +60269,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `market_taxonomy_cluster`\n- Primary sources: `https://skills-hub.ai/`, `https://openagentskills.dev/`\n- Import status: `validated_scenario_bundle_import`\n- Validation basis: `public taxonomy plus representative skill mapping`\n- Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": null,
+      "upstreamSourcePathHint": null,
       "sections": [
         {
           "title": "Provenance",
@@ -46165,6 +60439,98 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/top-scenario-security-and-risk-review.md",
+      "category": {
+        "slug": "devops",
+        "label": "DevOps & Security",
+        "description": "Deployment, testing, QA, security, compliance, and infrastructure skills."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "https://skills-hub.ai/",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        },
+        {
+          "label": "https://openagentskills.dev/",
+          "href": "https://openagentskills.dev/",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `market_taxonomy_cluster`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Primary sources: `https://skills-hub.ai/`, `https://openagentskills.dev/`",
+          "href": "https://skills-hub.ai/",
+          "kind": "external"
+        },
+        {
+          "label": "Import status: `validated_scenario_bundle_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `public taxonomy plus representative skill mapping`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/022-skill-wiki-marketplace-taxonomy-scan/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/022-skill-wiki-marketplace-taxonomy-scan/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/022-skill-wiki-marketplace-taxonomy-scan/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "scenario discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "public taxonomy clustering",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "representative workflow bundles",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "per-skill runtime certification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-bound automation",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "promotion as a verified recipe",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -46325,6 +60691,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_github_import`\n- Source repo: `vercel-labs/agent-skills`\n- Source URL: `https://github.com/vercel-labs/agent-skills`\n- Import status: `imported_external_unverified`\n- Imported via: `manual_market_sync`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": "vercel-labs/agent-skills",
+      "upstreamSourceUrl": "https://github.com/vercel-labs/agent-skills",
+      "upstreamSourcePathHint": null,
       "sections": [
         {
           "title": "Provenance",
@@ -46505,6 +60874,96 @@ export const skillWikiPayload = {
           ],
           "raw": "- 2026-06-05"
         }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/vercel-agent-skills.md",
+      "category": {
+        "slug": "devops",
+        "label": "DevOps & Security",
+        "description": "Deployment, testing, QA, security, compliance, and infrastructure skills."
+      },
+      "evidenceLinks": [
+        {
+          "label": "https://github.com/vercel-labs/agent-skills",
+          "href": "https://github.com/vercel-labs/agent-skills",
+          "kind": "external"
+        },
+        {
+          "label": "https://github.com/vercel-labs/skills",
+          "href": "https://github.com/vercel-labs/skills",
+          "kind": "external"
+        },
+        {
+          "label": "https://skills.sh/",
+          "href": "https://skills.sh/",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_github_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source repo: `vercel-labs/agent-skills`",
+          "href": "https://github.com/vercel-labs/agent-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source URL: `https://github.com/vercel-labs/agent-skills`",
+          "href": "https://github.com/vercel-labs/agent-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Import status: `imported_external_unverified`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Imported via: `manual_market_sync`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "external skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Vercel platform skill reference",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "imported wiki search surface",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local validation",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "promotion gating",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "deployment approval",
+          "href": null,
+          "kind": "plain-text"
+        }
       ]
     },
     {
@@ -46667,6 +61126,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source type: `external_github_skill_seed`\n- Source repo: `vercel-labs/agent-skills`\n- Source URL: `https://github.com/vercel-labs/agent-skills`\n- Source path hint: `skills/vercel-optimize`\n- Import status: `validated_external_import`\n- Validation basis: `listed_in_validated_source_catalog`\n- Validation run: `runs/019-external-skill-wiki-import-vendor-platforms/`\n- Imported at: `2026-06-05`"
       },
+      "upstreamSourceRepo": "vercel-labs/agent-skills",
+      "upstreamSourceUrl": "https://github.com/vercel-labs/agent-skills",
+      "upstreamSourcePathHint": "skills/vercel-optimize",
       "sections": [
         {
           "title": "Provenance",
@@ -46835,6 +61297,104 @@ export const skillWikiPayload = {
             "- 2026-06-05"
           ],
           "raw": "- 2026-06-05"
+        }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/vercel-optimize-skill.md",
+      "category": {
+        "slug": "devops",
+        "label": "DevOps & Security",
+        "description": "Deployment, testing, QA, security, compliance, and infrastructure skills."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/019-external-skill-wiki-import-vendor-platforms/",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/019-external-skill-wiki-import-vendor-platforms/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/019-external-skill-wiki-import-vendor-platforms/"
+        },
+        {
+          "label": "https://github.com/vercel-labs/agent-skills",
+          "href": "https://github.com/vercel-labs/agent-skills",
+          "kind": "external"
+        }
+      ],
+      "relatedSkillLinks": [],
+      "provenanceLinks": [
+        {
+          "label": "Source type: `external_github_skill_seed`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Source repo: `vercel-labs/agent-skills`",
+          "href": "https://github.com/vercel-labs/agent-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source URL: `https://github.com/vercel-labs/agent-skills`",
+          "href": "https://github.com/vercel-labs/agent-skills",
+          "kind": "external"
+        },
+        {
+          "label": "Source path hint: `skills/vercel-optimize`",
+          "href": "https://github.com/vercel-labs/agent-skills/tree/main/skills/vercel-optimize",
+          "kind": "upstream-path",
+          "repoPath": "skills/vercel-optimize"
+        },
+        {
+          "label": "Import status: `validated_external_import`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation basis: `listed_in_validated_source_catalog`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Validation run: `runs/019-external-skill-wiki-import-vendor-platforms/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/019-external-skill-wiki-import-vendor-platforms/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/019-external-skill-wiki-import-vendor-platforms/"
+        },
+        {
+          "label": "Imported at: `2026-06-05`",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "external skill discovery",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "searchable seed entry",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "source-provenance capture",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "repo-local runtime verification",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "workflow promotion",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "scenario approval",
+          "href": null,
+          "kind": "plain-text"
         }
       ]
     },
@@ -47018,6 +61578,9 @@ export const skillWikiPayload = {
         ],
         "raw": "- Source run: `runs/008-xhs-skillopt-kb-reuse-minimal/`\n- Source skill path: `runs/008-xhs-skillopt-kb-reuse-minimal/best_skill.md`\n- Promotion status: `wiki_promoted`\n- Promotion target: `skills/wiki/xhs-kb-reuse-selection-gated-safety.md`\n- Promotion manifest: `runs/008-xhs-skillopt-kb-reuse-minimal/promotion-manifest.json`"
       },
+      "upstreamSourceRepo": null,
+      "upstreamSourceUrl": null,
+      "upstreamSourcePathHint": null,
       "sections": [
         {
           "title": "Provenance",
@@ -47220,6 +61783,142 @@ export const skillWikiPayload = {
             "- 2026-06-01"
           ],
           "raw": "- 2026-06-01"
+        }
+      ],
+      "sourceUrl": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/xhs-kb-reuse-selection-gated-safety.md",
+      "category": {
+        "slug": "automation",
+        "label": "Automation & MCP",
+        "description": "MCP, browser automation, workflow orchestration, integration, and tooling."
+      },
+      "evidenceLinks": [
+        {
+          "label": "runs/008-xhs-skillopt-kb-reuse-minimal/run-summary.md",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/runs/008-xhs-skillopt-kb-reuse-minimal/run-summary.md",
+          "kind": "repo-evidence",
+          "repoPath": "runs/008-xhs-skillopt-kb-reuse-minimal/run-summary.md"
+        },
+        {
+          "label": "runs/008-xhs-skillopt-kb-reuse-minimal/score-result.json",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/runs/008-xhs-skillopt-kb-reuse-minimal/score-result.json",
+          "kind": "repo-evidence",
+          "repoPath": "runs/008-xhs-skillopt-kb-reuse-minimal/score-result.json"
+        },
+        {
+          "label": "runs/008-xhs-skillopt-kb-reuse-minimal/best_skill.md",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/runs/008-xhs-skillopt-kb-reuse-minimal/best_skill.md",
+          "kind": "repo-evidence",
+          "repoPath": "runs/008-xhs-skillopt-kb-reuse-minimal/best_skill.md"
+        },
+        {
+          "label": "runs/008-xhs-skillopt-kb-reuse-minimal/rejected-candidate-publish-proof-skill.md",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/runs/008-xhs-skillopt-kb-reuse-minimal/rejected-candidate-publish-proof-skill.md",
+          "kind": "repo-evidence",
+          "repoPath": "runs/008-xhs-skillopt-kb-reuse-minimal/rejected-candidate-publish-proof-skill.md"
+        },
+        {
+          "label": "workflow-kb/failure-cases/xhs-content-failure-cases.md",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/workflow-kb/failure-cases/xhs-content-failure-cases.md",
+          "kind": "repo-evidence",
+          "repoPath": "workflow-kb/failure-cases/xhs-content-failure-cases.md"
+        },
+        {
+          "label": "workflow-kb/failure-cases/xhs-account-state-precheck-missing.md",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/workflow-kb/failure-cases/xhs-account-state-precheck-missing.md",
+          "kind": "repo-evidence",
+          "repoPath": "workflow-kb/failure-cases/xhs-account-state-precheck-missing.md"
+        }
+      ],
+      "relatedSkillLinks": [
+        {
+          "label": "xhs-ai-tool-topic-to-post.v1",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "xhs-content-failure-cases",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "xhs-account-state-precheck-missing",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "knowledge-base-writeback",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "provenanceLinks": [
+        {
+          "label": "Source run: `runs/008-xhs-skillopt-kb-reuse-minimal/`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/runs/008-xhs-skillopt-kb-reuse-minimal/",
+          "kind": "repo-evidence",
+          "repoPath": "runs/008-xhs-skillopt-kb-reuse-minimal/"
+        },
+        {
+          "label": "Source skill path: `runs/008-xhs-skillopt-kb-reuse-minimal/best_skill.md`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/runs/008-xhs-skillopt-kb-reuse-minimal/best_skill.md",
+          "kind": "repo-evidence",
+          "repoPath": "runs/008-xhs-skillopt-kb-reuse-minimal/best_skill.md"
+        },
+        {
+          "label": "Promotion status: `wiki_promoted`",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "Promotion target: `skills/wiki/xhs-kb-reuse-selection-gated-safety.md`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/xhs-kb-reuse-selection-gated-safety.md",
+          "kind": "repo-skill-file",
+          "repoPath": "skills/wiki/xhs-kb-reuse-selection-gated-safety.md"
+        },
+        {
+          "label": "Promotion manifest: `runs/008-xhs-skillopt-kb-reuse-minimal/promotion-manifest.json`",
+          "href": "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/runs/008-xhs-skillopt-kb-reuse-minimal/promotion-manifest.json",
+          "kind": "repo-evidence",
+          "repoPath": "runs/008-xhs-skillopt-kb-reuse-minimal/promotion-manifest.json"
+        }
+      ],
+      "scopeLinks": [
+        {
+          "label": "KB-first skill reuse",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "selection-gated workflow composition",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "proof-boundary preservation",
+          "href": null,
+          "kind": "plain-text"
+        }
+      ],
+      "nonScopeLinks": [
+        {
+          "label": "live publish",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "browser automation",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "account-state automation",
+          "href": null,
+          "kind": "plain-text"
+        },
+        {
+          "label": "recipe promotion",
+          "href": null,
+          "kind": "plain-text"
         }
       ]
     }

@@ -8,6 +8,245 @@ const webRoot = path.resolve(__dirname, "..");
 const repoRoot = path.resolve(webRoot, "..");
 const skillWikiDir = path.join(repoRoot, "skills", "wiki");
 const outputPath = path.join(webRoot, "data", "skills.generated.js");
+const repoGitHubBase = "https://github.com/AricRedemption/awesome-skill-workflows";
+
+const CATEGORY_DEFINITIONS = [
+  {
+    slug: "claude",
+    label: "Claude",
+    description: "Claude Code, Anthropic-specific skills, and Claude-oriented execution patterns.",
+    keywords: ["claude", "claude-code", "anthropic", "anthropics"],
+    tags: ["claude-code", "claude-skills", "anthropic", "document-processing"],
+  },
+  {
+    slug: "codex",
+    label: "Codex",
+    description: "Codex, OpenAI skills, prompt operators, and code-generation workflows.",
+    keywords: ["codex", "openai skills", "gpt", "command-creator"],
+    tags: ["codex", "openai", "command-creator"],
+  },
+  {
+    slug: "office",
+    label: "Office & Productivity",
+    description: "Documents, spreadsheets, workspace automation, and productivity workflows.",
+    keywords: [
+      "office",
+      "docx",
+      "xlsx",
+      "pptx",
+      "pdf",
+      "presentation",
+      "invoice",
+      "resume",
+      "productivity",
+      "backoffice",
+      "calendar",
+      "gmail",
+      "google workspace",
+    ],
+    tags: [
+      "office",
+      "office-assistant",
+      "document-processing",
+      "document-skill",
+      "document-skills",
+      "spreadsheet-skill",
+      "presentation-skill",
+      "productivity",
+      "backoffice",
+      "workspace-automation",
+      "meeting",
+      "invoice",
+      "todo",
+      "tracker",
+      "task-management",
+      "collaboration",
+      "sharing",
+    ],
+  },
+  {
+    slug: "media",
+    label: "Media & Creative",
+    description: "Design, image, video, writing, content, social media, and brand skills.",
+    keywords: [
+      "media",
+      "creative",
+      "design",
+      "image",
+      "video",
+      "social media",
+      "marketing",
+      "copywriting",
+      "seo",
+      "brand",
+      "writing",
+      "prose",
+      "twitter",
+      "content",
+      "frontend",
+    ],
+    tags: [
+      "creative-and-media",
+      "creative-media",
+      "creative",
+      "marketing",
+      "seo",
+      "social-media",
+      "brand",
+      "writing",
+      "writing-style",
+      "prose",
+      "image",
+      "ui",
+      "frontend",
+      "game-dev",
+      "content",
+      "twitter",
+      "brainstorming",
+      "design",
+      "artifacts",
+    ],
+  },
+  {
+    slug: "devops",
+    label: "DevOps & Security",
+    description: "Deployment, testing, QA, security, compliance, and infrastructure skills.",
+    keywords: [
+      "deploy",
+      "deployment",
+      "testing",
+      "qa",
+      "release",
+      "preflight",
+      "security",
+      "compliance",
+      "hardening",
+      "infrastructure",
+      "changelog",
+    ],
+    tags: [
+      "deploy",
+      "deployment",
+      "test",
+      "test-automation",
+      "testing",
+      "qa",
+      "quality",
+      "code-quality",
+      "release-readiness",
+      "infra",
+      "ops",
+      "cloud",
+      "security",
+      "compliance",
+      "hardening",
+      "risk",
+      "review",
+      "changelog",
+    ],
+  },
+  {
+    slug: "automation",
+    label: "Automation & MCP",
+    description: "MCP, browser automation, workflow orchestration, integration, and tooling.",
+    keywords: [
+      "automation",
+      "mcp",
+      "browser automation",
+      "integration",
+      "tooling",
+      "skill builder",
+      "skill creator",
+    ],
+    tags: [
+      "automation",
+      "browser-automation",
+      "mcp",
+      "integration",
+      "tooling",
+      "workflow",
+      "orchestration",
+      "connectors",
+      "file-organizer",
+      "skill-creator",
+      "skill-installer",
+      "skill-share",
+      "skill-sync",
+      "skill-composition",
+      "skill-authoring",
+      "meta",
+      "builder",
+      "self-improvement",
+      "agent",
+      "utility",
+      "coaching",
+      "setup",
+      "install",
+      "skill-opt",
+      "skillopt",
+      "kb-reuse",
+      "selection-gated",
+      "proof-boundary",
+    ],
+  },
+  {
+    slug: "research",
+    label: "Research & Data",
+    description: "Search, research, analysis, data science, GPU computing, and evidence-gathering.",
+    keywords: [
+      "research",
+      "search",
+      "analysis",
+      "data analysis",
+      "gpu",
+      "cuda",
+      "numerical",
+      "medical",
+      "healthcare",
+      "clinical",
+      "lead research",
+      "knowledge graph",
+    ],
+    tags: [
+      "research",
+      "search-and-research",
+      "lead-research",
+      "market-research",
+      "insights",
+      "data-analysis",
+      "data",
+      "gpu",
+      "gpu-dataframes",
+      "cuda",
+      "cudaq",
+      "cudf",
+      "cuopt",
+      "nvidia",
+      "optimization",
+      "optimizer",
+      "medical-and-healthcare",
+      "knowledge-graph",
+      "knowledge-management",
+      "education",
+      "discovery",
+    ],
+  },
+  {
+    slug: "collections",
+    label: "Collections & Catalogs",
+    description: "Skill catalogs, hubs, repositories, and ecosystem-level collections.",
+    keywords: ["catalog", "hub", "collection", "directory", "library"],
+    tags: [
+      "category-hub",
+      "catalog",
+      "curated-list",
+      "directory",
+      "official_repo_catalog",
+      "industry-hub",
+      "skill-library",
+    ],
+  },
+];
 
 function listMarkdownFiles(directory) {
   if (!fs.existsSync(directory)) {
@@ -114,6 +353,119 @@ function getSection(sections, title) {
   return sections.find((section) => section.title.toLowerCase() === title.toLowerCase());
 }
 
+function repoPathToUrl(repoPath) {
+  const normalized = repoPath.replace(/^\/+/, "");
+  const isFile = /\.[a-z0-9]+$/i.test(normalized);
+  return `${repoGitHubBase}/${isFile ? "blob" : "tree"}/main/${normalized}`;
+}
+
+function detectRepoPath(value) {
+  const inlinePathMatch = value.match(/`((?:skills|runs|docs|reports|workflow-kb|schemas|scenarios|verified-recipes|failed-recipes|evolution)[^`]+)`/);
+  if (inlinePathMatch) {
+    return inlinePathMatch[1];
+  }
+
+  const rawPathMatch = value.match(/((?:skills|runs|docs|reports|workflow-kb|schemas|scenarios|verified-recipes|failed-recipes|evolution)\/[^\s,)]+)/);
+  return rawPathMatch?.[1] ?? null;
+}
+
+function detectHttpUrl(value) {
+  const raw = value.match(/https?:\/\/[^\s)]+/i)?.[0] ?? null;
+  return raw ? raw.replace(/[`\],.;:]+$/g, "") : null;
+}
+
+function extractFieldValue(lines, prefix) {
+  const line = lines.find((entry) => entry.toLowerCase().startsWith(prefix.toLowerCase()));
+  return line ? line.slice(prefix.length).trim().replace(/^`|`$/g, "") : null;
+}
+
+function buildRefLink(value, skillSlugSet, context = {}) {
+  const repoPath = detectRepoPath(value);
+  const directUrl = detectHttpUrl(value);
+  const relatedSkillMatch = value.match(/`([a-z0-9-]+)`/i);
+  const relatedSlug = relatedSkillMatch?.[1] ?? null;
+  const upstreamRepoUrl = context.upstreamSourceUrl ?? null;
+
+  if (directUrl) {
+    return {
+      label: value,
+      href: directUrl,
+      kind: "external",
+    };
+  }
+
+  if (repoPath) {
+    const repoScopedHref =
+      upstreamRepoUrl && !repoPath.startsWith("runs/") && !repoPath.startsWith("docs/") && !repoPath.startsWith("reports/")
+        ? `${upstreamRepoUrl.replace(/\/$/, "")}/tree/main/${repoPath}`
+        : repoPathToUrl(repoPath);
+    return {
+      label: value,
+      href: repoScopedHref,
+      kind:
+        upstreamRepoUrl && !repoPath.startsWith("runs/")
+          ? "upstream-path"
+          : repoPath.startsWith("skills/wiki/")
+            ? "repo-skill-file"
+            : "repo-evidence",
+      repoPath,
+    };
+  }
+
+  if (value.toLowerCase().startsWith("source repo:")) {
+    const repoName = value.split(":").slice(1).join(":").trim().replace(/^`|`$/g, "");
+    if (/^[\w.-]+\/[\w.-]+$/.test(repoName)) {
+      return {
+        label: value,
+        href: `https://github.com/${repoName}`,
+        kind: "external",
+      };
+    }
+  }
+
+  if (relatedSlug && skillSlugSet.has(relatedSlug)) {
+    return {
+      label: value,
+      href: `#/skills/${relatedSlug}`,
+      kind: "internal-skill",
+      slug: relatedSlug,
+    };
+  }
+
+  return {
+    label: value,
+    href: null,
+    kind: "plain-text",
+  };
+}
+
+function inferCategory({ title, summary, tags, searchText, sourcePath }) {
+  const haystack = `${title} ${summary} ${tags.join(" ")}`.toLowerCase();
+  const tagSet = new Set(tags.map((tag) => tag.toLowerCase()));
+
+  // Phase 1: Tag-first matching (most reliable signal)
+  for (const category of CATEGORY_DEFINITIONS) {
+    if (!category.tags) continue;
+    if (category.tags.some((tag) => tagSet.has(tag.toLowerCase()))) {
+      return category;
+    }
+  }
+
+  // Phase 2: Keyword matching in title/summary/tags only (not full searchText)
+  const hasKeyword = (keywords) => keywords.some((keyword) => haystack.includes(keyword.toLowerCase()));
+
+  // Check specific categories before broad ones
+  for (const category of CATEGORY_DEFINITIONS) {
+    if (!category.keywords) continue;
+    if (hasKeyword(category.keywords)) {
+      return category;
+    }
+  }
+
+  // Fallback: collections
+  return CATEGORY_DEFINITIONS.find((category) => category.slug === "collections");
+}
+
 function buildSkillRecord(filePath) {
   const markdown = fs.readFileSync(filePath, "utf8");
   const sections = splitSections(markdown);
@@ -135,6 +487,10 @@ function buildSkillRecord(filePath) {
   const nonScope = formatSection(getSection(sections, "Non-Scope"));
   const updatedAt = formatSection(getSection(sections, "Updated At"));
   const provenance = formatSection(getSection(sections, "Provenance"));
+  const provenanceLines = provenance.bullets;
+  const upstreamSourceRepo = extractFieldValue(provenanceLines, "Source repo:");
+  const upstreamSourceUrl = extractFieldValue(provenanceLines, "Source URL:");
+  const upstreamSourcePathHint = extractFieldValue(provenanceLines, "Source path hint:");
 
   return {
     slug,
@@ -157,23 +513,64 @@ function buildSkillRecord(filePath) {
     scope,
     nonScope,
     provenance,
+    upstreamSourceRepo,
+    upstreamSourceUrl,
+    upstreamSourcePathHint,
     sections: sections.map((section) => formatSection(section)),
   };
 }
 
 function buildPayload() {
-  const skills = listMarkdownFiles(skillWikiDir).map(buildSkillRecord);
+  const baseSkills = listMarkdownFiles(skillWikiDir).map(buildSkillRecord);
+  const skillSlugSet = new Set(baseSkills.map((skill) => skill.slug));
+  const skills = baseSkills.map((skill) => {
+    const category = inferCategory(skill);
+
+    return {
+      ...skill,
+      sourceUrl: repoPathToUrl(skill.sourcePath),
+      category: {
+        slug: category.slug,
+        label: category.label,
+        description: category.description,
+      },
+      evidenceLinks: skill.evidenceRefs.bullets.map((value) =>
+        buildRefLink(value, skillSlugSet, { upstreamSourceUrl: skill.upstreamSourceUrl }),
+      ),
+      relatedSkillLinks: skill.relatedSkills.bullets.map((value) =>
+        buildRefLink(value, skillSlugSet, { upstreamSourceUrl: skill.upstreamSourceUrl }),
+      ),
+      provenanceLinks: skill.provenance.bullets.map((value) =>
+        buildRefLink(value, skillSlugSet, { upstreamSourceUrl: skill.upstreamSourceUrl }),
+      ),
+      scopeLinks: skill.scope.bullets.map((value) =>
+        buildRefLink(value, skillSlugSet, { upstreamSourceUrl: skill.upstreamSourceUrl }),
+      ),
+      nonScopeLinks: skill.nonScope.bullets.map((value) =>
+        buildRefLink(value, skillSlugSet, { upstreamSourceUrl: skill.upstreamSourceUrl }),
+      ),
+    };
+  });
+
   const tagCount = new Set(skills.flatMap((skill) => skill.tags)).size;
   const evidenceRefCount = skills.reduce((count, skill) => count + skill.evidenceRefs.bullets.length, 0);
+  const categoryStats = CATEGORY_DEFINITIONS.map((category) => ({
+    slug: category.slug,
+    label: category.label,
+    description: category.description,
+    count: skills.filter((skill) => skill.category.slug === category.slug).length,
+  }));
 
   return {
     generatedAt: new Date().toISOString(),
     sourceDirectory: "skills/wiki",
+    repoGitHubBase,
     stats: {
       skillCount: skills.length,
       tagCount,
       evidenceRefCount,
     },
+    categories: categoryStats,
     skills,
   };
 }
