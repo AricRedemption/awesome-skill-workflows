@@ -37,6 +37,26 @@ The service keeps technical and operational acceptance separate.
 This separation is required because the real draft-save proof is positive while
 the fresh visible-session recheck is still blocked by a login reset.
 
+### Why `partial` And `accepted_for_paas` Can Both Be True
+
+The endpoint returns two different verdict families:
+
+| Verdict family | Field | Current value | What it means |
+| --- | --- | --- | --- |
+| Technical proof | `technical_validation.status` | `partial` | The latest orchestration did not fully pass because the fresh visible-session proof path is still blocked. |
+| Technical terminal state | `technical_validation.final_terminal_state` | `blocked` | The blocker remains part of the technical record. |
+| Product readiness | `readiness_level` | `accepted_for_paas` | The workflow may be exposed as a constrained service because prior draft proof is positive, publish stayed disabled, the blocker is isolated, and human-reviewed readiness accepted the scope. |
+
+`accepted_for_paas` does not upgrade the technical verdict. It only says the
+known technical limits are acceptable for the current service boundary.
+
+The service must therefore preserve these separations:
+
+- service readiness is not technical pass,
+- draft proof is not live publish proof,
+- human-reviewed acceptance is not automatic account authorization,
+- scenario-specific blockers stay scenario-specific.
+
 ## Endpoint Contract
 
 ### `GET /health`

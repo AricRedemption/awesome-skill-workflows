@@ -69,6 +69,7 @@ These rules adapt general LLM coding guardrails to this workflow framework. They
 - Convert broad requests into verifiable goals before execution, such as a specific schema check, promotion-gate validation, acceptance report, or run-evidence update.
 - For multi-step changes, pair each step with the narrowest relevant verification before moving on. Weak goals like "make the workflow better" are not enough for promotion-sensitive work.
 - Before reporting completion, inspect the final diff and validation output. If the diff contains unrelated changes, speculative assets, or unverified promotion-sensitive edits, remove them or report the remaining issue clearly.
+- When browser or Chrome-based QA is needed, prefer Codex-provided Browser or Chrome capabilities first. Do not default to ad-hoc command-line Chrome flows unless Codex browser capabilities are unavailable and the fallback is explicitly justified by the task.
 
 ## Scenario And Risk Rules
 

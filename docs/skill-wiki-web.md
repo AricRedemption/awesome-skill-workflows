@@ -3,8 +3,9 @@
 ## Purpose
 
 `skill-wiki-web/` is an independent frontend surface for browsing the repository
-Skill Wiki as a standalone product, rather than embedding that experience inside
-the existing `landing-page/` site.
+Skill Wiki as a standalone product. The current direction is to present that
+surface more like a real skills marketplace or community homepage, rather than
+like a repository-backed documentation browser.
 
 ## Data Boundary
 
@@ -24,11 +25,31 @@ anchored to `skills/wiki/*.md`.
 The independent site currently provides:
 
 - `#/` for the platform homepage
-- `#/skills` for searchable skill discovery
-- `#/skills/:slug` for markdown-derived skill detail pages
+- `#/workflows` for searchable workflow discovery
+- `#/workflows/:slug` for markdown-derived workflow detail pages
 
 Hash routes are used so the site stays reliable as a standalone static app
 without requiring deployment rewrites.
+
+## Product Direction
+
+- Homepage should behave like a product landing/discovery surface first:
+  search, recommendation, category entry, featured workflow, and direct
+  navigation to workflow detail.
+- The top-level product object should prefer scenario-level workflow bundles such
+  as `top-scenario-*` and `hot-scenario-*`, rather than treating isolated skill
+  pages as the primary browsing unit.
+- For each domain, prefer a small number of high-signal workflow entry points
+  over exhaustive low-level skill listing on the homepage.
+- Repository-truth language such as markdown provenance, evidence references,
+  and source ownership should be de-emphasized on the homepage and discovery
+  surface.
+- Repository-truth data should still remain available on detail pages where the
+  user explicitly drills into a workflow.
+- CTA cards on the homepage must be complete navigation actions, not descriptive
+  placeholders without a direct target.
+- When browser-based QA is needed for this frontend, prefer Codex-provided
+  Chrome/Browser capabilities over ad-hoc command-line Chrome flows.
 
 ## Local Commands
 

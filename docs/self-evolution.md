@@ -22,6 +22,10 @@ The system evolves by turning run evidence into better reusable assets.
 
 Evolution must be evidence-driven. Do not promote a pattern just because it looks useful in theory.
 
+Self-evolution is bounded writeback, not autonomous prompt drift. A run may
+teach the system, but the lesson must land in the smallest durable home that
+the evidence supports.
+
 ## Trigger Rules
 
 Self-evolution is triggered by any evidence-backed workflow gap, not only by a low content or quality score.
@@ -56,6 +60,27 @@ Use the smallest durable writeback level supported by evidence:
 - `evolution-drafts/`: human-approved proposals for upgrading repeated lessons into long-lived `AGENTS.md`, `TOOLS.md`, `MEMORY.md`, or managed `SKILL.md` rules
 
 If evidence is incomplete, write a failure case or evolution note, but do not promote it to a verified recipe.
+
+## Case Study: PaaS Readiness Without Relabeling Technical Proof
+
+The current PaaS readiness path shows the intended self-evolution pattern.
+
+Evidence already showed a compliant draft-save boundary with `clicked_publish=false`.
+A later visible-session recheck was blocked by a login reset. That new blocker
+did not erase the prior proof, but it also could not be ignored.
+
+The bounded writeback was:
+
+1. keep `technical_validation.status=partial`,
+2. keep the terminal technical state as blocked,
+3. preserve the blocker as run evidence,
+4. accept PaaS progression only through human-reviewed readiness logic,
+5. keep the service boundary thin enough that it exposes readiness status
+   without performing or claiming a high-risk external action.
+
+This is a self-evolution success because the next run gets a clearer boundary.
+It is not a full technical pass, not live-publish proof, and not a reason to
+rewrite Layer 1 rules with scenario-specific account assumptions.
 
 ## Event Contract
 

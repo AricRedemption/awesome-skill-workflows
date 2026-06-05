@@ -1,28 +1,28 @@
 # Skill Wiki Web Acceptance Report
 
-- Generated at: 2026-06-04T18:52:43.835Z
-- Base URL: http://127.0.0.1:4179
+- Generated at: 2026-06-05T07:45:13.643Z
+- Base URL: http://127.0.0.1:4690
 
 ## Checks
 
 - PASS: generate-data — Generated /Users/aricredemption/Projects/awesome-skill-workflows/skill-wiki-web/data/skills.generated.js
 - PASS: verify-data — Skill Wiki web verification passed.
-Verified 145 skills from skills/wiki/*.md.
-- PASS: start-server — Listening on http://127.0.0.1:4179
-- PASS: home-page — Hero, title, stats, and desktop layout verified.
-- PASS: catalog-tag-toggle — Tag wall is collapsed by default and expands on demand.
-- PASS: catalog-search — Search query returns the expected wiki-backed skill.
-- PASS: catalog-empty-state — Empty state appears for an impossible query.
-- PASS: catalog-risk-filter — High-risk filter narrows results correctly.
-- PASS: catalog-tag-filter — Tag filter is present and updates the catalog.
-- PASS: detail-page — Skill detail route renders canonical wiki sections.
-- PASS: missing-route — Missing skill route shows the fallback state.
-- PASS: mobile-layout — Mobile layout renders without horizontal overflow.
+Verified 145 workflow-backed entries from skills/wiki/*.md.
+- PASS: start-server — Listening on http://127.0.0.1:4690
+- PASS: home-page — Workflow-first hero, quick entry, and desktop layout verified.
+- PASS: catalog-default-scope — Catalog defaults to workflow bundle cards.
+- PASS: catalog-search — Search query narrows results to matching workflows.
+- PASS: catalog-category-filter — Category filter keeps discovery at workflow granularity.
+- PASS: catalog-risk-filter — Risk filter still works on workflow cards.
+- PASS: catalog-clear-filters — Clear filters resets workflow discovery state.
+- PASS: detail-page — Workflow detail route renders product entry plus underlying reference structure.
+- PASS: missing-route — Missing workflow route shows the fallback state.
+- PASS: mobile-layout — Mobile workflow catalog renders without horizontal overflow.
 
 ## Screenshots
 
 - `reports/skill-wiki-web-qa/home-desktop.png`
-- `reports/skill-wiki-web-qa/skills-desktop.png`
+- `reports/skill-wiki-web-qa/workflows-desktop.png`
 - `reports/skill-wiki-web-qa/detail-desktop.png`
-- `reports/skill-wiki-web-qa/skills-mobile.png`
+- `reports/skill-wiki-web-qa/workflows-mobile.png`
 

@@ -1,11 +1,11 @@
 <div align="center">
 
-<h1>awesome-skill-workflows</h1>
+<h1>Runwiser / awesome-skill-workflows</h1>
 
-<h3>Validate Agent Workflows Before Promoting Skills</h3>
+<h3>Turn Agent Runs Into Verified, Reusable, Self-Improving Workflow Assets</h3>
 
 <p>
-  Evidence-first workflows for turning successful AI agent runs into reusable, measurable, and improvable skill assets.
+  An evidence-first operating layer for turning repeated AI agent runs into reusable, auditable, and promotable workflow assets.
 </p>
 
 <p>
@@ -34,12 +34,34 @@
 
 ---
 
-`awesome-skill-workflows` is **not** a Xiaohongshu tool.
+`Runwiser` is the product direction.
 
-It is a lightweight framework for turning repeated agent work into reusable,
-measurable, and improvable skill/workflow assets.
+`awesome-skill-workflows` is the open repository that proves and packages that
+direction.
+
+This project is **not** a Xiaohongshu tool.
+
+It is an evidence-first workflow operating layer for turning repeated agent
+work into verified, reusable, self-improving, and eventually serviceable
+workflow assets.
 
 ![Skill workflow validation pipeline](runs/001-xhs-ai-agent-save-one-hour/xhs-skill-workflow-media-en/01-skill-workflow-validation-en.png)
+
+## What This Is
+
+Most teams already have prompts, scripts, tools, and agent runs.
+
+What they usually do **not** have is a reliable system that answers:
+
+- which workflow actually worked,
+- what proof was preserved,
+- which gates passed or failed,
+- what became reusable,
+- what should evolve before the next run,
+- and what can be exposed safely as a service surface.
+
+Runwiser treats the workflow, its evidence, and its upgrade path as the durable
+asset.
 
 ## Why This Exists
 
@@ -52,23 +74,163 @@ This repository treats workflows as the durable asset:
 - scenarios are validation wrappers,
 - run evidence is the proof layer,
 - the workflow knowledge base is the reusable memory,
-- self-evolution turns failures and review notes into better future assets.
+- self-evolution turns failures, review notes, and verification gaps into better future assets.
 
-The SkillOpt-style direction extends that loop by treating reusable skill
-documents as candidate artifacts that can be optimized from scored rollout
-evidence. Edits should be bounded, evidence-backed, and accepted only through
-validation gates rather than promoted because they look plausible. See
-`docs/skillopt-integration.md`.
+## What Makes It Different
+
+### 1. Proof Before Reuse
+
+A run is not reusable because it looked good once.
+
+Reusable assets only emerge after explicit evidence, review, verification, and
+promotion boundaries line up.
+
+- run evidence stays in `runs/`
+- durable knowledge stays in `workflow-kb/`
+- promoted assets stay in `verified-recipes/`
+- failed but useful lessons stay in failed namespaces
+
+### 2. Self-Evolution With Boundaries
+
+This project does not treat self-evolution as free-form prompt drift.
+
+Self-evolution is evidence-driven writeback:
+
+- failures can become reusable guardrails,
+- human review can trigger workflow upgrades,
+- verification mismatches can force a correction path,
+- long-lived rule changes are drafted before they are promoted.
+
+See `docs/self-evolution.md` and `evolution-drafts/`.
+
+### 3. PaaS-Ready Workflow Service
+
+This repository is not only a documentation surface.
+
+It already defines a thin HTTP service boundary that exposes repo-owned
+workflow validation and readiness checks while preserving evidence semantics.
+
+The key distinction is deliberate:
+
+- technical validation can remain `partial`
+- readiness can still be `accepted_for_paas`
+
+Those states are not collapsed into a vague "passed" badge.
+
+See `docs/paas-ready-workflow-service.md`.
 
 ## What This Project Is
 
 This repository is a framework for:
 
-1. Skill Aggregation
-2. Skill Self-Evolution
-3. Workflow Knowledge Base
+1. workflow evidence and proof preservation
+2. bounded self-evolution from run evidence
+3. reusable workflow memory and promotion
+4. scenario-portable workflow validation
+5. service-ready workflow execution boundaries
 
-The long-term goal is to turn repeatable workflows into reusable, measurable, and improvable skill assets.
+The long-term goal is to turn repeatable workflows into reusable, measurable,
+improvable, and serviceable workflow assets.
+
+## Core Loop
+
+Every useful run should make the next run better:
+
+1. clarify the task and constraints
+2. select the best matching skill assets
+3. compose and run the workflow
+4. score the result
+5. pass human review for high-risk steps
+6. verify whether the output actually met the target
+7. capture failure cases and reusable evidence
+8. write back the right lesson at the right layer
+9. promote only what passed the required gates
+
+The reusable asset is the path, not just the final output.
+
+## Current Proof Surfaces
+
+The repository currently proves three distinct things:
+
+1. **Workflow proof stack**
+   - evidence, gates, verification, and promotion remain separate
+2. **Bounded self-evolution**
+   - runs can improve future assets without silently rewriting core rules
+3. **PaaS-ready workflow service**
+   - repo-owned workflow validation can be exposed over HTTP with explicit
+     readiness semantics
+
+The current deepest end-to-end scenario is still Xiaohongshu draft validation,
+but that scenario is a proof wrapper, not the product identity.
+
+## Runwiser Proof Stack
+
+Runwiser is easiest to understand as a proof stack, not as a single success
+badge.
+
+Each layer answers a different question:
+
+| Layer | Question | Primary home |
+| --- | --- | --- |
+| Run evidence | What actually happened in a concrete execution? | `runs/` |
+| Generic contracts | What is reusable across scenarios? | `schemas/`, `workflows/`, `docs/action-verification.md` |
+| Bounded evolution | What should change before the next run? | `evolution/`, `evolution-drafts/`, `docs/self-evolution.md` |
+| Durable knowledge | What can future runs retrieve and reuse? | `workflow-kb/`, `skills/wiki/` |
+| Scenario wrapper | Which local constraints proved or blocked the run? | `scenarios/` |
+| Service boundary | What can safely become an HTTP workflow surface? | `services/workflow-api/`, `docs/paas-ready-workflow-service.md` |
+
+This separation is the core trust model:
+
+- a quality score is not human approval,
+- an action fact is not compliance proof,
+- failed evidence can become a reusable guardrail without becoming a verified recipe,
+- service readiness can be accepted without relabeling partial technical validation.
+
+## Self-Evolution Case Study
+
+The current PaaS-readiness path is the clearest example of bounded
+self-evolution.
+
+The system has positive draft-save proof from prior run evidence, including a
+compliant draft boundary and `clicked_publish=false`. A later fresh
+visible-session recheck hit a login-reset blocker. Instead of hiding that
+blocker behind a vague "passed" label, the repository split the result:
+
+1. keep the orchestration's technical validation as `partial`,
+2. preserve the final technical terminal state as `blocked`,
+3. record the blocker as evidence,
+4. allow human-reviewed PaaS progression because the service boundary is thin,
+   repo-owned, and constrained to readiness checks,
+5. keep the exact evidence references available for future validation runs.
+
+That is what "self-evolution" means here: the workflow gets a better future
+boundary from evidence, but the technical record is not rewritten.
+
+See:
+
+- `docs/self-evolution.md`
+- `docs/paas-ready-workflow-service.md`
+- `runs/022-xhs-pi-paas-readiness-acceptance/`
+
+## Why `partial` And `accepted_for_paas` Can Both Be True
+
+The PaaS readiness status uses two tracks:
+
+| Track | Current status | Meaning |
+| --- | --- | --- |
+| Technical validation | `technical_validation.status=partial` | The latest orchestration did not fully pass because the fresh visible-session recheck is still blocked. |
+| Product readiness | `readiness_level=accepted_for_paas` | The workflow can progress as a service surface because the blocker is isolated, prior draft proof is positive, publish stayed disabled, and human-reviewed readiness accepted the bounded service scope. |
+
+The accepted readiness verdict does **not** mean:
+
+- the technical validation passed,
+- live publish proof exists,
+- the login-reset blocker disappeared,
+- scenario-specific account rules moved into the generic architecture.
+
+It means the repository can expose an evidence-backed readiness service without
+collapsing technical truth, human acceptance, and product progression into one
+ambiguous state.
 
 ## Core Idea
 
@@ -100,18 +262,6 @@ A scenario can prove the architecture, but it must not define the architecture.
 ## Workflow Loop
 
 ![Run once, evolve once workflow loop](runs/001-xhs-ai-agent-save-one-hour/xhs-skill-workflow-media-en/03-skill-workflow-loop-en.png)
-
-Every useful run should make the next run better:
-
-1. clarify the task and constraints,
-2. select the best matching skill assets,
-3. compose and run the workflow,
-4. score the result,
-5. pass human review for high-risk steps,
-6. verify whether the output actually met the target,
-7. capture failure cases and reusable evidence,
-8. update the knowledge base,
-9. start the next run with better assets.
 
 ## v0.1 Validation Scenario
 
