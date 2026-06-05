@@ -23,22 +23,16 @@ export function ScenarioSkillHeatmap() {
 
   return (
     <section id="skill-heatmap" className="mx-auto w-full max-w-[1240px] px-4 py-12">
-      <div className="mb-6 grid grid-cols-[0.9fr_1fr] gap-6 max-[980px]:grid-cols-1">
-        <div>
-          <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#d6ad69]/30 bg-[#ae8444]/10 px-3 py-1.5 text-[11px] font-extrabold uppercase tracking-[0.08em] text-[#d6ad69]">
-            {scenarioHeatmap.eyebrow}
-          </p>
-          <h2 className="asw-display-serif max-w-[760px] text-[clamp(2rem,3.8vw,3.35rem)] leading-[1] text-[#f8f3e8]">
-            {scenarioHeatmap.title}
-          </h2>
-        </div>
-        <p className="self-end text-base leading-[1.72] text-[#ebe1c8]/75">{scenarioHeatmap.description}</p>
+      <div className="mb-7 border-b border-[#d1bf94]/12 pb-7">
+        <h2 className="asw-display-serif max-w-[760px] text-[clamp(1.9rem,3.5vw,3rem)] leading-[1.02] text-[#f8f3e8]">
+          {scenarioHeatmap.title}
+        </h2>
+        <p className="mt-3 max-w-[560px] text-[0.98rem] leading-[1.7] text-[#ebe1c8]/66">{scenarioHeatmap.description}</p>
       </div>
 
-      <article className="overflow-hidden rounded-[30px] border border-[#d1bf94]/18 bg-[linear-gradient(180deg,rgba(27,34,26,0.98),rgba(12,15,12,0.98))] shadow-[0_0_0_1px_rgba(122,170,119,0.14),0_36px_120px_rgba(0,0,0,0.42)]">
+      <article className="overflow-hidden rounded-[28px] border border-[#d1bf94]/15 bg-[linear-gradient(180deg,rgba(27,34,26,0.98),rgba(12,15,12,0.98))] shadow-[0_0_0_1px_rgba(122,170,119,0.12),0_30px_90px_rgba(0,0,0,0.34)]">
         <div className="grid grid-cols-[300px_1fr] max-[980px]:grid-cols-1">
           <aside className="border-r border-[#d1bf94]/12 bg-[#0e120e]/68 p-4 max-[980px]:border-r-0 max-[980px]:border-b">
-            <div className="mb-3 text-[11px] font-extrabold uppercase tracking-[0.08em] text-[#d6ad69]">Scenario lens</div>
             <div className="grid gap-2 max-[980px]:grid-cols-2 max-[640px]:grid-cols-1">
               {scenarioHeatmap.scenarios.map((scenario) => {
                 const selected = scenario.key === active.key;
@@ -76,16 +70,14 @@ export function ScenarioSkillHeatmap() {
                   </span>
                 </div>
                 <h3 className="asw-display-serif text-[clamp(1.55rem,2.8vw,2.25rem)] leading-[1.03] text-[#f8f3e8]">{active.title}</h3>
-                <p className="mt-3 text-[0.98rem] leading-[1.7] text-[#ebe1c8]/74">{active.description}</p>
+                <p className="mt-3 text-[0.98rem] leading-[1.7] text-[#ebe1c8]/68">{active.description}</p>
                 <div className="mt-5 rounded-[18px] border border-[#d1bf94]/10 bg-[#0d110d]/78 p-4">
-                  <div className="text-[11px] font-extrabold uppercase tracking-[0.08em] text-[#d6ad69]">Boundary</div>
                   <p className="mt-2 text-sm font-semibold leading-[1.6] text-[#f4f0df]/86">{active.boundary}</p>
                 </div>
               </div>
 
               <div className="grid gap-4">
                 <div className="rounded-[22px] border border-[#d1bf94]/12 bg-[#111511]/82 p-5">
-                  <div className="text-[11px] font-extrabold uppercase tracking-[0.08em] text-[#d6ad69]">Evidence</div>
                   <ul className="mt-3 space-y-2 text-sm leading-[1.62] text-[#ebe1c8]/72">
                     {active.evidence.map((item) => (
                       <li className="flex gap-2" key={item}>
@@ -96,7 +88,6 @@ export function ScenarioSkillHeatmap() {
                   </ul>
                 </div>
                 <div className="rounded-[22px] border border-[#d1bf94]/12 bg-[#111511]/82 p-5">
-                  <div className="text-[11px] font-extrabold uppercase tracking-[0.08em] text-[#d6ad69]">Asset homes</div>
                   <div className="mt-3 flex flex-wrap gap-2">
                     {active.assets.map((asset) => (
                       <span className="rounded-lg border border-[#d6ad69]/15 bg-[#d6ad69]/10 px-2.5 py-2 font-mono text-xs text-[#f2d59e]" key={asset}>
@@ -109,7 +100,6 @@ export function ScenarioSkillHeatmap() {
             </div>
 
             <div className="mb-3 flex flex-wrap items-center justify-between gap-3">
-              <div className="text-[11px] font-extrabold uppercase tracking-[0.08em] text-[#d6ad69]">Validation heatmap</div>
               <div className="flex flex-wrap gap-2">
                 {scenarioHeatmap.legend.map((item) => (
                   <span className={`rounded-full border px-3 py-1 text-[11px] font-bold uppercase tracking-[0.06em] ${statusClassName[item.status]}`} key={item.status}>

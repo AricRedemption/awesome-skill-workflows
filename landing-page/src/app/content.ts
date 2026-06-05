@@ -2,6 +2,8 @@ export const links = {
   repository: "https://github.com/AricRedemption/awesome-skill-workflows",
   architecture:
     "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/docs/architecture.md",
+  actionVerification:
+    "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/docs/action-verification.md",
   directoryMap:
     "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/docs/directory-architecture.md",
   workflowKb:
@@ -20,10 +22,29 @@ export const links = {
     "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/docs/skillopt-integration.md",
   skilloptReadiness:
     "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/reports/skillopt-official-readiness.json",
+  selfEvolution:
+    "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/docs/self-evolution.md",
+  paasService:
+    "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/docs/paas-ready-workflow-service.md",
+  multiAgent:
+    "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/docs/multi-agent-workflows.md",
+  piAgent: "https://github.com/earendil-works/pi",
   docs:
     "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/docs",
   agentRules:
     "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/AGENTS.md",
+  wiki: "http://localhost:7745",
+} as const;
+
+const skillWikiSummary = {
+  skillCount: 145,
+  categoryCount: 8,
+  categories: {
+    research: 33,
+    office: 24,
+    media: 25,
+    automation: 16,
+  },
 } as const;
 
 export const brand = {
@@ -31,50 +52,204 @@ export const brand = {
   repositoryName: "awesome-skill-workflows",
   logo: "/brand/runwise-logo.png",
   description:
-    "Evidence-first AI agent workflow memory for verified reusable skills.",
+    "Evidence-first AI agent workflow operating layer for verified reusable assets.",
 } as const;
 
+export const footer = {
+  links: [
+    { label: "GitHub", href: links.repository, external: true },
+    { label: "Docs", href: links.docs, external: true },
+    { label: "Directory", href: links.directoryMap, external: true },
+  ],
+} as const;
+
+export const sitePages = [
+  {
+    label: "Home",
+    href: "/",
+    title: "Run wiser, prove stronger.",
+    description:
+      "Turn repeated agent runs into verified, reusable workflow assets—with proof, gates, and writeback kept separate.",
+  },
+  {
+    label: "Orchestration",
+    href: "/orchestration",
+    title: "Plan clearer, gate stronger.",
+    description: "Planner, worker, reviewer, verifier—with hard gates between handoffs.",
+  },
+  {
+    label: "Proof",
+    href: "/proof",
+    title: "Prove clearer, trust stronger.",
+    description: "Evidence, gates, and promotion stay in separate lanes.",
+  },
+  {
+    label: "Evolution",
+    href: "/evolution",
+    title: "Learn tighter, drift lighter.",
+    description: "Evidence-backed writeback—no silent prompt drift.",
+  },
+  {
+    label: "Wiki",
+    href: links.wiki,
+    title: "Keep leaner, trust stronger.",
+    description: "Promoted knowledge only—each asset has a home and a bar.",
+  },
+  {
+    label: "Cases",
+    href: "/cases",
+    title: "Prove deeper, scale cleaner.",
+    description: "One deep scenario proof plus a broader structured case surface.",
+  },
+] as const;
+
 export const navItems = [
-  { label: "Problem", href: "#problem" },
-  { label: "Proof", href: "#proof-stack" },
-  { label: "SkillOpt", href: "#skillopt" },
-  { label: "Model", href: "#model" },
-  { label: "Scenarios", href: "#skill-heatmap" },
+  { label: "Home", href: "/" },
+  { label: "Orchestration", href: "/orchestration" },
+  { label: "Proof", href: "/proof" },
+  { label: "Evolution", href: "/evolution" },
+  { label: "Wiki", href: links.wiki },
+  { label: "Cases", href: "/cases" },
   { label: "Docs", href: links.docs },
 ] as const;
 
 export const hero = {
-  eyebrow: "Workflow evidence system",
-  title: "Runwiser turns agent runs into reusable workflow memory.",
+  eyebrow: "Evidence-first workflow operating layer",
+  title: "Run wiser, prove stronger.",
   description:
-    "Stop losing good agent runs in chat history. Runwiser turns repeatable execution into skills, recipes, proof, and reusable workflow memory, with no promotion until evidence and gates are explicit.",
-  primaryCta: "View proof",
-  secondaryCta: "Read docs",
+    "Turn repeated agent runs into verified, reusable workflow assets—with proof, gates, and writeback kept separate.",
+  primaryCta: "Explore the model",
+  primaryHref: "/proof",
+  secondaryCta: "See proven cases",
+  secondaryHref: "/cases",
+  secondaryExternal: false,
   consoleSteps: ["Run", "Score", "Review", "Verify", "Write back", "Promote"],
   signals: [
     { label: "Source", value: "real run evidence" },
-    { label: "Gate", value: "human + risk review" },
-    { label: "Output", value: "verified workflow asset" },
+    { label: "Gate", value: "review + verify + scenario checks" },
+    { label: "Output", value: "reusable workflow asset" },
   ],
 } as const;
 
 export const problem = {
   eyebrow: "The gap",
-  title: "Agent work disappears after each successful run.",
-  description:
-    "Most agent workflows leave behind a chat transcript, a few prompts, and no durable path for reuse. This project treats every run as evidence that can either become reusable knowledge or a documented failure.",
+  title: "Scatter faster, prove stronger.",
+  description: "Agent work ends in chat. What survives is the workflow asset.",
   cards: [
     {
-      title: "Skills stay scattered",
-      body: "Useful prompts, tools, and tactics remain buried in conversations instead of becoming selectable skill assets.",
+      title: "Scattered",
+      body: "Prompts stay in chat, not in the system.",
     },
     {
-      title: "Success is not repeatability",
-      body: "One good output does not prove that the workflow can be selected, composed, reviewed, and reused.",
+      title: "Unrepeatable",
+      body: "One good output does not prove a reusable workflow.",
     },
     {
-      title: "Failures get lost",
-      body: "Failed runs often contain the best prevention rules, but they rarely make it into a reusable knowledge base.",
+      title: "Lost failures",
+      body: "The best guardrails die with the transcript.",
+    },
+  ],
+} as const;
+
+export const firstClickPaths = {
+  eyebrow: "Start here",
+  title: "Start wiser, go deeper.",
+  description:
+    "Trust, roles, evolution, durability, or scenario fit—start where your question lives.",
+  paths: [
+    {
+      title: "Can I trust it?",
+      body: "Proof stack, gate separations, and readiness without relabeling.",
+      href: "/proof",
+      cta: "Open proof",
+    },
+    {
+      title: "How do roles run?",
+      body: "Planner to verifier, with hard review gates between handoffs.",
+      href: "/orchestration",
+      cta: "See orchestration",
+    },
+    {
+      title: "How does it improve?",
+      body: "Bounded writeback from run evidence—not prompt drift.",
+      href: "/evolution",
+      cta: "See evolution",
+    },
+    {
+      title: "What gets kept?",
+      body: "Wiki, workflow-kb, and promotion boundaries for durable assets.",
+      href: links.wiki,
+      cta: "Browse wiki",
+      external: true,
+    },
+    {
+      title: "Where is it proven?",
+      body: "Deepest scenario proof plus the broader case map.",
+      href: "/cases",
+      cta: "See cases",
+    },
+  ],
+} as const;
+
+export const visionValue = {
+  eyebrow: "Vision and value",
+  title: "Keep better, relearn less.",
+  description:
+    "The value is simple: useful runs do not disappear. Teams keep the proof, the gate result, and the reusable path.",
+  pillars: [
+    {
+      title: "Immediate value",
+      body: "Useful runs stop disappearing into chat. Teams keep the proof, review outcome, and reusable path.",
+    },
+    {
+      title: "Long-term vision",
+      body: "Agent workflows become durable assets: reviewable, improvable, retrievable, and eventually serviceable.",
+    },
+  ],
+  gaps: [
+    {
+      title: "Prompt libraries stop too early",
+      body: "They help you start, but they do not preserve whether the run worked, what failed, or what earned reuse.",
+    },
+    {
+      title: "Eval tools stop at scoring",
+      body: "They tell you how a run performed, but not what should become durable knowledge or what must stay blocked.",
+    },
+    {
+      title: "Automation layers stop at execution",
+      body: "They can run steps, but they rarely keep hard review, proof boundaries, and reusable failure evidence separate.",
+    },
+  ],
+} as const;
+
+export const differentiation = {
+  eyebrow: "Where it differs",
+  title: "Run deeper, reuse stronger.",
+  description: "Not a prompt library, eval tool, wiki, or script—a workflow operating layer.",
+  items: [
+    {
+      title: "Prompt library",
+      label: "Useful, but incomplete",
+      body: "Prompt collections help you start faster, but they do not preserve run evidence, review outcomes, or promotion state.",
+      contrast: "Runwiser keeps the path and the proof, not just the text.",
+    },
+    {
+      title: "Eval harness",
+      label: "Necessary, but narrower",
+      body: "Evaluation tells you how a run scored. It does not decide what becomes durable, what stays failed, or how future runs retrieve the lesson.",
+      contrast: "Scoring is one gate—not the whole writeback loop.",
+    },
+    {
+      title: "Skill wiki",
+      label: "Readable, but downstream",
+      body: "A wiki is where promoted knowledge ends up. It is not the full system that decides how that knowledge earned promotion.",
+      contrast: "Wiki is where promoted knowledge lands—not how it earns promotion.",
+    },
+    {
+      title: "Automation script",
+      label: "Fast, but brittle",
+      body: "A script can execute steps, but it rarely captures review boundaries, service readiness, or reusable failure evidence.",
+      contrast: "Execution without separated review and proof boundaries.",
     },
   ],
 } as const;
@@ -83,7 +258,7 @@ export const ecosystem = {
   eyebrow: "Agent ecosystem",
   title: "Compatible with the agent stack you already run.",
   description:
-    "This layer is additive. It sits above existing agent tools and gives repeated work a promotion path: evidence, review gates, reusable workflow assets, and writeback.",
+    "This layer sits above existing agent tools and gives repeated work a path to proof, review, and reuse.",
   logos: [
     {
       id: "roo-code",
@@ -176,21 +351,20 @@ export const ecosystem = {
 } as const;
 
 export const validatedProof = {
-  eyebrow: "Why it matters",
-  title: "Runwiser makes agent workflow improvement auditable.",
-  description:
-    "Runwiser gives every repeatable agent workflow a durable operating layer: evidence capture, review gates, reusable memory, and promotion discipline.",
+  eyebrow: "What we prove",
+  title: "Proof tighter, trust stronger.",
+  description: "What this repo already proves—not what it merely claims.",
   stats: [
-    { value: "Evidence", label: "before promotion", detail: "Runs, scores, review records, and proof artifacts are kept separate." },
-    { value: "Gates", label: "before action", detail: "Human review, risk state, account state, and proof are explicit states." },
-    { value: "Memory", label: "after each run", detail: "Reusable lessons move into KB assets instead of disappearing in chat." },
-    { value: "Failures", label: "stay useful", detail: "Broken attempts become guardrails without being mislabeled as success." },
+    { value: "Evidence", label: "before promotion", detail: "Runs, scores, and proof stay separate." },
+    { value: "Gates", label: "before action", detail: "Human review, risk, and proof are explicit." },
+    { value: "Writeback", label: "after each run", detail: "Useful lessons move into the right durable layer." },
+    { value: "Service", label: "without trust collapse", detail: "HTTP readiness stays separate from technical proof." },
   ],
   spotlight: {
     label: "Operating model",
     scenario: "Proof stack for repeatable agent work",
-    problem: "A good agent output is not enough. Runwiser records the path that produced it, the checks that accepted it, and the evidence that makes it reusable.",
-    outcome: "Promotion only happens after evidence and gates line up.",
+    problem: "A good output is not enough. The durable asset is the path, the gates, the writeback, and the service boundary.",
+    outcome: "Promotion follows evidence and gates. Service status never overwrites technical truth.",
     skills: [
       "skill selection",
       "workflow composition",
@@ -199,47 +373,203 @@ export const validatedProof = {
       "risk gates",
       "proof verification",
       "KB writeback",
+      "readiness modeling",
     ],
     evidence: [
       "run records",
       "gate ledgers",
       "verified and failed recipe boundaries",
+      "service readiness status",
     ],
     href: links.architecture,
   },
   cards: [
     {
-      title: "Reusable workflow assets",
-      stat: "Not just prompts",
-      body: "Skills, workflows, schemas, run evidence, and KB entries form one traceable system for repeating the work.",
+      title: "Proof stack",
+      stat: "Proof before reuse",
+      body: "Evidence, review, and promotion never collapse into one badge.",
       proofLabel: "Core",
-      proofValue: "architecture docs",
-      href: links.architecture,
+      proofValue: "action verification",
+      href: links.actionVerification,
     },
     {
-      title: "Reviewable promotion",
-      stat: "Evidence-gated",
-      body: "Quality score, human review, risk approval, proof verification, and promotion approval remain separate.",
-      proofLabel: "Gate",
-      proofValue: "promotion rules",
-      href: links.agentRules,
+      title: "Bounded self-evolution",
+      stat: "Learn without drift",
+      body: "Failures and gaps write back through drafts—not prompt drift.",
+      proofLabel: "Evolution",
+      proofValue: "self-evolution rules",
+      href: links.selfEvolution,
     },
     {
-      title: "Scenario-portable model",
-      stat: "One core, many wrappers",
-      body: "Scenario details stay local, so the base architecture can support content, research, engineering, and ops workflows.",
-      proofLabel: "Boundary",
-      proofValue: "directory map",
-      href: links.directoryMap,
+      title: "PaaS-ready workflow service",
+      stat: "Ready without lying",
+      body: "HTTP readiness stays separate from technical validation.",
+      proofLabel: "Service",
+      proofValue: "PaaS contract",
+      href: links.paasService,
     },
   ],
+} as const;
+
+export const proofStackExplainer = {
+  eyebrow: "Runwiser proof stack",
+  title: "Layer clearer, claim stronger.",
+  description: "Six layers, six questions—evidence, contracts, evolution, memory, scenario, and service stay separate.",
+  principle: "A good run is not yet a reusable asset. Each layer keeps a different truth.",
+  compactCta: {
+    label: "Full proof stack",
+    href: "/proof",
+  },
+  layers: [
+    {
+      label: "Layer 0",
+      title: "Run evidence",
+      body: "Inputs, outputs, scores, blockers, and proof from one concrete execution.",
+      path: "runs/",
+      claim: "What actually happened?",
+    },
+    {
+      label: "Layer 1",
+      title: "Core contracts",
+      body: "Scenario-agnostic schemas, workflows, validators, and action-verification rules.",
+      path: "schemas/ + workflows/",
+      claim: "What is reusable across scenarios?",
+    },
+    {
+      label: "Layer 2",
+      title: "Bounded evolution",
+      body: "Evidence-backed notes, candidate edits, and draft rule changes—not silent prompt drift.",
+      path: "evolution/ + evolution-drafts/",
+      claim: "What should change before the next run?",
+    },
+    {
+      label: "Layer 3",
+      title: "Durable knowledge",
+      body: "KB entries, failure cases, wiki pages, and retrieval records promoted from verified runs.",
+      path: "workflow-kb/ + skills/wiki/",
+      claim: "What can future runs retrieve?",
+    },
+    {
+      label: "Layer 4",
+      title: "Scenario wrapper",
+      body: "Local constraints, risk rules, account boundaries, and human handoff gates for one validation context.",
+      path: "scenarios/",
+      claim: "Which constraints stay local?",
+    },
+    {
+      label: "Layer 5",
+      title: "Service boundary",
+      body: "HTTP readiness and status on top of repo-owned evidence—without rewriting technical truth.",
+      path: "services/workflow-api/",
+      claim: "What can safely become a service?",
+    },
+  ],
+  separations: [
+    "Quality score is not human approval.",
+    "Action fact is not compliance proof.",
+    "A failed run can teach the system without becoming a verified recipe.",
+    "Technical validation can stay partial while operational readiness is accepted.",
+  ],
+} as const;
+
+export const selfEvolutionCaseStudy = {
+  eyebrow: "Self-evolution case study",
+  title: "The system improves by routing one gap to the smallest durable writeback.",
+  description:
+    "This is the important distinction: self-evolution does not mean the agent silently rewrites its own instructions. It means evidence finds the narrowest safe place to change future behavior.",
+  caseLabel: "Current acceptance path",
+  caseTitle: "Positive draft proof plus a login-reset blocker becomes a bounded readiness rule.",
+  outcome:
+    "The workflow can progress as PaaS-ready because the remaining blocker is operationally isolated, while technical validation still tells the truth: partial.",
+  timeline: [
+    {
+      title: "Evidence arrived",
+      body: "Prior run evidence showed compliant draft-save proof with publish disabled and explicit action-verification records.",
+      artifact: "runs/003 + action-verification.json",
+    },
+    {
+      title: "Gap appeared",
+      body: "A fresh visible-session recheck hit a login reset. That blocks full technical validation, but it does not erase the prior draft proof.",
+      artifact: "runs/018",
+    },
+    {
+      title: "Boundary was chosen",
+      body: "The gap stayed in the technical lane instead of being hidden behind a broad passed verdict.",
+      artifact: "technical_validation.status=partial",
+    },
+    {
+      title: "Writeback stayed bounded",
+      body: "Human-reviewed readiness accepted PaaS progression while preserving the exact blocker and evidence references.",
+      artifact: "runs/022",
+    },
+    {
+      title: "Future runs improve",
+      body: "The next service or validation run can now query the known blocker, readiness decision, and proof requirements.",
+      artifact: "workflow-api readiness contract",
+    },
+  ],
+  guardrails: [
+    {
+      title: "No silent prompt drift",
+      body: "Long-lived rule changes go through evolution drafts, not direct mutation from one run.",
+    },
+    {
+      title: "No proof laundering",
+      body: "Blocked technical validation remains blocked or partial, even when product readiness is accepted.",
+    },
+    {
+      title: "No scenario leakage",
+      body: "Xiaohongshu-specific risk and account rules stay inside the scenario boundary.",
+    },
+  ],
+  artifacts: [
+    { label: "Self-evolution doc", href: links.selfEvolution },
+    { label: "PaaS service doc", href: links.paasService },
+    { label: "Multi-agent contract", href: links.multiAgent },
+  ],
+} as const;
+
+export const paasReadinessExplainer = {
+  eyebrow: "PaaS readiness, without trust collapse",
+  title: "Why technical_validation=partial and readiness_level=accepted_for_paas can both be true.",
+  description:
+    "Runwiser models readiness as two tracks. Technical validation says what the latest orchestration proved. Product readiness says whether the service boundary is safe enough to expose with the known limits.",
+  verdicts: [
+    {
+      label: "Technical track",
+      value: "technical_validation=partial",
+      tone: "amber",
+      body: "A fresh visible-session recheck is still blocked by login reset, so the orchestration cannot honestly claim full technical pass.",
+      keeps: ["final_terminal_state=blocked", "blocker preserved", "no relabeling as passed"],
+    },
+    {
+      label: "Readiness track",
+      value: "readiness_level=accepted_for_paas",
+      tone: "green",
+      body: "The service can expose repo-owned validation and readiness because prior draft proof is positive, publish stayed disabled, and the blocker is isolated.",
+      keeps: ["human-reviewed acceptance", "evidence references intact", "service scope constrained"],
+    },
+  ],
+  equation: [
+    "Positive draft proof",
+    "clicked_publish=false",
+    "known isolated blocker",
+    "human-reviewed readiness",
+    "thin HTTP surface",
+  ],
+  notAllowed: [
+    "Do not convert partial technical validation into passed technical validation.",
+    "Do not let PaaS readiness imply live publish proof.",
+    "Do not move scenario-specific account rules into Layer 1.",
+  ],
+  href: links.paasService,
 } as const;
 
 export const paperReproduction = {
   eyebrow: "Paper reproduction",
   title: "Microsoft SkillOpt, rebuilt as a local workflow-evidence loop.",
   description:
-    "The implementation translates the paper architecture into this repository's Layer 1 model: freeze the target skill, generate bounded edits from run evidence, evaluate candidates on held-out evidence, preserve rejected edits, and export the accepted skill state.",
+    "The paper is adapted into a local loop: bounded edits, held-out checks, rejected candidates, and explicit export.",
   image: {
     src: "/architecture/skillopt-local-reproduction-gpt-image-2.png",
     alt: "GPT Image 2 architecture illustration of the local SkillOpt reproduction loop",
@@ -248,15 +578,15 @@ export const paperReproduction = {
   steps: [
     {
       title: "Matched the training contract",
-      body: "Mapped the official SkillOpt ideas into baseline skill, candidate skill, rollout evidence, held-out selection, and exported artifacts.",
+      body: "Mapped the paper into baseline skill, candidate skill, and held-out selection.",
     },
     {
       title: "Kept edits bounded",
-      body: "Candidate changes are structured as add, delete, or replace operations instead of free-form prompt rewrites.",
+      body: "Changes stay bounded instead of turning into free-form rewrites.",
     },
     {
       title: "Verified with local evidence",
-      body: "The local run records score consistency, rejected candidates, sensitive-reference checks, and direct-promotion boundaries.",
+      body: "Local runs check score consistency, rejected candidates, and promotion boundaries.",
     },
   ],
   artifacts: [
@@ -267,11 +597,11 @@ export const paperReproduction = {
 } as const;
 
 export const scenarioHeatmap = {
-  eyebrow: "Use cases + validated skill heatmap",
-  title: "See which workflow skills are actually validated.",
+  eyebrow: "Current case surface",
+  title: "The case surface is now wider than one validation wrapper.",
   description:
-    "The product is not a loose skill list. Each scenario is graded by evidence, so you can see what has been executed, reviewed, verified, and made reusable.",
-  columns: ["Executed", "Reviewed", "Verified", "Reusable"],
+    `The skill wiki now tracks ${skillWikiSummary.skillCount} skills across ${skillWikiSummary.categoryCount} categories. One workflow is the deepest end-to-end proof. The rest show where the system is already structured and reusable.`,
+  columns: ["Cataloged", "Structured", "Proven", "Reusable"],
   legend: [
     { status: "verified", label: "verified" },
     { status: "partial", label: "partial" },
@@ -282,10 +612,10 @@ export const scenarioHeatmap = {
     {
       key: "xiaohongshu",
       tag: "Xiaohongshu Creator",
-      status: "verified sample",
-      title: "The v0.1 validation wrapper with the strongest evidence chain.",
+      status: "deepest proof",
+      title: "Still the strongest end-to-end workflow proof in the system.",
       description:
-        "A topic-to-draft workflow proved that multiple reusable skills can be selected, composed, reviewed, verified, reused, and improved through failure evidence.",
+        "This is still the most complete case: one workflow, one scenario boundary, one reusable proof chain.",
       evidence: [
         "verified recipe and verified workflow records",
         "draft proof with clicked_publish=false",
@@ -295,130 +625,95 @@ export const scenarioHeatmap = {
       boundary: "Verified for compliant draft save. Live publish is explicitly not claimed.",
       assets: ["verified-recipes/", "workflow-kb/verified-workflows/", "workflow-kb/failure-cases/"],
       rows: [
-        { skill: "Skill discovery and normalization", cells: ["verified", "verified", "verified", "verified"] },
         { skill: "Workflow composition", cells: ["verified", "verified", "verified", "verified"] },
-        { skill: "Content generation and style rewrite", cells: ["verified", "verified", "partial", "partial"] },
-        { skill: "Quality scoring", cells: ["verified", "verified", "verified", "partial"] },
-        { skill: "Human review gate", cells: ["verified", "verified", "verified", "verified"] },
-        { skill: "Risk and account-state gate", cells: ["verified", "verified", "verified", "verified"] },
-        { skill: "Draft/proof verification", cells: ["verified", "verified", "verified", "partial"] },
-        { skill: "KB writeback", cells: ["verified", "verified", "verified", "verified"] },
-        { skill: "Failure-to-guardrail", cells: ["verified", "verified", "verified", "verified"] },
-        { skill: "Skill optimization", cells: ["emerging", "emerging", "none", "none"] },
-      ],
-    },
-    {
-      key: "agora",
-      tag: "Agora Voice Agent",
-      status: "emerging",
-      title: "A real-time agent scenario for checking workflow validation beyond content.",
-      description:
-        "Agora expands the validation surface toward environment checks, runtime proof, CLI readiness, and scenario-owned risk gates without redefining the core architecture.",
-      evidence: [
-        "scenario boundary and scoring rubric exist",
-        "baseline run records environment and runtime proof",
-        "reusable patterns remain candidate-level",
-      ],
-      boundary: "Not promoted as a verified reusable recipe. Evidence is scenario-run level.",
-      assets: ["scenarios/agora-voice-agent-demo/", "runs/001-agora-voice-agent-quickstart-baseline/", "skills/agora-e2e-workflow-validation/"],
-      rows: [
-        { skill: "Skill discovery and normalization", cells: ["partial", "partial", "emerging", "emerging"] },
-        { skill: "Workflow composition", cells: ["partial", "partial", "emerging", "none"] },
-        { skill: "Environment readiness", cells: ["partial", "partial", "emerging", "none"] },
-        { skill: "Runtime proof capture", cells: ["partial", "partial", "emerging", "none"] },
-        { skill: "Quality scoring", cells: ["partial", "partial", "none", "none"] },
-        { skill: "Risk gate", cells: ["partial", "partial", "none", "none"] },
-        { skill: "KB writeback", cells: ["emerging", "none", "none", "none"] },
-        { skill: "Verified promotion", cells: ["none", "none", "none", "none"] },
-      ],
-    },
-    {
-      key: "skillopt",
-      tag: "Skill Optimization",
-      status: "local method",
-      title: "A generic optimization loop for improving reusable skill documents.",
-      description:
-        "SkillOpt-style work is treated as Layer 1 skill optimization: bounded edits, split evidence, held-out selection, and explicit rejection records.",
-      evidence: [
-        "schema contracts for skill edits and optimization runs",
-        "validator checks train/selection evidence split",
-        "minimal XHS KB-reuse optimization run passes",
-      ],
-      boundary: "Experimental local architecture only. No official SkillOpt code or external benchmark is claimed.",
-      assets: ["docs/skillopt-integration.md", "workflows/skill-optimization/", "runs/008-xhs-skillopt-kb-reuse-minimal/"],
-      rows: [
-        { skill: "Evidence split", cells: ["verified", "verified", "partial", "partial"] },
-        { skill: "Bounded skill edits", cells: ["verified", "verified", "partial", "partial"] },
-        { skill: "Held-out selection gate", cells: ["verified", "verified", "partial", "partial"] },
-        { skill: "Risk gate compatibility", cells: ["verified", "verified", "partial", "partial"] },
-        { skill: "Rejected-edit preservation", cells: ["emerging", "none", "none", "none"] },
-        { skill: "Official optimizer integration", cells: ["none", "none", "none", "none"] },
+        { skill: "Human review and risk gate", cells: ["verified", "verified", "verified", "verified"] },
+        { skill: "Draft proof boundary", cells: ["verified", "verified", "verified", "partial"] },
+        { skill: "Failure writeback", cells: ["verified", "verified", "verified", "verified"] },
+        { skill: "Skill optimization follow-up", cells: ["emerging", "emerging", "none", "none"] },
       ],
     },
     {
       key: "research",
-      tag: "Research / Analysis",
-      status: "target",
-      title: "A repeatable analysis workflow target, not yet a promoted recipe.",
+      tag: "Research & Data",
+      status: `${skillWikiSummary.categories.research} skills`,
+      title: "Research is now the largest visible case family in the wiki.",
       description:
-        "The framework fits market scans, competitor research, literature review, and due diligence when source selection and review notes need to become reusable evidence.",
+        "The wiki now covers search, analysis, medical research, and data-oriented skill seeds well beyond the original content workflow.",
       evidence: [
-        "supported by the generic workflow model",
-        "no dedicated verified research recipe yet",
-        "requires scenario rubric before promotion",
+        "Brave Search skill entries and catalog seeds",
+        "OpenClaw and NVIDIA research-facing wiki entries",
+        "top-scenario research pages and category hubs",
       ],
-      boundary: "Use-case fit is claimed. Verified workflow status is not claimed.",
-      assets: ["docs/architecture.md", "docs/workflow-knowledge-base.md"],
+      boundary: "Broadly cataloged and structured in the wiki. Not all entries are end-to-end workflow proof.",
+      assets: ["skills/wiki/", "skill-wiki-web/data/skills.generated.js", "category-hub-*.md"],
       rows: [
-        { skill: "Source selection", cells: ["emerging", "none", "none", "none"] },
-        { skill: "Synthesis workflow", cells: ["emerging", "none", "none", "none"] },
-        { skill: "Review rubric", cells: ["emerging", "none", "none", "none"] },
-        { skill: "KB writeback", cells: ["emerging", "none", "none", "none"] },
-        { skill: "Verified promotion", cells: ["none", "none", "none", "none"] },
+        { skill: "Search and retrieval skills", cells: ["verified", "verified", "partial", "partial"] },
+        { skill: "Scenario pages and hubs", cells: ["verified", "verified", "partial", "partial"] },
+        { skill: "Official vendor seeds", cells: ["verified", "verified", "none", "partial"] },
+        { skill: "End-to-end workflow proof", cells: ["partial", "partial", "none", "none"] },
       ],
     },
     {
-      key: "engineering",
-      tag: "Engineering Delivery",
-      status: "target",
-      title: "A natural fit for bug triage, PR review, migrations, and release checks.",
+      key: "office",
+      tag: "Office & Productivity",
+      status: `${skillWikiSummary.categories.office} skills`,
+      title: "Office and productivity is now a substantial reusable case family.",
       description:
-        "Engineering workflows can preserve commands, failures, verifier output, reviewer feedback, and the exact execution path that worked.",
+        "Google Workspace skills, event automation, collaboration entries, and productivity scenario pages now form a clear case surface.",
       evidence: [
-        "framework model supports validator-backed runs",
-        "no dedicated engineering verified recipe yet",
-        "promotion would need repo-specific gates",
+        "Google Workspace Docs, Sheets, Drive, and Calendar skills",
+        "productivity and collaboration category hubs",
+        "office automation and assistant scenario pages",
       ],
-      boundary: "Workflow pattern fit only. No engineering delivery recipe is promoted.",
-      assets: ["docs/principles.md", "docs/directory-architecture.md"],
+      boundary: "Strong wiki coverage and reusable structure. Validation depth still varies by skill family.",
+      assets: ["skills/wiki/google-workspace-*.md", "skills/wiki/category-hub-productivity.md", "skills/wiki/top-scenario-*.md"],
       rows: [
-        { skill: "Command capture", cells: ["emerging", "none", "none", "none"] },
-        { skill: "Review feedback loop", cells: ["emerging", "none", "none", "none"] },
-        { skill: "Validator evidence", cells: ["emerging", "none", "none", "none"] },
-        { skill: "Release gate", cells: ["none", "none", "none", "none"] },
-        { skill: "Reusable recipe", cells: ["none", "none", "none", "none"] },
+        { skill: "Workspace tool skills", cells: ["verified", "verified", "partial", "partial"] },
+        { skill: "Automation recipes and hubs", cells: ["verified", "verified", "partial", "partial"] },
+        { skill: "Scenario pages", cells: ["verified", "verified", "none", "partial"] },
+        { skill: "End-to-end workflow proof", cells: ["partial", "partial", "none", "none"] },
       ],
     },
     {
-      key: "ops",
-      tag: "Monitoring / Ops Review",
-      status: "target",
-      title: "Recurring review loops can become KB-backed operational memory.",
+      key: "media",
+      tag: "Media & Creative",
+      status: `${skillWikiSummary.categories.media} skills`,
+      title: "Creative and media is now another large structured case surface.",
       description:
-        "The same evidence model can support watchlists, incident reviews, weekly reports, competitive changes, and operational checkups.",
+        "Creative tooling, image work, prompt authoring, and storytelling entries are now represented as reusable wiki surfaces.",
       evidence: [
-        "recurring-loop fit follows from KB writeback model",
-        "no dedicated monitoring verified run yet",
-        "needs freshness, source, and review gates",
+        "creative-media category hub",
+        "Composio and Skills Hub creative entries",
+        "story collaboration and image enhancement skills",
       ],
-      boundary: "Potential application area only. Not verified as a scenario recipe.",
-      assets: ["workflow-kb/", "reports/"],
+      boundary: "Clear case coverage in the wiki. Deeper workflow proof still depends on the specific path.",
+      assets: ["skills/wiki/category-hub-creative-media.md", "skills/wiki/composio-*.md", "skills/wiki/skillshub-*.md"],
       rows: [
-        { skill: "Freshness checks", cells: ["emerging", "none", "none", "none"] },
-        { skill: "Recurring evidence capture", cells: ["emerging", "none", "none", "none"] },
-        { skill: "Fallback strategy", cells: ["emerging", "none", "none", "none"] },
-        { skill: "Human review", cells: ["none", "none", "none", "none"] },
-        { skill: "Verified promotion", cells: ["none", "none", "none", "none"] },
+        { skill: "Creative tool skills", cells: ["verified", "verified", "partial", "partial"] },
+        { skill: "Scenario and hub pages", cells: ["verified", "verified", "none", "partial"] },
+        { skill: "Vendor and collection imports", cells: ["verified", "verified", "none", "partial"] },
+        { skill: "End-to-end workflow proof", cells: ["partial", "partial", "none", "none"] },
+      ],
+    },
+    {
+      key: "automation",
+      tag: "Automation & MCP",
+      status: `${skillWikiSummary.categories.automation} skills`,
+      title: "Automation and MCP tooling is now an active case family, not just a target fit.",
+      description:
+        "Browser automation, Browserbase entries, MCP scenario pages, and integration hubs now show a broader live surface in the wiki.",
+      evidence: [
+        "Browserbase skill entries and catalog seeds",
+        "integration and MCP tooling scenario pages",
+        "productivity automation scenario pages",
+      ],
+      boundary: "Structured and discoverable in the wiki. End-to-end proof depth still varies by path.",
+      assets: ["skills/wiki/hot-scenario-integration-and-mcp-tooling.md", "skills/wiki/browserbase-*.md", "skills/wiki/category-hub-*.md"],
+      rows: [
+        { skill: "Automation tool skills", cells: ["verified", "verified", "partial", "partial"] },
+        { skill: "MCP and integration scenarios", cells: ["verified", "verified", "partial", "partial"] },
+        { skill: "Official vendor seeds", cells: ["verified", "verified", "none", "partial"] },
+        { skill: "End-to-end workflow proof", cells: ["partial", "partial", "none", "none"] },
       ],
     },
   ],
@@ -426,33 +721,33 @@ export const scenarioHeatmap = {
 
 export const useCases = {
   eyebrow: "Where it applies",
-  title: "Best when repeated agent work needs proof, review, and memory.",
+  title: "Best when people cannot afford to rediscover the workflow every run.",
   description:
-    "The framework is strongest when a workflow keeps recurring, carries risk or review boundaries, and should improve from run evidence instead of being rediscovered in chat.",
+    "This system is strongest when work repeats, carries review or operational risk, and should get better from evidence instead of chat history.",
   items: [
     {
       title: "Research and analysis workflows",
       fit: "Competitor research, market scans, literature reviews, due diligence, and synthesis reports.",
       proof:
-        "Capture source selection, prompt strategy, scoring notes, review comments, and reusable research patterns.",
+        "Capture source choice, review notes, and reusable research patterns.",
     },
     {
       title: "Engineering delivery workflows",
       fit: "Bug triage, PR review, release checks, migration plans, QA loops, and repo onboarding.",
       proof:
-        "Preserve commands, failures, validator output, reviewer feedback, and the exact workflow path that worked.",
+        "Preserve commands, failures, validator output, and reviewer feedback.",
     },
     {
       title: "Monitoring and recurring review",
       fit: "Data watchlists, weekly reports, incident review, competitive changes, and operational checkups.",
       proof:
-        "Turn recurring observations into KB entries, fallback strategies, and improved future run selection.",
+        "Turn recurring observations into KB entries and better future selection.",
     },
     {
       title: "Content and publishing workflows",
       fit: "Draft generation, compliance review, channel-specific packaging, and human-approved handoff.",
       proof:
-        "Keep quality score, risk approval, account-state checks, draft proof, and publish boundaries separate.",
+        "Keep quality, risk, draft proof, and publish boundaries separate.",
     },
   ],
 } as const;
@@ -521,7 +816,7 @@ export const lifecycle = {
   eyebrow: "Workflow lifecycle",
   title: "One run becomes reusable only after the loop closes.",
   description:
-    "The reusable asset is not the final output. It is the whole path: how skills were selected, how the workflow ran, how the result was scored, what review found, and what was written back.",
+    "The reusable asset is the path, not just the final output.",
   visual: {
     src: "/architecture/workflow-loop-dark.png",
     alt: "Dark mode workflow loop diagram",
@@ -564,7 +859,7 @@ export const gates = {
   eyebrow: "Evidence gates",
   title: "A recipe is not verified because it worked once.",
   description:
-    "The project keeps quality, review, risk, account state, platform handoff, and proof verification as separate states. That is why a failed run can teach the system without being promoted as success.",
+    "Quality, review, risk, handoff, and proof stay separate. That is why failure can still teach the system.",
   visual: {
     src: "/architecture/workflow-validation-dark.png",
     alt: "Dark mode workflow validation pipeline diagram",
@@ -593,7 +888,7 @@ export const repositoryMap = {
   eyebrow: "Repository map",
   title: "The repository is a workflow system, not a file dump.",
   description:
-    "Each directory has a job in the evidence lifecycle. The value is in the boundary between temporary run records and durable reusable assets.",
+    "Each directory has a job. The value is in the boundary between evidence and durable assets.",
   assets: [
     { path: "skills/", label: "Reusable capability definitions and maps" },
     { path: "workflows/", label: "Composable execution paths" },
@@ -608,7 +903,7 @@ export const repositoryMap = {
 export const scenario = {
   eyebrow: "Validated scenario",
   title: "Proven through one concrete scenario, designed for many.",
-  body: "The current Xiaohongshu workflow is a validation wrapper. It proves that the framework can move from skill discovery to run evidence, review gates, draft proof, KB writeback, and verified recipe promotion. The same model can support research workflows, report generation, monitoring, and operational review loops.",
+  body: "The current Xiaohongshu workflow is a validation wrapper. It proves the path from skill discovery to evidence, review, draft proof, and KB writeback.",
   validates: [
     "Skill discovery can be normalized into reusable workflow assets.",
     "High-risk steps can stay behind explicit human and scenario review.",
@@ -623,26 +918,116 @@ export const scenario = {
 } as const;
 
 export const finalCta = {
-  title: "Use the evidence map as the starting point.",
-  body: "Inspect the proven workflow, check the current skill coverage, then add the next scenario only when its evidence path is clear.",
+  title: "Run together, repeat smarter.",
+  body: "Shared workflows with proof, review, and writeback—not one-off chat.",
   actions: [
     {
-      label: "View workflow",
-      href: links.verifiedWorkflow,
-      detail: "Start from the workflow that already passed draft-safe verification and reuse.",
+      label: "Open GitHub",
+      href: links.repository,
+      detail: "Browse the repo, runs, schemas, and promotion evidence.",
       external: true,
     },
     {
-      label: "Skill heatmap",
-      href: "#skill-heatmap",
-      detail: "See which skills are verified, partial, emerging, or not claimed.",
-      external: false,
-    },
-    {
-      label: "Add scenario",
-      href: links.directoryMap,
-      detail: "Use the directory map to place a new scenario, run, or KB artifact without mixing layers.",
+      label: "Read architecture",
+      href: links.architecture,
+      detail: "Five-layer model, core loop, and module boundaries.",
       external: true,
     },
+    {
+      label: "Browse wiki",
+      href: links.wiki,
+      detail: "Durable skills, scenario pages, and promoted workflow surfaces.",
+      external: true,
+    },
+    {
+      label: "View docs",
+      href: links.docs,
+      detail: "Self-evolution, action verification, PaaS service, and scenario rules.",
+      external: true,
+    },
+  ],
+} as const;
+
+export const orchestrationPage = {
+  eyebrow: "Pi multi-agent orchestration",
+  title: "Four Pi agents, one review-gated workflow.",
+  description:
+    "Pi is the execution substrate: planner, worker, reviewer, and verifier each run as a separate Pi agent session. The repository owns the reusable contract—role topology, handoff rules, and hard gates stay portable across backends.",
+  substrate: {
+    label: "Pi agent substrate",
+    title: "Pi runs the roles. The repo owns the contract.",
+    body: "Each handoff spawns a specialized Pi agent with role-scoped instructions—not one agent pretending to be four hats. Topology, gate placement, and writeback authority live in the repository, not in Pi runtime memory.",
+    chips: ["separate Pi sessions per role", "hard review + verification gates", "repo-owned workflow JSON"],
+    github: {
+      label: "Pi agent on GitHub",
+      repo: "earendil-works/pi",
+      href: links.piAgent,
+    },
+  },
+  teamView: {
+    label: "Pi agent team",
+    title: "Four agents collaborate on one bounded problem.",
+    body: "Planner scopes the work, worker executes, reviewer enforces the hard gate, and verifier checks outcome and proof—each as its own Pi role session with explicit handoffs.",
+  },
+  roles: [
+    {
+      id: "planner",
+      label: "01",
+      title: "Planner agent",
+      body: "Pi planner session: turns one bounded problem into a workflow path and assigns scoped work to downstream roles.",
+      path: "planner",
+      color: "amber",
+    },
+    {
+      id: "worker",
+      label: "02",
+      title: "Worker agent",
+      body: "Pi worker session: executes the assigned task, produces candidate output, and preserves execution evidence for review.",
+      path: "worker",
+      color: "blue",
+    },
+    {
+      id: "reviewer",
+      label: "03",
+      title: "Reviewer agent",
+      body: "Pi reviewer session: applies the hard review gate—output cannot move forward without an explicit pass.",
+      path: "reviewer",
+      color: "plum",
+    },
+    {
+      id: "verifier",
+      label: "04",
+      title: "Verifier agent",
+      body: "Pi verifier session: checks whether the requested action actually happened and whether proof meets the workflow contract.",
+      path: "verifier",
+      color: "green",
+    },
+  ],
+  nodes: [
+    { title: "spawn", body: "launch one Pi role session" },
+    { title: "sequence", body: "ordered agent handoff" },
+    { title: "fork", body: "bounded parallel Pi branches" },
+    { title: "join", body: "merge branch outputs into one handoff" },
+    { title: "loop", body: "bounded rework between worker and reviewer" },
+  ],
+  rules: [
+    "planner, worker, reviewer, and verifier are separate Pi role sessions",
+    "review gate mode must stay hard—not advisory",
+    "verifier is required before any durable writeback",
+    "writeback only after a passed terminal state",
+    "Pi executes roles; the repository owns workflow semantics",
+  ],
+  flow: [
+    { title: "Bound one problem", body: "one multi-agent workflow solves one bounded problem" },
+    { title: "Spawn Pi role sessions", body: "each role gets its own agent context and scoped instructions" },
+    { title: "Gate with review", body: "reviewer agent must pass before verifier or writeback can proceed" },
+    { title: "Verify outcome", body: "verifier agent confirms the requested action and proof boundary" },
+    { title: "Write back safely", body: "only passed multi-agent runs can promote durable knowledge" },
+  ],
+  links: [
+    { label: "Pi agent (GitHub)", href: links.piAgent },
+    { label: "Multi-agent contract", href: links.multiAgent },
+    { label: "PaaS service", href: links.paasService },
+    { label: "Architecture", href: links.architecture },
   ],
 } as const;

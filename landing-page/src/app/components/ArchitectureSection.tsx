@@ -125,12 +125,12 @@ export function ArchitectureSection() {
       <div className="grid grid-cols-3 gap-3.5 max-[900px]:grid-cols-1">
         {coreModel.pillars.map((pillar) => (
           <article
-            className="rounded-[22px] border border-[#d1bf94]/15 bg-gradient-to-b from-[#1e241d]/95 to-[#10120f]/95 p-6 shadow-[0_0_0_1px_rgba(122,170,119,0.14),0_28px_90px_rgba(0,0,0,0.42)]"
+            className="flex h-full flex-col rounded-[22px] border border-[#d1bf94]/15 bg-gradient-to-b from-[#1e241d]/95 to-[#10120f]/95 p-6 shadow-[0_0_0_1px_rgba(122,170,119,0.14),0_28px_90px_rgba(0,0,0,0.42)]"
             key={pillar.title}
           >
             <span className="mb-4 inline-block text-xs font-extrabold uppercase tracking-[0.06em] text-[#d6ad69]">{pillar.subtitle}</span>
             <h3 className="asw-display-serif text-[1.2rem] text-[#f8f3e8]">{pillar.title}</h3>
-            <p className="mt-3 text-base leading-[1.72] text-[#ebe1c8]/75">{pillar.body}</p>
+            <p className="mt-3 flex-1 text-base leading-[1.72] text-[#ebe1c8]/75">{pillar.body}</p>
             <ul className="mt-5 flex flex-wrap gap-2">
               {pillar.paths.map((item) => (
                 <li className="rounded-lg border border-[#d6ad69]/15 bg-[#d6ad69]/10 px-2.5 py-2 font-mono text-xs text-[#f2d59e]" key={item}>{item}</li>
