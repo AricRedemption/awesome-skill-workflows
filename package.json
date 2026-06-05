@@ -2,6 +2,11 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "dev": "npm run dev:landing",
+    "dev:all": "concurrently -k -n landing,wiki -c yellow,cyan \"npm run dev:landing\" \"npm run dev:wiki\"",
+    "dev:landing": "npm --prefix landing-page run dev",
+    "dev:wiki": "npm --prefix skill-wiki-web run dev",
+    "install:web": "npm --prefix landing-page install",
     "xhs:headless-draft": "node scripts/reproduce-xhs-headless-draft.mjs",
     "xhs:visible-cookie": "node scripts/open-xhs-visible-with-cookie.mjs",
     "validate:promotion-gates": "node scripts/validate-promotion-gates.mjs",
@@ -18,5 +23,8 @@
     "@earendil-works/pi-ai": "0.78.1",
     "@earendil-works/pi-coding-agent": "0.78.1",
     "puppeteer": "^24.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
   }
 }
