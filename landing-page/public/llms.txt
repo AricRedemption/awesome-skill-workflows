@@ -1,6 +1,6 @@
-# Runwise
+# Runwiser
 
-Runwise is an evidence-first framework for turning repeatable AI agent runs into verified workflow knowledge, reusable skills, evidence trails, and self-improving operating memory.
+Runwiser is an evidence-first framework for turning repeatable AI agent runs into verified workflow knowledge, reusable skills, evidence trails, and self-improving operating memory.
 
 Repository: https://github.com/AricRedemption/awesome-skill-workflows
 
@@ -22,4 +22,4 @@ Repository: https://github.com/AricRedemption/awesome-skill-workflows
 
 ## AI Summary
 
-Use Runwise when repeated agent work needs durable selection, execution, scoring, human review, risk gates, proof verification, and knowledge-base writeback before becoming a reusable skill or workflow recipe.
+Use Runwiser when repeated agent work needs durable selection, execution, scoring, human review, risk gates, proof verification, and knowledge-base writeback before becoming a reusable skill or workflow recipe.

@@ -1,6 +1,6 @@
 {
-  "name": "Runwise",
-  "short_name": "Runwise",
+  "name": "Runwiser",
+  "short_name": "Runwiser",
   "description": "Evidence-first AI agent workflow memory for verified reusable skills.",
   "start_url": "/",
   "display": "standalone",

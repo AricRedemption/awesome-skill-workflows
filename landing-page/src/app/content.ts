@@ -27,7 +27,7 @@ export const links = {
 } as const;
 
 export const brand = {
-  name: "Runwise",
+  name: "Runwiser",
   repositoryName: "awesome-skill-workflows",
   logo: "/brand/runwise-logo.png",
   description:
@@ -45,9 +45,9 @@ export const navItems = [
 
 export const hero = {
   eyebrow: "Workflow evidence system",
-  title: "Runwise turns agent runs into reusable workflow memory.",
+  title: "Runwiser turns agent runs into reusable workflow memory.",
   description:
-    "Stop losing good agent runs in chat history. Runwise turns repeatable execution into skills, recipes, proof, and reusable workflow memory, with no promotion until evidence and gates are explicit.",
+    "Stop losing good agent runs in chat history. Runwiser turns repeatable execution into skills, recipes, proof, and reusable workflow memory, with no promotion until evidence and gates are explicit.",
   primaryCta: "View proof",
   secondaryCta: "Read docs",
   consoleSteps: ["Run", "Score", "Review", "Verify", "Write back", "Promote"],
@@ -177,9 +177,9 @@ export const ecosystem = {
 
 export const validatedProof = {
   eyebrow: "Why it matters",
-  title: "Runwise makes agent workflow improvement auditable.",
+  title: "Runwiser makes agent workflow improvement auditable.",
   description:
-    "Runwise gives every repeatable agent workflow a durable operating layer: evidence capture, review gates, reusable memory, and promotion discipline.",
+    "Runwiser gives every repeatable agent workflow a durable operating layer: evidence capture, review gates, reusable memory, and promotion discipline.",
   stats: [
     { value: "Evidence", label: "before promotion", detail: "Runs, scores, review records, and proof artifacts are kept separate." },
     { value: "Gates", label: "before action", detail: "Human review, risk state, account state, and proof are explicit states." },
@@ -189,7 +189,7 @@ export const validatedProof = {
   spotlight: {
     label: "Operating model",
     scenario: "Proof stack for repeatable agent work",
-    problem: "A good agent output is not enough. Runwise records the path that produced it, the checks that accepted it, and the evidence that makes it reusable.",
+    problem: "A good agent output is not enough. Runwiser records the path that produced it, the checks that accepted it, and the evidence that makes it reusable.",
     outcome: "Promotion only happens after evidence and gates line up.",
     skills: [
       "skill selection",
