@@ -1,0 +1,64 @@
+1
+00:00:00,000 --> 00:00:03,300
+This is Runwiser.
+
+2
+00:00:03,420 --> 00:00:06,720
+It turns repeated agent work into reusable workflow assets, with proof attached.
+
+3
+00:00:06,720 --> 00:00:11,860
+The landing page leads with the operating model.
+
+4
+00:00:11,980 --> 00:00:17,120
+Runs create evidence, gates check quality, and only verified work moves forward.
+
+5
+00:00:17,120 --> 00:00:21,220
+This is not loose multi-agent parallelism.
+
+6
+00:00:21,340 --> 00:00:25,440
+Specialized roles hand work across bounded review and verification steps.
+
+7
+00:00:25,440 --> 00:00:29,860
+The wiki also shows up on the landing page as a public knowledge surface.
+
+8
+00:00:29,980 --> 00:00:34,400
+That makes the system feel browsable instead of hidden.
+
+9
+00:00:34,400 --> 00:00:39,060
+Then the live wiki service makes that idea concrete.
+
+10
+00:00:39,180 --> 00:00:43,840
+You can open the catalog, enter a page, and browse promoted workflow knowledge directly.
+
+11
+00:00:43,840 --> 00:00:48,500
+The repository mirrors the same lifecycle.
+
+12
+00:00:48,620 --> 00:00:53,280
+Architecture documents explain the layers, the boundaries, and where each asset belongs.
+
+13
+00:00:53,280 --> 00:00:59,380
+The proof is not abstract.
+
+14
+00:00:59,500 --> 00:01:05,600
+You can see runs, workflows, scripts, knowledge assets, and scenario wrappers living in separate layers inside the repo.
+
+15
+00:01:05,600 --> 00:01:10,260
+That is the point of Runwiser.
+
+16
+00:01:10,380 --> 00:01:15,040
+Make agent work measurable, improvable, and reusable by preserving evidence before promotion.
+

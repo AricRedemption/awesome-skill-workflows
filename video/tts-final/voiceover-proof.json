@@ -1,0 +1,89 @@
+{
+  "engine": "xiaomi-mimo",
+  "model": "mimo-v2.5-tts",
+  "voice": "Mia",
+  "format": "wav",
+  "generated_at": "2026-06-05T14:33:21.991Z",
+  "scenes": [
+    {
+      "scene_number": 1,
+      "scene_id": "scene-01-hook",
+      "title": "Hook",
+      "transcript": null,
+      "text": "This is Runwiser. It turns repeated agent work into reusable workflow assets, with proof attached.",
+      "file_path": "/Users/aricredemption/Projects/awesome-skill-workflows/video/tts-final/scene-01-hook.wav",
+      "bytes": 322604,
+      "duration_seconds": 6.72
+    },
+    {
+      "scene_number": 2,
+      "scene_id": "scene-02-proof-first",
+      "title": "Proof First",
+      "transcript": null,
+      "text": "The landing page leads with the operating model. Runs create evidence, gates check quality, and only verified work moves forward.",
+      "file_path": "/Users/aricredemption/Projects/awesome-skill-workflows/video/tts-final/scene-02-proof-first.wav",
+      "bytes": 430124,
+      "duration_seconds": 8.96
+    },
+    {
+      "scene_number": 3,
+      "scene_id": "scene-03-pi-agent-orchestration",
+      "title": "PI Agent Orchestration",
+      "transcript": null,
+      "text": "This is not loose multi-agent parallelism. Five specialized roles move work through research, compose, review, verify, and writeback.",
+      "file_path": "/Users/aricredemption/Projects/awesome-skill-workflows/video/tts-final/scene-03-pi-agent-orchestration.wav",
+      "bytes": 529964,
+      "duration_seconds": 11.04
+    },
+    {
+      "scene_number": 4,
+      "scene_id": "scene-04-live-wiki-service",
+      "title": "Live Wiki Service",
+      "transcript": null,
+      "text": "The live wiki service makes the knowledge layer concrete. You can open the catalog, move into a detail page, and browse promoted workflow knowledge directly.",
+      "file_path": "/Users/aricredemption/Projects/awesome-skill-workflows/video/tts-final/scene-04-live-wiki-service.wav",
+      "bytes": 491564,
+      "duration_seconds": 10.24
+    },
+    {
+      "scene_number": 5,
+      "scene_id": "scene-05-architecture-overview",
+      "title": "Architecture Overview",
+      "transcript": null,
+      "text": "The system is organized into five layers around one promotion loop. Evidence starts at layer zero, reusable skills live at layer one, and optimization stays in layer two.",
+      "file_path": "/Users/aricredemption/Projects/awesome-skill-workflows/video/tts-final/scene-05-architecture-overview.wav",
+      "bytes": 622124,
+      "duration_seconds": 12.96
+    },
+    {
+      "scene_number": 6,
+      "scene_id": "scene-06-architecture-boundary",
+      "title": "Architecture Boundary",
+      "transcript": null,
+      "text": "Layer three becomes durable knowledge, while layer four keeps scenario validation local. That boundary matters, because scenarios can validate the architecture, but they should not define it.",
+      "file_path": "/Users/aricredemption/Projects/awesome-skill-workflows/video/tts-final/scene-06-architecture-boundary.wav",
+      "bytes": 614444,
+      "duration_seconds": 12.8
+    },
+    {
+      "scene_number": 7,
+      "scene_id": "scene-07-proof-in-the-repo",
+      "title": "Proof In The Repo",
+      "transcript": null,
+      "text": "You can see that separation directly in the repo. Runs, workflows, scripts, knowledge assets, and scenario wrappers live in different places for different jobs.",
+      "file_path": "/Users/aricredemption/Projects/awesome-skill-workflows/video/tts-final/scene-07-proof-in-the-repo.wav",
+      "bytes": 499244,
+      "duration_seconds": 10.4
+    },
+    {
+      "scene_number": 8,
+      "scene_id": "scene-08-close",
+      "title": "Close",
+      "transcript": null,
+      "text": "That is the point of Runwiser. Make agent work measurable, improvable, and reusable by preserving evidence before promotion.",
+      "file_path": "/Users/aricredemption/Projects/awesome-skill-workflows/video/tts-final/scene-08-close.wav",
+      "bytes": 445484,
+      "duration_seconds": 9.28
+    }
+  ]
+}
