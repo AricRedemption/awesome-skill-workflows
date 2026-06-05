@@ -277,7 +277,7 @@ function sortSkills(skills, sortKey) {
 
 function renderHeader(route) {
   const links = [
-    { href: "/", label: "首页" },
+    { href: "/", label: "Home" },
     { href: "/skills", label: "Find Skills" },
   ];
 
@@ -302,7 +302,7 @@ function renderHeader(route) {
             })
             .join("")}
         </nav>
-        <a class="cta" href="#/skills">打开技能库</a>
+        <a class="cta" href="#/skills">Open Wiki</a>
       </div>
     </header>
   `;
@@ -317,31 +317,31 @@ function renderHomePage() {
     <div class="stack">
       <section class="hero hero-centered">
         <div class="hero-stack">
-          <span class="eyebrow hero-pill">专为 Skill Wiki 优化的 Skill 社区</span>
-          <h1 class="hero-title-centered">打开这个 Skill Wiki，快速发现真正能用的技能</h1>
+          <span class="eyebrow hero-pill">English-first AI agent skill wiki</span>
+          <h1 class="hero-title-centered">Open the wiki and find reusable skills faster.</h1>
           <p class="lede hero-lede-centered">
-            更像产品目录，而不是文档堆。先搜，先看，先判断，再进入细节页看工作流边界和证据。
+            More like a product catalog than a document dump. Search first, scan faster, then open the detail page for scope, workflow boundaries, and evidence.
           </p>
           <div class="hero-actions hero-actions-centered">
-            <button class="cta hero-cta-dark" data-nav="/skills" type="button">探索全部技能</button>
+            <button class="cta hero-cta-dark" data-nav="/skills" type="button">Browse all skills</button>
             ${
               featured
-                ? `<button class="cta ghost" data-nav="/skills/${escapeHtml(featured.slug)}" type="button">打开精选技能</button>`
+                ? `<button class="cta ghost" data-nav="/skills/${escapeHtml(featured.slug)}" type="button">Open featured skill</button>`
                 : ""
             }
           </div>
           <div class="hero-command-card">
             <div class="hero-command-tabs">
-              <span class="hero-command-tab active">快速入口</span>
-              <span class="hero-command-tab">Skill Wiki 数据</span>
+              <span class="hero-command-tab active">Quick entry</span>
+              <span class="hero-command-tab">Skill Wiki data</span>
             </div>
             <div class="hero-command-body">
               <div class="hero-command-line">
-                <span>搜索、筛选、打开详情，全部直接来自 <code>skills/wiki/*.md</code></span>
+                <span>Search, filter, and open skill details directly from <code>skills/wiki/*.md</code></span>
               </div>
               <div class="hero-command-meta">
-                <span>${escapeHtml(String(skillWikiPayload.stats.skillCount))} 个技能</span>
-                <span>${escapeHtml(String(skillWikiPayload.stats.evidenceRefCount))} 条证据引用</span>
+                <span>${escapeHtml(String(skillWikiPayload.stats.skillCount))} skills</span>
+                <span>${escapeHtml(String(skillWikiPayload.stats.evidenceRefCount))} evidence references</span>
               </div>
             </div>
           </div>
@@ -352,13 +352,13 @@ function renderHomePage() {
         <div class="home-search-row">
           <div>
             <span class="eyebrow">Explore</span>
-            <h2>从精选技能开始，再进入完整技能库。</h2>
+            <h2>Start with high-signal skills, then move into the full catalog.</h2>
           </div>
-          <button class="cta hero-cta-dark" data-nav="/skills" type="button">进入技能库</button>
+          <button class="cta hero-cta-dark" data-nav="/skills" type="button">Enter the catalog</button>
         </div>
         <p class="section-intro">
-          首页只保留高价值入口。真正的筛选、搜索和详情判断，全部集中在技能库完成。
-        </div>
+          Keep the home page lightweight. Real filtering, search, and skill evaluation all happen inside the catalog.
+        </p>
         <div class="stats-strip">
           ${stats
             .map(
@@ -375,10 +375,10 @@ function renderHomePage() {
       <section class="section">
         <div class="catalog-head">
           <div>
-            <span class="eyebrow">精选技能</span>
-            <h2>先看近期高信号条目。</h2>
+            <span class="eyebrow">Featured skills</span>
+            <h2>Start with recent high-signal entries.</h2>
           </div>
-          <p class="filter-note">默认展示最近更新的 6 条技能，减少首次进入时的信息负担。</p>
+          <p class="filter-note">Show the 6 most recently updated skills first to reduce first-visit overload.</p>
         </div>
         <div class="cards-grid">
           ${previewSkills.map((skill) => renderSkillCard(skill, featured && skill.slug === featured.slug)).join("")}
@@ -403,7 +403,7 @@ function renderSkillCard(skill, featured = false) {
           <strong>${escapeHtml(skill.updatedAt)}</strong>
           <small>${escapeHtml(skill.sourcePath.replace("skills/wiki/", ""))}</small>
         </div>
-        <button class="cta" data-nav="/skills/${escapeHtml(skill.slug)}" type="button">查看详情</button>
+        <button class="cta" data-nav="/skills/${escapeHtml(skill.slug)}" type="button">View details</button>
       </div>
     </article>
   `;
@@ -496,7 +496,7 @@ function renderSkillDetailPage(skill) {
     <div class="stack">
       <section class="detail-hero">
         <article class="section">
-          <button class="cta ghost" data-nav="/skills" type="button">返回技能列表</button>
+          <button class="cta ghost" data-nav="/skills" type="button">Back to catalog</button>
           <div class="card-head" style="margin-top: 22px;">
             <span class="badge blue">Skill Wiki detail</span>
             <span class="badge neutral">Risk: ${escapeHtml(skill.riskLevel)}</span>

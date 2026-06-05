@@ -161,9 +161,9 @@ try {
     await page.$('link[rel="icon"][sizes="32x32"][type="image/png"]'),
     "32x32 PNG favicon link is missing.",
   );
-  assert(await textIncludes(page, "打开这个 Skill Wiki，快速发现真正能用的技能"), "Home hero copy missing.");
-  assert(await textIncludes(page, "个技能"), "Home stats count missing.");
-  assert(await textIncludes(page, "证据引用"), "Home evidence summary missing.");
+  assert(await textIncludes(page, "Open the wiki and find reusable skills faster."), "Home hero copy missing.");
+  assert(await textIncludes(page, "skills"), "Home stats count missing.");
+  assert(await textIncludes(page, "evidence references"), "Home evidence summary missing.");
   const homeOverflow = await page.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth + 1);
   assert(homeOverflow, "Home page has horizontal overflow.");
   record("home-page", "pass", "Hero, title, stats, and desktop layout verified.");
