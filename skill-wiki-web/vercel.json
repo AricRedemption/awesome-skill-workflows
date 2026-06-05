@@ -1,0 +1,5 @@
+{
+  "framework": null,
+  "buildCommand": "node -e \"console.log('Using committed static assets')\"",
+  "outputDirectory": "."
+}

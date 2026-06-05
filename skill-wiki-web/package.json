@@ -1,0 +1,9 @@
+{
+  "name": "awesome-skill-workflows-skill-wiki-web",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/generate-skill-wiki-data.mjs && node scripts/verify.mjs",
+    "vercel-build": "npm run build"
+  }
+}
