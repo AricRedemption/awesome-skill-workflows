@@ -12,6 +12,7 @@ const repoRoot = path.resolve(webRoot, "..");
 const reportDir = path.join(repoRoot, "reports", "skill-wiki-web-qa");
 const port = 4179;
 const baseUrl = `http://127.0.0.1:${port}`;
+const systemChromePath = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
 
 fs.mkdirSync(reportDir, { recursive: true });
 
@@ -108,12 +109,20 @@ async function textIncludes(page, expected) {
   return text.includes(expected);
 }
 
+async function getMetaContent(page, selector) {
+  return page.$eval(selector, (node) => node.getAttribute("content") ?? "");
+}
+
 const results = [];
 function record(name, status, details) {
   results.push({ name, status, details });
 }
 
-const browser = await puppeteer.launch({ headless: "new" });
+const browser = await puppeteer.launch({
+  headless: "new",
+  executablePath: fs.existsSync(systemChromePath) ? systemChromePath : undefined,
+  args: ["--no-sandbox", "--disable-setuid-sandbox"],
+});
 let server;
 
 try {
@@ -131,7 +140,27 @@ try {
 
   await page.goto(`${baseUrl}/#/`, { waitUntil: "networkidle0" });
   await screenshot(page, "home-desktop");
-  assert((await page.title()) === "SkillWorkflow | Skill Wiki Hub", "Unexpected home page title.");
+  assert(
+    (await page.title()) === "Runwiser Wiki | AI Agent Skills and Workflow Library",
+    "Unexpected home page title.",
+  );
+  assert(
+    (await getMetaContent(page, 'meta[name="description"]')).includes("English-first skill wiki"),
+    "Home page description meta was not updated.",
+  );
+  assert(
+    (await page.$eval('link[rel="canonical"]', (node) => node.getAttribute("href") ?? "")) ===
+      "https://runwiser-wiki.vercel.app/",
+    "Home page canonical URL is incorrect.",
+  );
+  assert(
+    await page.$('link[rel="icon"][sizes="16x16"][type="image/png"]'),
+    "16x16 PNG favicon link is missing.",
+  );
+  assert(
+    await page.$('link[rel="icon"][sizes="32x32"][type="image/png"]'),
+    "32x32 PNG favicon link is missing.",
+  );
   assert(await textIncludes(page, "打开这个 Skill Wiki，快速发现真正能用的技能"), "Home hero copy missing.");
   assert(await textIncludes(page, "个技能"), "Home stats count missing.");
   assert(await textIncludes(page, "证据引用"), "Home evidence summary missing.");
@@ -205,6 +234,15 @@ try {
 
   await page.goto(`${baseUrl}/#/skills/xhs-kb-reuse-selection-gated-safety`, { waitUntil: "networkidle0" });
   await screenshot(page, "detail-desktop");
+  assert(
+    (await page.title()) === "XHS KB Reuse With Selection-Gated Safety Rules | Runwiser Wiki",
+    "Detail page title was not updated.",
+  );
+  assert(
+    (await page.$eval('link[rel="canonical"]', (node) => node.getAttribute("href") ?? "")) ===
+      "https://runwiser-wiki.vercel.app/#/skills/xhs-kb-reuse-selection-gated-safety",
+    "Detail page canonical URL is incorrect.",
+  );
   assert(
     await textIncludes(page, "XHS KB Reuse With Selection-Gated Safety Rules"),
     "Detail page heading missing.",

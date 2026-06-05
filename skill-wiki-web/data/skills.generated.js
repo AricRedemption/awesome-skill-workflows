@@ -1,5 +1,5 @@
 export const skillWikiPayload = {
-  "generatedAt": "2026-06-05T02:20:08.309Z",
+  "generatedAt": "2026-06-05T03:27:30.834Z",
   "sourceDirectory": "skills/wiki",
   "stats": {
     "skillCount": 145,

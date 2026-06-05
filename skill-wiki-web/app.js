@@ -1,6 +1,12 @@
 import { skillWikiPayload } from "./data/skills.generated.js";
 
 const app = document.getElementById("app");
+const SITE_URL = "https://runwiser-wiki.vercel.app/";
+const SITE_NAME = "Runwiser Wiki";
+const SITE_DEFAULT_TITLE = "Runwiser Wiki | AI Agent Skills and Workflow Library";
+const SITE_DEFAULT_DESCRIPTION =
+  "Browse reusable AI agent skills, workflow playbooks, and evidence-backed execution patterns in an English-first skill wiki.";
+const SITE_OG_IMAGE = "https://runwiser.vercel.app/brand/runwise-icon-512.png";
 
 function getRoute() {
   const raw = window.location.hash.slice(1) || "/";
@@ -28,6 +34,85 @@ function getRoute() {
 
 function navigate(path) {
   window.location.hash = path;
+}
+
+function upsertMeta(selector, attributes) {
+  let node = document.head.querySelector(selector);
+
+  if (!(node instanceof HTMLMetaElement) && !(node instanceof HTMLLinkElement)) {
+    node = selector.startsWith("link")
+      ? document.createElement("link")
+      : document.createElement("meta");
+    document.head.appendChild(node);
+  }
+
+  Object.entries(attributes).forEach(([key, value]) => {
+    node.setAttribute(key, value);
+  });
+}
+
+function updateStructuredData({ title, description, url }) {
+  const script = document.getElementById("structured-data");
+  if (!(script instanceof HTMLScriptElement)) {
+    return;
+  }
+
+  script.textContent = JSON.stringify(
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      name: SITE_NAME,
+      url,
+      inLanguage: "en",
+      description,
+      headline: title,
+    },
+    null,
+    2,
+  );
+}
+
+function setPageMeta({ title, description, path }) {
+  const url = new URL(path, SITE_URL).toString();
+  document.title = title;
+
+  upsertMeta('meta[name="description"]', {
+    name: "description",
+    content: description,
+  });
+  upsertMeta('meta[property="og:title"]', {
+    property: "og:title",
+    content: title,
+  });
+  upsertMeta('meta[property="og:description"]', {
+    property: "og:description",
+    content: description,
+  });
+  upsertMeta('meta[property="og:url"]', {
+    property: "og:url",
+    content: url,
+  });
+  upsertMeta('meta[property="og:image"]', {
+    property: "og:image",
+    content: SITE_OG_IMAGE,
+  });
+  upsertMeta('meta[name="twitter:title"]', {
+    name: "twitter:title",
+    content: title,
+  });
+  upsertMeta('meta[name="twitter:description"]', {
+    name: "twitter:description",
+    content: description,
+  });
+  upsertMeta('meta[name="twitter:image"]', {
+    name: "twitter:image",
+    content: SITE_OG_IMAGE,
+  });
+  upsertMeta('link[rel="canonical"]', {
+    rel: "canonical",
+    href: url,
+  });
+  updateStructuredData({ title, description, url });
 }
 
 function escapeHtml(value) {
@@ -200,10 +285,10 @@ function renderHeader(route) {
     <header class="site-header">
       <div class="container header-inner">
         <a class="brand" href="#/">
-          <span class="brand-mark">SW</span>
+          <span class="brand-mark">RW</span>
           <span class="brand-copy">
-            <small>SkillWorkflow</small>
-            <strong>Skill Wiki Hub</strong>
+            <small>Runwiser</small>
+            <strong>Wiki</strong>
           </span>
         </a>
         <nav class="nav">
@@ -528,10 +613,10 @@ function renderFooter() {
     <footer class="site-footer">
       <div class="container footer-grid">
         <div>
-          <span class="eyebrow">SkillWorkflow</span>
-          <h2>Skill Wiki is the product surface.</h2>
+          <span class="eyebrow">Runwiser Wiki</span>
+          <h2>AI agent skills with evidence, not filler.</h2>
           <p class="section-intro">
-            This standalone site uses repository Skill Wiki pages as the only product data source. What you browse here is derived directly from <code>skills/wiki/*.md</code>, not a hand-maintained marketing dataset.
+            This standalone site turns repository skill pages into an English-first product surface for AI agent skills, reusable workflows, and evidence-backed playbooks.
           </p>
         </div>
         <div class="section footer-card">
@@ -552,14 +637,36 @@ function renderApp() {
   let content = "";
 
   if (route.name === "home") {
-    document.title = "SkillWorkflow | Skill Wiki Hub";
+    setPageMeta({
+      title: SITE_DEFAULT_TITLE,
+      description: SITE_DEFAULT_DESCRIPTION,
+      path: "/",
+    });
     content = renderHomePage();
   } else if (route.name === "skills") {
-    document.title = "Find Skills | SkillWorkflow";
+    setPageMeta({
+      title: "Find Skills | Runwiser Wiki",
+      description:
+        "Search the Runwiser Wiki catalog for AI agent skills, reusable workflows, evidence-backed playbooks, tags, and risk-scoped execution patterns.",
+      path: "/#/skills",
+    });
     content = renderSkillsPage();
   } else {
     const skill = skillWikiPayload.skills.find((item) => item.slug === route.slug);
-    document.title = skill ? `${skill.title} | SkillWorkflow` : "Skill detail | SkillWorkflow";
+    setPageMeta(
+      skill
+        ? {
+            title: `${skill.title} | Runwiser Wiki`,
+            description: skill.summary,
+            path: `/#/skills/${skill.slug}`,
+          }
+        : {
+            title: "Skill detail | Runwiser Wiki",
+            description:
+              "Open a canonical Runwiser Wiki skill entry to inspect scope, risk level, execution steps, and evidence references.",
+            path: "/#/skills",
+          },
+    );
     content = skill ? renderSkillDetailPage(skill) : renderNotFound();
   }
 
