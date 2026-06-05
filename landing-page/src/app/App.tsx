@@ -10,14 +10,15 @@ import { OrchestrationArchitecture } from "./components/OrchestrationArchitectur
 import { PaperReproductionSection } from "./components/PaperReproductionSection";
 import { PaasReadinessExplainer, ProofStackMap, SelfEvolutionCaseStudy } from "./components/PublicMessagingExplainers";
 import { ProblemSection } from "./components/ProblemSection";
+import { SkillWikiModule } from "./components/SkillWikiModule";
 import { ScenarioSkillHeatmap } from "./components/ScenarioSkillHeatmap";
 import { UseCasesSection } from "./components/UseCasesSection";
 import { ValidatedProofSection } from "./components/ValidatedProofSection";
 import { brand, orchestrationPage, sitePages } from "./content";
 
-type RoutePath = "/" | "/proof" | "/cases" | "/evolution" | "/orchestration";
+type RoutePath = "/" | "/proof" | "/cases" | "/evolution" | "/orchestration" | "/wiki";
 
-const validRoutes = new Set<RoutePath>(["/", "/proof", "/cases", "/evolution", "/orchestration"]);
+const validRoutes = new Set<RoutePath>(["/", "/proof", "/cases", "/evolution", "/orchestration", "/wiki"]);
 
 const pageMeta: Record<RoutePath, { eyebrow: string; title: string; description: string }> = {
   "/proof": {
@@ -39,6 +40,11 @@ const pageMeta: Record<RoutePath, { eyebrow: string; title: string; description:
     eyebrow: orchestrationPage.eyebrow,
     title: orchestrationPage.title,
     description: orchestrationPage.description,
+  },
+  "/wiki": {
+    eyebrow: "Skill wiki",
+    title: "Keep leaner, trust stronger.",
+    description: "Promoted workflow knowledge—browse by task, domain, and evidence boundary.",
   },
 };
 
@@ -119,6 +125,15 @@ function EvolutionPage() {
   );
 }
 
+function WikiPage() {
+  return (
+    <>
+      <PageHero route="/wiki" />
+      <SkillWikiModule />
+    </>
+  );
+}
+
 function OrchestrationPage() {
   return (
     <>
@@ -192,6 +207,7 @@ export default function App() {
         {route === "/cases" && <CasesPage />}
         {route === "/evolution" && <EvolutionPage />}
         {route === "/orchestration" && <OrchestrationPage />}
+        {route === "/wiki" && <WikiPage />}
       </main>
       <Footer />
     </div>

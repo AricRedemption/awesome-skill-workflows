@@ -1,6 +1,10 @@
 {
   "rewrites": [
     {
+      "source": "/wiki-app/:path*",
+      "destination": "/wiki-app/:path*"
+    },
+    {
       "source": "/(.*)",
       "destination": "/"
     }

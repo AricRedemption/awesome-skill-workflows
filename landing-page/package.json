@@ -4,9 +4,12 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
+    "predev": "node scripts/copy-wiki-app.mjs",
+    "prebuild": "node scripts/copy-wiki-app.mjs",
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "copy-wiki-app": "node scripts/copy-wiki-app.mjs"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.0",

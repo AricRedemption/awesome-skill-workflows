@@ -33,7 +33,7 @@ export const links = {
     "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/docs",
   agentRules:
     "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/AGENTS.md",
-  wiki: "http://localhost:7745",
+  wiki: "/wiki",
 } as const;
 
 const skillWikiSummary = {
@@ -178,9 +178,8 @@ export const firstClickPaths = {
     {
       title: "What gets kept?",
       body: "Wiki, workflow-kb, and promotion boundaries for durable assets.",
-      href: links.wiki,
+      href: "/wiki",
       cta: "Browse wiki",
-      external: true,
     },
     {
       title: "Where is it proven?",
@@ -935,9 +934,8 @@ export const finalCta = {
     },
     {
       label: "Browse wiki",
-      href: links.wiki,
+      href: "/wiki",
       detail: "Durable skills, scenario pages, and promoted workflow surfaces.",
-      external: true,
     },
     {
       label: "View docs",

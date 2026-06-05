@@ -33,3 +33,6 @@ Do not collapse those two states into a generic "passed" badge.
 ```bash
 npm run build
 ```
+
+Wiki is bundled into the landing app at `/wiki` (static assets under `/wiki-app/`).
+Copy step runs automatically via `predev` / `prebuild`.
