@@ -38,6 +38,14 @@ export function OrchestrationArchitecture() {
       </div>
 
       <article className="overflow-hidden rounded-[30px] border border-[#d1bf94]/15 bg-[radial-gradient(ellipse_at_top_left,rgba(122,170,119,0.14),transparent_42%),linear-gradient(180deg,rgba(27,34,26,0.96),rgba(10,13,10,0.98))] p-5 shadow-[0_0_0_1px_rgba(122,170,119,0.12),0_32px_100px_rgba(0,0,0,0.36)]">
+        <figure className="mb-5 overflow-hidden rounded-[26px] border border-[#d1bf94]/12 bg-[#0b110f] shadow-[inset_0_1px_0_rgba(244,230,200,0.05)]">
+          <img
+            alt="PI Agent orchestration diagram showing the closed-loop flow from research to writeback"
+            className="block w-full"
+            src="/architecture/pi-agent-orchestration.png"
+          />
+        </figure>
+
         <div className="rounded-[24px] border border-[#d1bf94]/12 bg-[linear-gradient(180deg,rgba(12,18,22,0.92),rgba(10,13,10,0.86))] p-5 shadow-[inset_0_1px_0_rgba(244,230,200,0.05)]">
           <div className="mx-auto max-w-[880px] text-center">
             <div className="text-[11px] font-extrabold uppercase tracking-[0.08em] text-[#d6ad69]">{orchestrationPage.teamView.label}</div>
