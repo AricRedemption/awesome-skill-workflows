@@ -5,7 +5,7 @@ const SITE_URL = "https://runwiser-wiki.vercel.app/";
 const SITE_NAME = "Runwiser Wiki";
 const SITE_DEFAULT_TITLE = "Runwiser Wiki | AI Agent Skills and Workflow Library";
 const SITE_DEFAULT_DESCRIPTION =
-  "Browse reusable AI agent skills, workflow playbooks, and evidence-backed execution patterns in an English-first skill wiki.";
+  "Browse by Claude, Codex, Office, Media, DevOps, Automation, Research, and Collections — reusable AI agent skills, workflow playbooks, and evidence-backed execution patterns in an English-first skill wiki.";
 const SITE_OG_IMAGE = "https://runwiser.vercel.app/brand/runwise-icon-512.png";
 
 function getRoute() {
@@ -40,9 +40,7 @@ function upsertMeta(selector, attributes) {
   let node = document.head.querySelector(selector);
 
   if (!(node instanceof HTMLMetaElement) && !(node instanceof HTMLLinkElement)) {
-    node = selector.startsWith("link")
-      ? document.createElement("link")
-      : document.createElement("meta");
+    node = selector.startsWith("link") ? document.createElement("link") : document.createElement("meta");
     document.head.appendChild(node);
   }
 
@@ -76,47 +74,20 @@ function setPageMeta({ title, description, path }) {
   const url = new URL(path, SITE_URL).toString();
   document.title = title;
 
-  upsertMeta('meta[name="description"]', {
-    name: "description",
-    content: description,
-  });
-  upsertMeta('meta[property="og:title"]', {
-    property: "og:title",
-    content: title,
-  });
-  upsertMeta('meta[property="og:description"]', {
-    property: "og:description",
-    content: description,
-  });
-  upsertMeta('meta[property="og:url"]', {
-    property: "og:url",
-    content: url,
-  });
-  upsertMeta('meta[property="og:image"]', {
-    property: "og:image",
-    content: SITE_OG_IMAGE,
-  });
-  upsertMeta('meta[name="twitter:title"]', {
-    name: "twitter:title",
-    content: title,
-  });
-  upsertMeta('meta[name="twitter:description"]', {
-    name: "twitter:description",
-    content: description,
-  });
-  upsertMeta('meta[name="twitter:image"]', {
-    name: "twitter:image",
-    content: SITE_OG_IMAGE,
-  });
-  upsertMeta('link[rel="canonical"]', {
-    rel: "canonical",
-    href: url,
-  });
+  upsertMeta('meta[name="description"]', { name: "description", content: description });
+  upsertMeta('meta[property="og:title"]', { property: "og:title", content: title });
+  upsertMeta('meta[property="og:description"]', { property: "og:description", content: description });
+  upsertMeta('meta[property="og:url"]', { property: "og:url", content: url });
+  upsertMeta('meta[property="og:image"]', { property: "og:image", content: SITE_OG_IMAGE });
+  upsertMeta('meta[name="twitter:title"]', { name: "twitter:title", content: title });
+  upsertMeta('meta[name="twitter:description"]', { name: "twitter:description", content: description });
+  upsertMeta('meta[name="twitter:image"]', { name: "twitter:image", content: SITE_OG_IMAGE });
+  upsertMeta('link[rel="canonical"]', { rel: "canonical", href: url });
   updateStructuredData({ title, description, url });
 }
 
 function escapeHtml(value) {
-  return value
+  return String(value)
     .replaceAll("&", "&amp;")
     .replaceAll("<", "&lt;")
     .replaceAll(">", "&gt;")
@@ -124,54 +95,23 @@ function escapeHtml(value) {
     .replaceAll("'", "&#39;");
 }
 
-function renderTagList(tags) {
-  if (tags.length === 0) {
-    return `<span class="tag">No tags specified</span>`;
-  }
+const CATEGORY_COLORS = {
+  claude: "#4a9eff",
+  codex: "#2dd4bf",
+  office: "#f59e0b",
+  media: "#ec4899",
+  devops: "#8b5cf6",
+  automation: "#06b6d4",
+  research: "#3b82f6",
+  collections: "#6b7280",
+};
 
-  return tags.map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join("");
+function getCategoryColor(slug) {
+  return CATEGORY_COLORS[slug] ?? "#6b7280";
 }
 
-function renderCompactTagList(tags, limit = 5) {
-  if (tags.length === 0) {
-    return `<span class="tag">No tags specified</span>`;
-  }
-
-  const visible = tags.slice(0, limit);
-  const hiddenCount = tags.length - visible.length;
-
-  return [
-    ...visible.map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`),
-    hiddenCount > 0 ? `<span class="tag muted">+${hiddenCount} more</span>` : "",
-  ].join("");
-}
-
-function renderList(items) {
-  if (items.length === 0) {
-    return `<p>Not specified in wiki.</p>`;
-  }
-
-  return `
-    <ul class="list">
-      ${items
-        .map(
-          (item) => `
-            <li>
-              <span class="dot"></span>
-              <span>${escapeHtml(item)}</span>
-            </li>`,
-        )
-        .join("")}
-    </ul>
-  `;
-}
-
-function renderParagraphs(items) {
-  if (items.length === 0) {
-    return `<p>Not specified in wiki.</p>`;
-  }
-
-  return items.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("");
+function truncateText(value, length = 180) {
+  return value.length <= length ? value : `${value.slice(0, length - 1)}…`;
 }
 
 function getStats() {
@@ -189,40 +129,55 @@ function getStats() {
     {
       label: "Evidence refs",
       value: String(skillWikiPayload.stats.evidenceRefCount),
-      description: "Repository proof links preserved from the wiki pages",
+      description: "Proof links preserved and converted into repository-aware references",
     },
     {
-      label: "High-risk skills",
-      value: String(highRisk),
-      description: "Entries marked high risk in the Skill Wiki",
+      label: "Categories",
+      value: String(skillWikiPayload.categories.length),
+      description: "Editorial board structure layered over raw wiki tags",
     },
     {
       label: "Latest update",
       value: latestUpdated ?? "Not specified",
       description: "Newest visible wiki timestamp in the current catalog",
     },
+    {
+      label: "High-risk skills",
+      value: String(highRisk),
+      description: "Entries that require tighter review before operational use",
+    },
   ];
 }
 
+function scoreSkill(skill) {
+  return (
+    skill.tags.length +
+    skill.evidenceLinks.filter((link) => link.href).length * 2 +
+    skill.steps.steps.length * 2 +
+    skill.whenToUse.bullets.length +
+    skill.failureModes.bullets.length +
+    skill.relatedSkillLinks.filter((link) => link.href).length
+  );
+}
+
 function getFeaturedSkill() {
-  const scored = [...skillWikiPayload.skills].map((skill) => {
-    const richnessScore =
-      skill.tags.length +
-      skill.evidenceRefs.bullets.length * 2 +
-      skill.steps.steps.length * 2 +
-      skill.whenToUse.bullets.length +
-      skill.failureModes.bullets.length +
-      skill.relatedSkills.bullets.length;
+  return [...skillWikiPayload.skills]
+    .sort((left, right) => scoreSkill(right) - scoreSkill(left) || left.title.localeCompare(right.title))[0] ?? null;
+}
 
-    const externalPenalty = skill.tags.includes("external") ? -2 : 0;
-    return {
-      skill,
-      score: richnessScore + externalPenalty,
-    };
-  });
+function getSkillsByCategory(categorySlug) {
+  return skillWikiPayload.skills
+    .filter((skill) => skill.category.slug === categorySlug)
+    .sort((left, right) => scoreSkill(right) - scoreSkill(left) || left.title.localeCompare(right.title));
+}
 
-  scored.sort((left, right) => right.score - left.score || left.skill.title.localeCompare(right.skill.title));
-  return scored[0]?.skill ?? null;
+function getCategorySections() {
+  return skillWikiPayload.categories
+    .map((category) => ({
+      ...category,
+      skills: getSkillsByCategory(category.slug),
+    }))
+    .filter((category) => category.skills.length > 0);
 }
 
 function getAllTags() {
@@ -231,21 +186,7 @@ function getAllTags() {
   );
 }
 
-function getTopTags(limit = 18) {
-  const counts = new Map();
-  for (const skill of skillWikiPayload.skills) {
-    for (const tag of skill.tags) {
-      counts.set(tag, (counts.get(tag) ?? 0) + 1);
-    }
-  }
-
-  return [...counts.entries()]
-    .sort((left, right) => right[1] - left[1] || left[0].localeCompare(right[0]))
-    .slice(0, limit)
-    .map(([tag]) => tag);
-}
-
-function filterSkills(skills, query, activeTag, activeRisk) {
+function filterSkills(skills, query, activeCategory, activeTag, activeRisk) {
   const normalizedQuery = query.trim().toLowerCase();
 
   return skills.filter((skill) => {
@@ -255,10 +196,11 @@ function filterSkills(skills, query, activeTag, activeRisk) {
       skill.summary.toLowerCase().includes(normalizedQuery) ||
       skill.tags.some((tag) => tag.toLowerCase().includes(normalizedQuery)) ||
       skill.searchText.includes(normalizedQuery);
+    const matchesCategory = activeCategory === "all" || skill.category.slug === activeCategory;
     const matchesTag = activeTag === "all" || skill.tags.includes(activeTag);
     const matchesRisk = activeRisk === "all" || skill.riskLevel.toLowerCase() === activeRisk;
 
-    return matchesQuery && matchesTag && matchesRisk;
+    return matchesQuery && matchesCategory && matchesTag && matchesRisk;
   });
 }
 
@@ -270,15 +212,94 @@ function sortSkills(skills, sortKey) {
       return next.sort((left, right) => right.updatedAt.localeCompare(left.updatedAt));
     case "risk":
       return next.sort((left, right) => left.riskLevel.localeCompare(right.riskLevel) || left.title.localeCompare(right.title));
+    case "signal":
+      return next.sort((left, right) => scoreSkill(right) - scoreSkill(left) || left.title.localeCompare(right.title));
     default:
       return next.sort((left, right) => left.title.localeCompare(right.title));
   }
 }
 
+function renderTagList(tags, limit = 5) {
+  if (tags.length === 0) {
+    return `<span class="chip chip-muted">No tags specified</span>`;
+  }
+
+  const visible = tags.slice(0, limit);
+  const hiddenCount = tags.length - visible.length;
+
+  return [
+    ...visible.map((tag) => `<span class="chip">${escapeHtml(tag)}</span>`),
+    hiddenCount > 0 ? `<span class="chip chip-muted">+${hiddenCount}</span>` : "",
+  ].join("");
+}
+
+function renderList(items) {
+  if (items.length === 0) {
+    return `<p class="empty-copy">Not specified in wiki.</p>`;
+  }
+
+  return `
+    <ul class="detail-list">
+      ${items
+        .map(
+          (item) => `
+            <li>
+              <span class="list-dot"></span>
+              <span>${escapeHtml(item)}</span>
+            </li>`,
+        )
+        .join("")}
+    </ul>
+  `;
+}
+
+function renderParagraphs(items) {
+  if (items.length === 0) {
+    return `<p class="empty-copy">Not specified in wiki.</p>`;
+  }
+
+  return items.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("");
+}
+
+function renderLinkList(links, emptyLabel = "No linked evidence available.") {
+  if (links.length === 0) {
+    return `<p class="empty-copy">${escapeHtml(emptyLabel)}</p>`;
+  }
+
+  return `
+    <ul class="detail-list">
+      ${links
+        .map((link) => {
+          const label = escapeHtml(link.label);
+          const meta = escapeHtml(link.kind.replaceAll("-", " "));
+          const isGitHubExternal = link.kind === "external" && link.href && link.href.includes("github.com");
+          const githubBadge = isGitHubExternal ? `<span class="link-badge link-badge-github">GitHub</span>` : "";
+          if (!link.href) {
+            return `
+              <li>
+                <span class="list-dot"></span>
+                <span>${label}</span>
+                <span class="link-kind">${meta}</span>
+              </li>`;
+          }
+
+          const external = /^https?:\/\//.test(link.href);
+          return `
+            <li>
+              <span class="list-dot"></span>
+              <a class="evidence-link" href="${escapeHtml(link.href)}" ${external ? 'target="_blank" rel="noreferrer"' : ""}>${label}</a>
+              <span class="link-kind">${meta}${githubBadge}</span>
+            </li>`;
+        })
+        .join("")}
+    </ul>
+  `;
+}
+
 function renderHeader(route) {
   const links = [
     { href: "/", label: "Home" },
-    { href: "/skills", label: "Find Skills" },
+    { href: "/skills", label: "Browse" },
   ];
 
   return `
@@ -302,70 +323,81 @@ function renderHeader(route) {
             })
             .join("")}
         </nav>
-        <a class="cta" href="#/skills">Open Wiki</a>
+        <a class="cta" href="#/skills">Open catalog</a>
       </div>
     </header>
+  `;
+}
+
+function renderCategoryRail() {
+  return `
+    <div class="category-rail">
+      ${getCategorySections()
+        .map(
+          (category) => `
+            <button class="category-jump" data-category-jump="${escapeHtml(category.slug)}" type="button">
+              <span class="category-dot" style="background:${getCategoryColor(category.slug)}"></span>
+              <span>${escapeHtml(category.label)}</span>
+              <strong>${escapeHtml(String(category.count))}</strong>
+            </button>`,
+        )
+        .join("")}
+    </div>
   `;
 }
 
 function renderHomePage() {
   const featured = getFeaturedSkill();
   const stats = getStats();
-  const previewSkills = sortSkills([...skillWikiPayload.skills], "updated").slice(0, 6);
+  const categorySections = getCategorySections();
+  const latestSkills = sortSkills([...skillWikiPayload.skills], "updated").slice(0, 4);
 
   return `
     <div class="stack">
-      <section class="hero hero-centered">
-        <div class="hero-stack">
-          <span class="eyebrow hero-pill">English-first AI agent skill wiki</span>
-          <h1 class="hero-title-centered">Open the wiki and find reusable skills faster.</h1>
-          <p class="lede hero-lede-centered">
-            More like a product catalog than a document dump. Search first, scan faster, then open the detail page for scope, workflow boundaries, and evidence.
+      <section class="hero">
+        <div class="hero-copy">
+          <span class="eyebrow">Editorial skill hub</span>
+          <h1>Browse AI agent skills like a real product, not a markdown dump.</h1>
+          <p class="lede">
+            Runwiser Wiki turns repository-owned skill pages into a browsable board of categories, evidence, and reusable workflows. Browse by Claude, Codex, Office, Media, DevOps, Automation, Research, and Collections, then drill into canonical skill detail pages with source and proof links intact.
           </p>
-          <div class="hero-actions hero-actions-centered">
-            <button class="cta hero-cta-dark" data-nav="/skills" type="button">Browse all skills</button>
+          <div class="hero-actions">
+            <button class="cta" data-nav="/skills" type="button">Browse all skills</button>
             ${
               featured
                 ? `<button class="cta ghost" data-nav="/skills/${escapeHtml(featured.slug)}" type="button">Open featured skill</button>`
                 : ""
             }
           </div>
-          <div class="hero-command-card">
-            <div class="hero-command-tabs">
-              <span class="hero-command-tab active">Quick entry</span>
-              <span class="hero-command-tab">Skill Wiki data</span>
-            </div>
-            <div class="hero-command-body">
-              <div class="hero-command-line">
-                <span>Search, filter, and open skill details directly from <code>skills/wiki/*.md</code></span>
-              </div>
-              <div class="hero-command-meta">
-                <span>${escapeHtml(String(skillWikiPayload.stats.skillCount))} skills</span>
-                <span>${escapeHtml(String(skillWikiPayload.stats.evidenceRefCount))} evidence references</span>
-              </div>
-            </div>
+        </div>
+        <div class="hero-panel">
+          <div class="hero-panel-kicker">Category board</div>
+          ${renderCategoryRail()}
+          <div class="hero-note">
+            <strong>${escapeHtml(String(skillWikiPayload.stats.evidenceRefCount))}</strong>
+            evidence references are preserved as navigable repo or GitHub links.
           </div>
         </div>
       </section>
 
-      <section class="section">
-        <div class="home-search-row">
+      <section class="section section-tinted">
+        <div class="section-head">
           <div>
-            <span class="eyebrow">Explore</span>
-            <h2>Start with high-signal skills, then move into the full catalog.</h2>
+            <span class="eyebrow">Overview</span>
+            <h2>The wiki now reads as an organized board, not a loose tag wall.</h2>
           </div>
-          <button class="cta hero-cta-dark" data-nav="/skills" type="button">Enter the catalog</button>
+          <p class="section-intro">
+            Categories give the first layer of orientation. Tags still exist, but they now refine the catalog instead of defining the whole product.
+          </p>
         </div>
-        <p class="section-intro">
-          Keep the home page lightweight. Real filtering, search, and skill evaluation all happen inside the catalog.
-        </p>
-        <div class="stats-strip">
+        <div class="stats-grid">
           ${stats
             .map(
               (stat) => `
-                <article class="mini-stat">
-                  <span class="mini-stat-label">${escapeHtml(stat.label)}</span>
+                <article class="stat-card">
+                  <span class="stat-label">${escapeHtml(stat.label)}</span>
                   <strong>${escapeHtml(stat.value)}</strong>
+                  <p>${escapeHtml(stat.description)}</p>
                 </article>`,
             )
             .join("")}
@@ -373,15 +405,54 @@ function renderHomePage() {
       </section>
 
       <section class="section">
-        <div class="catalog-head">
+        <div class="section-head">
           <div>
-            <span class="eyebrow">Featured skills</span>
-            <h2>Start with recent high-signal entries.</h2>
+            <span class="eyebrow">Primary boards</span>
+            <h2>Start from a stable category, then narrow down with filters.</h2>
           </div>
-          <p class="filter-note">Show the 6 most recently updated skills first to reduce first-visit overload.</p>
+          <p class="section-intro">Eight boards cover Claude, Codex, Office, Media, DevOps, Automation, Research, and Collections.</p>
         </div>
-        <div class="cards-grid">
-          ${previewSkills.map((skill) => renderSkillCard(skill, featured && skill.slug === featured.slug)).join("")}
+        <div class="board-grid">
+          ${categorySections
+            .map(
+              (category) => `
+                <article class="board-card" id="home-category-${escapeHtml(category.slug)}" data-category-color="${getCategoryColor(category.slug)}" style="border-top:3px solid ${getCategoryColor(category.slug)}">
+                  <div class="board-head">
+                    <div>
+                      <span class="board-kicker">${escapeHtml(category.label)}</span>
+                      <h3>${escapeHtml(String(category.count))} skills</h3>
+                    </div>
+                    <button class="text-action" data-category-open="${escapeHtml(category.slug)}" type="button">See board</button>
+                  </div>
+                  <p>${escapeHtml(category.description)}</p>
+                  <div class="board-preview">
+                    ${category.skills
+                      .slice(0, 3)
+                      .map(
+                        (skill) => `
+                          <button class="preview-link" data-nav="/skills/${escapeHtml(skill.slug)}" type="button">
+                            <strong>${escapeHtml(skill.title)}</strong>
+                            <span>${escapeHtml(truncateText(skill.summary, 92))}</span>
+                          </button>`,
+                      )
+                      .join("")}
+                  </div>
+                </article>`,
+            )
+            .join("")}
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Featured</span>
+            <h2>High-signal skills worth opening first.</h2>
+          </div>
+          <p class="section-intro">Recent or rich entries surface first so the front page feels curated instead of exhaustive.</p>
+        </div>
+        <div class="cards-grid cards-grid-wide">
+          ${latestSkills.map((skill) => renderSkillCard(skill, featured && skill.slug === featured.slug)).join("")}
         </div>
       </section>
     </div>
@@ -389,21 +460,29 @@ function renderHomePage() {
 }
 
 function renderSkillCard(skill, featured = false) {
+  const upstreamLinkHtml = skill.upstreamSourceUrl
+    ? `<a class="upstream-link" href="${escapeHtml(skill.upstreamSourceUrl)}" target="_blank" rel="noreferrer">
+        <svg class="upstream-icon" viewBox="0 0 16 16" width="14" height="14" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+        ${escapeHtml(skill.upstreamSourceRepo ?? "Source")}
+      </a>`
+    : "";
+
   return `
-    <article class="card ${featured ? "featured-card" : ""}">
-      <div class="card-head">
-        <span class="badge blue">${featured ? "Featured wiki skill" : "Skill Wiki"}</span>
-        <span class="badge neutral">Risk: ${escapeHtml(skill.riskLevel)}</span>
+    <article class="skill-card ${featured ? "skill-card-featured" : ""}">
+      <div class="card-topline">
+        <span class="pill pill-brand" style="border-color:${getCategoryColor(skill.category.slug)};background:${getCategoryColor(skill.category.slug)}22;color:${getCategoryColor(skill.category.slug)}">${featured ? "Featured" : escapeHtml(skill.category.label)}</span>
+        <span class="pill">${escapeHtml(`Risk: ${skill.riskLevel}`)}</span>
       </div>
       <h3>${escapeHtml(skill.title)}</h3>
       <p class="card-summary">${escapeHtml(skill.summary)}</p>
-      <div class="tags">${renderCompactTagList(skill.tags, featured ? 6 : 4)}</div>
-      <div class="meta-row">
+      <div class="chip-row">${renderTagList(skill.tags, featured ? 6 : 4)}</div>
+      <div class="card-meta">
         <div>
           <strong>${escapeHtml(skill.updatedAt)}</strong>
           <small>${escapeHtml(skill.sourcePath.replace("skills/wiki/", ""))}</small>
+          ${upstreamLinkHtml}
         </div>
-        <button class="cta" data-nav="/skills/${escapeHtml(skill.slug)}" type="button">View details</button>
+        <button class="cta dark" data-nav="/skills/${escapeHtml(skill.slug)}" type="button">Open detail</button>
       </div>
     </article>
   `;
@@ -411,76 +490,108 @@ function renderSkillCard(skill, featured = false) {
 
 function renderSkillsPage() {
   const tags = getAllTags();
-  const topTags = new Set(getTopTags());
+  const categories = getCategorySections();
   const riskOptions = ["all", ...new Set(skillWikiPayload.skills.map((skill) => skill.riskLevel.toLowerCase()))];
 
   return `
     <div class="stack">
-      <section class="section">
-        <span class="eyebrow">Find Skills</span>
-        <h2>Search the Skill Wiki like a product.</h2>
-        <p class="section-intro">
-          Search, filter, and open canonical wiki entries. The catalog stays derived-only from <code>skills/wiki/*.md</code>.
-        </p>
-        <div class="filter-grid">
-          <div class="field">
-            <label for="searchInput">Search</label>
-            <input id="searchInput" placeholder="Search title, summary, tags, or section text" />
-          </div>
-          <div class="select">
-            <label for="riskSelect">Risk</label>
-            <select id="riskSelect">
-              ${riskOptions
-                .map(
-                  (option) =>
-                    `<option value="${escapeHtml(option)}">${option === "all" ? "All risks" : escapeHtml(option)}</option>`,
-                )
-                .join("")}
-            </select>
-          </div>
-          <div class="select">
-            <label for="sortSelect">Sort</label>
-            <select id="sortSelect">
-              <option value="title">Title</option>
-              <option value="updated">Updated time</option>
-              <option value="risk">Risk level</option>
-            </select>
-          </div>
-        </div>
-        <div class="filter-tags-head">
-          <p class="filter-note">Popular tags first. Expand the full tag set when you need deeper filtering.</p>
-          <button class="pill filter-toggle" id="tagToggle" type="button" aria-expanded="false">Show all tags</button>
-        </div>
-        <div class="pill-row" id="tagFilters">
-          <button class="pill active" data-tag="all" type="button">All tags</button>
-          ${tags
-            .map((tag) => {
-              const hiddenClass = topTags.has(tag) ? "" : " tag-hidden";
-              return `<button class="pill${hiddenClass}" data-tag="${escapeHtml(tag)}" type="button">${escapeHtml(tag)}</button>`;
-            })
-            .join("")}
-        </div>
-      </section>
-
-      <section class="stack">
-        <div class="catalog-head">
+      <section class="section section-hero-lite">
+        <div class="section-head">
           <div>
-            <span class="eyebrow">Catalog result</span>
-            <h2 id="catalogCount">0 skills available</h2>
+            <span class="eyebrow">Catalog</span>
+            <h2>Move from category board to precise skill detail.</h2>
           </div>
-          <p class="filter-note">No synthetic filler records. Every result resolves to a real wiki page.</p>
+          <p class="section-intro">
+            Start with an editorial board. Then layer risk, tags, or raw text search when you know what you're looking for.
+          </p>
         </div>
-        <div class="cards-grid" id="catalogGrid"></div>
-        <div class="empty-state" id="catalogEmpty" hidden>
-          <h3>No wiki skill matches this filter.</h3>
-          <p>Try a broader query or clear the active tag and risk filter.</p>
+        <div class="catalog-layout">
+          <aside class="catalog-sidebar">
+            <div class="sidebar-block">
+              <span class="sidebar-label">Boards</span>
+              <div class="sidebar-buttons">
+                <button class="sidebar-chip active" data-category="all" type="button">All boards</button>
+                ${categories
+                  .map(
+                    (category) => `
+                      <button class="sidebar-chip" data-category="${escapeHtml(category.slug)}" type="button" style="border-left:3px solid ${getCategoryColor(category.slug)}">
+                        ${escapeHtml(category.label)} <strong>${escapeHtml(String(category.count))}</strong>
+                      </button>`,
+                  )
+                  .join("")}
+              </div>
+            </div>
+            <div class="sidebar-block">
+              <span class="sidebar-label">Filters</span>
+              <div class="field-stack">
+                <label class="field">
+                  <span>Search</span>
+                  <input id="searchInput" placeholder="Search title, summary, tags, or section text" />
+                </label>
+                <label class="field">
+                  <span>Risk</span>
+                  <select id="riskSelect">
+                    ${riskOptions
+                      .map(
+                        (option) => `<option value="${escapeHtml(option)}">${option === "all" ? "All risks" : escapeHtml(option)}</option>`,
+                      )
+                      .join("")}
+                  </select>
+                </label>
+                <label class="field">
+                  <span>Sort</span>
+                  <select id="sortSelect">
+                    <option value="signal">Signal</option>
+                    <option value="updated">Updated time</option>
+                    <option value="title">Title</option>
+                    <option value="risk">Risk level</option>
+                  </select>
+                </label>
+              </div>
+            </div>
+          </aside>
+          <div class="catalog-main">
+            <div class="tag-toolbar">
+              <div class="tag-toolbar-copy">
+                <span class="eyebrow">Tags</span>
+                <h3>Secondary filter layer</h3>
+              </div>
+              <button class="text-action" id="clearFilters" type="button">Clear all</button>
+            </div>
+            <div class="tag-cloud" id="tagFilters">
+              <button class="chip active" data-tag="all" type="button">All tags</button>
+              ${tags.map((tag) => `<button class="chip" data-tag="${escapeHtml(tag)}" type="button">${escapeHtml(tag)}</button>`).join("")}
+            </div>
+            <div class="catalog-results-head">
+              <div>
+                <span class="eyebrow">Result</span>
+                <h3 id="catalogCount">0 skills available</h3>
+              </div>
+              <p class="section-intro">Every result maps back to a canonical markdown skill page and keeps its repo evidence visible.</p>
+            </div>
+            <div class="cards-grid cards-grid-wide" id="catalogGrid"></div>
+            <div class="empty-state" id="catalogEmpty" hidden>
+              <h3>No wiki skill matches this filter.</h3>
+              <p>Broaden the board, clear the tag, or search with a higher-level workflow term.</p>
+            </div>
+          </div>
         </div>
       </section>
     </div>
   `;
 }
 
+function renderInfoPanel(title, content) {
+  return `
+    <article class="info-panel">
+      <h3>${escapeHtml(title)}</h3>
+      <div>${content}</div>
+    </article>
+  `;
+}
+
 function renderSkillDetailPage(skill) {
+  const overviewIsDuplicate = skill.overview.paragraphs.length === 0 || skill.overview.paragraphs[0] === skill.summary;
   const primaryCards = [
     { title: "When to use", content: renderList(skill.whenToUse.bullets) },
     { title: "When not to use", content: renderList(skill.whenNotToUse.bullets) },
@@ -488,39 +599,56 @@ function renderSkillDetailPage(skill) {
     { title: "Outputs", content: renderList(skill.outputs.bullets) },
     { title: "Failure modes", content: renderList(skill.failureModes.bullets) },
   ];
-  const overviewIsDuplicate =
-    skill.overview.paragraphs.length === 0 ||
-    skill.overview.paragraphs[0] === skill.summary;
+
+  const upstreamSourceHtml = skill.upstreamSourceUrl
+    ? `<a class="evidence-link" href="${escapeHtml(skill.upstreamSourceUrl)}" target="_blank" rel="noreferrer">
+        <svg class="upstream-icon" viewBox="0 0 16 16" width="14" height="14" fill="currentColor" style="vertical-align:middle;margin-right:4px"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+        ${escapeHtml(skill.upstreamSourceRepo ?? skill.upstreamSourceUrl)}
+      </a>`
+    : `<strong>Not available</strong>`;
 
   return `
     <div class="stack">
       <section class="detail-hero">
-        <article class="section">
-          <button class="cta ghost" data-nav="/skills" type="button">Back to catalog</button>
-          <div class="card-head" style="margin-top: 22px;">
-            <span class="badge blue">Skill Wiki detail</span>
-            <span class="badge neutral">Risk: ${escapeHtml(skill.riskLevel)}</span>
+        <article class="detail-main">
+          <button class="text-back" data-nav="/skills" type="button">Back to catalog</button>
+          <div class="detail-topline">
+            <span class="pill pill-brand" style="border-color:${getCategoryColor(skill.category.slug)};background:${getCategoryColor(skill.category.slug)}22;color:${getCategoryColor(skill.category.slug)}">${escapeHtml(skill.category.label)}</span>
+            <span class="pill">${escapeHtml(`Risk: ${skill.riskLevel}`)}</span>
           </div>
-          <h1 class="detail-title">${escapeHtml(skill.title)}</h1>
+          <h1>${escapeHtml(skill.title)}</h1>
           <p class="detail-lede">${escapeHtml(skill.summary)}</p>
-          <div class="tags">${renderCompactTagList(skill.tags, 6)}</div>
+          <div class="chip-row">${renderTagList(skill.tags, 7)}</div>
+          <div class="detail-actions">
+            <a class="cta dark" href="${escapeHtml(skill.sourceUrl)}" target="_blank" rel="noreferrer">Open source file</a>
+            ${
+              skill.evidenceLinks.find((link) => link.href)
+                ? `<a class="cta ghost" href="${escapeHtml(skill.evidenceLinks.find((link) => link.href).href)}" target="_blank" rel="noreferrer">Open first evidence</a>`
+                : ""
+            }
+          </div>
         </article>
-        <aside class="detail-sidebar section">
-          <span class="eyebrow">Quick facts</span>
-          <dl>
-            <div>
-              <dt>Updated at</dt>
-              <dd>${escapeHtml(skill.updatedAt)}</dd>
-            </div>
-            <div>
-              <dt>Source path</dt>
-              <dd>${escapeHtml(skill.sourcePath)}</dd>
-            </div>
-            <div>
-              <dt>Workflow summary</dt>
-              <dd>${escapeHtml(skill.overview.paragraphs[0] ?? "Not specified in wiki.")}</dd>
-            </div>
-          </dl>
+        <aside class="detail-sidebar">
+          <div class="detail-fact">
+            <span>Category</span>
+            <strong>${escapeHtml(skill.category.label)}</strong>
+            <p>${escapeHtml(skill.category.description)}</p>
+          </div>
+          <div class="detail-fact">
+            <span>Updated</span>
+            <strong>${escapeHtml(skill.updatedAt)}</strong>
+            <p>Canonical wiki freshness timestamp.</p>
+          </div>
+          <div class="detail-fact">
+            <span>Source path</span>
+            <a class="evidence-link" href="${escapeHtml(skill.sourceUrl)}" target="_blank" rel="noreferrer">${escapeHtml(skill.sourcePath)}</a>
+            <p>Repository-owned markdown entry.</p>
+          </div>
+          <div class="detail-fact">
+            <span>Source repo</span>
+            ${upstreamSourceHtml}
+            <p>Upstream GitHub repository where the skill originated.</p>
+          </div>
         </aside>
       </section>
 
@@ -528,61 +656,37 @@ function renderSkillDetailPage(skill) {
         skill.steps.steps.length > 0
           ? `
             <section class="section">
-              <span class="eyebrow">Steps</span>
-              <h2>Execution path from the wiki page</h2>
-              <div class="steps">
+              <div class="section-head">
+                <div>
+                  <span class="eyebrow">Execution path</span>
+                  <h2>Workflow steps preserved from the wiki.</h2>
+                </div>
+              </div>
+              <ol class="step-list">
                 ${skill.steps.steps
                   .map(
                     (step, index) => `
-                      <article class="step">
+                      <li class="step-card">
                         <span class="step-index">${index + 1}</span>
                         <p>${escapeHtml(step)}</p>
-                      </article>`,
+                      </li>`,
                   )
                   .join("")}
-              </div>
+              </ol>
             </section>`
           : ""
       }
 
       <section class="detail-grid">
-        ${primaryCards
-          .map(
-            (section) => `
-              <article class="detail-box">
-                <h3>${escapeHtml(section.title)}</h3>
-                <div>${section.content}</div>
-              </article>`,
-          )
-          .join("")}
+        ${primaryCards.map((section) => renderInfoPanel(section.title, section.content)).join("")}
       </section>
 
-      <section class="detail-disclosures">
-        <details class="disclosure">
-          <summary>Evidence refs</summary>
-          <div class="disclosure-body">${renderList(skill.evidenceRefs.bullets)}</div>
-        </details>
-        <details class="disclosure">
-          <summary>Related skills</summary>
-          <div class="disclosure-body">${renderList(skill.relatedSkills.bullets)}</div>
-        </details>
-        <details class="disclosure">
-          <summary>Scope, non-scope, and provenance</summary>
-          <div class="disclosure-body disclosure-stack">
-            <div>
-              <h3>Scope</h3>
-              ${renderList(skill.scope.bullets)}
-            </div>
-            <div>
-              <h3>Non-scope</h3>
-              ${renderList(skill.nonScope.bullets)}
-            </div>
-            <div>
-              <h3>Provenance</h3>
-              ${renderList(skill.provenance.bullets)}
-            </div>
-          </div>
-        </details>
+      <section class="detail-grid detail-grid-large">
+        ${renderInfoPanel("Evidence refs", renderLinkList(skill.evidenceLinks, "No linked evidence references."))}
+        ${renderInfoPanel("Related skills", renderLinkList(skill.relatedSkillLinks, "No related skills specified."))}
+        ${renderInfoPanel("Provenance", renderLinkList(skill.provenanceLinks, "No provenance links available."))}
+        ${renderInfoPanel("Scope", renderLinkList(skill.scopeLinks, "No linked scope references."))}
+        ${renderInfoPanel("Non-scope", renderLinkList(skill.nonScopeLinks, "No linked non-scope references."))}
       </section>
 
       ${
@@ -590,9 +694,13 @@ function renderSkillDetailPage(skill) {
           ? ""
           : `
             <section class="section">
-              <span class="eyebrow">Overview</span>
-              <h2>Narrative from the canonical wiki entry</h2>
-              <div>${renderParagraphs(skill.overview.paragraphs)}</div>
+              <div class="section-head">
+                <div>
+                  <span class="eyebrow">Overview</span>
+                  <h2>Narrative from the canonical wiki entry.</h2>
+                </div>
+              </div>
+              <div class="prose">${renderParagraphs(skill.overview.paragraphs)}</div>
             </section>`
       }
     </div>
@@ -614,17 +722,17 @@ function renderFooter() {
       <div class="container footer-grid">
         <div>
           <span class="eyebrow">Runwiser Wiki</span>
-          <h2>AI agent skills with evidence, not filler.</h2>
+          <h2>Skills, categories, and evidence all stay attached to the repository.</h2>
           <p class="section-intro">
-            This standalone site turns repository skill pages into an English-first product surface for AI agent skills, reusable workflows, and evidence-backed playbooks.
+            This web surface is a navigable reading layer over canonical markdown skills. It does not invent marketplace records or hide the proof behind generic cards.
           </p>
         </div>
-        <div class="section footer-card">
+        <div class="footer-panel">
           <h3>Source of truth</h3>
-          <ul class="list">
-            <li><span class="dot"></span><span>Only reads canonical wiki markdown entries.</span></li>
-            <li><span class="dot"></span><span>Search, tags, and detail pages derive from generated local wiki data.</span></li>
-            <li><span class="dot"></span><span>No login, no remote API, no synthetic marketplace claims.</span></li>
+          <ul class="detail-list">
+            <li><span class="list-dot"></span><span>Only reads canonical wiki markdown entries.</span></li>
+            <li><span class="list-dot"></span><span>Evidence, provenance, and related references stay linkable.</span></li>
+            <li><span class="list-dot"></span><span>Boards are derived from repo content, not from remote APIs.</span></li>
           </ul>
         </div>
       </div>
@@ -645,9 +753,9 @@ function renderApp() {
     content = renderHomePage();
   } else if (route.name === "skills") {
     setPageMeta({
-      title: "Find Skills | Runwiser Wiki",
+      title: "Browse Skills | Runwiser Wiki",
       description:
-        "Search the Runwiser Wiki catalog for AI agent skills, reusable workflows, evidence-backed playbooks, tags, and risk-scoped execution patterns.",
+        "Browse the Runwiser Wiki by category board, then refine with risk, tags, and text search across AI agent skills and evidence-backed workflows.",
       path: "/#/skills",
     });
     content = renderSkillsPage();
@@ -691,20 +799,56 @@ function bindInteractions() {
   const riskSelect = document.getElementById("riskSelect");
   const sortSelect = document.getElementById("sortSelect");
   const tagButtons = [...document.querySelectorAll("[data-tag]")];
-  const tagToggle = document.getElementById("tagToggle");
-  const tagFilters = document.getElementById("tagFilters");
+  const categoryButtons = [...document.querySelectorAll("[data-category]")];
+  const clearFilters = document.getElementById("clearFilters");
+  const categoryJumpButtons = [...document.querySelectorAll("[data-category-jump]")];
+  const categoryOpenButtons = [...document.querySelectorAll("[data-category-open]")];
+
+  categoryJumpButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const category = button.getAttribute("data-category-jump");
+      navigate("/skills");
+      window.requestAnimationFrame(() => {
+        window.requestAnimationFrame(() => {
+          const target = document.querySelector(`[data-category="${category}"]`);
+          if (target instanceof HTMLElement) {
+            target.click();
+          }
+        });
+      });
+    });
+  });
+
+  categoryOpenButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const category = button.getAttribute("data-category-open");
+      navigate("/skills");
+      window.requestAnimationFrame(() => {
+        window.requestAnimationFrame(() => {
+          const target = document.querySelector(`[data-category="${category}"]`);
+          if (target instanceof HTMLElement) {
+            target.click();
+          }
+        });
+      });
+    });
+  });
 
   if (!(catalogGrid instanceof HTMLElement) || !(catalogCount instanceof HTMLElement) || !(catalogEmpty instanceof HTMLElement)) {
     return;
   }
 
   let activeTag = "all";
+  let activeCategory = "all";
 
   const updateCatalog = () => {
     const query = searchInput instanceof HTMLInputElement ? searchInput.value : "";
     const activeRisk = riskSelect instanceof HTMLSelectElement ? riskSelect.value : "all";
-    const activeSort = sortSelect instanceof HTMLSelectElement ? sortSelect.value : "title";
-    const filtered = sortSkills(filterSkills(skillWikiPayload.skills, query, activeTag, activeRisk), activeSort);
+    const activeSort = sortSelect instanceof HTMLSelectElement ? sortSelect.value : "signal";
+    const filtered = sortSkills(
+      filterSkills(skillWikiPayload.skills, query, activeCategory, activeTag, activeRisk),
+      activeSort,
+    );
 
     catalogCount.textContent = `${filtered.length} skill${filtered.length === 1 ? "" : "s"} available`;
     catalogGrid.innerHTML = filtered.map((skill) => renderSkillCard(skill)).join("");
@@ -725,22 +869,40 @@ function bindInteractions() {
 
   tagButtons.forEach((button) => {
     button.addEventListener("click", () => {
-      if (!(button instanceof HTMLElement)) {
-        return;
-      }
-
-      activeTag = button.dataset.tag ?? "all";
+      activeTag = button.getAttribute("data-tag") ?? "all";
       tagButtons.forEach((item) => item.classList.remove("active"));
       button.classList.add("active");
       updateCatalog();
     });
   });
 
-  if (tagToggle instanceof HTMLButtonElement && tagFilters instanceof HTMLElement) {
-    tagToggle.addEventListener("click", () => {
-      const expanded = tagFilters.classList.toggle("expanded");
-      tagToggle.setAttribute("aria-expanded", String(expanded));
-      tagToggle.textContent = expanded ? "Collapse tags" : "Show all tags";
+  categoryButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      activeCategory = button.getAttribute("data-category") ?? "all";
+      categoryButtons.forEach((item) => item.classList.remove("active"));
+      button.classList.add("active");
+      updateCatalog();
+    });
+  });
+
+  if (clearFilters instanceof HTMLButtonElement) {
+    clearFilters.addEventListener("click", () => {
+      activeTag = "all";
+      activeCategory = "all";
+      tagButtons.forEach((item) => item.classList.toggle("active", item.getAttribute("data-tag") === "all"));
+      categoryButtons.forEach((item) =>
+        item.classList.toggle("active", item.getAttribute("data-category") === "all"),
+      );
+      if (searchInput instanceof HTMLInputElement) {
+        searchInput.value = "";
+      }
+      if (riskSelect instanceof HTMLSelectElement) {
+        riskSelect.value = "all";
+      }
+      if (sortSelect instanceof HTMLSelectElement) {
+        sortSelect.value = "signal";
+      }
+      updateCatalog();
     });
   }
 
@@ -761,8 +923,4 @@ app.addEventListener("click", (event) => {
 
 window.addEventListener("hashchange", renderApp);
 
-if (!window.location.hash) {
-  window.location.hash = "/";
-} else {
-  renderApp();
-}
+renderApp();
