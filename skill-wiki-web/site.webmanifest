@@ -1,6 +1,6 @@
 {
-  "name": "Runwiser",
-  "short_name": "Runwiser",
+  "name": "Runwiser Wiki",
+  "short_name": "Wiki",
   "description": "AI capabilities organized into reusable workflow entry points.",
   "start_url": "/",
   "display": "standalone",

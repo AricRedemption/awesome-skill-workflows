@@ -144,7 +144,7 @@ try {
   await page.goto(`${baseUrl}/#/`, { waitUntil: "networkidle0" });
   await screenshot(page, "home-desktop");
 
-  assert((await page.title()) === "Runwiser | AI capabilities organized into reusable workflows", "Unexpected home page title.");
+  assert((await page.title()) === "Runwiser Wiki | AI capabilities organized into reusable workflows", "Unexpected home page title.");
   assert(
     (await getMetaContent(page, 'meta[name="description"]')).includes("workflow"),
     "Home page description should emphasize workflow-first discovery.",
@@ -156,27 +156,26 @@ try {
   );
 
   const homeText = await getBodyText(page);
-  assert(homeText.includes("Browse workflows"), "Home page should expose a direct workflow catalog CTA.");
+  assert(homeText.includes("Open catalog"), "Start page should expose a direct catalog CTA.");
+  assert(homeText.includes("Start"), "Navigation should label the start page.");
+  assert(homeText.includes("What do you need to get done?"), "Home page should keep the task-first headline.");
   assert(
-    homeText.includes("What do you need to get done?") && homeText.includes("Search by the task in front of you"),
-    "Home page should explain the user task entry point.",
+    homeText.includes("Search by workflow, industry, or target outcome"),
+    "Home page should keep the primary search entry.",
   );
-  assert(
-    homeText.includes("workflow bundles") || homeText.includes("workflow entries"),
-    "Home page stats should show workflow-level stats.",
-  );
-  assert(homeText.includes("Open featured workflow"), "Home page should expose a featured workflow entry.");
+  assert(homeText.includes("Editor’s pick") || homeText.includes("Editor's pick"), "Home page should mark the featured pick.");
 
   const homeOverflow = await page.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth + 1);
   assert(homeOverflow, "Home page has horizontal overflow.");
-  record("home-page", "pass", "Workflow-first hero, quick entry, and desktop layout verified.");
+  record("home-page", "pass", "Minimal start page, search entry, and compact picks verified.");
 
   await page.goto(`${baseUrl}/#/workflows`, { waitUntil: "networkidle0" });
   await screenshot(page, "workflows-desktop");
 
   const workflowsText = await getBodyText(page);
-  assert(workflowsText.includes("Find the right workflow first"), "Catalog intro should frame discovery around workflows.");
-  assert(workflowsText.includes("0 workflow results") || /\d+ workflow results/.test(workflowsText), "Catalog count text missing.");
+  assert(workflowsText.includes("Filter by domain"), "Catalog intro should explain filtering.");
+  assert(workflowsText.includes("Catalog"), "Navigation should label the catalog page.");
+  assert(workflowsText.includes("0 workflows") || /\d+ workflows/.test(workflowsText), "Catalog count text missing.");
   assert(!workflowsText.includes("skills available"), "Catalog still contains stale skill-first copy.");
 
   const initialTitles = await getCatalogTitles(page);
@@ -200,14 +199,14 @@ try {
   await page.waitForFunction(() => {
     const search = document.querySelector("#searchInput");
     const count = document.querySelector("#catalogCount");
-    return !!search && !!count && search.value === "" && /\d+ workflow results/.test(count.textContent ?? "");
+    return !!search && !!count && search.value === "" && /\d+ workflows?/.test(count.textContent ?? "");
   });
 
   await page.click('[data-category="office"]');
   await page.waitForFunction(() => {
     const count = document.querySelector("#catalogCount");
     const grid = document.querySelector("#catalogGrid");
-    return !!count && !!grid && count.textContent !== "0 workflow results" && grid.innerText.toLowerCase().includes("office");
+    return !!count && !!grid && count.textContent !== "0 workflows" && grid.innerText.toLowerCase().includes("office");
   });
   const officeTitles = await getCatalogTitles(page);
   assert(officeTitles.length > 0, "Office category returned no workflows.");
@@ -227,7 +226,7 @@ try {
   await page.waitForFunction(() => {
     const search = document.querySelector("#searchInput");
     const count = document.querySelector("#catalogCount");
-    return !!search && !!count && search.value === "" && /\d+ workflow results/.test(count.textContent ?? "");
+    return !!search && !!count && search.value === "" && /\d+ workflows?/.test(count.textContent ?? "");
   });
   record("catalog-clear-filters", "pass", "Clear filters resets workflow discovery state.");
 
@@ -235,7 +234,7 @@ try {
   await screenshot(page, "detail-desktop");
 
   assert(
-    (await page.title()) === "Top Scenario: Development And Engineering Delivery | Runwiser",
+    (await page.title()) === "Top Scenario: Development And Engineering Delivery | Runwiser Wiki",
     "Detail page title was not updated.",
   );
   assert(

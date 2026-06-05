@@ -3,10 +3,12 @@ import { skillWikiPayload } from "./data/skills.generated.js";
 const isEmbedded = new URLSearchParams(window.location.search).get("embed") === "1";
 const app = document.getElementById("app");
 const SITE_URL = "https://runwiser-wiki.vercel.app/";
-const SITE_NAME = "Runwiser";
+const SITE_NAME = "Runwiser Wiki";
 const SITE_OG_IMAGE = "https://runwiser.vercel.app/brand/runwise-icon-512.png";
 const BRAND_LOGO_URL = "https://runwiser.vercel.app/brand/runwise-logo.png";
 const LOCALE_STORAGE_KEY = "skillhub-locale";
+const HOME_PICK_LIMIT = 4;
+const CATALOG_TAG_PREVIEW_LIMIT = 8;
 const PRESENTATION_SUMMARY_OVERRIDES = {
   "hot-scenario-documentation-and-knowledge-management":
     "A documentation workflow for collecting notes, shaping them into durable knowledge, and keeping the resulting material easy to reuse across teams.",
@@ -44,49 +46,35 @@ const PRESENTATION_SUMMARY_OVERRIDES = {
 
 const COPY = {
   en: {
-    metaDefaultTitle: "Runwiser | AI capabilities organized into reusable workflows",
+    metaDefaultTitle: "Runwiser Wiki | AI capabilities organized into reusable workflows",
     metaDefaultDescription: "Find a workflow that fits the task in front of you.",
-    metaCatalogTitle: "Browse Workflows | Runwiser",
-    metaCatalogDescription: "Browse workflows by category, tag, risk, and keyword.",
-    metaDetailFallbackTitle: "Workflow Detail | Runwiser",
+    metaCatalogTitle: "Catalog | Runwiser Wiki",
+    metaCatalogDescription: "Filter workflows by domain, tag, risk, and keyword.",
+    metaDetailFallbackTitle: "Workflow Detail | Runwiser Wiki",
     metaDetailFallbackDescription: "Open a workflow and inspect fit, steps, and source.",
     brandTagline: "AI capabilities organized into workflows you can reuse",
-    navHome: "Home",
-    navWorkflows: "Workflows",
+    navHome: "Start",
+    navWorkflows: "Catalog",
     headerSearchPlaceholder: "Search workflows, industries, or outcomes",
     headerSearchCta: "Browse",
     localeEn: "EN",
     localeZh: "中文",
     homeEyebrow: "",
-    homeTitle: "What are you trying to get done?",
-    homeLede: "Search by task. Open the closest workflow.",
-    homePrimaryCta: "Browse",
-    homeFeaturedCta: "Open",
-    quickTabPrimary: "Start",
-    quickTabSecondary: "Featured",
-    quickEntryPrimaryTitle: "Search the catalog",
-    quickEntryPrimaryBody: "Start with the task, not the underlying assets.",
-    quickEntryPrimaryCta: "Browse",
-    quickEntrySecondaryTitle: "Open one example first",
-    quickEntrySecondaryBody: "See one full workflow before opening more.",
-    statsWorkflows: "workflow bundles",
-    statsEvidence: "evidence refs",
-    homeExploreEyebrow: "",
-    homeExploreTitle: "Start here",
-    homeExploreBody: "",
+    homeTitle: "What do you need to get done?",
     homeSearchPlaceholder: "Search by workflow, industry, or target outcome",
-    homeSearchCta: "Browse",
-    shelfRecommended: "Recommended",
-    shelfTrending: "Trending",
-    shelfNewest: "New",
+    homeSearchCta: "Search",
+    homeBrowseAll: "Open catalog",
     categoryEyebrow: "",
     categoryTitle: "Browse by domain",
-    categoryBody: "",
+    categoryBody: "Click a domain to open matching workflows in the catalog.",
+    categoryCountLabel: (count) => (count === 1 ? "1 workflow" : `${count} workflows`),
     featuredLabel: "Editor’s pick",
     cardOpen: "Open",
     catalogEyebrow: "",
-    catalogTitle: "Browse workflows",
-    catalogBody: "",
+    catalogTitle: "Catalog",
+    catalogBody: "Filter by domain, tag, risk, or keyword.",
+    tagsToggleMore: (count) => `Show ${count} more tags`,
+    tagsToggleHide: "Hide tags",
     sidebarCategoryLabel: "Domains",
     sidebarCategoryBody: "",
     sidebarAll: "All workflows",
@@ -106,7 +94,7 @@ const COPY = {
     catalogSearchNote: "",
     allTags: "All tags",
     resultsEyebrow: "",
-    resultsCount: (count) => `${count} workflow results`,
+    resultsCount: (count) => (count === 1 ? "1 workflow" : `${count} workflows`),
     resultsBody: "",
     activeFilter: "Scope",
     activeFilterAll: "All workflows",
@@ -170,58 +158,38 @@ const COPY = {
     detailMissingTitle: "Workflow not found.",
     detailMissingBody:
       "This workflow slug is not available on the current surface. The entry may be stale, removed, or not yet generated from the source knowledge.",
-    footerEyebrow: "",
-    footerTitle: "",
-    footerBody: "",
-    footerQuickTitle: "",
-    footerBackHome: "",
-    footerBrowse: "",
-    footerSourceNote: "",
+    footerLine: "Runwiser Wiki · Workflow knowledge from skills/wiki/*.md",
   },
   zh: {
-    metaDefaultTitle: "Runwiser | 把 AI 能力整理成可直接复用的工作流",
+    metaDefaultTitle: "Runwiser Wiki | 把 AI 能力整理成可直接复用的工作流",
     metaDefaultDescription: "先找到适合当前任务的工作流。",
-    metaCatalogTitle: "探索全部工作流 | Runwiser",
-    metaCatalogDescription: "按领域、标签、风险和关键词浏览工作流。",
-    metaDetailFallbackTitle: "工作流详情 | Runwiser",
+    metaCatalogTitle: "目录 | Runwiser Wiki",
+    metaCatalogDescription: "按领域、标签、风险和关键词筛选工作流。",
+    metaDetailFallbackTitle: "工作流详情 | Runwiser Wiki",
     metaDetailFallbackDescription: "打开工作流，查看适配、步骤和来源。",
     brandTagline: "把 AI 能力整理成可直接复用的工作流",
-    navHome: "首页",
-    navWorkflows: "全部工作流",
+    navHome: "开始",
+    navWorkflows: "目录",
     headerSearchPlaceholder: "搜索工作流、行业、任务目标",
     headerSearchCta: "探索",
     localeEn: "EN",
     localeZh: "中文",
     homeEyebrow: "",
-    homeTitle: "你现在要完成什么任务？",
-    homeLede: "按任务来搜。打开最接近的一条。",
-    homePrimaryCta: "探索",
-    homeFeaturedCta: "打开",
-    quickTabPrimary: "开始",
-    quickTabSecondary: "示例",
-    quickEntryPrimaryTitle: "搜索目录",
-    quickEntryPrimaryBody: "先从任务开始，不要先看底层资产。",
-    quickEntryPrimaryCta: "探索",
-    quickEntrySecondaryTitle: "先打开一个示例看看",
-    quickEntrySecondaryBody: "先看一条完整工作流。",
-    statsWorkflows: "工作流入口",
-    statsEvidence: "参考链接",
-    homeExploreEyebrow: "",
-    homeExploreTitle: "从这里开始",
-    homeExploreBody: "",
+    homeTitle: "你要完成什么任务？",
     homeSearchPlaceholder: "搜索工作流场景、行业、任务目标",
-    homeSearchCta: "探索",
-    shelfRecommended: "为你推荐",
-    shelfTrending: "近期飙升",
-    shelfNewest: "最近上新",
+    homeSearchCta: "搜索",
+    homeBrowseAll: "进入目录",
     categoryEyebrow: "",
     categoryTitle: "按领域浏览",
-    categoryBody: "",
+    categoryBody: "点击领域，查看该分类下的全部工作流。",
+    categoryCountLabel: (count) => `${count} 条工作流`,
     featuredLabel: "编辑精选",
     cardOpen: "打开",
     catalogEyebrow: "",
-    catalogTitle: "全部工作流",
-    catalogBody: "",
+    catalogTitle: "工作流目录",
+    catalogBody: "按领域、标签、风险或关键词筛选。",
+    tagsToggleMore: (count) => `展开其余 ${count} 个标签`,
+    tagsToggleHide: "收起标签",
     sidebarCategoryLabel: "领域",
     sidebarCategoryBody: "",
     sidebarAll: "全部工作流",
@@ -241,7 +209,7 @@ const COPY = {
     catalogSearchNote: "",
     allTags: "全部标签",
     resultsEyebrow: "",
-    resultsCount: (count) => `${count} 个工作流结果`,
+    resultsCount: (count) => `${count} 条工作流`,
     resultsBody: "",
     activeFilter: "当前范围",
     activeFilterAll: "全部工作流",
@@ -301,13 +269,7 @@ const COPY = {
     detailOverviewTitle: "原始说明",
     detailMissingTitle: "工作流不存在。",
     detailMissingBody: "当前前台没有找到这个 workflow slug，对应入口可能已经失效，或者还没有从底层 Skill Wiki 生成出来。",
-    footerEyebrow: "",
-    footerTitle: "",
-    footerBody: "",
-    footerQuickTitle: "",
-    footerBackHome: "",
-    footerBrowse: "",
-    footerSourceNote: "",
+    footerLine: "Runwiser Wiki · 工作流知识来自 skills/wiki/*.md",
   },
 };
 
@@ -738,115 +700,74 @@ function renderHeader(route) {
   `;
 }
 
+function renderCategoryJumpButton(category, { inline = false } = {}) {
+  const inlineClass = inline ? " category-jump-inline" : "";
+
+  return `
+    <button
+      class="category-jump${inlineClass}"
+      data-category-jump="${escapeHtml(category.slug)}"
+      type="button"
+      aria-label="${escapeHtml(`${category.label}, ${t("categoryCountLabel", category.count)}`)}"
+    >
+      <span class="category-jump-label">
+        <span class="category-dot" style="background:${getCategoryColor(category.slug)}"></span>
+        <span>${escapeHtml(category.label)}</span>
+      </span>
+      <span class="category-jump-meta">${escapeHtml(t("categoryCountLabel", category.count))}</span>
+    </button>
+  `;
+}
+
 function renderCategoryRail() {
   return `
     <div class="category-rail">
-      ${getWorkflowCategorySections()
-        .map(
-          (category) => `
-            <button class="category-jump" data-category-jump="${escapeHtml(category.slug)}" type="button">
-              <span class="category-dot" style="background:${getCategoryColor(category.slug)}"></span>
-              <span>${escapeHtml(category.label)}</span>
-              <strong>${escapeHtml(String(category.count))}</strong>
-            </button>`,
-        )
-        .join("")}
+      ${getWorkflowCategorySections().map((category) => renderCategoryJumpButton(category)).join("")}
     </div>
+  `;
+}
+
+function renderHomeSkillRow(skill, featured = false) {
+  const summary = getPresentationSummary(skill);
+
+  return `
+    <article class="home-skill-row">
+      <div class="home-skill-row-copy">
+        ${featured ? `<span class="pill pill-brand home-skill-row-flag">${escapeHtml(t("featuredLabel"))}</span>` : ""}
+        <h3>${escapeHtml(skill.title)}</h3>
+        <p>${escapeHtml(summary)}</p>
+      </div>
+      <button class="card-cta card-cta-compact" data-nav="/workflows/${escapeHtml(skill.slug)}" type="button">
+        <span>${escapeHtml(t("cardOpen"))}</span>
+        <span aria-hidden="true">↗</span>
+      </button>
+    </article>
   `;
 }
 
 function renderHomePage() {
   const featured = getFeaturedWorkflow();
-  const categorySections = getWorkflowCategorySections();
-  const recommendedSkills = getHomeShelfSkills("recommended");
+  const picks = getHomeShelfSkills("recommended").slice(0, HOME_PICK_LIMIT);
 
   return `
-    <div class="stack">
-      <section class="hero">
+    <div class="stack stack-home">
+      <section class="hero hero-single">
         <div class="hero-copy">
           <h1>${escapeHtml(t("homeTitle"))}</h1>
-          <p class="lede">${escapeHtml(t("homeLede"))}</p>
-          <div class="hero-actions">
-            <button class="cta" data-nav="/workflows" type="button">${escapeHtml(t("homePrimaryCta"))}</button>
-            ${
-              featured
-                ? `<button class="cta ghost" data-nav="/workflows/${escapeHtml(featured.slug)}" type="button">${escapeHtml(t("homeFeaturedCta"))}</button>`
-                : ""
-            }
-          </div>
-        </div>
-        <div class="hero-panel quick-surface">
-          <div class="quick-entry-list">
-            <button class="quick-entry-card" data-nav="/workflows" type="button">
-              <strong>${escapeHtml(t("quickEntryPrimaryTitle"))}</strong>
-              <p>${escapeHtml(t("quickEntryPrimaryBody"))}</p>
-              <span>${escapeHtml(t("quickEntryPrimaryCta"))}</span>
-            </button>
-            ${
-              featured
-                ? `<button class="quick-entry-card quick-entry-card-muted" data-nav="/workflows/${escapeHtml(featured.slug)}" type="button">
-                    <strong>${escapeHtml(t("quickEntrySecondaryTitle"))}</strong>
-                    <p>${escapeHtml(t("quickEntrySecondaryBody"))}</p>
-                    <span>${escapeHtml(currentLocale === "zh" ? "打开这个工作流" : `Open ${featured.title}`)}</span>
-                  </button>`
-                : ""
-            }
-          </div>
-          <div class="quick-stats">
-            <div>
-              <strong>${escapeHtml(String(getWorkflowBundles().length))}</strong>
-              <span>${escapeHtml(t("statsWorkflows"))}</span>
-            </div>
-            <div>
-              <strong>${escapeHtml(String(skillWikiPayload.stats.evidenceRefCount))}</strong>
-              <span>${escapeHtml(t("statsEvidence"))}</span>
-            </div>
+          <div class="home-search-card hero-search-inline">
+            <label class="hero-search-field" for="homeSearchInput">
+              <input id="homeSearchInput" placeholder="${escapeHtml(t("homeSearchPlaceholder"))}" />
+            </label>
+            <button class="cta" id="homeSearchGo" type="button">${escapeHtml(t("homeSearchCta"))}</button>
           </div>
         </div>
       </section>
 
-      <section class="section section-hero-lite">
-        <div class="section-head">
-          <div>
-            <h2>${escapeHtml(t("homeExploreTitle"))}</h2>
-          </div>
+      <section class="home-picks">
+        <div class="home-picks-list">
+          ${picks.map((skill) => renderHomeSkillRow(skill, featured?.slug === skill.slug)).join("")}
         </div>
-        <div class="home-search-card">
-          <label class="hero-search-field" for="homeSearchInput">
-            <input id="homeSearchInput" placeholder="${escapeHtml(t("homeSearchPlaceholder"))}" />
-          </label>
-          <button class="cta" id="homeSearchGo" type="button">${escapeHtml(t("homeSearchCta"))}</button>
-        </div>
-        <div class="home-switcher">
-          <div class="switcher-tabs">
-            <button class="switcher-tab active" data-home-shelf="recommended" type="button">${escapeHtml(t("shelfRecommended"))}</button>
-            <button class="switcher-tab" data-home-shelf="trending" type="button">${escapeHtml(t("shelfTrending"))}</button>
-            <button class="switcher-tab" data-home-shelf="newest" type="button">${escapeHtml(t("shelfNewest"))}</button>
-          </div>
-          <div class="cards-grid cards-grid-wide" id="homeShelfGrid">
-            ${recommendedSkills.map((skill, index) => renderSkillCard(skill, index === 0)).join("")}
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="section-head">
-          <div>
-            <h2>${escapeHtml(t("categoryTitle"))}</h2>
-          </div>
-        </div>
-        <div class="category-rail category-rail-inline">
-          ${categorySections
-            .map(
-              (category) => `
-                <button class="category-jump category-jump-inline" data-category-jump="${escapeHtml(category.slug)}" type="button">
-                  <span class="category-dot" style="background:${getCategoryColor(category.slug)}"></span>
-                  <span>${escapeHtml(category.label)}</span>
-                  <strong>${escapeHtml(String(category.count))}</strong>
-                </button>`,
-            )
-            .join("")}
-        </div>
+        <a class="home-browse-all" href="#/workflows">${escapeHtml(t("homeBrowseAll"))}</a>
       </section>
     </div>
   `;
@@ -886,15 +807,17 @@ function renderSkillCard(skill, featured = false) {
 
 function renderSkillsPage() {
   const tags = getFeaturedTags();
+  const hiddenTagCount = Math.max(0, tags.length - CATALOG_TAG_PREVIEW_LIMIT);
   const categories = getWorkflowCategorySections();
   const riskOptions = ["all", ...new Set(getWorkflowBundles().map((skill) => skill.riskLevel.toLowerCase()))];
 
   return `
-    <div class="stack">
-      <section class="section section-hero-lite">
-        <div class="section-head">
+    <div class="stack stack-catalog">
+      <section class="section section-catalog">
+        <div class="section-head section-head-catalog">
           <div>
             <h2>${escapeHtml(t("catalogTitle"))}</h2>
+            <p class="section-intro">${escapeHtml(t("catalogBody"))}</p>
           </div>
         </div>
         <div class="catalog-layout">
@@ -918,22 +841,26 @@ function renderSkillsPage() {
               <div class="field-stack">
                 <label class="field">
                   <span>${escapeHtml(t("fieldRisk"))}</span>
-                  <select id="riskSelect">
-                    ${riskOptions
-                      .map(
-                        (option) => `<option value="${escapeHtml(option)}">${option === "all" ? escapeHtml(t("fieldAllRisk")) : escapeHtml(option)}</option>`,
-                      )
-                      .join("")}
-                  </select>
+                  <span class="field-select-wrap">
+                    <select id="riskSelect">
+                      ${riskOptions
+                        .map(
+                          (option) => `<option value="${escapeHtml(option)}">${option === "all" ? escapeHtml(t("fieldAllRisk")) : escapeHtml(option)}</option>`,
+                        )
+                        .join("")}
+                    </select>
+                  </span>
                 </label>
                 <label class="field">
                   <span>${escapeHtml(t("fieldSort"))}</span>
-                  <select id="sortSelect">
-                    <option value="signal">${escapeHtml(t("sortSignal"))}</option>
-                    <option value="updated">${escapeHtml(t("sortUpdated"))}</option>
-                    <option value="title">${escapeHtml(t("sortTitle"))}</option>
-                    <option value="risk">${escapeHtml(t("sortRisk"))}</option>
-                  </select>
+                  <span class="field-select-wrap">
+                    <select id="sortSelect">
+                      <option value="signal">${escapeHtml(t("sortSignal"))}</option>
+                      <option value="updated">${escapeHtml(t("sortUpdated"))}</option>
+                      <option value="title">${escapeHtml(t("sortTitle"))}</option>
+                      <option value="risk">${escapeHtml(t("sortRisk"))}</option>
+                    </select>
+                  </span>
                 </label>
               </div>
             </div>
@@ -948,15 +875,21 @@ function renderSkillsPage() {
                 <input id="searchInput" placeholder="${escapeHtml(t("catalogSearchPlaceholder"))}" />
               </label>
             </div>
-            <div class="tag-cloud" id="tagFilters">
+            <div class="tag-cloud${hiddenTagCount > 0 ? "" : " is-expanded"}" id="tagFilters">
               <button class="chip active" data-tag="all" type="button">${escapeHtml(t("allTags"))}</button>
               ${tags.map((tag) => `<button class="chip" data-tag="${escapeHtml(tag)}" type="button">${escapeHtml(tag)}</button>`).join("")}
             </div>
+            ${
+              hiddenTagCount > 0
+                ? `<button class="tag-cloud-toggle" id="tagFiltersToggle" type="button">${escapeHtml(t("tagsToggleMore", hiddenTagCount))}</button>`
+                : ""
+            }
             <div class="catalog-results-head">
-              <div>
-                <h3 id="catalogCount">${escapeHtml(t("resultsCount", 0))}</h3>
-              </div>
-              <p class="catalog-active-filter" id="catalogActiveFilter">${escapeHtml(`${t("activeFilter")}：${t("activeFilterAll")}`)}</p>
+              <p class="catalog-results-meta">
+                <span class="catalog-results-count" id="catalogCount">${escapeHtml(t("resultsCount", 0))}</span>
+                <span class="catalog-results-divider" aria-hidden="true">·</span>
+                <span class="catalog-active-filter" id="catalogActiveFilter">${escapeHtml(t("activeFilterAll"))}</span>
+              </p>
             </div>
             <div class="cards-grid cards-grid-wide" id="catalogGrid"></div>
             <div class="empty-state" id="catalogEmpty" hidden>
@@ -1038,7 +971,7 @@ function renderSkillDetailPage(skill) {
           </div>
           <div class="detail-fact">
             <span>${escapeHtml(t("detailSourcePath"))}</span>
-            <a class="evidence-link" href="${escapeHtml(skill.sourceUrl)}" target="_blank" rel="noreferrer">${escapeHtml(skill.sourcePath)}</a>
+            <a class="evidence-link" href="${escapeHtml(skill.sourceUrl)}" target="_blank" rel="noreferrer">${escapeHtml(skill.sourceLabel ?? skill.sourcePath)}</a>
           </div>
           <div class="detail-fact">
             <span>${escapeHtml(t("detailUpstream"))}</span>
@@ -1093,7 +1026,7 @@ function renderSkillDetailPage(skill) {
             <div class="validation-facts">
               <div><span>${escapeHtml(t("detailCategory"))}</span><strong>${escapeHtml(skill.category.label)}</strong></div>
               <div><span>${escapeHtml(t("detailUpdated"))}</span><strong>${escapeHtml(skill.updatedAt)}</strong></div>
-              <div><span>${escapeHtml(t("detailSourcePath"))}</span><a class="evidence-link" href="${escapeHtml(skill.sourceUrl)}" target="_blank" rel="noreferrer">${escapeHtml(skill.sourcePath)}</a></div>
+              <div><span>${escapeHtml(t("detailSourcePath"))}</span><a class="evidence-link" href="${escapeHtml(skill.sourceUrl)}" target="_blank" rel="noreferrer">${escapeHtml(skill.sourceLabel ?? skill.sourcePath)}</a></div>
               <div><span>${escapeHtml(t("detailUpstream"))}</span>${upstreamSourceHtml}</div>
             </div>
           `,
@@ -1137,21 +1070,9 @@ function renderNotFound() {
 
 function renderFooter() {
   return `
-    <footer class="site-footer">
-      <div class="container footer-grid">
-        <div>
-          <span class="eyebrow">${escapeHtml(t("footerEyebrow"))}</span>
-          <h2>${escapeHtml(t("footerTitle"))}</h2>
-          <p class="section-intro">${escapeHtml(t("footerBody"))}</p>
-        </div>
-        <div class="footer-panel">
-          <h3>${escapeHtml(t("footerQuickTitle"))}</h3>
-          <ul class="detail-list">
-            <li><span class="list-dot"></span><span><a class="evidence-link" href="#/">${escapeHtml(t("footerBackHome"))}</a></span></li>
-            <li><span class="list-dot"></span><span><a class="evidence-link" href="#/workflows">${escapeHtml(t("footerBrowse"))}</a></span></li>
-            <li><span class="list-dot"></span><span>${escapeHtml(t("footerSourceNote")).replace("`skills/wiki/*.md`", "<code>skills/wiki/*.md</code>")}</span></li>
-          </ul>
-        </div>
+    <footer class="site-footer site-footer-minimal">
+      <div class="container">
+        <p class="footer-line">${escapeHtml(t("footerLine"))}</p>
       </div>
     </footer>
   `;
@@ -1219,29 +1140,9 @@ function bindInteractions() {
   const clearFilters = document.getElementById("clearFilters");
   const categoryJumpButtons = [...document.querySelectorAll("[data-category-jump]")];
   const categoryOpenButtons = [...document.querySelectorAll("[data-category-open]")];
-  const homeShelfButtons = [...document.querySelectorAll("[data-home-shelf]")];
-  const homeShelfGrid = document.getElementById("homeShelfGrid");
   const homeSearchInput = document.getElementById("homeSearchInput");
   const homeSearchGo = document.getElementById("homeSearchGo");
   const localeButtons = [...document.querySelectorAll("[data-locale]")];
-
-  const updateHomeShelf = (mode) => {
-    if (!(homeShelfGrid instanceof HTMLElement)) {
-      return;
-    }
-
-    const skills = getHomeShelfSkills(mode);
-    homeShelfGrid.innerHTML = skills.map((skill, index) => renderSkillCard(skill, index === 0)).join("");
-  };
-
-  homeShelfButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const nextMode = button.getAttribute("data-home-shelf") ?? "recommended";
-      homeShelfButtons.forEach((item) => item.classList.remove("active"));
-      button.classList.add("active");
-      updateHomeShelf(nextMode);
-    });
-  });
 
   const openSearchResults = () => {
     if (!(homeSearchInput instanceof HTMLInputElement)) {
@@ -1327,25 +1228,29 @@ function bindInteractions() {
 
     catalogCount.textContent = t("resultsCount", filtered.length);
     if (catalogActiveFilter instanceof HTMLElement) {
-      const pieces = [`${t("activeFilter")}: ${activeCategoryLabel}`];
+      const pieces = [activeCategoryLabel];
       if (activeTag !== "all") {
-        pieces.push(`${t("activeFilterTag")}: ${activeTag}`);
+        pieces.push(activeTag);
       }
       if (activeRisk !== "all") {
         pieces.push(`${t("activeFilterRisk")}: ${activeRisk}`);
       }
       if (query.trim()) {
-        pieces.push(`${t("activeFilterSearch")}: ${query.trim()}`);
+        pieces.push(`"${query.trim()}"`);
       }
-      catalogActiveFilter.textContent = pieces.join(" / ");
+      catalogActiveFilter.textContent = pieces.join(" · ");
     }
     catalogGrid.innerHTML = filtered.map((skill) => renderSkillCard(skill)).join("");
     catalogEmpty.hidden = filtered.length > 0;
   };
 
+  const tagFilters = document.getElementById("tagFilters");
+  const tagFiltersToggle = document.getElementById("tagFiltersToggle");
+
   const pendingQuery = consumePendingCatalogQuery();
   if (pendingQuery && searchInput instanceof HTMLInputElement && searchInput.value.length === 0) {
     searchInput.value = pendingQuery;
+    searchInput.focus();
   }
 
   if (searchInput instanceof HTMLInputElement) {
@@ -1379,6 +1284,15 @@ function bindInteractions() {
       updateCatalog();
     });
   });
+
+  if (tagFilters instanceof HTMLElement && tagFiltersToggle instanceof HTMLButtonElement) {
+    const hiddenTagCount = Math.max(0, tagButtons.length - 1 - CATALOG_TAG_PREVIEW_LIMIT);
+
+    tagFiltersToggle.addEventListener("click", () => {
+      const expanded = tagFilters.classList.toggle("is-expanded");
+      tagFiltersToggle.textContent = expanded ? t("tagsToggleHide") : t("tagsToggleMore", hiddenTagCount);
+    });
+  }
 
   if (clearFilters instanceof HTMLButtonElement) {
     clearFilters.addEventListener("click", () => {

@@ -374,12 +374,196 @@ function detectHttpUrl(value) {
   return raw ? raw.replace(/[`\],.;:]+$/g, "") : null;
 }
 
+function extractHttpUrls(value) {
+  return [...value.matchAll(/https?:\/\/[^\s)`,]+/gi)].map((match) => match[0].replace(/[`\],.;:]+$/g, ""));
+}
+
+function stripBackticks(value) {
+  return value.replace(/`([^`]+)`/g, "$1").trim();
+}
+
+function humanizeToken(value) {
+  return stripBackticks(value)
+    .replace(/[_-]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+    .replace(/\b\w/g, (char) => char.toUpperCase());
+}
+
+function slugToTitle(slug) {
+  return slug
+    .replace(/\.md$/i, "")
+    .split(/[-_/]+/)
+    .filter(Boolean)
+    .map((word) => {
+      if (word.length <= 4 && word === word.toUpperCase()) {
+        return word;
+      }
+      return word.charAt(0).toUpperCase() + word.slice(1);
+    })
+    .join(" ");
+}
+
+const EXTERNAL_HOST_LABELS = {
+  "skills-hub.ai": "Skills Hub",
+  "openagentskills.dev": "Open Agent Skills",
+  "docs.nvidia.com": "NVIDIA Holoscan docs",
+};
+
+function formatExternalUrlLabel(url) {
+  try {
+    const parsed = new URL(url);
+    const host = parsed.hostname.replace(/^www\./, "");
+    if (EXTERNAL_HOST_LABELS[host]) {
+      return EXTERNAL_HOST_LABELS[host];
+    }
+
+    if (host === "github.com") {
+      const parts = parsed.pathname.split("/").filter(Boolean);
+      if (parts.length >= 2) {
+        const base = `${parts[0]}/${parts[1]}`;
+        const markerIndex = parts.findIndex((part) => part === "tree" || part === "blob");
+        if (markerIndex >= 0 && parts.length > markerIndex + 2) {
+          const subpath = parts.slice(markerIndex + 2).join("/");
+          return subpath ? `${base} · ${subpath}` : base;
+        }
+        return base;
+      }
+      return "GitHub";
+    }
+
+    const hostLabel = host
+      .split(".")
+      .slice(0, -1)
+      .join(" ")
+      .replace(/\b\w/g, (char) => char.toUpperCase());
+    return hostLabel || host;
+  } catch {
+    return url;
+  }
+}
+
+function formatRepoPathLabel(repoPath) {
+  const normalized = repoPath.replace(/\/$/, "");
+  const runMatch = normalized.match(/^runs\/(\d+)-(.+)$/);
+  if (runMatch) {
+    return `Run ${runMatch[1]}: ${humanizeToken(runMatch[2])}`;
+  }
+
+  if (normalized.startsWith("skills/wiki/")) {
+    const slug = normalized.replace(/^skills\/wiki\//, "").replace(/\.md$/i, "");
+    return slugToTitle(slug);
+  }
+
+  const parts = normalized.split("/");
+  if (parts.length >= 2) {
+    return parts.slice(-2).join("/");
+  }
+
+  return normalized;
+}
+
+function formatPrefixedLabel(value) {
+  const cleaned = stripBackticks(value);
+  const prefixed = cleaned.match(/^([^:]+):\s*(.+)$/);
+  if (!prefixed) {
+    return cleaned;
+  }
+
+  const field = prefixed[1].trim().toLowerCase();
+  const payload = prefixed[2].trim();
+
+  if (field === "source url") {
+    const url = detectHttpUrl(payload);
+    return url ? formatExternalUrlLabel(url) : humanizeToken(payload);
+  }
+
+  if (field === "source repo") {
+    return payload.replace(/^`|`$/g, "");
+  }
+
+  if (field === "source path hint") {
+    return payload;
+  }
+
+  if (field === "validation run") {
+    const repoPath = detectRepoPath(payload) ?? payload;
+    return formatRepoPathLabel(repoPath);
+  }
+
+  if (field === "primary sources") {
+    const urls = extractHttpUrls(payload);
+    if (urls.length > 0) {
+      return urls.map((url) => formatExternalUrlLabel(url)).join(" · ");
+    }
+  }
+
+  if (["source type", "import status", "validation basis", "imported at"].includes(field)) {
+    return field === "imported at" ? `Imported ${payload}` : humanizeToken(payload);
+  }
+
+  return cleaned;
+}
+
+function formatLinkLabel(value, link = {}) {
+  const viaMatch = value.match(/^([a-z0-9-]+)\s+via\s+/i);
+  if (viaMatch) {
+    const slug = viaMatch[1];
+    return link.skillTitleBySlug?.get(slug) ?? slugToTitle(slug);
+  }
+
+  if (link.kind === "external" && link.href) {
+    if (/^https?:\/\//i.test(stripBackticks(value))) {
+      return formatExternalUrlLabel(link.href);
+    }
+    return formatPrefixedLabel(value);
+  }
+
+  if (link.repoPath) {
+    if (/^[^:]+:\s*/.test(value)) {
+      return formatPrefixedLabel(value);
+    }
+    return formatRepoPathLabel(link.repoPath);
+  }
+
+  if (link.kind === "internal-skill" && link.slug) {
+    return link.skillTitleBySlug?.get(link.slug) ?? slugToTitle(link.slug);
+  }
+
+  if (value.toLowerCase().startsWith("source repo:")) {
+    return value.split(":").slice(1).join(":").trim().replace(/^`|`$/g, "");
+  }
+
+  return formatPrefixedLabel(value);
+}
+
+function expandRefBullet(value) {
+  const urls = extractHttpUrls(value);
+  if (urls.length > 1 && /primary sources/i.test(value)) {
+    return urls;
+  }
+  return [value];
+}
+
 function extractFieldValue(lines, prefix) {
   const line = lines.find((entry) => entry.toLowerCase().startsWith(prefix.toLowerCase()));
   return line ? line.slice(prefix.length).trim().replace(/^`|`$/g, "") : null;
 }
 
 function buildRefLink(value, skillSlugSet, context = {}) {
+  const viaMatch = value.match(/^([a-z0-9-]+)\s+via\s+/i);
+  if (viaMatch && skillSlugSet.has(viaMatch[1])) {
+    const slug = viaMatch[1];
+    const link = {
+      label: "",
+      href: `#/workflows/${slug}`,
+      kind: "internal-skill",
+      slug,
+    };
+    link.label = formatLinkLabel(value, { ...link, skillTitleBySlug: context.skillTitleBySlug });
+    return link;
+  }
+
   const repoPath = detectRepoPath(value);
   const directUrl = detectHttpUrl(value);
   const relatedSkillMatch = value.match(/`([a-z0-9-]+)`/i);
@@ -387,11 +571,13 @@ function buildRefLink(value, skillSlugSet, context = {}) {
   const upstreamRepoUrl = context.upstreamSourceUrl ?? null;
 
   if (directUrl) {
-    return {
-      label: value,
+    const link = {
+      label: "",
       href: directUrl,
       kind: "external",
     };
+    link.label = formatLinkLabel(value, { ...link, skillTitleBySlug: context.skillTitleBySlug });
+    return link;
   }
 
   if (repoPath) {
@@ -399,8 +585,8 @@ function buildRefLink(value, skillSlugSet, context = {}) {
       upstreamRepoUrl && !repoPath.startsWith("runs/") && !repoPath.startsWith("docs/") && !repoPath.startsWith("reports/")
         ? `${upstreamRepoUrl.replace(/\/$/, "")}/tree/main/${repoPath}`
         : repoPathToUrl(repoPath);
-    return {
-      label: value,
+    const link = {
+      label: "",
       href: repoScopedHref,
       kind:
         upstreamRepoUrl && !repoPath.startsWith("runs/")
@@ -410,33 +596,40 @@ function buildRefLink(value, skillSlugSet, context = {}) {
             : "repo-evidence",
       repoPath,
     };
+    link.label = formatLinkLabel(value, { ...link, skillTitleBySlug: context.skillTitleBySlug });
+    return link;
   }
 
   if (value.toLowerCase().startsWith("source repo:")) {
     const repoName = value.split(":").slice(1).join(":").trim().replace(/^`|`$/g, "");
     if (/^[\w.-]+\/[\w.-]+$/.test(repoName)) {
-      return {
-        label: value,
+      const link = {
+        label: "",
         href: `https://github.com/${repoName}`,
         kind: "external",
       };
+      link.label = formatLinkLabel(value, link);
+      return link;
     }
   }
 
   if (relatedSlug && skillSlugSet.has(relatedSlug)) {
-    return {
-      label: value,
+    const link = {
+      label: "",
       href: `#/workflows/${relatedSlug}`,
       kind: "internal-skill",
       slug: relatedSlug,
     };
+    link.label = formatLinkLabel(value, { ...link, skillTitleBySlug: context.skillTitleBySlug });
+    return link;
   }
 
-  return {
-    label: value,
+  const plainLink = {
+    label: formatLinkLabel(value, { kind: "plain-text", skillTitleBySlug: context.skillTitleBySlug }),
     href: null,
     kind: "plain-text",
   };
+  return plainLink;
 }
 
 function inferCategory({ title, summary, tags, searchText, sourcePath }) {
@@ -520,35 +713,37 @@ function buildSkillRecord(filePath) {
   };
 }
 
+function buildLinkList(bullets, skillSlugSet, context = {}) {
+  return bullets
+    .flatMap((value) => expandRefBullet(value))
+    .map((value) => buildRefLink(value, skillSlugSet, context));
+}
+
 function buildPayload() {
   const baseSkills = listMarkdownFiles(skillWikiDir).map(buildSkillRecord);
   const skillSlugSet = new Set(baseSkills.map((skill) => skill.slug));
+  const skillTitleBySlug = new Map(baseSkills.map((skill) => [skill.slug, skill.title]));
+  const linkContext = (skill) => ({
+    upstreamSourceUrl: skill.upstreamSourceUrl,
+    skillTitleBySlug,
+  });
   const skills = baseSkills.map((skill) => {
     const category = inferCategory(skill);
 
     return {
       ...skill,
       sourceUrl: repoPathToUrl(skill.sourcePath),
+      sourceLabel: formatRepoPathLabel(skill.sourcePath),
       category: {
         slug: category.slug,
         label: category.label,
         description: category.description,
       },
-      evidenceLinks: skill.evidenceRefs.bullets.map((value) =>
-        buildRefLink(value, skillSlugSet, { upstreamSourceUrl: skill.upstreamSourceUrl }),
-      ),
-      relatedSkillLinks: skill.relatedSkills.bullets.map((value) =>
-        buildRefLink(value, skillSlugSet, { upstreamSourceUrl: skill.upstreamSourceUrl }),
-      ),
-      provenanceLinks: skill.provenance.bullets.map((value) =>
-        buildRefLink(value, skillSlugSet, { upstreamSourceUrl: skill.upstreamSourceUrl }),
-      ),
-      scopeLinks: skill.scope.bullets.map((value) =>
-        buildRefLink(value, skillSlugSet, { upstreamSourceUrl: skill.upstreamSourceUrl }),
-      ),
-      nonScopeLinks: skill.nonScope.bullets.map((value) =>
-        buildRefLink(value, skillSlugSet, { upstreamSourceUrl: skill.upstreamSourceUrl }),
-      ),
+      evidenceLinks: buildLinkList(skill.evidenceRefs.bullets, skillSlugSet, linkContext(skill)),
+      relatedSkillLinks: buildLinkList(skill.relatedSkills.bullets, skillSlugSet, linkContext(skill)),
+      provenanceLinks: buildLinkList(skill.provenance.bullets, skillSlugSet, linkContext(skill)),
+      scopeLinks: buildLinkList(skill.scope.bullets, skillSlugSet, linkContext(skill)),
+      nonScopeLinks: buildLinkList(skill.nonScope.bullets, skillSlugSet, linkContext(skill)),
     };
   });
 

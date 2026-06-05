@@ -7,7 +7,7 @@ export function SkillWikiModule() {
         <iframe
           className="block min-h-[calc(100vh-240px)] w-full border-0 bg-[#0c0c0c]"
           src={WIKI_EMBED_SRC}
-          title="Runwiser skill wiki"
+          title="Runwiser Wiki"
         />
       </div>
     </section>
