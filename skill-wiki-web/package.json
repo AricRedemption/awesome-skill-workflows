@@ -3,6 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "dev": "node dev-server.mjs",
     "build": "node scripts/generate-skill-wiki-data.mjs && node scripts/verify.mjs",
     "vercel-build": "npm run build"
   }
