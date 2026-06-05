@@ -1,7 +1,7 @@
 {
-  "name": "Runwiser Wiki",
+  "name": "Runwiser",
   "short_name": "Runwiser",
-  "description": "An English-first skill wiki for AI agent playbooks, reusable workflows, and evidence-backed execution patterns.",
+  "description": "AI capabilities organized into reusable workflow entry points.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#f6f9ff",

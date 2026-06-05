@@ -426,7 +426,7 @@ function buildRefLink(value, skillSlugSet, context = {}) {
   if (relatedSlug && skillSlugSet.has(relatedSlug)) {
     return {
       label: value,
-      href: `#/skills/${relatedSlug}`,
+      href: `#/workflows/${relatedSlug}`,
       kind: "internal-skill",
       slug: relatedSlug,
     };

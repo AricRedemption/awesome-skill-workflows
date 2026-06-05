@@ -44,7 +44,7 @@ for (const skill of skillWikiPayload.skills) {
     throw new Error(`Missing required parsed field for slug: ${skill.slug}`);
   }
 
-  const detailRoute = `#/skills/${skill.slug}`;
+  const detailRoute = `#/workflows/${skill.slug}`;
   if (!detailRoute.includes(skill.slug)) {
     throw new Error(`Unresolvable detail route for slug: ${skill.slug}`);
   }
@@ -55,4 +55,4 @@ for (const skill of skillWikiPayload.skills) {
 }
 
 console.log("Skill Wiki web verification passed.");
-console.log(`Verified ${generatedSlugs.length} skills from skills/wiki/*.md.`);
+console.log(`Verified ${generatedSlugs.length} workflow-backed entries from skills/wiki/*.md.`);
