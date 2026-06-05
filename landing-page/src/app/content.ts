@@ -20,10 +20,6 @@ export const links = {
     "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/docs/skillopt-integration.md",
   skilloptReadiness:
     "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/reports/skillopt-official-readiness.json",
-  skillWikiPromotion:
-    "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/docs/skill-wiki-promotion.md",
-  skillWikiEntry:
-    "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/skills/wiki/xhs-kb-reuse-selection-gated-safety.md",
   docs:
     "https://github.com/AricRedemption/awesome-skill-workflows/tree/main/docs",
   agentRules:
@@ -39,54 +35,46 @@ export const brand = {
 } as const;
 
 export const navItems = [
-  { label: "Home", href: "/" },
-  { label: "Proof", href: "/proof" },
-  { label: "Cases", href: "/cases" },
-  { label: "Evolution", href: "/evolution" },
-  { label: "Wiki", href: "/wiki" },
+  { label: "Problem", href: "#problem" },
+  { label: "Proof", href: "#proof-stack" },
+  { label: "SkillOpt", href: "#skillopt" },
+  { label: "Model", href: "#model" },
+  { label: "Scenarios", href: "#skill-heatmap" },
+  { label: "Docs", href: links.docs },
 ] as const;
 
 export const hero = {
   eyebrow: "Workflow evidence system",
-  title: "Runwise keeps successful agent work from disappearing into chat history.",
+  title: "Runwise turns agent runs into reusable workflow memory.",
   description:
-    "It turns repeatable runs into reusable assets, explicit gates, and durable workflow memory, so teams can keep what worked, learn from what failed, and promote only what evidence supports.",
-  primaryCta: "See why it works",
+    "Stop losing good agent runs in chat history. Runwise turns repeatable execution into skills, recipes, proof, and reusable workflow memory, with no promotion until evidence and gates are explicit.",
+  primaryCta: "View proof",
   secondaryCta: "Read docs",
-  consoleSteps: ["Run", "Review", "Verify", "Write back"],
+  consoleSteps: ["Run", "Score", "Review", "Verify", "Write back", "Promote"],
   signals: [
-    { label: "What it keeps", value: "reusable workflow assets" },
-    { label: "What it requires", value: "evidence and explicit gates" },
-    { label: "What it avoids", value: "promoting plausible-looking output" },
+    { label: "Source", value: "real run evidence" },
+    { label: "Gate", value: "human + risk review" },
+    { label: "Output", value: "verified workflow asset" },
   ],
-  proofStrip: [
-    "real run evidence",
-    "human and scenario review",
-    "durable KB writeback",
-  ],
-  support: {
-    title: "What survives a good run",
-    body: "Not just the final answer. The selected skills, execution path, review decisions, proof boundary, and reusable lessons all stay attached to the run.",
-  },
 } as const;
 
 export const problem = {
-  eyebrow: "Why this exists",
-  title: "A successful run is useful once. A durable workflow asset is useful again.",
+  eyebrow: "The gap",
+  title: "Agent work disappears after each successful run.",
   description:
-    "Most agent workflows end as a transcript, a few prompts, and a vague memory that something worked. Runwise treats each run as evidence that can become reusable knowledge or a documented failure boundary.",
+    "Most agent workflows leave behind a chat transcript, a few prompts, and no durable path for reuse. This project treats every run as evidence that can either become reusable knowledge or a documented failure.",
   cards: [
     {
-      title: "The workflow path gets lost",
-      body: "Teams may keep the final output, but not the selected skills, review decisions, or execution path that made the result repeatable.",
+      title: "Skills stay scattered",
+      body: "Useful prompts, tools, and tactics remain buried in conversations instead of becoming selectable skill assets.",
     },
     {
-      title: "A good output is mistaken for proof",
-      body: "One strong answer does not prove the workflow can be selected again, reviewed safely, and promoted as a reusable asset.",
+      title: "Success is not repeatability",
+      body: "One good output does not prove that the workflow can be selected, composed, reviewed, and reused.",
     },
     {
-      title: "Failures rarely become guardrails",
-      body: "Broken runs often contain the best prevention rules, but those lessons usually vanish instead of becoming reusable failure evidence.",
+      title: "Failures get lost",
+      body: "Failed runs often contain the best prevention rules, but they rarely make it into a reusable knowledge base.",
     },
   ],
 } as const;
@@ -189,9 +177,9 @@ export const ecosystem = {
 
 export const validatedProof = {
   eyebrow: "Why it matters",
-  title: "The proof stack makes workflow improvement auditable.",
+  title: "Runwise makes agent workflow improvement auditable.",
   description:
-    "Once the visitor understands what the system preserves, this is the credibility layer: evidence capture, review gates, reusable memory, and promotion discipline.",
+    "Runwise gives every repeatable agent workflow a durable operating layer: evidence capture, review gates, reusable memory, and promotion discipline.",
   stats: [
     { value: "Evidence", label: "before promotion", detail: "Runs, scores, review records, and proof artifacts are kept separate." },
     { value: "Gates", label: "before action", detail: "Human review, risk state, account state, and proof are explicit states." },
@@ -251,7 +239,7 @@ export const paperReproduction = {
   eyebrow: "Paper reproduction",
   title: "Microsoft SkillOpt, rebuilt as a local workflow-evidence loop.",
   description:
-    "The implementation translates the paper architecture into this repository's Layer 2 optimization loop: freeze the target skill, generate bounded edits from run evidence, evaluate candidates on held-out evidence, preserve rejected edits, and export the accepted skill state before any durable promotion.",
+    "The implementation translates the paper architecture into this repository's Layer 1 model: freeze the target skill, generate bounded edits from run evidence, evaluate candidates on held-out evidence, preserve rejected edits, and export the accepted skill state.",
   image: {
     src: "/architecture/skillopt-local-reproduction-gpt-image-2.png",
     alt: "GPT Image 2 architecture illustration of the local SkillOpt reproduction loop",
@@ -268,14 +256,12 @@ export const paperReproduction = {
     },
     {
       title: "Verified with local evidence",
-      body: "The local run records score consistency, rejected candidates, sensitive-reference checks, and manifest-backed promotion boundaries before anything reaches the durable skill surface.",
+      body: "The local run records score consistency, rejected candidates, sensitive-reference checks, and direct-promotion boundaries.",
     },
   ],
   artifacts: [
     { label: "Integration doc", href: links.skilloptIntegration },
     { label: "Readiness report", href: links.skilloptReadiness },
-    { label: "Skill wiki promotion", href: links.skillWikiPromotion },
-    { label: "Promoted wiki entry", href: links.skillWikiEntry },
     { label: "Workflow", href: "https://github.com/AricRedemption/awesome-skill-workflows/blob/main/workflows/skill-optimization/skillopt-style-skill-training.workflow.md" },
   ],
 } as const;
@@ -299,7 +285,7 @@ export const scenarioHeatmap = {
       status: "verified sample",
       title: "The v0.1 validation wrapper with the strongest evidence chain.",
       description:
-        "A topic-to-draft workflow proved that multiple reusable skills can be selected, composed, reviewed, verified, reused, and improved through failure evidence. It is the strongest current wrapper, not the architecture definition.",
+        "A topic-to-draft workflow proved that multiple reusable skills can be selected, composed, reviewed, verified, reused, and improved through failure evidence.",
       evidence: [
         "verified recipe and verified workflow records",
         "draft proof with clicked_publish=false",
@@ -352,11 +338,10 @@ export const scenarioHeatmap = {
       status: "local method",
       title: "A generic optimization loop for improving reusable skill documents.",
       description:
-        "SkillOpt-style work is treated as Layer 2 skill optimization: bounded edits, split evidence, held-out selection, explicit rejection records, and gated promotion into the skill wiki.",
+        "SkillOpt-style work is treated as Layer 1 skill optimization: bounded edits, split evidence, held-out selection, and explicit rejection records.",
       evidence: [
         "schema contracts for skill edits and optimization runs",
         "validator checks train/selection evidence split",
-        "promotion manifest and durable wiki/registry/retrieval records are enforced",
         "minimal XHS KB-reuse optimization run passes",
       ],
       boundary: "Experimental local architecture only. No official SkillOpt code or external benchmark is claimed.",
@@ -605,13 +590,12 @@ export const gates = {
 } as const;
 
 export const repositoryMap = {
-  eyebrow: "Durable assets",
-  title: "Runs stay temporary. Durable assets are what survive promotion.",
+  eyebrow: "Repository map",
+  title: "The repository is a workflow system, not a file dump.",
   description:
-    "The point of the framework is not to collect files. It is to separate temporary execution records from the durable surfaces that future runs can actually reuse: skill wiki pages, workflow KB entries, verified recipes, and governed rule drafts.",
+    "Each directory has a job in the evidence lifecycle. The value is in the boundary between temporary run records and durable reusable assets.",
   assets: [
     { path: "skills/", label: "Reusable capability definitions and maps" },
-    { path: "skills/wiki/", label: "Canonical promoted skill pages backed by manifests, registry records, and retrieval entries" },
     { path: "workflows/", label: "Composable execution paths" },
     { path: "runs/", label: "Evidence records from specific executions" },
     { path: "workflow-kb/", label: "Reusable memory, rubrics, patterns, and failure cases" },
@@ -619,22 +603,12 @@ export const repositoryMap = {
     { path: "failed-recipes/", label: "Failed runs with reusable lessons" },
     { path: "evolution-drafts/", label: "Proposed long-lived rule changes" },
   ],
-  spotlight: {
-    title: "What stays temporary",
-    body: "Run records, one-off experiments, draft notes, and incomplete evidence remain execution artifacts. They matter, but they are not durable assets yet.",
-    items: ["run transcripts", "raw outputs", "one-off experiments", "incomplete gate evidence"],
-  },
-  durable: {
-    title: "What becomes durable",
-    body: "Only the surfaces that future runs can actually rely on should survive promotion.",
-    items: ["skill wiki entries", "workflow KB patterns", "verified recipes", "approved evolution drafts"],
-  },
 } as const;
 
 export const scenario = {
   eyebrow: "Validated scenario",
   title: "Proven through one concrete scenario, designed for many.",
-  body: "The current Xiaohongshu workflow is the strongest validation wrapper, not the product identity. It proves that the framework can move from skill discovery to run evidence, review gates, draft proof, KB writeback, and verified recipe promotion while keeping scenario-specific rules local. The same model can support research workflows, report generation, monitoring, and operational review loops.",
+  body: "The current Xiaohongshu workflow is a validation wrapper. It proves that the framework can move from skill discovery to run evidence, review gates, draft proof, KB writeback, and verified recipe promotion. The same model can support research workflows, report generation, monitoring, and operational review loops.",
   validates: [
     "Skill discovery can be normalized into reusable workflow assets.",
     "High-risk steps can stay behind explicit human and scenario review.",
@@ -649,26 +623,26 @@ export const scenario = {
 } as const;
 
 export const finalCta = {
-  title: "Start with the page that answers your question fastest.",
-  body: "The homepage gives the overview. The other pages separate trust, validated cases, evolution, and wiki-level durable knowledge so you do not need to read one long scroll to understand the system.",
+  title: "Use the evidence map as the starting point.",
+  body: "Inspect the proven workflow, check the current skill coverage, then add the next scenario only when its evidence path is clear.",
   actions: [
     {
-      label: "Proof",
-      href: "/proof",
-      detail: "See the evidence, gates, and promotion discipline that make the framework credible.",
+      label: "View workflow",
+      href: links.verifiedWorkflow,
+      detail: "Start from the workflow that already passed draft-safe verification and reuse.",
+      external: true,
+    },
+    {
+      label: "Skill heatmap",
+      href: "#skill-heatmap",
+      detail: "See which skills are verified, partial, emerging, or not claimed.",
       external: false,
     },
     {
-      label: "Cases",
-      href: "/cases",
-      detail: "See where the framework is validated today and where it is only a target fit.",
-      external: false,
-    },
-    {
-      label: "Wiki",
-      href: "/wiki",
-      detail: "See what becomes durable knowledge and how promoted skill wiki pages fit the model.",
-      external: false,
+      label: "Add scenario",
+      href: links.directoryMap,
+      detail: "Use the directory map to place a new scenario, run, or KB artifact without mixing layers.",
+      external: true,
     },
   ],
 } as const;

@@ -1,42 +1,35 @@
 @import "tailwindcss";
 
 :root {
-  font-family: "Plus Jakarta Sans", "PingFang SC", "Microsoft YaHei", sans-serif;
-  color: #1c1c1e;
-  background: #f7f9fc;
+  --asw-display-serif: Georgia, "Times New Roman", "Songti SC", "Noto Serif SC", serif;
 }
 
-body {
-  min-width: 320px;
-  background: linear-gradient(180deg, #eef5ff 0%, #f7f9fc 36%, #ffffff 100%);
-  color: #1c1c1e;
+.asw-display-serif {
+  font-family: var(--asw-display-serif);
+  font-weight: 650;
+  letter-spacing: 0;
 }
 
-button,
-input,
-select {
-  font: inherit;
+.asw-agent-marquee-track {
+  animation: asw-agent-marquee 34s linear infinite;
 }
 
-code {
-  border-radius: 999px;
-  background: rgba(0, 122, 255, 0.08);
-  padding: 0.12rem 0.45rem;
-  font-family: "JetBrains Mono", "SFMono-Regular", monospace;
-  font-size: 0.88em;
+.asw-agent-marquee-track:hover {
+  animation-play-state: paused;
 }
 
-::selection {
-  background: rgba(0, 122, 255, 0.18);
+@keyframes asw-agent-marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
+  .asw-agent-marquee-track {
+    animation: none;
   }
 }
